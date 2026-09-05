@@ -4,8 +4,7 @@
 <head>
   <meta charset="UTF-8">
 
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>MUCI — Pusat Print & Foto Copy</title>
 
@@ -14,23 +13,952 @@
     content="MUCI menyediakan jasa print, fotocopy, cetak foto, pas foto, laminating, jilid, stempel flash dan cetak kartu di Muara Enim."
   >
 
-  <meta property="og:title"
-        content="MUCI — Pusat Print & Foto Copy">
+  <style>
 
-  <meta property="og:description"
-        content="Solusi print, fotocopy, cetak foto, pas foto, laminating, jilid, stempel dan cetak kartu di Muara Enim.">
+    /* ==================================================
+       RESET
+    ================================================== */
 
-  <meta property="og:image"
-        content="https://ranggamuci.github.io/TokoMuci-website/muci-preview.jpg">
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  <meta property="og:url"
-        content="https://ranggamuci.github.io/TokoMuci-website/">
+    html {
+      scroll-behavior: smooth;
+    }
 
-  <meta property="og:type"
-        content="website">
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #071a41;
+      background: #eef7ff;
+      line-height: 1.6;
+    }
 
-  <link rel="stylesheet"
-        href="style.css">
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1400px, 92%);
+      margin: auto;
+    }
+
+
+    /* ==================================================
+       HEADER
+    ================================================== */
+
+    .hero {
+      min-height: 700px;
+
+      background:
+        radial-gradient(
+          circle at 10% 20%,
+          #d9edff,
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 90% 10%,
+          #d9edff,
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          #f8fcff,
+          #e8f4ff
+        );
+
+      padding-bottom: 70px;
+    }
+
+    .nav {
+      min-height: 80px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
+    }
+
+    .brand {
+      font-size: 30px;
+      font-weight: 900;
+      color: #0868d7;
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+
+      font-weight: 700;
+      color: #20385d;
+    }
+
+    .nav-links a:hover {
+      color: #0874e8;
+    }
+
+    .nav-wa {
+      background: #087cf0;
+      color: white;
+
+      padding: 12px 22px;
+
+      border-radius: 12px;
+
+      font-weight: 800;
+
+      box-shadow:
+        0 8px 20px
+        rgba(8, 124, 240, .20);
+    }
+
+
+    /* ==================================================
+       HERO
+    ================================================== */
+
+    .hero-grid {
+      min-height: 570px;
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      align-items: center;
+
+      gap: 60px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+
+      color: #0874e8;
+
+      font-size: 14px;
+
+      font-weight: 900;
+
+      letter-spacing: 3px;
+
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size:
+        clamp(42px, 5vw, 72px);
+
+      line-height: 1.05;
+
+      font-weight: 900;
+
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: #0874e8;
+    }
+
+    .lead {
+      color: #5d7697;
+
+      font-size: 19px;
+
+      max-width: 650px;
+
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+
+      gap: 15px;
+
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      min-height: 52px;
+
+      padding: 0 26px;
+
+      border-radius: 14px;
+
+      font-weight: 800;
+
+      border: 0;
+
+      cursor: pointer;
+    }
+
+    .btn.primary {
+      color: white;
+
+      background:
+        linear-gradient(
+          135deg,
+          #087cf0,
+          #1768d5
+        );
+
+      box-shadow:
+        0 10px 25px
+        rgba(8, 124, 240, .22);
+    }
+
+    .btn.secondary {
+      background: white;
+
+      color: #0874e8;
+
+      border: 2px solid #d4e6fa;
+    }
+
+    .trust-row {
+      display: flex;
+
+      gap: 20px;
+
+      flex-wrap: wrap;
+
+      margin-top: 30px;
+
+      color: #526d90;
+
+      font-size: 14px;
+
+      font-weight: 700;
+    }
+
+    .hero-card {
+      background: white;
+
+      padding: 15px;
+
+      border-radius: 30px;
+
+      box-shadow:
+        0 25px 70px
+        rgba(26, 88, 150, .12);
+    }
+
+    .hero-card img {
+      border-radius: 20px;
+
+      width: 100%;
+    }
+
+
+    /* ==================================================
+       SECTION
+    ================================================== */
+
+    .section {
+      padding: 90px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+
+      max-width: 800px;
+
+      margin:
+        0 auto 45px;
+    }
+
+    .section-heading h2 {
+      font-size:
+        clamp(36px, 5vw, 58px);
+
+      line-height: 1.1;
+
+      margin-bottom: 15px;
+
+      font-weight: 900;
+    }
+
+    .section-heading p {
+      color: #607a9b;
+
+      font-size: 18px;
+    }
+
+
+    /* ==================================================
+       LAYANAN
+    ================================================== */
+
+    .service-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 22px;
+    }
+
+    .service-card {
+      background: white;
+
+      border: 1px solid #dbe8f6;
+
+      border-radius: 22px;
+
+      padding: 25px;
+
+      min-height: 330px;
+
+      box-shadow:
+        0 12px 35px
+        rgba(38, 91, 140, .08);
+
+      transition:
+        transform .3s,
+        box-shadow .3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+
+      box-shadow:
+        0 20px 45px
+        rgba(38, 91, 140, .16);
+    }
+
+
+    /* ==================================================
+       FOTO FOTOCOPY
+    ================================================== */
+
+    .service-image {
+      width: 100%;
+
+      height: 155px;
+
+      overflow: hidden;
+
+      border-radius: 16px;
+
+      margin-bottom: 18px;
+
+      background: #f5f9ff;
+    }
+
+    .service-image img {
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+      display: block;
+
+      border-radius: 16px;
+
+      transition: .3s ease;
+    }
+
+    .service-card:hover
+    .service-image img {
+      transform: scale(1.05);
+    }
+
+
+    /* ==================================================
+       IKON LAYANAN LAIN
+    ================================================== */
+
+    .service-icon {
+      width: 145px;
+
+      height: 125px;
+
+      margin:
+        0 auto 12px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+    }
+
+    .service-icon svg {
+      width: 100%;
+
+      height: 100%;
+
+      filter:
+        drop-shadow(
+          0 9px 7px
+          rgba(24, 94, 170, .15)
+        );
+
+      transition: .3s;
+    }
+
+    .service-card:hover
+    .service-icon svg {
+      transform:
+        translateY(-5px)
+        scale(1.05);
+    }
+
+    .service-card h3 {
+      font-size: 21px;
+
+      line-height: 1.25;
+
+      text-align: center;
+
+      margin-bottom: 10px;
+
+      font-weight: 900;
+    }
+
+    .service-card p {
+      text-align: center;
+
+      color: #607998;
+
+      font-size: 15px;
+    }
+
+
+    /* ==================================================
+       HARGA
+    ================================================== */
+
+    .price-section {
+      background:
+        linear-gradient(
+          135deg,
+          #eef8ff,
+          #e3f2ff
+        );
+    }
+
+    .price-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 22px;
+    }
+
+    .price-card {
+      position: relative;
+
+      background: white;
+
+      min-height: 350px;
+
+      padding: 28px 25px;
+
+      border-radius: 22px;
+
+      border: 1px solid #dce9f7;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      justify-content: center;
+
+      text-align: center;
+
+      box-shadow:
+        0 12px 35px
+        rgba(38, 91, 140, .08);
+
+      transition: .3s;
+    }
+
+    .price-card:hover {
+      transform: translateY(-7px);
+
+      box-shadow:
+        0 20px 45px
+        rgba(38, 91, 140, .16);
+    }
+
+    .price-card.featured {
+      border:
+        2px solid #087cf0;
+    }
+
+    .badge {
+      position: absolute;
+
+      top: 15px;
+
+      right: 15px;
+
+      background: #e5f1ff;
+
+      color: #075fc7;
+
+      font-size: 13px;
+
+      font-weight: 900;
+
+      padding: 6px 12px;
+
+      border-radius: 20px;
+    }
+
+
+    /* ==================================================
+       FOTO FOTOCOPY PADA HARGA
+    ================================================== */
+
+    .price-image {
+      width: 170px;
+
+      height: 120px;
+
+      overflow: hidden;
+
+      border-radius: 15px;
+
+      margin-bottom: 15px;
+
+      background: #f5f9ff;
+    }
+
+    .price-image img {
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+      display: block;
+
+      border-radius: 15px;
+
+      transition: .3s ease;
+    }
+
+    .price-card:hover
+    .price-image img {
+      transform: scale(1.06);
+    }
+
+
+    .price-icon {
+      font-size: 70px;
+
+      line-height: 1;
+
+      margin-bottom: 15px;
+    }
+
+    .price-card h3 {
+      font-size: 21px;
+
+      line-height: 1.25;
+
+      margin-bottom: 8px;
+
+      font-weight: 900;
+    }
+
+    .price-card strong {
+      color: #1265cf;
+
+      font-size: 32px;
+
+      line-height: 1.1;
+
+      font-weight: 900;
+    }
+
+    .price-card p {
+      color: #5f7899;
+
+      margin: 7px 0 18px;
+
+      font-size: 15px;
+    }
+
+    .price-card a {
+      background:
+        linear-gradient(
+          135deg,
+          #0785f4,
+          #126bd7
+        );
+
+      color: white;
+
+      font-weight: 900;
+
+      width: 70%;
+
+      padding: 12px;
+
+      border-radius: 14px;
+    }
+
+    .note {
+      text-align: center;
+
+      color: #607a99;
+
+      margin-top: 28px;
+    }
+
+
+    /* ==================================================
+       PESAN
+    ================================================== */
+
+    .order-section {
+      background: white;
+    }
+
+    .order-wrap {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 70px;
+
+      align-items: start;
+    }
+
+    .order-wrap h2 {
+      font-size:
+        clamp(34px, 4vw, 52px);
+
+      line-height: 1.1;
+
+      margin-bottom: 20px;
+    }
+
+    .order-wrap > div > p {
+      color: #607998;
+
+      font-size: 17px;
+    }
+
+    .steps {
+      margin-top: 30px;
+
+      display: grid;
+
+      gap: 15px;
+    }
+
+    .steps > div {
+      display: flex;
+
+      align-items: center;
+
+      gap: 15px;
+
+      padding: 15px;
+
+      background: #f3f8fd;
+
+      border-radius: 14px;
+    }
+
+    .steps b {
+      width: 45px;
+
+      height: 45px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: #087cf0;
+
+      color: white;
+    }
+
+
+    /* ==================================================
+       FORM
+    ================================================== */
+
+    .order-form {
+      background: #f4f9ff;
+
+      border: 1px solid #dceaf8;
+
+      border-radius: 24px;
+
+      padding: 30px;
+
+      box-shadow:
+        0 15px 40px
+        rgba(40, 90, 140, .08);
+    }
+
+    .order-form label {
+      display: block;
+
+      color: #18345b;
+
+      font-weight: 800;
+
+      margin-bottom: 18px;
+    }
+
+    .order-form input,
+    .order-form select,
+    .order-form textarea {
+      display: block;
+
+      width: 100%;
+
+      margin-top: 7px;
+
+      border:
+        1px solid #cddded;
+
+      background: white;
+
+      border-radius: 12px;
+
+      padding: 13px 14px;
+
+      font-size: 15px;
+
+      font-family: inherit;
+
+      outline: none;
+    }
+
+    .two-col {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 15px;
+    }
+
+    .full {
+      width: 100%;
+    }
+
+    .order-form small {
+      display: block;
+
+      margin-top: 12px;
+
+      color: #7186a0;
+
+      text-align: center;
+    }
+
+
+    /* ==================================================
+       KONTAK
+    ================================================== */
+
+    .contact-section {
+      background:
+        linear-gradient(
+          135deg,
+          #eaf6ff,
+          #f7fbff
+        );
+    }
+
+    .contact-grid {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 50px;
+
+      align-items: center;
+    }
+
+    .contact-grid h2 {
+      font-size:
+        clamp(35px, 4vw, 55px);
+
+      line-height: 1.1;
+
+      margin-bottom: 18px;
+    }
+
+    .contact-grid p {
+      color: #5f7899;
+
+      font-size: 17px;
+    }
+
+    .contact-box {
+      background: white;
+
+      padding: 30px;
+
+      border-radius: 22px;
+
+      box-shadow:
+        0 15px 40px
+        rgba(30, 90, 140, .10);
+    }
+
+    .contact-box p {
+      padding: 12px 0;
+
+      border-bottom:
+        1px solid #edf2f7;
+    }
+
+    .contact-box p:last-child {
+      border-bottom: 0;
+    }
+
+
+    /* ==================================================
+       FOOTER
+    ================================================== */
+
+    footer {
+      background: #071a41;
+
+      color: white;
+
+      padding: 30px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+    }
+
+    .footer-inner div {
+      display: flex;
+
+      flex-direction: column;
+    }
+
+    .footer-inner strong {
+      font-size: 24px;
+
+      color: #4da0ff;
+    }
+
+    .footer-inner span {
+      color: #a9bfdc;
+    }
+
+
+    /* ==================================================
+       RESPONSIVE
+    ================================================== */
+
+    @media (max-width: 1100px) {
+
+      .service-grid,
+      .price-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+    }
+
+
+    @media (max-width: 800px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero-grid,
+      .order-wrap,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy {
+        text-align: center;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .trust-row {
+        justify-content: center;
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .service-grid,
+      .price-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 65px 0;
+      }
+
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+      }
+
+      .service-image {
+        height: 190px;
+      }
+
+      .price-image {
+        width: 200px;
+
+        height: 140px;
+      }
+
+    }
+
+  </style>
+
 </head>
 
 
@@ -45,11 +973,9 @@
 
   <nav class="nav container">
 
-    <a class="brand"
-       href="#home">
+    <a class="brand" href="#home">
       MUCI
     </a>
-
 
     <div class="nav-links">
 
@@ -71,9 +997,7 @@
 
     </div>
 
-
-    <a class="nav-wa"
-       href="#pesan">
+    <a class="nav-wa" href="#pesan">
       Pesan Sekarang
     </a>
 
@@ -83,19 +1007,16 @@
   <div id="home"
        class="hero-grid container">
 
-
     <div class="hero-copy">
 
       <span class="eyebrow">
         PUSAT PRINT & FOTO COPY
       </span>
 
-
       <h1>
         Semua kebutuhan cetak Anda
         <span>ada di MUCI.</span>
       </h1>
-
 
       <p class="lead">
         Print dokumen, fotocopy, cetak foto,
@@ -103,7 +1024,6 @@
         bikin stempel flash dan cetak kartu
         dengan proses cepat dan hasil berkualitas.
       </p>
-
 
       <div class="hero-actions">
 
@@ -119,20 +1039,13 @@
 
       </div>
 
-
       <div class="trust-row">
 
-        <div>
-          ✓ Hasil berkualitas
-        </div>
+        <div>✓ Hasil berkualitas</div>
 
-        <div>
-          ✓ Proses cepat
-        </div>
+        <div>✓ Proses cepat</div>
 
-        <div>
-          ✓ Harga terjangkau
-        </div>
+        <div>✓ Harga terjangkau</div>
 
       </div>
 
@@ -166,7 +1079,6 @@
 
   <div class="container">
 
-
     <div class="section-heading">
 
       <span class="eyebrow">
@@ -192,53 +1104,18 @@
 
       <article class="service-card">
 
-        <div class="service-icon">
+        <div class="service-image">
 
-          <svg viewBox="0 0 120 120">
-
-            <rect x="25"
-                  y="35"
-                  width="62"
-                  height="55"
-                  rx="5"
-                  fill="#dbeafe"
-                  stroke="#1478e8"
-                  stroke-width="4"
-                  transform="rotate(-7 56 62)"/>
-
-            <rect x="34"
-                  y="25"
-                  width="62"
-                  height="55"
-                  rx="5"
-                  fill="white"
-                  stroke="#1478e8"
-                  stroke-width="4"/>
-
-            <path d="M48 45h32"
-                  stroke="#2d82e8"
-                  stroke-width="5"
-                  stroke-linecap="round"/>
-
-            <path d="M48 58h28"
-                  stroke="#2d82e8"
-                  stroke-width="5"
-                  stroke-linecap="round"/>
-
-            <path d="M48 70h22"
-                  stroke="#2d82e8"
-                  stroke-width="5"
-                  stroke-linecap="round"/>
-
-          </svg>
+          <img
+            src="fotocopy.png"
+            alt="Layanan Fotocopy MUCI"
+          >
 
         </div>
-
 
         <h3>
           Fotocopy
         </h3>
-
 
         <p>
           Hitam putih dan warna untuk
@@ -295,11 +1172,9 @@
 
         </div>
 
-
         <h3>
           Print Dokumen
         </h3>
-
 
         <p>
           Print tugas, surat, laporan,
@@ -354,11 +1229,9 @@
 
         </div>
 
-
         <h3>
           Cetak Foto
         </h3>
-
 
         <p>
           Cetak foto berbagai ukuran
@@ -417,11 +1290,9 @@
 
         </div>
 
-
         <h3>
           Pas Foto
         </h3>
-
 
         <p>
           Pas foto untuk sekolah,
@@ -473,11 +1344,9 @@
 
         </div>
 
-
         <h3>
           Laminating
         </h3>
-
 
         <p>
           Lindungi dokumen agar lebih
@@ -550,11 +1419,9 @@
 
         </div>
 
-
         <h3>
           Jilid
         </h3>
-
 
         <p>
           Jilid dokumen, tugas, laporan
@@ -614,11 +1481,9 @@
 
         </div>
 
-
         <h3>
           Bikin Stempel/Cap Flash
         </h3>
-
 
         <p>
           Pembuatan stempel atau cap flash
@@ -698,11 +1563,9 @@
 
         </div>
 
-
         <h3>
           Cetak Kartu ID Card / NPWP / BPJS
         </h3>
-
 
         <p>
           Cetak kartu ID Card, NPWP dan BPJS
@@ -729,7 +1592,6 @@
 
   <div class="container">
 
-
     <div class="section-heading">
 
       <span class="eyebrow">
@@ -755,8 +1617,13 @@
 
       <div class="price-card">
 
-        <div class="price-icon">
-          📄
+        <div class="price-image">
+
+          <img
+            src="fotocopy.png"
+            alt="Fotocopy MUCI"
+          >
+
         </div>
 
         <h3>
@@ -811,7 +1678,7 @@
 
 
 
-      <!-- FOTO -->
+      <!-- CETAK FOTO -->
 
       <div class="price-card">
 
@@ -955,7 +1822,7 @@
 
 
 
-      <!-- KARTU -->
+      <!-- ID CARD -->
 
       <div class="price-card">
 
@@ -1030,25 +1897,36 @@
       <div class="steps">
 
         <div>
+
           <b>01</b>
+
           <span>
             Isi jenis layanan dan jumlah.
           </span>
+
         </div>
 
+
         <div>
+
           <b>02</b>
+
           <span>
             Klik Kirim ke WhatsApp.
           </span>
+
         </div>
 
+
         <div>
+
           <b>03</b>
+
           <span>
             Tambahkan file atau desain
             melalui WhatsApp.
           </span>
+
         </div>
 
       </div>
@@ -1283,7 +2161,131 @@
 </footer>
 
 
-<script src="script.js"></script>
+
+<!-- ==================================================
+     WHATSAPP
+================================================== -->
+
+<script>
+
+  const NOMOR_WHATSAPP =
+    "6285185207306";
+
+
+  const HARGA_LAYANAN = {
+
+    "Fotocopy":
+      "Rp. 1.000 / 3 lembar",
+
+    "Print Dokumen":
+      "Rp. 2.000 / lembar",
+
+    "Cetak Foto":
+      "Mulai dari Rp. 3.000 / lembar",
+
+    "Pas Foto":
+      "Mulai dari Rp. 2.000 / set",
+
+    "Laminating":
+      "Mulai dari Rp. 3.000",
+
+    "Jilid":
+      "Mulai dari Rp. 3.000",
+
+    "Bikin Stempel/Cap Flash":
+      "Mulai dari Rp. 100.000",
+
+    "Cetak Kartu ID Card / NPWP / BPJS":
+      "Rp. 15.000 / kartu"
+
+  };
+
+
+  const orderForm =
+    document.getElementById(
+      "orderForm"
+    );
+
+
+  if (orderForm) {
+
+    orderForm.addEventListener(
+      "submit",
+      function(event) {
+
+        event.preventDefault();
+
+
+        const nama =
+          document
+            .getElementById("nama")
+            .value
+            .trim();
+
+
+        const layanan =
+          document
+            .getElementById("layananSelect")
+            .value;
+
+
+        const jumlah =
+          document
+            .getElementById("jumlah")
+            .value;
+
+
+        const ukuran =
+          document
+            .getElementById("ukuran")
+            .value
+            .trim() || "-";
+
+
+        const catatan =
+          document
+            .getElementById("catatan")
+            .value
+            .trim() || "-";
+
+
+        const harga =
+          HARGA_LAYANAN[layanan] ||
+          "Menyesuaikan pesanan";
+
+
+        const pesan =
+`Halo MUCI, saya ingin memesan.
+
+Nama: ${nama}
+Layanan: ${layanan}
+Jumlah: ${jumlah}
+Ukuran: ${ukuran}
+Harga: ${harga}
+Catatan: ${catatan}
+
+Untuk pesanan stempel atau cetak kartu ID Card / NPWP / BPJS, saya akan mengirimkan desain atau contoh melalui WhatsApp.
+
+Terima kasih.`;
+
+
+        const url =
+          `https://wa.me/${NOMOR_WHATSAPP}?text=${encodeURIComponent(pesan)}`;
+
+
+        window.open(
+          url,
+          "_blank"
+        );
+
+      }
+
+    );
+
+  }
+
+</script>
+
 
 </body>
 </html>
