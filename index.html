@@ -1,3 +1,115 @@
+kemarin 16.15
+
+Mantap 👍 sekarang proses “Complete your Business Profile” sudah selesai.
+
+Pada layar terlihat:
+
+You can add more later
+
+Artinya Google sudah menyelesaikan tahap pengisian awal dan Anda masih bisa menambahkan informasi lain nanti.
+
+👉 Sekarang klik Go to profile
+
+Setelah kembali ke profil Toko MUCI, kita bisa melihat apakah Profile strength sudah meningkat.
+
+Kemudian kirim screenshot halaman profilnya kepada saya.
+
+Jangan klik penawaran Google Ads atau Google Workspace lagi. Kita fokus memperkuat profil MUCI secara gratis.
+
+hari ini 9.23
+tambahkan bikin stempel/cap 
+Teks yang ditempel (1).txt
+Dokumen
+buatkan codinggan tersebut 
+
+
+Tentu. Kita tambahkan layanan Bikin Stempel / Cap ke website MUCI, lengkap dengan kartu harga dan pilihan pada form pemesanan.
+
+1. Tambahkan kartu harga "Bikin Stempel"
+
+Di index.html, cari bagian kartu Jilid. Letaknya di bagian Daftar Harga.
+
+Tambahkan kode berikut setelah kartu Jilid:
+
+<!-- Bikin Stempel -->
+<div class="price-card">
+  <h3>Bikin Stempel</h3>
+  <div class="price">Mulai Rp50.000</div>
+  <div class="unit">/ buah</div>
+  <p>Stempel biasa & custom sesuai kebutuhan.</p>
+  <a href="#pesan" class="price-link">Pesan</a>
+</div>
+
+Kalau ingin harga yang lebih fleksibel, bisa menggunakan:
+
+<!-- Bikin Stempel -->
+<div class="price-card">
+  <h3>Bikin Stempel / Cap</h3>
+  <div class="price">Mulai Rp50.000</div>
+  <div class="unit">/ buah</div>
+  <p>Harga menyesuaikan ukuran dan jenis stempel.</p>
+  <a href="#pesan" class="price-link">Pesan</a>
+</div>
+
+Saya lebih menyarankan versi kedua, karena harga stempel biasanya tergantung ukuran dan model.
+
+2. Tambahkan pilihan Stempel pada form pemesanan
+
+Cari bagian seperti ini di index.html:
+
+<select id="layananSelect" name="layanan" required>
+
+Di dalamnya kemungkinan ada pilihan:
+
+<option value="Fotocopy">Fotocopy</option>
+<option value="Print Dokumen">Print Dokumen</option>
+<option value="Cetak Foto">Cetak Foto</option>
+<option value="Pas Foto">Pas Foto</option>
+<option value="Laminating">Laminating</option>
+<option value="Jilid">Jilid</option>
+
+Tambahkan:
+
+<option value="Bikin Stempel / Cap">Bikin Stempel / Cap</option>
+
+Sehingga menjadi:
+
+<select id="layananSelect" name="layanan" required>
+  <option value="">Pilih layanan</option>
+  <option value="Fotocopy">Fotocopy</option>
+  <option value="Print Dokumen">Print Dokumen</option>
+  <option value="Cetak Foto">Cetak Foto</option>
+  <option value="Pas Foto">Pas Foto</option>
+  <option value="Laminating">Laminating</option>
+  <option value="Jilid">Jilid</option>
+  <option value="Bikin Stempel / Cap">Bikin Stempel / Cap</option>
+</select>
+3. Hasilnya
+
+Daftar harga MUCI nantinya menjadi:
+
+Layanan	Harga
+Fotocopy	Rp1.000 / 3 lembar
+Print Dokumen	Rp2.000 / lembar
+Cetak Foto	Mulai Rp3.000
+Pas Foto	Mulai Rp2.000
+Laminating	Mulai Rp3.000
+Jilid	Mulai Rp3.000
+Bikin Stempel / Cap	Mulai Rp50.000
+
+Dan ketika pelanggan memilih Bikin Stempel / Cap, pesanan akan ikut dikirim ke WhatsApp MUCI melalui form yang sudah kita buat.
+
+Catatan: saya memakai harga mulai Rp50.000 sebagai contoh. Kalau harga stempel MUCI sebenarnya berbeda, beri saya harga yang diinginkan dan saya sesuaikan.
+
+Kalau mau, kita juga bisa sekalian tambahkan gambar/icon stempel 🖋️ pada kartu "Bikin Stempel" agar tampilannya lebih menarik.
+
+buatkan code tersebut menjadi 1 agar tinggal saya copy ke github
+
+Bisa. Agar tidak perlu mencari-cari bagian kode, saya buatkan 1 blok kode yang bisa langsung Anda copy ke GitHub.
+
+Namun, karena website MUCI Anda sudah memiliki index.html lengkap, jangan hapus seluruh index.html. Kita cukup mengganti bagian Daftar Harga dengan kode di bawah ini.
+
+Kode Daftar Harga MUCI — sudah ditambah Bikin Stempel/Cap
 <!-- =========================
      DAFTAR HARGA MUCI
 ========================= -->
@@ -211,3 +323,690 @@ Terima kasih 🙏`;
   });
 }
 </script>
+⚠️ Tapi ada satu hal penting
+
+Kode di atas adalah kode gabungan, bukan berarti seluruh index.html lama harus dihapus.
+
+Karena website Anda sudah bagus seperti pada gambar, lebih aman kita hanya menambahkan Stempel, supaya desain yang sudah jadi tidak rusak.
+
+Untuk harga stempel, saya masukkan Mulai Rp50.000. Kalau harga sebenarnya berbeda, tinggal saya ubah.
+
+Kalau Anda ingin, kirim/salin isi index.html terbaru ke sini, lalu saya bisa buatkan 1 kode index.html lengkap dari awal sampai akhir, sudah termasuk Stempel/Cap + WhatsApp + semua layanan MUCI, sehingga Anda benar-benar tinggal Ctrl+A → Ctrl+V → Commit changes di GitHub.
+
+ganti harga Stempel tersebut menjadi Mulai dari Rp. 100.000
+
+Siap. Harga Bikin Stempel / Cap diganti menjadi:
+
+<!-- Bikin Stempel / Cap -->
+<div class="price-card">
+  <h3>🖋️ Bikin Stempel / Cap</h3>
+  <div class="price">Mulai dari Rp. 100.000</div>
+  <div class="unit">/ buah</div>
+  <p>Stempel custom sesuai kebutuhan dan desain.</p>
+  <a href="#pesan" class="price-link">Pesan</a>
+</div>
+
+Jadi yang tampil di website:
+
+🖋️ Bikin Stempel / Cap
+
+Mulai dari Rp. 100.000
+/ buah
+
+Layanan lainnya tetap sama.
+
+Pustaka file Anda penuh. File baru tidak akan disimpan ke Pustaka Anda, tetapi masih bisa digunakan di obrolan ini. Untuk menyimpan file baru nanti, kosongkan ruang atau tingkatkan penyimpanan Anda.
+Upgrade
+Manage
+
+<!DOCTYPE html>
+
+<html lang="id"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MUCI — Pusat Print & Foto Copy</title>
+
+<meta name="description" content="MUCI menyediakan jasa print, fotocopy, cetak foto, pas foto, laminating, jilid dan kebutuhan ATK di Muara Enim. Cepat, mudah dan berkualitas.">
+
+<!-- Preview WhatsApp / Facebook -->
+
+<meta property="og:title" content="MUCI — Jasa Print, Foto Copy & Cetak Foto"> <meta property="og:description" content="Solusi cetak dokumen, foto, laminating, jilid dan kebutuhan ATK di Muara Enim."> <meta property="og:image" content="https://ranggamuci.github.io/TokoMuci-website/muci-preview.jpg"> <meta property="og:url" content="https://ranggamuci.github.io/TokoMuci-website/"> <meta property="og:type" content="website">
+
+<link rel="stylesheet" href="style.css"> </head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="hero">
+
+<nav class="nav container">
+
+  <a class="brand" href="#home" aria-label="MUCI">
+    MUCI
+  </a>
+
+  <div class="nav-links">
+    <a href="#layanan">Layanan</a>
+    <a href="#harga">Harga</a>
+    <a href="#pesan">Pesan</a>
+    <a href="#kontak">Kontak</a>
+  </div>
+
+  <a class="nav-wa" href="#pesan">
+    Pesan Sekarang
+  </a>
+
+</nav>
+
+
+<div id="home" class="hero-grid container">
+
+  <div class="hero-copy">
+
+    <span class="eyebrow">
+      PUSAT PRINT & FOTO COPY
+    </span>
+
+    <h1>
+      Semua kebutuhan cetak Anda
+      <span>ada di MUCI.</span>
+    </h1>
+
+    <p class="lead">
+      Print dokumen, fotocopy, cetak foto, pas foto,
+      laminating, jilid, dan kebutuhan ATK dengan
+      proses cepat dan hasil berkualitas.
+    </p>
+
+    <div class="hero-actions">
+
+      <a class="btn primary" href="#pesan">
+        🖨️ Buat Pesanan
+      </a>
+
+      <a class="btn secondary" href="#layanan">
+        Lihat Layanan
+      </a>
+
+    </div>
+
+    <div class="trust-row">
+
+      <div>✓ Hasil berkualitas</div>
+      <div>✓ Proses cepat</div>
+      <div>✓ Harga terjangkau</div>
+
+    </div>
+
+  </div>
+
+
+  <div class="hero-card">
+
+    <img
+      src="muci-preview.jpg"
+      alt="Layanan MUCI Print dan Foto Copy"
+    >
+
+  </div>
+
+</div>
+
+</header>
+
+<main>
+
+<!-- ================= LAYANAN ================= -->
+<section id="layanan" class="section">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <span class="eyebrow">
+        LAYANAN KAMI
+      </span>
+
+      <h2>
+        Butuh cetak apa hari ini?
+      </h2>
+
+      <p>
+        Pilih layanan yang Anda perlukan,
+        lalu kirim detail pesanan melalui WhatsApp.
+      </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+      <article class="service-card">
+
+        <div class="icon">📄</div>
+
+        <h3>Fotocopy</h3>
+
+        <p>
+          Hitam putih dan warna untuk
+          dokumen harian.
+        </p>
+
+      </article>
+
+
+      <article class="service-card">
+
+        <div class="icon">🖨️</div>
+
+        <h3>Print Dokumen</h3>
+
+        <p>
+          Print tugas, surat, laporan,
+          PDF dan dokumen lainnya.
+        </p>
+
+      </article>
+
+
+      <article class="service-card">
+
+        <div class="icon">📸</div>
+
+        <h3>Cetak Foto</h3>
+
+        <p>
+          Cetak foto berbagai ukuran
+          sesuai kebutuhan.
+        </p>
+
+      </article>
+
+
+      <article class="service-card">
+
+        <div class="icon">🪪</div>
+
+        <h3>Pas Foto</h3>
+
+        <p>
+          Pas foto untuk sekolah,
+          kerja, administrasi dan dokumen.
+        </p>
+
+      </article>
+
+
+      <article class="service-card">
+
+        <div class="icon">📑</div>
+
+        <h3>Laminating</h3>
+
+        <p>
+          Lindungi dokumen agar lebih
+          rapi dan tahan lama.
+        </p>
+
+      </article>
+
+
+      <article class="service-card">
+
+        <div class="icon">📚</div>
+
+        <h3>Jilid</h3>
+
+        <p>
+          Jilid dokumen, tugas, laporan
+          dan kebutuhan lainnya.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= HARGA ================= -->
+<section id="harga" class="section price-section">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <span class="eyebrow">
+        DAFTAR HARGA
+      </span>
+
+      <h2>
+        Daftar Harga MUCI
+      </h2>
+
+      <p>
+        Harga layanan MUCI yang transparan
+        dan terjangkau.
+      </p>
+
+    </div>
+
+
+    <div class="price-grid">
+
+
+      <!-- Fotocopy -->
+      <div class="price-card">
+
+        <h3>
+          Fotocopy
+        </h3>
+
+        <strong>
+          Rp 1.000
+        </strong>
+
+        <p>
+          / 3 lembar
+        </p>
+
+        <a href="#pesan">
+          Pesan
+        </a>
+
+      </div>
+
+
+      <!-- Print -->
+      <div class="price-card featured">
+
+        <span class="badge">
+          POPULER
+        </span>
+
+        <h3>
+          Print Dokumen
+        </h3>
+
+        <strong>
+          Rp 2.000
+        </strong>
+
+        <p>
+          / lembar
+        </p>
+
+        <a href="#pesan">
+          Pesan
+        </a>
+
+      </div>
+
+
+      <!-- Cetak Foto -->
+      <div class="price-card">
+
+        <h3>
+          Cetak Foto
+        </h3>
+
+        <strong>
+          Mulai Rp 3.000
+        </strong>
+
+        <p>
+          / lembar
+        </p>
+
+        <a href="#pesan">
+          Pesan
+        </a>
+
+      </div>
+
+
+      <!-- Pas Foto -->
+      <div class="price-card">
+
+        <h3>
+          Pas Foto
+        </h3>
+
+        <strong>
+          Mulai Rp 2.000
+        </strong>
+
+        <p>
+          / set
+        </p>
+
+        <a href="#pesan">
+          Pesan
+        </a>
+
+      </div>
+
+
+      <!-- Laminating -->
+      <div class="price-card">
+
+        <h3>
+          Laminating
+        </h3>
+
+        <strong>
+          Mulai Rp 3.000
+        </strong>
+
+        <p>
+          KTP Rp 3.000 • A4/F4 Rp 5.000
+        </p>
+
+        <a href="#pesan">
+          Pesan
+        </a>
+
+      </div>
+
+
+      <!-- Jilid -->
+      <div class="price-card">
+
+        <h3>
+          Jilid
+        </h3>
+
+        <strong>
+          Mulai Rp 3.000
+        </strong>
+
+        <p>
+          Tergantung ketebalan
+        </p>
+
+        <a href="#pesan">
+          Pesan
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+    <p class="note">
+      * Harga dapat berbeda sesuai jenis,
+      ukuran, bahan, dan jumlah pesanan.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- ================= PEMESANAN ================= -->
+<section id="pesan" class="section order-section">
+
+  <div class="container order-wrap">
+
+
+    <div>
+
+      <span class="eyebrow">
+        PEMESANAN
+      </span>
+
+      <h2>
+        Kirim detail pesanan ke WhatsApp
+      </h2>
+
+      <p>
+        Isi formulir. Setelah tombol ditekan,
+        WhatsApp akan terbuka dengan pesan
+        yang sudah tersusun. Untuk file cetak,
+        pelanggan dapat melampirkannya langsung
+        di WhatsApp.
+      </p>
+
+
+      <div class="steps">
+
+        <div>
+          <b>01</b>
+          <span>
+            Isi jenis layanan dan jumlah.
+          </span>
+        </div>
+
+        <div>
+          <b>02</b>
+          <span>
+            Klik “Kirim ke WhatsApp”.
+          </span>
+        </div>
+
+        <div>
+          <b>03</b>
+          <span>
+            Tambahkan file yang ingin
+            dicetak di WhatsApp.
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <form id="orderForm" class="order-form">
+
+
+      <label>
+        Nama
+
+        <input
+          id="nama"
+          type="text"
+          placeholder="Nama Anda"
+          required
+        >
+
+      </label>
+
+
+      <label>
+        Jenis layanan
+
+        <select
+          id="layananSelect"
+          required
+        >
+
+          <option value="">
+            Pilih layanan
+          </option>
+
+          <option>
+            Fotocopy
+          </option>
+
+          <option>
+            Print Dokumen
+          </option>
+
+          <option>
+            Cetak Foto
+          </option>
+
+          <option>
+            Pas Foto
+          </option>
+
+          <option>
+            Laminating
+          </option>
+
+          <option>
+            Jilid
+          </option>
+
+          <option>
+            Lainnya
+          </option>
+
+        </select>
+
+      </label>
+
+
+      <div class="two-col">
+
+        <label>
+          Jumlah
+
+          <input
+            id="jumlah"
+            type="number"
+            min="1"
+            value="1"
+            required
+          >
+
+        </label>
+
+
+        <label>
+          Ukuran
+
+          <input
+            id="ukuran"
+            type="text"
+            placeholder="A4 / 4R / dll."
+          >
+
+        </label>
+
+      </div>
+
+
+      <label>
+        Catatan
+
+        <textarea
+          id="catatan"
+          rows="4"
+          placeholder="Warna, jenis kertas, finishing, dll."
+        ></textarea>
+
+      </label>
+
+
+      <button
+        class="btn primary full"
+        type="submit"
+      >
+        💬 Kirim Pesanan ke WhatsApp
+      </button>
+
+
+      <small>
+        File tidak diunggah ke website ini.
+        Setelah WhatsApp terbuka, lampirkan
+        file cetak secara manual.
+      </small>
+
+    </form>
+
+  </div>
+
+</section>
+
+
+<!-- ================= KONTAK ================= -->
+<section id="kontak" class="section contact-section">
+
+  <div class="container contact-grid">
+
+
+    <div>
+
+      <span class="eyebrow">
+        MUCI
+      </span>
+
+      <h2>
+        Cetak lebih mudah, lebih dekat.
+      </h2>
+
+      <p>
+        Butuh print, fotocopy, cetak foto,
+        laminating, atau jilid?
+        Hubungi MUCI untuk kebutuhan cetak Anda.
+      </p>
+
+    </div>
+
+
+    <div class="contact-box">
+
+      <p>
+        📱 <b>WhatsApp</b><br>
+        <span id="displayPhone">
+          0851-8520-7306
+        </span>
+      </p>
+
+
+      <p>
+        📍 <b>Alamat</b><br>
+        Jl. Jend. Bambang Utoyo No. 38,
+        Muara Enim
+      </p>
+
+
+      <p>
+        🕐 <b>Jam Buka</b><br>
+        Mulai pukul 06.00 pagi
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="container footer-inner">
+
+  <div>
+
+    <strong>
+      MUCI
+    </strong>
+
+    <span>
+      Pusat Print & Foto Copy
+    </span>
+
+  </div>
+
+  <span>
+    © 2026 MUCI
+  </span>
+
+</div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body> </html>
+
+Tutup
