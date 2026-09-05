@@ -8,44 +8,31 @@
   padding: 0;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
 
-
 body {
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
+  font-family: Arial, Helvetica, sans-serif;
   color: #071a41;
-
   background: #eef7ff;
-
   line-height: 1.6;
 }
-
 
 img {
   max-width: 100%;
   display: block;
 }
 
-
 a {
   text-decoration: none;
   color: inherit;
 }
 
-
 .container {
   width: min(1400px, 92%);
-
   margin: auto;
 }
-
 
 
 /* ==================================================
@@ -75,7 +62,6 @@ a {
   padding-bottom: 70px;
 }
 
-
 .nav {
   min-height: 80px;
 
@@ -86,40 +72,31 @@ a {
   gap: 30px;
 }
 
-
 .brand {
   font-size: 30px;
   font-weight: 900;
-
   color: #0868d7;
-
   letter-spacing: 2px;
 }
-
 
 .nav-links {
   display: flex;
   gap: 32px;
 
   font-weight: 700;
-
   color: #20385d;
 }
 
-
 .nav-links a {
-  transition: .25s;
+  transition: 0.25s;
 }
-
 
 .nav-links a:hover {
   color: #0874e8;
 }
 
-
 .nav-wa {
   background: #087cf0;
-
   color: white;
 
   padding: 12px 22px;
@@ -129,9 +106,9 @@ a {
   font-weight: 800;
 
   box-shadow:
-    0 8px 20px rgba(8, 124, 240, .20);
+    0 8px 20px
+    rgba(8, 124, 240, 0.20);
 }
-
 
 
 /* ==================================================
@@ -152,6 +129,9 @@ a {
   gap: 60px;
 }
 
+.hero-copy {
+  position: relative;
+}
 
 .eyebrow {
   display: inline-block;
@@ -167,7 +147,6 @@ a {
   margin-bottom: 15px;
 }
 
-
 .hero h1 {
   font-size:
     clamp(42px, 5vw, 72px);
@@ -179,11 +158,9 @@ a {
   margin-bottom: 25px;
 }
 
-
 .hero h1 span {
   color: #0874e8;
 }
-
 
 .lead {
   color: #5d7697;
@@ -195,7 +172,6 @@ a {
   margin-bottom: 30px;
 }
 
-
 .hero-actions {
   display: flex;
 
@@ -203,7 +179,6 @@ a {
 
   flex-wrap: wrap;
 }
-
 
 .btn {
   display: inline-flex;
@@ -224,15 +199,13 @@ a {
   cursor: pointer;
 
   transition:
-    transform .25s,
-    box-shadow .25s;
+    transform 0.25s,
+    box-shadow 0.25s;
 }
-
 
 .btn:hover {
   transform: translateY(-3px);
 }
-
 
 .btn.primary {
   color: white;
@@ -246,9 +219,8 @@ a {
 
   box-shadow:
     0 10px 25px
-    rgba(8, 124, 240, .22);
+    rgba(8, 124, 240, 0.22);
 }
-
 
 .btn.secondary {
   background: white;
@@ -257,7 +229,6 @@ a {
 
   border: 2px solid #d4e6fa;
 }
-
 
 .trust-row {
   display: flex;
@@ -275,7 +246,6 @@ a {
   font-weight: 700;
 }
 
-
 .hero-card {
   background: white;
 
@@ -285,16 +255,13 @@ a {
 
   box-shadow:
     0 25px 70px
-    rgba(26, 88, 150, .12);
+    rgba(26, 88, 150, 0.12);
 }
-
 
 .hero-card img {
   border-radius: 20px;
-
   width: 100%;
 }
-
 
 
 /* ==================================================
@@ -305,7 +272,6 @@ a {
   padding: 90px 0;
 }
 
-
 .section-heading {
   text-align: center;
 
@@ -314,7 +280,6 @@ a {
   margin:
     0 auto 45px;
 }
-
 
 .section-heading h2 {
   font-size:
@@ -327,13 +292,11 @@ a {
   font-weight: 900;
 }
 
-
 .section-heading p {
   color: #607a9b;
 
   font-size: 18px;
 }
-
 
 
 /* ==================================================
@@ -349,7 +312,6 @@ a {
   gap: 22px;
 }
 
-
 .service-card {
   background: white;
 
@@ -363,22 +325,25 @@ a {
 
   box-shadow:
     0 12px 35px
-    rgba(38, 91, 140, .08);
+    rgba(38, 91, 140, 0.08);
 
   transition:
-    transform .3s,
-    box-shadow .3s;
+    transform 0.3s,
+    box-shadow 0.3s;
 }
-
 
 .service-card:hover {
   transform: translateY(-8px);
 
   box-shadow:
     0 20px 45px
-    rgba(38, 91, 140, .16);
+    rgba(38, 91, 140, 0.16);
 }
 
+
+/* ==================================================
+   IKON LAYANAN
+================================================== */
 
 .service-icon {
   width: 145px;
@@ -395,7 +360,6 @@ a {
   position: relative;
 }
 
-
 .service-icon svg {
   width: 100%;
   height: 100%;
@@ -403,14 +367,13 @@ a {
   filter:
     drop-shadow(
       0 9px 7px
-      rgba(24, 94, 170, .15)
+      rgba(24, 94, 170, 0.15)
     );
 
   transition:
-    transform .3s,
-    filter .3s;
+    transform 0.3s,
+    filter 0.3s;
 }
-
 
 .service-card:hover
 .service-icon svg {
@@ -421,7 +384,56 @@ a {
   filter:
     drop-shadow(
       0 15px 12px
-      rgba(24, 94, 170, .20)
+      rgba(24, 94, 170, 0.20)
+    );
+}
+
+
+/* ==================================================
+   FOTO FOTOCOPY PADA LAYANAN
+================================================== */
+
+.service-image {
+  width: 100%;
+  height: 145px;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  margin-bottom: 15px;
+
+  background: #f5f9ff;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  border-radius: 16px;
+
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.service-card:hover
+.service-image img {
+  transform: scale(1.05);
+
+  filter:
+    drop-shadow(
+      0 8px 12px
+      rgba(20, 90, 170, 0.18)
     );
 }
 
@@ -438,7 +450,6 @@ a {
   font-weight: 900;
 }
 
-
 .service-card p {
   text-align: center;
 
@@ -446,7 +457,6 @@ a {
 
   font-size: 15px;
 }
-
 
 
 /* ==================================================
@@ -462,7 +472,6 @@ a {
     );
 }
 
-
 .price-grid {
   display: grid;
 
@@ -471,7 +480,6 @@ a {
 
   gap: 22px;
 }
-
 
 .price-card {
   position: relative;
@@ -498,28 +506,25 @@ a {
 
   box-shadow:
     0 12px 35px
-    rgba(38, 91, 140, .08);
+    rgba(38, 91, 140, 0.08);
 
   transition:
-    transform .3s,
-    box-shadow .3s;
+    transform 0.3s,
+    box-shadow 0.3s;
 }
-
 
 .price-card:hover {
   transform: translateY(-7px);
 
   box-shadow:
     0 20px 45px
-    rgba(38, 91, 140, .16);
+    rgba(38, 91, 140, 0.16);
 }
-
 
 .price-card.featured {
   border:
     2px solid #087cf0;
 }
-
 
 .badge {
   position: absolute;
@@ -541,6 +546,59 @@ a {
 }
 
 
+/* ==================================================
+   FOTO FOTOCOPY PADA DAFTAR HARGA
+================================================== */
+
+.price-image {
+  width: 170px;
+  height: 125px;
+
+  overflow: hidden;
+
+  border-radius: 15px;
+
+  margin-bottom: 15px;
+
+  background: #f5f9ff;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.price-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  border-radius: 15px;
+
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.price-card:hover
+.price-image img {
+  transform: scale(1.06);
+
+  filter:
+    drop-shadow(
+      0 8px 10px
+      rgba(20, 90, 170, 0.18)
+    );
+}
+
+
+/* ==================================================
+   IKON HARGA LAINNYA
+================================================== */
+
 .price-icon {
   font-size: 70px;
 
@@ -551,10 +609,9 @@ a {
   filter:
     drop-shadow(
       0 7px 6px
-      rgba(20, 90, 170, .12)
+      rgba(20, 90, 170, 0.12)
     );
 }
-
 
 .price-card h3 {
   font-size: 21px;
@@ -565,7 +622,6 @@ a {
 
   font-weight: 900;
 }
-
 
 .price-card strong {
   color: #1265cf;
@@ -579,7 +635,6 @@ a {
   margin-top: 4px;
 }
 
-
 .price-card p {
   color: #5f7899;
 
@@ -587,7 +642,6 @@ a {
 
   font-size: 15px;
 }
-
 
 .price-card a {
   background:
@@ -609,16 +663,14 @@ a {
 
   box-shadow:
     0 8px 20px
-    rgba(8, 124, 240, .20);
+    rgba(8, 124, 240, 0.20);
 
-  transition: .25s;
+  transition: 0.25s;
 }
-
 
 .price-card a:hover {
   transform: translateY(-3px);
 }
-
 
 .note {
   text-align: center;
@@ -629,15 +681,13 @@ a {
 }
 
 
-
 /* ==================================================
-   PESAN
+   PEMESANAN
 ================================================== */
 
 .order-section {
   background: white;
 }
-
 
 .order-wrap {
   display: grid;
@@ -651,7 +701,6 @@ a {
   align-items: start;
 }
 
-
 .order-wrap h2 {
   font-size:
     clamp(34px, 4vw, 52px);
@@ -661,7 +710,6 @@ a {
   margin-bottom: 20px;
 }
 
-
 .order-wrap > div > p {
   color: #607998;
 
@@ -670,7 +718,6 @@ a {
   max-width: 600px;
 }
 
-
 .steps {
   margin-top: 30px;
 
@@ -678,7 +725,6 @@ a {
 
   gap: 15px;
 }
-
 
 .steps > div {
   display: flex;
@@ -693,7 +739,6 @@ a {
 
   border-radius: 14px;
 }
-
 
 .steps b {
   width: 45px;
@@ -711,13 +756,11 @@ a {
   color: white;
 }
 
-
 .steps span {
   color: #536f90;
 
   font-weight: 700;
 }
-
 
 
 /* ==================================================
@@ -735,9 +778,8 @@ a {
 
   box-shadow:
     0 15px 40px
-    rgba(40, 90, 140, .08);
+    rgba(40, 90, 140, 0.08);
 }
-
 
 .order-form label {
   display: block;
@@ -748,7 +790,6 @@ a {
 
   margin-bottom: 18px;
 }
-
 
 .order-form input,
 .order-form select,
@@ -777,7 +818,6 @@ a {
   color: #17365f;
 }
 
-
 .order-form input:focus,
 .order-form select:focus,
 .order-form textarea:focus {
@@ -785,9 +825,8 @@ a {
 
   box-shadow:
     0 0 0 3px
-    rgba(8, 124, 240, .10);
+    rgba(8, 124, 240, 0.10);
 }
-
 
 .two-col {
   display: grid;
@@ -798,11 +837,9 @@ a {
   gap: 15px;
 }
 
-
 .full {
   width: 100%;
 }
-
 
 .order-form small {
   display: block;
@@ -813,7 +850,6 @@ a {
 
   text-align: center;
 }
-
 
 
 /* ==================================================
@@ -829,7 +865,6 @@ a {
     );
 }
 
-
 .contact-grid {
   display: grid;
 
@@ -842,7 +877,6 @@ a {
   align-items: center;
 }
 
-
 .contact-grid h2 {
   font-size:
     clamp(35px, 4vw, 55px);
@@ -852,13 +886,11 @@ a {
   margin-bottom: 18px;
 }
 
-
 .contact-grid p {
   color: #5f7899;
 
   font-size: 17px;
 }
-
 
 .contact-box {
   background: white;
@@ -869,9 +901,8 @@ a {
 
   box-shadow:
     0 15px 40px
-    rgba(30, 90, 140, .10);
+    rgba(30, 90, 140, 0.10);
 }
-
 
 .contact-box p {
   padding: 12px 0;
@@ -880,11 +911,9 @@ a {
     1px solid #edf2f7;
 }
 
-
 .contact-box p:last-child {
   border-bottom: 0;
 }
-
 
 
 /* ==================================================
@@ -899,7 +928,6 @@ footer {
   padding: 30px 0;
 }
 
-
 .footer-inner {
   display: flex;
 
@@ -910,13 +938,11 @@ footer {
   gap: 20px;
 }
 
-
 .footer-inner div {
   display: flex;
 
   flex-direction: column;
 }
-
 
 .footer-inner strong {
   font-size: 24px;
@@ -924,11 +950,9 @@ footer {
   color: #4da0ff;
 }
 
-
 .footer-inner span {
   color: #a9bfdc;
 }
-
 
 
 /* ==================================================
@@ -952,33 +976,27 @@ footer {
     display: none;
   }
 
-
   .hero-grid,
   .order-wrap,
   .contact-grid {
     grid-template-columns: 1fr;
   }
 
-
   .hero {
     padding-bottom: 50px;
   }
-
 
   .hero-copy {
     text-align: center;
   }
 
-
   .hero-actions {
     justify-content: center;
   }
 
-
   .trust-row {
     justify-content: center;
   }
-
 
   .hero-card {
     max-width: 650px;
@@ -995,11 +1013,9 @@ footer {
     min-height: 70px;
   }
 
-
   .brand {
     font-size: 25px;
   }
-
 
   .nav-wa {
     padding: 9px 13px;
@@ -1007,17 +1023,14 @@ footer {
     font-size: 13px;
   }
 
-
   .service-grid,
   .price-grid {
     grid-template-columns: 1fr;
   }
 
-
   .section {
     padding: 65px 0;
   }
-
 
   .service-card,
   .price-card {
@@ -1026,16 +1039,27 @@ footer {
     padding: 28px 22px;
   }
 
-
   .two-col {
     grid-template-columns: 1fr;
   }
-
 
   .footer-inner {
     flex-direction: column;
 
     text-align: center;
+  }
+
+  .service-image {
+    height: 180px;
+  }
+
+  .service-image img {
+    height: 180px;
+  }
+
+  .price-image {
+    width: 200px;
+    height: 140px;
   }
 
 }
