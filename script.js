@@ -1,10 +1,5 @@
 const NOMOR_WHATSAPP = "6285185207306";
 
-
-/* ===============================
-   DAFTAR HARGA LAYANAN
-================================ */
-
 const HARGA_LAYANAN = {
 
   "Fotocopy":
@@ -26,22 +21,19 @@ const HARGA_LAYANAN = {
     "Mulai dari Rp. 3.000",
 
   "Bikin Stempel/Cap Flash":
-    "Mulai dari Rp. 100.000"
+    "Mulai dari Rp. 100.000",
+
+  "Cetak Kartu ID Card / NPWP / BPJS":
+    "Rp. 15.000 / kartu"
 
 };
 
-
-
-/* ===============================
-   FORM PEMESANAN
-================================ */
 
 const orderForm =
   document.getElementById("orderForm");
 
 
 if (orderForm) {
-
 
   orderForm.addEventListener(
     "submit",
@@ -50,57 +42,38 @@ if (orderForm) {
       e.preventDefault();
 
 
-      /* ===============================
-         AMBIL DATA FORM
-      ================================= */
-
       const nama =
-        document
-          .getElementById("nama")
-          .value
-          .trim();
+        document.getElementById("nama")
+          .value.trim();
 
 
       const layanan =
-        document
-          .getElementById("layananSelect")
+        document.getElementById("layananSelect")
           .value;
 
 
       const jumlah =
-        document
-          .getElementById("jumlah")
+        document.getElementById("jumlah")
           .value;
 
 
       const ukuran =
-        document
-          .getElementById("ukuran")
-          .value
-          .trim() || "-";
+        document.getElementById("ukuran")
+          .value.trim() || "-";
 
 
       const catatan =
-        document
-          .getElementById("catatan")
-          .value
-          .trim() || "-";
+        document.getElementById("catatan")
+          .value.trim() || "-";
 
-
-      /* ===============================
-         AMBIL HARGA
-      ================================= */
 
       const harga =
-        HARGA_LAYANAN[layanan]
-        || "Menyesuaikan pesanan";
+        HARGA_LAYANAN[layanan] ||
+        "Menyesuaikan pesanan";
 
-
-      /* ===============================
-         PESAN WHATSAPP
-      ================================= */
 
       const pesan =
+
 `Halo MUCI, saya ingin memesan.
 
 Nama: ${nama}
@@ -110,22 +83,14 @@ Ukuran: ${ukuran}
 Harga: ${harga}
 Catatan: ${catatan}
 
-Untuk pesanan Bikin Stempel/Cap Flash, saya akan mengirimkan desain, tulisan, ukuran, atau contoh stempel melalui WhatsApp.
+Untuk pesanan kartu ID Card / NPWP / BPJS, saya akan mengirimkan desain atau contoh kartu melalui WhatsApp.
 
 Terima kasih.`;
 
 
-      /* ===============================
-         BUAT LINK WHATSAPP
-      ================================= */
-
       const url =
         `https://wa.me/${NOMOR_WHATSAPP}?text=${encodeURIComponent(pesan)}`;
 
-
-      /* ===============================
-         BUKA WHATSAPP
-      ================================= */
 
       window.open(
         url,
