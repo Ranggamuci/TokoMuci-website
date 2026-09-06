@@ -673,6 +673,138 @@ footer {
 
 }
 
+
+/* =====================================================
+   MENU ATK
+===================================================== */
+
+.atk-section {
+    background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
+}
+
+.atk-toolbar {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.atk-search {
+    width: min(520px, 100%);
+    padding: 14px 18px;
+    border: 1px solid #d4e4f5;
+    border-radius: 30px;
+    outline: none;
+    font-size: 15px;
+    background: white;
+}
+
+.atk-search:focus {
+    border-color: #0875e1;
+    box-shadow: 0 0 0 3px rgba(8,117,225,.08);
+}
+
+.atk-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.atk-card {
+    background: white;
+    border: 1px solid #dceafa;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(40,100,160,.06);
+    transition: .3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.atk-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 40px rgba(40,100,160,.14);
+}
+
+.atk-image {
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    background: linear-gradient(135deg, #eaf6ff, #ffffff);
+}
+
+.atk-image svg {
+    width: 150px;
+    height: 150px;
+    filter: drop-shadow(0 9px 8px rgba(0,80,160,.13));
+    transition: .3s ease;
+}
+
+.atk-card:hover .atk-image svg {
+    transform: scale(1.07) rotate(-1deg);
+}
+
+.atk-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.atk-body h3 {
+    color: #06245a;
+    font-size: 18px;
+    line-height: 1.25;
+    margin-bottom: 8px;
+}
+
+.atk-body p {
+    color: #6985a5;
+    font-size: 13px;
+    min-height: 42px;
+}
+
+.atk-price {
+    color: #0875e1;
+    font-size: 23px;
+    font-weight: 900;
+    margin: 12px 0;
+}
+
+.atk-buy {
+    display: block;
+    text-align: center;
+    background: #0875e1;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-weight: 800;
+    cursor: pointer;
+    border: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+.atk-buy:hover {
+    transform: translateY(-2px);
+}
+
+@media (max-width: 1050px) {
+    .atk-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .atk-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 </style>
 </head>
 
@@ -694,6 +826,7 @@ footer {
 
     <div class="nav-links">
         <a href="#layanan">Layanan</a>
+        <a href="#atk">ATK</a>
         <a href="#harga">Harga</a>
         <a href="#pesan">Pesan</a>
         <a href="#kontak">Kontak</a>
@@ -1452,6 +1585,181 @@ fill="#3e7ed8"/>
 
 
 
+
+<!-- =====================================================
+     MENU ATK
+===================================================== -->
+<section id="atk" class="section atk-section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">TOKO ATK MUCI</span>
+            <h2>Alat Tulis Kantor & Sekolah</h2>
+            <p>Pilih kebutuhan ATK Anda. Semua produk dilengkapi gambar, nama, dan harga.</p>
+        </div>
+
+        <div class="atk-toolbar">
+            <input id="atkSearch" class="atk-search" type="search"
+                   placeholder="🔎 Cari ATK, misalnya pulpen, buku, kertas...">
+        </div>
+
+        <div id="atkGrid" class="atk-grid">
+
+        <article class="atk-card" data-name="pulpen standard biru">
+            <div class="atk-image"><svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><ellipse cx="80" cy="140" rx="48" ry="8" fill="#dce8f7"/><rect x="67" y="24" width="27" height="100" rx="13" fill="#1478e5" transform="rotate(25 80 75)"/><rect x="71" y="22" width="19" height="30" rx="7" fill="#ffd21c" transform="rotate(25 80 75)"/><path d="M105 120l12 18-20-7z" fill="#667c98"/></svg></div>
+            <div class="atk-body">
+                <h3>Pulpen Standard Biru</h3>
+                <p>Pulpen untuk menulis sehari-hari.</p>
+                <div class="atk-price">Rp 2.500</div>
+                <button class="atk-buy" type="button" onclick="pesanATK('Pulpen Standard Biru', 'Rp 2.500')">Pesan via WhatsApp</button>
+            </div>
+        </article>
+
+        <article class="atk-card" data-name="pensil 2b">
+            <div class="atk-image"><svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><ellipse cx="80" cy="140" rx="48" ry="8" fill="#dce8f7"/><g transform="rotate(35 80 80)"><rect x="66" y="25" width="28" height="100" rx="4" fill="#ffd21c"/><rect x="66" y="25" width="28" height="17" fill="#f39b87"/><path d="M66 125l14 18 14-18z" fill="#e5c29f"/><path d="M77 138h6l-3 8z" fill="#333"/></g></svg></div>
+            <div class="atk-body">
+                <h3>Pensil 2B</h3>
+                <p>Pensil 2B untuk sekolah dan ujian.</p>
+                <div class="atk-price">Rp 2.000</div>
+                <button class="atk-buy" type="button" onclick="pesanATK('Pensil 2B', 'Rp 2.000')">Pesan via WhatsApp</button>
+            </div>
+        </article>
+
+        <article class="atk-card" data-name="penghapus putih">
+            <div class="atk-image"><svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><ellipse cx="80" cy="137" rx="52" ry="8" fill="#dce8f7"/><rect x="38" y="57" width="84" height="48" rx="12" fill="#fff" stroke="#ff6f91" stroke-width="6"/><path d="M48 57h30l44 48H92z" fill="#ff9bb1"/><path d="M48 57h30" stroke="#1478e5" stroke-width="5"/></svg></div>
+            <div class="atk-body">
+                <h3>Penghapus Putih</h3>
+                <p>Penghapus putih lembut dan bersih.</p>
+                <div class="atk-price">Rp 1.500</div>
+                <button class="atk-buy" type="button" onclick="pesanATK('Penghapus Putih', 'Rp 1.500')">Pesan via WhatsApp</button>
+            </div>
+        </article>
+
+        <article class="atk-card" data-name="spidol permanen">
+            <div class="atk-image"><svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><ellipse cx="80" cy="140" rx="50" ry="8" fill="#dce8f7"/><rect x="55" y="35" width="50" height="85" rx="14" fill="#e92b2b"/><rect x="55" y="35" width="50" height="24" rx="14" fill="#ffcc29"/><rect x="65" y="27" width="30" height="15" rx="6" fill="#293d60"/><path d="M70 120h20l-10 19z" fill="#657c9b"/></svg></div>
+            <div class="atk-body">
+                <h3>Spidol Permanen</h3>
+                <p>Spidol permanen untuk berbagai kebutuhan.</p>
+                <div class="atk-price">Rp 5.000</div>
+                <button class="atk-buy" type="button" onclick="pesanATK('Spidol Permanen', 'Rp 5.000')">Pesan via WhatsApp</button>
+            </div>
+        </article>
+
+        <article class="atk-card" data-name="buku tulis 38 lembar">
+            <div class="atk-image"><svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><ellipse cx="80" cy="140" rx="52" ry="8" fill="#dce8f7"/><rect x="38" y="35" width="72" height="95" rx="8" fill="#1478e5"/><rect x="52" y="29" width="72" height="95" rx="8" fill="#fff" stroke="#1478e5" stroke-width="6"/><rect x="65" y="50" width="43" height="6" rx="3" fill="#8da1ba"/><rect x="65" y="68" width="35" height="6" rx="3" fill="#8da1ba"/><rect x="65" y="86" width="42" height="6" rx="3" fill="#8da1ba"/></svg></div>
+            <div class="atk-body">
+                <h3>Buku Tulis 38 Lembar</h3>
+                <p>Buku tulis praktis untuk sekolah dan kantor.</p>
+                <div class="atk-price">Rp 4.000</div>
+                <button class="atk-buy" type="button" onclick="pesanATK('Buku Tulis 38 Lembar', 'Rp 4.000')">Pesan via WhatsApp</button>
+            </div>
+        </article>
+
+        <article class="atk-card" data-name="buku gambar">
+            <div class="atk-image"><svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><ellipse cx="80" cy="140" rx="52" ry="8" fill="#dce8f7"/><rect x="42" y="28" width="76" height="103" rx="8" fill="#fff" stroke="#1478e5" stroke-width="6"/><circle cx="100" cy="51" r="10" fill="#ffd21c"/><path d="M52 111l25-34 18 19 12-15 11 30z" fill="#43b95f"/></svg></div>
+            <div class="atk-body">
+                <h3>Buku Gambar</h3>
+                <p>Buku gambar untuk aktivitas menggambar.</p>
+                <div class="atk-price">Rp 5.000</div>
+                <button class="atk-buy" type="button" onclick="pesanATK('Buku Gambar', 'Rp 5.000')">Pesan via WhatsApp</button>
+            </div>
+        </article>
+
+        <article class="atk-card" data-name="kertas a4 70 gsm">
+            <div class="atk-image"><svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><ellipse cx="80" cy="140" rx="50" ry="8" fill="#dce8f7"/><rect x="45" y="22" width="70" height="108" rx="5" fill="#fff" stroke="#1478e5" stroke-width="6"/><path d="M94 22v28h21" fill="#eaf5ff"/><rect x="58" y="65" width="44" height="6" fill="#8da1ba"/><rect x="58" y="82" width="34" height="6" fill="#8da1ba"/></svg></div>
+            <div class="atk-body">
+                <h3>Kertas A4 70 GSM</h3>
+                <p>Kertas A4 70 GSM, 1 rim.</p>
+                <div class="atk-price">Rp 55.000</div>
+                <button class="atk-buy" type="button" onclick="pesanATK('Kertas A4 70 GSM', 'Rp 55.000')">Pesan via WhatsApp</button>
+            </div>
+        </article>
+
+        <article class="atk-card" data-name="kertas f4 70 gsm">
+            <div class="atk-image"><svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><ellipse cx="80" cy="140" rx="50" ry="8" fill="#dce8f7"/><rect x="40" y="30" width="80" height="98" rx="5" fill="#fff" stroke="#1478e5" stroke-width="6"/><text x="80" y="80" text-anchor="middle" font-size="22" font-weight="bold" fill="#1478e5">F4</text><rect x="57" y="94" width="46" height="5" fill="#8da1ba"/></svg></div>
+            <div class="atk-body">
+                <h3>Kertas F4 70 GSM</h3>
+                <p>Kertas F4 70 GSM, 1 rim.</p>
+                <div class="atk-price">Rp 58.000</div>
+                <button class="atk-buy" type="button" onclick="pesanATK('Kertas F4 70 GSM', 'Rp 58.000')">Pesan via WhatsApp</button>
+            </div>
+        </article>
+
+        <article class="atk-card" data-name="stapler mini">
+            <div class="atk-image"><svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><ellipse cx="80" cy="137" rx="52" ry="8" fill="#dce8f7"/><path d="M35 93h91v25H35z" rx="8" fill="#1478e5"/><path d="M45 92V53h78v20H62v19z" fill="#e92b2b"/><rect x="48" y="48" width="70" height="10" rx="5" fill="#657c9b"/></svg></div>
+            <div class="atk-body">
+                <h3>Stapler Mini</h3>
+                <p>Stapler mini untuk dokumen.</p>
+                <div class="atk-price">Rp 8.000</div>
+                <button class="atk-buy" type="button" onclick="pesanATK('Stapler Mini', 'Rp 8.000')">Pesan via WhatsApp</button>
+            </div>
+        </article>
+
+        <article class="atk-card" data-name="isi staples">
+            <div class="atk-image"><svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><ellipse cx="80" cy="137" rx="50" ry="8" fill="#dce8f7"/><rect x="35" y="55" width="90" height="55" rx="10" fill="#fff" stroke="#1478e5" stroke-width="6"/><path d="M50 76h60M50 91h60" stroke="#8da1ba" stroke-width="7"/><text x="80" y="48" text-anchor="middle" font-size="18" font-weight="bold" fill="#1478e5">STAPLES</text></svg></div>
+            <div class="atk-body">
+                <h3>Isi Staples</h3>
+                <p>Isi staples untuk stapler.</p>
+                <div class="atk-price">Rp 3.000</div>
+                <button class="atk-buy" type="button" onclick="pesanATK('Isi Staples', 'Rp 3.000')">Pesan via WhatsApp</button>
+            </div>
+        </article>
+
+        <article class="atk-card" data-name="map plastik">
+            <div class="atk-image"><svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><ellipse cx="80" cy="140" rx="52" ry="8" fill="#dce8f7"/><path d="M30 55h40l10 12h50v60H30z" fill="#ffd21c" stroke="#e0a900" stroke-width="5"/><path d="M30 70h100v57H30z" fill="#4eb6f7"/></svg></div>
+            <div class="atk-body">
+                <h3>Map Plastik</h3>
+                <p>Map plastik untuk menyimpan dokumen.</p>
+                <div class="atk-price">Rp 3.000</div>
+                <button class="atk-buy" type="button" onclick="pesanATK('Map Plastik', 'Rp 3.000')">Pesan via WhatsApp</button>
+            </div>
+        </article>
+
+        <article class="atk-card" data-name="kotak pensil">
+            <div class="atk-image"><svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><ellipse cx="80" cy="138" rx="52" ry="8" fill="#dce8f7"/><rect x="35" y="55" width="90" height="65" rx="14" fill="#ef3340"/><rect x="50" y="42" width="60" height="22" rx="10" fill="#ffcc29"/><path d="M52 88h56" stroke="#fff" stroke-width="5"/><circle cx="80" cy="102" r="7" fill="#ffd21c"/></svg></div>
+            <div class="atk-body">
+                <h3>Kotak Pensil</h3>
+                <p>Kotak pensil praktis dan rapi.</p>
+                <div class="atk-price">Rp 15.000</div>
+                <button class="atk-buy" type="button" onclick="pesanATK('Kotak Pensil', 'Rp 15.000')">Pesan via WhatsApp</button>
+            </div>
+        </article>
+
+        <article class="atk-card" data-name="penggaris 30 cm">
+            <div class="atk-image"><svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><ellipse cx="80" cy="137" rx="52" ry="8" fill="#dce8f7"/><rect x="35" y="65" width="95" height="30" rx="7" fill="#ffd21c" stroke="#e0a900" stroke-width="5"/><path d="M50 65v15M65 65v10M80 65v15M95 65v10M110 65v15" stroke="#7a5b00" stroke-width="3"/><text x="80" y="88" text-anchor="middle" font-size="12" font-weight="bold" fill="#7a5b00">30 CM</text></svg></div>
+            <div class="atk-body">
+                <h3>Penggaris 30 CM</h3>
+                <p>Penggaris 30 cm untuk sekolah dan kantor.</p>
+                <div class="atk-price">Rp 3.000</div>
+                <button class="atk-buy" type="button" onclick="pesanATK('Penggaris 30 CM', 'Rp 3.000')">Pesan via WhatsApp</button>
+            </div>
+        </article>
+
+        <article class="atk-card" data-name="lem kertas">
+            <div class="atk-image"><svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><ellipse cx="80" cy="138" rx="48" ry="8" fill="#dce8f7"/><rect x="55" y="47" width="50" height="78" rx="10" fill="#fff" stroke="#1478e5" stroke-width="6"/><rect x="62" y="32" width="36" height="22" rx="6" fill="#ffd21c"/><path d="M68 78h24M68 92h20" stroke="#1478e5" stroke-width="5"/></svg></div>
+            <div class="atk-body">
+                <h3>Lem Kertas</h3>
+                <p>Lem kertas untuk pekerjaan sekolah dan kantor.</p>
+                <div class="atk-price">Rp 4.000</div>
+                <button class="atk-buy" type="button" onclick="pesanATK('Lem Kertas', 'Rp 4.000')">Pesan via WhatsApp</button>
+            </div>
+        </article>
+
+        <article class="atk-card" data-name="gunting">
+            <div class="atk-image"><svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><ellipse cx="80" cy="140" rx="50" ry="8" fill="#dce8f7"/><circle cx="55" cy="65" r="18" fill="#ffd21c" stroke="#1478e5" stroke-width="5"/><circle cx="55" cy="105" r="18" fill="#ffd21c" stroke="#1478e5" stroke-width="5"/><path d="M68 72l65 45M68 98l65-45" stroke="#657c9b" stroke-width="9" stroke-linecap="round"/></svg></div>
+            <div class="atk-body">
+                <h3>Gunting</h3>
+                <p>Gunting untuk berbagai kebutuhan.</p>
+                <div class="atk-price">Rp 7.000</div>
+                <button class="atk-buy" type="button" onclick="pesanATK('Gunting', 'Rp 7.000')">Pesan via WhatsApp</button>
+            </div>
+        </article>
+
+        </div>
+        <p id="atkEmpty" class="note" style="display:none;">Produk ATK tidak ditemukan.</p>
+    </div>
+</section>
+
+
 <!-- =====================================================
      HARGA
 ===================================================== -->
@@ -2177,9 +2485,22 @@ Jenis layanan
     Cetak Kartu ID Card / NPWP / BPJS
 </option>
 
-<option>
-    Lainnya
-</option>
+<option>ATK - Pulpen Standard Biru</option>
+            <option>ATK - Pensil 2B</option>
+            <option>ATK - Penghapus Putih</option>
+            <option>ATK - Spidol Permanen</option>
+            <option>ATK - Buku Tulis 38 Lembar</option>
+            <option>ATK - Buku Gambar</option>
+            <option>ATK - Kertas A4 70 GSM</option>
+            <option>ATK - Kertas F4 70 GSM</option>
+            <option>ATK - Stapler Mini</option>
+            <option>ATK - Isi Staples</option>
+            <option>ATK - Map Plastik</option>
+            <option>ATK - Kotak Pensil</option>
+            <option>ATK - Penggaris 30 CM</option>
+            <option>ATK - Lem Kertas</option>
+            <option>ATK - Gunting</option>
+            <option>Lainnya</option>
 
 </select>
 
@@ -2387,6 +2708,22 @@ const HARGA_LAYANAN = {
     "Cetak Kartu ID Card / NPWP / BPJS":
         "Rp. 15.000 / kartu",
 
+    "ATK - Pulpen Standard Biru": "Rp. 2.500 / pcs",
+    "ATK - Pensil 2B": "Rp. 2.000 / pcs",
+    "ATK - Penghapus Putih": "Rp. 1.500 / pcs",
+    "ATK - Spidol Permanen": "Rp. 5.000 / pcs",
+    "ATK - Buku Tulis 38 Lembar": "Rp. 4.000 / buku",
+    "ATK - Buku Gambar": "Rp. 5.000 / buku",
+    "ATK - Kertas A4 70 GSM": "Rp. 55.000 / rim",
+    "ATK - Kertas F4 70 GSM": "Rp. 58.000 / rim",
+    "ATK - Stapler Mini": "Rp. 8.000 / pcs",
+    "ATK - Isi Staples": "Rp. 3.000 / kotak",
+    "ATK - Map Plastik": "Rp. 3.000 / pcs",
+    "ATK - Kotak Pensil": "Rp. 15.000 / pcs",
+    "ATK - Penggaris 30 CM": "Rp. 3.000 / pcs",
+    "ATK - Lem Kertas": "Rp. 4.000 / pcs",
+    "ATK - Gunting": "Rp. 7.000 / pcs",
+
     "Lainnya":
         "Menyesuaikan pesanan"
 
@@ -2471,6 +2808,51 @@ Terima kasih.`;
         }
     );
 
+}
+
+
+/* =====================================================
+   MENU ATK + PEMESANAN WHATSAPP
+===================================================== */
+
+function pesanATK(namaProduk, hargaProduk) {
+    const pesan =
+`Halo MUCI, saya ingin membeli ATK.
+
+Produk: ${namaProduk}
+Harga: ${hargaProduk}
+Jumlah: 1
+
+Mohon konfirmasi ketersediaan produk dan total harga.
+Terima kasih.`;
+
+    const url =
+        "https://wa.me/" + NOMOR_WHATSAPP +
+        "?text=" + encodeURIComponent(pesan);
+
+    window.open(url, "_blank");
+}
+
+const atkSearch = document.getElementById("atkSearch");
+const atkCards = document.querySelectorAll(".atk-card");
+const atkEmpty = document.getElementById("atkEmpty");
+
+if (atkSearch) {
+    atkSearch.addEventListener("input", function () {
+        const keyword = this.value.toLowerCase().trim();
+        let visible = 0;
+
+        atkCards.forEach(function (card) {
+            const name = card.getAttribute("data-name") || "";
+            const show = name.includes(keyword);
+            card.style.display = show ? "flex" : "none";
+            if (show) visible++;
+        });
+
+        if (atkEmpty) {
+            atkEmpty.style.display = visible ? "none" : "block";
+        }
+    });
 }
 
 </script>
