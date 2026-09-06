@@ -4,1797 +4,2311 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MUCI ATK | Toko Alat Tulis Kantor Muara Enim</title>
+<title>MUCI — Pusat Print & Foto Copy</title>
 
-<meta name="description" content="MUCI ATK - Pusat alat tulis kantor, perlengkapan sekolah dan kebutuhan kantor dengan harga terjangkau di Muara Enim.">
+<meta name="description"
+content="MUCI menyediakan jasa print, fotocopy, cetak foto, pas foto, laminating, jilid, bikin stempel flash, cetak kartu ID Card, NPWP, BPJS dan kebutuhan ATK di Muara Enim.">
 
-<meta name="theme-color" content="#2563eb">
+<meta property="og:title"
+content="MUCI — Jasa Print, Fotocopy, Cetak Foto & Stempel Flash">
+
+<meta property="og:description"
+content="Solusi print, fotocopy, cetak foto, pas foto, laminating, jilid, stempel flash dan cetak kartu di Muara Enim.">
+
+<meta property="og:image"
+content="https://ranggamuci.github.io/TokoMuci-website/muci-preview.jpg">
+
+<meta property="og:url"
+content="https://ranggamuci.github.io/TokoMuci-website/">
+
+<meta property="og:type" content="website">
 
 <style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f5f7fb;
-    color:#172033;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef7ff;
+    color: #09234f;
+    line-height: 1.6;
 }
 
-a{
-    text-decoration:none;
-    color:inherit;
+a {
+    text-decoration: none;
 }
 
-button{
-    font-family:inherit;
-    cursor:pointer;
+.container {
+    width: min(1280px, 92%);
+    margin: auto;
 }
 
-/* ================= HEADER ================= */
 
-header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:rgba(255,255,255,.96);
-    backdrop-filter:blur(12px);
-    border-bottom:1px solid #e7eaf0;
-}
+/* =====================================================
+   HEADER
+===================================================== */
 
-.navbar{
-    max-width:1200px;
-    margin:auto;
-    padding:14px 20px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    font-weight:900;
-    font-size:25px;
-    color:#2563eb;
-}
-
-.logo-icon{
-    width:44px;
-    height:44px;
-    border-radius:13px;
-    background:linear-gradient(135deg,#2563eb,#7c3aed);
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:22px;
-    box-shadow:0 8px 20px rgba(37,99,235,.25);
-}
-
-.logo span{
-    color:#111827;
-}
-
-.nav-links{
-    display:flex;
-    gap:24px;
-    font-size:14px;
-    font-weight:700;
-}
-
-.nav-links a:hover{
-    color:#2563eb;
-}
-
-.cart-btn{
-    border:0;
-    background:#2563eb;
-    color:white;
-    border-radius:12px;
-    padding:11px 15px;
-    font-weight:800;
-}
-
-.cart-count{
-    background:white;
-    color:#2563eb;
-    padding:2px 7px;
-    border-radius:20px;
-    margin-left:4px;
-}
-
-/* ================= HERO ================= */
-
-.hero{
+.hero {
     background:
-    radial-gradient(circle at 85% 20%,rgba(124,58,237,.28),transparent 30%),
-    radial-gradient(circle at 10% 90%,rgba(37,99,235,.2),transparent 30%),
-    linear-gradient(135deg,#0f172a,#1e3a8a);
-    color:white;
+        radial-gradient(circle at 80% 20%, #d9eeff 0, transparent 35%),
+        linear-gradient(135deg, #eef8ff, #ffffff);
+    padding-bottom: 70px;
 }
 
-.hero-inner{
-    max-width:1200px;
-    min-height:500px;
-    margin:auto;
-    padding:75px 20px;
-    display:grid;
-    grid-template-columns:1.1fr .9fr;
-    align-items:center;
-    gap:50px;
+.nav {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
 }
 
-.badge{
-    display:inline-block;
-    background:rgba(255,255,255,.13);
-    border:1px solid rgba(255,255,255,.2);
-    padding:9px 14px;
-    border-radius:30px;
-    font-size:13px;
-    font-weight:700;
-    margin-bottom:20px;
+.brand {
+    font-size: 34px;
+    font-weight: 900;
+    color: #0875e1;
+    letter-spacing: 2px;
 }
 
-.hero h1{
-    font-size:clamp(40px,6vw,68px);
-    line-height:1;
-    margin-bottom:22px;
+.nav-links {
+    display: flex;
+    gap: 30px;
 }
 
-.hero h1 span{
-    color:#93c5fd;
+.nav-links a {
+    color: #163d70;
+    font-weight: 700;
 }
 
-.hero p{
-    font-size:18px;
-    line-height:1.7;
-    color:#dbeafe;
-    max-width:650px;
+.nav-links a:hover {
+    color: #0875e1;
 }
 
-.hero-buttons{
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
-    margin-top:28px;
+.nav-wa {
+    background: #0875e1;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-weight: 800;
+    box-shadow: 0 8px 20px rgba(8,117,225,.2);
 }
 
-.btn-primary,
-.btn-secondary{
-    padding:14px 20px;
-    border-radius:13px;
-    font-weight:800;
-    border:0;
-    display:inline-block;
-}
 
-.btn-primary{
-    background:white;
-    color:#1d4ed8;
-}
+/* =====================================================
+   HERO
+===================================================== */
 
-.btn-secondary{
-    background:#22c55e;
-    color:white;
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+    padding-top: 50px;
 }
 
-.hero-card{
-    background:white;
-    color:#172033;
-    border-radius:28px;
-    padding:28px;
-    box-shadow:0 30px 70px rgba(0,0,0,.25);
-    transform:rotate(1deg);
+.eyebrow {
+    display: inline-block;
+    color: #0875e1;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
 }
 
-.hero-card h3{
-    margin-bottom:20px;
+.hero h1 {
+    font-size: clamp(40px, 5vw, 68px);
+    line-height: 1.08;
+    color: #06245a;
+    font-weight: 900;
 }
 
-.mini-product{
-    display:flex;
-    align-items:center;
-    gap:14px;
-    padding:14px 0;
-    border-bottom:1px solid #edf0f5;
+.hero h1 span {
+    color: #0875e1;
 }
 
-.mini-icon{
-    width:55px;
-    height:55px;
-    border-radius:15px;
-    background:#eff6ff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:28px;
+.lead {
+    margin-top: 22px;
+    color: #52739f;
+    font-size: 18px;
+    max-width: 650px;
 }
 
-.mini-product strong{
-    display:block;
-    margin-bottom:5px;
+.hero-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
 }
 
-.mini-product small{
-    color:#64748b;
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    padding: 14px 24px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 800;
 }
 
-/* ================= SECTION ================= */
+.btn.primary {
+    background: #0875e1;
+    color: white;
+    box-shadow: 0 10px 25px rgba(8,117,225,.25);
+}
 
-section{
-    padding:65px 20px;
+.btn.secondary {
+    background: white;
+    color: #0875e1;
+    border: 2px solid #d7eaff;
 }
 
-.container{
-    max-width:1200px;
-    margin:auto;
+.btn:hover {
+    transform: translateY(-2px);
 }
 
-.section-title{
-    text-align:center;
-    margin-bottom:35px;
+.trust-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 28px;
+    color: #52739f;
+    font-size: 14px;
+    font-weight: 700;
 }
 
-.section-title h2{
-    font-size:35px;
-    margin-bottom:10px;
+.hero-card {
+    background: white;
+    border-radius: 30px;
+    padding: 12px;
+    box-shadow: 0 25px 60px rgba(20,80,130,.14);
 }
 
-.section-title p{
-    color:#64748b;
+.hero-card img {
+    width: 100%;
+    display: block;
+    border-radius: 22px;
 }
 
-/* ================= FEATURES ================= */
 
-.features{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
-}
+/* =====================================================
+   SECTION
+===================================================== */
 
-.feature{
-    background:white;
-    border-radius:20px;
-    padding:25px;
-    text-align:center;
-    border:1px solid #e9edf3;
-    box-shadow:0 8px 25px rgba(15,23,42,.04);
+.section {
+    padding: 90px 0;
 }
 
-.feature-icon{
-    font-size:35px;
-    margin-bottom:12px;
+.section-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 45px;
 }
 
-.feature h3{
-    margin-bottom:8px;
+.section-heading h2 {
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1.15;
+    color: #06245a;
+    margin-bottom: 14px;
+    font-weight: 900;
 }
 
-.feature p{
-    color:#64748b;
-    font-size:14px;
-    line-height:1.6;
+.section-heading p {
+    color: #5b7ca7;
 }
 
-/* ================= SEARCH ================= */
 
-.search-box{
-    max-width:600px;
-    margin:0 auto 28px;
-    position:relative;
-}
+/* =====================================================
+   SERVICE
+===================================================== */
 
-.search-box input{
-    width:100%;
-    padding:17px 20px 17px 48px;
-    border:1px solid #dce2eb;
-    border-radius:15px;
-    outline:none;
-    font-size:15px;
-    background:white;
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
 }
 
-.search-box input:focus{
-    border-color:#2563eb;
-    box-shadow:0 0 0 4px rgba(37,99,235,.1);
+.service-card {
+    background: white;
+    border: 1px solid #dceafa;
+    border-radius: 22px;
+    padding: 25px 22px 28px;
+    text-align: center;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: .3s ease;
+    box-shadow: 0 8px 25px rgba(40,100,160,.05);
 }
 
-.search-icon{
-    position:absolute;
-    left:18px;
-    top:16px;
+.service-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 40px rgba(40,100,160,.13);
 }
 
-/* ================= CATEGORY ================= */
 
-.categories{
-    display:flex;
-    gap:10px;
-    overflow-x:auto;
-    padding-bottom:12px;
-    margin-bottom:28px;
-}
+/* =====================================================
+   SVG ICON
+===================================================== */
 
-.categories button{
-    white-space:nowrap;
-    border:1px solid #dce2eb;
-    background:white;
-    padding:10px 17px;
-    border-radius:30px;
-    font-weight:700;
-    color:#475569;
+.service-icon {
+    width: 100%;
+    height: 145px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
 }
 
-.categories button.active,
-.categories button:hover{
-    background:#2563eb;
-    color:white;
-    border-color:#2563eb;
+.service-icon svg {
+    width: 170px;
+    height: 140px;
+    display: block;
+    filter: drop-shadow(0 8px 8px rgba(0,80,160,.13));
+    transition: .3s ease;
 }
 
-/* ================= PRODUCTS ================= */
-
-.products{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
+.service-card:hover .service-icon svg {
+    transform: translateY(-5px) scale(1.04);
 }
 
-.product{
-    background:white;
-    border-radius:20px;
-    overflow:hidden;
-    border:1px solid #e8ebf1;
-    transition:.25s;
-    position:relative;
+.service-card h3 {
+    color: #061f51;
+    font-size: 21px;
+    line-height: 1.25;
+    margin-bottom: 12px;
+    font-weight: 900;
 }
 
-.product:hover{
-    transform:translateY(-5px);
-    box-shadow:0 18px 35px rgba(15,23,42,.1);
+.service-card p {
+    color: #5b7ca7;
+    font-size: 15px;
 }
 
-.product-img{
-    height:190px;
-    background:linear-gradient(135deg,#eff6ff,#f8fafc);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:85px;
-    position:relative;
-}
 
-.product-label{
-    position:absolute;
-    top:12px;
-    left:12px;
-    background:#ef4444;
-    color:white;
-    padding:6px 9px;
-    border-radius:8px;
-    font-size:11px;
-    font-weight:900;
-}
+/* =====================================================
+   PRICE
+===================================================== */
 
-.product-body{
-    padding:17px;
+.price-section {
+    background: #f7fbff;
 }
 
-.product-category{
-    color:#64748b;
-    font-size:11px;
-    text-transform:uppercase;
-    font-weight:800;
-    margin-bottom:6px;
+.price-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
 }
 
-.product h3{
-    font-size:16px;
-    margin-bottom:9px;
-    min-height:38px;
+.price-card {
+    position: relative;
+    background: white;
+    border: 1px solid #dceafa;
+    border-radius: 22px;
+    padding: 28px 20px;
+    text-align: center;
+    min-height: 280px;
+    box-shadow: 0 8px 25px rgba(40,100,160,.05);
+    transition: .3s ease;
 }
 
-.price{
-    font-size:20px;
-    color:#2563eb;
-    font-weight:900;
-    margin-bottom:4px;
+.price-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(40,100,160,.12);
 }
 
-.price-note{
-    font-size:11px;
-    color:#94a3b8;
-    margin-bottom:13px;
+.price-card.featured {
+    border: 2px solid #0875e1;
 }
 
-.add-cart{
-    width:100%;
-    border:0;
-    background:#2563eb;
-    color:white;
-    padding:11px;
-    border-radius:10px;
-    font-weight:800;
+.price-card h3 {
+    color: #06245a;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 18px;
+    font-weight: 900;
 }
 
-.add-cart:hover{
-    background:#1d4ed8;
+.price-card strong {
+    display: block;
+    color: #0875e1;
+    font-size: 28px;
+    font-weight: 900;
 }
 
-/* ================= PRICE RULE ================= */
-
-.price-rule{
-    background:linear-gradient(135deg,#eff6ff,#eef2ff);
+.price-card p {
+    color: #6684a9;
+    margin-top: 5px;
+    min-height: 45px;
 }
 
-.rules{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
+.price-card a {
+    display: inline-block;
+    margin-top: 18px;
+    background: #0875e1;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-weight: 800;
 }
 
-.rule{
-    background:white;
-    padding:25px;
-    border-radius:18px;
-    border:1px solid #dbeafe;
+.badge {
+    display: inline-block;
+    background: #e8f3ff;
+    color: #0875e1;
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 11px;
+    font-weight: 900;
 }
 
-.rule h3{
-    margin-bottom:10px;
-    color:#1d4ed8;
+.note {
+    text-align: center;
+    color: #6985a5;
+    margin-top: 25px;
+    font-size: 14px;
 }
 
-.rule p{
-    color:#64748b;
-    line-height:1.7;
-    font-size:14px;
-}
 
-/* ================= CTA ================= */
+/* =====================================================
+   PRICE ICON
+===================================================== */
 
-.cta{
-    background:linear-gradient(135deg,#2563eb,#7c3aed);
-    color:white;
-    text-align:center;
-    border-radius:28px;
-    padding:50px 25px;
+.price-icon {
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.cta h2{
-    font-size:36px;
-    margin-bottom:12px;
+.price-icon svg {
+    width: 90px;
+    height: 75px;
+    filter: drop-shadow(0 5px 6px rgba(0,80,160,.12));
 }
 
-.cta p{
-    color:#dbeafe;
-    margin-bottom:25px;
-}
 
-/* ================= CONTACT ================= */
+/* =====================================================
+   ORDER
+===================================================== */
 
-.contact-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:25px;
+.order-section {
+    background: linear-gradient(135deg, #eaf6ff, #ffffff);
 }
 
-.contact-card{
-    background:white;
-    border:1px solid #e8ebf1;
-    border-radius:20px;
-    padding:27px;
+.order-wrap {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 55px;
+    align-items: center;
 }
 
-.contact-item{
-    display:flex;
-    gap:15px;
-    margin:18px 0;
+.order-wrap h2 {
+    font-size: clamp(32px, 4vw, 45px);
+    color: #06245a;
+    line-height: 1.15;
+    margin-bottom: 18px;
+    font-weight: 900;
 }
 
-.contact-item-icon{
-    width:42px;
-    height:42px;
-    background:#eff6ff;
-    border-radius:12px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-shrink:0;
+.order-wrap > div > p {
+    color: #58779f;
 }
 
-.contact-item strong{
-    display:block;
-    margin-bottom:4px;
+.steps {
+    display: grid;
+    gap: 14px;
+    margin-top: 30px;
 }
 
-.contact-item span{
-    color:#64748b;
-    line-height:1.5;
-    font-size:14px;
+.steps > div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 14px;
+    border-radius: 15px;
+    border: 1px solid #dceafa;
 }
-
-/* ================= FOOTER ================= */
 
-footer{
-    background:#0f172a;
-    color:#cbd5e1;
-    padding:35px 20px;
+.steps b {
+    background: #0875e1;
+    color: white;
+    min-width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
 }
 
-.footer-inner{
-    max-width:1200px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    gap:20px;
-    flex-wrap:wrap;
+.steps span {
+    color: #456b99;
+    font-weight: 600;
 }
 
-footer strong{
-    color:white;
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.order-form {
+    background: white;
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 20px 50px rgba(30,100,160,.12);
 }
 
-/* ================= WHATSAPP ================= */
+.order-form label {
+    display: block;
+    color: #183c6d;
+    font-weight: 800;
+    font-size: 14px;
+    margin-bottom: 17px;
+}
 
-.wa-float{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    width:60px;
-    height:60px;
-    background:#22c55e;
-    color:white;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:29px;
-    box-shadow:0 10px 30px rgba(34,197,94,.35);
-    z-index:900;
+.order-form input,
+.order-form select,
+.order-form textarea {
+    display: block;
+    width: 100%;
+    margin-top: 7px;
+    padding: 13px 15px;
+    border: 1px solid #d4e4f5;
+    border-radius: 12px;
+    outline: none;
+    font-family: inherit;
+    font-size: 15px;
+    color: #173c6d;
+    background: #fbfdff;
 }
 
-/* ================= CART ================= */
+.order-form input:focus,
+.order-form select:focus,
+.order-form textarea:focus {
+    border-color: #0875e1;
+    box-shadow: 0 0 0 3px rgba(8,117,225,.08);
+}
 
-.cart-panel{
-    position:fixed;
-    top:0;
-    right:-420px;
-    width:min(400px,92vw);
-    height:100vh;
-    background:white;
-    z-index:2000;
-    box-shadow:-15px 0 50px rgba(0,0,0,.2);
-    transition:.3s;
-    display:flex;
-    flex-direction:column;
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
 }
 
-.cart-panel.open{
-    right:0;
+.full {
+    width: 100%;
 }
 
-.cart-header{
-    padding:20px;
-    border-bottom:1px solid #e5e7eb;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+.order-form small {
+    display: block;
+    color: #7890ad;
+    margin-top: 13px;
+    text-align: center;
+    font-size: 12px;
 }
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
 
-.close-cart{
-    border:0;
-    background:#f1f5f9;
-    width:36px;
-    height:36px;
-    border-radius:10px;
-    font-size:20px;
+.contact-section {
+    background: white;
 }
 
-.cart-items{
-    flex:1;
-    overflow:auto;
-    padding:20px;
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
 }
 
-.cart-item{
-    display:flex;
-    justify-content:space-between;
-    gap:10px;
-    padding:14px 0;
-    border-bottom:1px solid #edf0f4;
+.contact-grid h2 {
+    font-size: clamp(32px, 4vw, 45px);
+    line-height: 1.15;
+    color: #06245a;
+    font-weight: 900;
+    margin-bottom: 18px;
 }
 
-.cart-item strong{
-    display:block;
-    margin-bottom:5px;
+.contact-grid > div > p {
+    color: #58779f;
 }
 
-.cart-item small{
-    color:#64748b;
+.contact-box {
+    background: #f3f9ff;
+    border: 1px solid #dceafa;
+    border-radius: 25px;
+    padding: 30px;
 }
 
-.remove{
-    border:0;
-    background:#fee2e2;
-    color:#dc2626;
-    width:30px;
-    height:30px;
-    border-radius:8px;
+.contact-box p {
+    color: #476c99;
+    margin-bottom: 20px;
 }
 
-.cart-footer{
-    border-top:1px solid #e5e7eb;
-    padding:20px;
+.contact-box p:last-child {
+    margin-bottom: 0;
 }
 
-.total{
-    display:flex;
-    justify-content:space-between;
-    font-size:20px;
-    font-weight:900;
-    margin-bottom:15px;
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background: #06245a;
+    color: white;
+    padding: 25px 0;
 }
 
-.checkout{
-    width:100%;
-    padding:14px;
-    border:0;
-    border-radius:12px;
-    background:#22c55e;
-    color:white;
-    font-weight:900;
-    font-size:15px;
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
-.overlay{
-    position:fixed;
-    inset:0;
-    background:rgba(15,23,42,.5);
-    z-index:1500;
-    display:none;
+.footer-inner strong {
+    display: block;
+    font-size: 22px;
 }
 
-.overlay.show{
-    display:block;
+.footer-inner span {
+    opacity: .8;
+    font-size: 13px;
 }
+
 
-/* ================= MOBILE ================= */
+/* =====================================================
+   RESPONSIVE
+===================================================== */
 
-@media(max-width:950px){
+@media (max-width: 1050px) {
 
-    .products{
-        grid-template-columns:repeat(3,1fr);
+    .service-grid,
+    .price-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .features{
-        grid-template-columns:repeat(2,1fr);
+    .hero-grid,
+    .order-wrap,
+    .contact-grid {
+        grid-template-columns: 1fr;
     }
 
-    .hero-inner{
-        grid-template-columns:1fr;
+    .hero-copy {
+        text-align: center;
+    }
+
+    .lead {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-actions,
+    .trust-row {
+        justify-content: center;
     }
 }
 
-@media(max-width:650px){
 
-    .nav-links{
-        display:none;
+@media (max-width: 700px) {
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 15px 0;
     }
 
-    .navbar{
-        padding:10px 15px;
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+        font-size: 14px;
     }
 
-    .logo{
-        font-size:21px;
+    .service-grid,
+    .price-grid,
+    .two-col {
+        grid-template-columns: 1fr;
     }
 
-    .logo-icon{
-        width:38px;
-        height:38px;
+    .section {
+        padding: 65px 0;
     }
 
-    .hero-inner{
-        padding:55px 18px;
+    .hero {
+        padding-bottom: 45px;
     }
 
-    .hero h1{
-        font-size:44px;
+    .hero h1 {
+        font-size: 40px;
     }
 
-    .hero p{
-        font-size:16px;
+    .order-form {
+        padding: 22px;
     }
 
-    section{
-        padding:45px 15px;
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .products{
-        grid-template-columns:repeat(2,1fr);
-        gap:12px;
-    }
-
-    .product-img{
-        height:145px;
-        font-size:65px;
-    }
-
-    .product-body{
-        padding:13px;
-    }
-
-    .product h3{
-        font-size:14px;
-    }
-
-    .price{
-        font-size:17px;
-    }
-
-    .features,
-    .rules,
-    .contact-grid{
-        grid-template-columns:1fr;
-    }
-
-    .section-title h2{
-        font-size:28px;
-    }
-
-    .cta h2{
-        font-size:28px;
-    }
 }
+
 </style>
 </head>
 
+
 <body>
 
-<!-- ================= HEADER ================= -->
 
-<header>
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
-<nav class="navbar">
+<header class="hero">
 
-<a href="#" class="logo">
-<div class="logo-icon">✏️</div>
-MUCI <span>ATK</span>
-</a>
+<nav class="nav container">
 
-<div class="nav-links">
-<a href="#produk">Produk</a>
-<a href="#harga">Ketentuan Harga</a>
-<a href="#kontak">Kontak</a>
-</div>
+    <a class="brand" href="#home">
+        MUCI
+    </a>
 
-<button class="cart-btn" onclick="openCart()">
-🛒 Keranjang
-<span class="cart-count" id="cartCount">0</span>
-</button>
+    <div class="nav-links">
+        <a href="#layanan">Layanan</a>
+        <a href="#harga">Harga</a>
+        <a href="#pesan">Pesan</a>
+        <a href="#kontak">Kontak</a>
+    </div>
+
+    <a class="nav-wa" href="#pesan">
+        Pesan Sekarang
+    </a>
 
 </nav>
+
+
+<div id="home" class="hero-grid container">
+
+    <div class="hero-copy">
+
+        <span class="eyebrow">
+            PUSAT PRINT & FOTO COPY
+        </span>
+
+        <h1>
+            Semua kebutuhan cetak Anda
+            <span>ada di MUCI.</span>
+        </h1>
+
+        <p class="lead">
+            Print dokumen, fotocopy, cetak foto,
+            pas foto, laminating, jilid,
+            bikin stempel flash, cetak kartu
+            ID Card, NPWP dan BPJS dengan proses
+            cepat dan hasil berkualitas.
+        </p>
+
+        <div class="hero-actions">
+
+            <a class="btn primary" href="#pesan">
+                🖨️ Buat Pesanan
+            </a>
+
+            <a class="btn secondary" href="#layanan">
+                Lihat Layanan
+            </a>
+
+        </div>
+
+        <div class="trust-row">
+
+            <div>✓ Hasil berkualitas</div>
+            <div>✓ Proses cepat</div>
+            <div>✓ Harga terjangkau</div>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-card">
+
+        <img
+            src="muci-preview.jpg"
+            alt="Layanan MUCI Print dan Foto Copy"
+        >
+
+    </div>
+
+</div>
 
 </header>
 
 
 <main>
 
-<!-- ================= HERO ================= -->
 
-<section class="hero">
+<!-- =====================================================
+     LAYANAN
+===================================================== -->
 
-<div class="hero-inner">
+<section id="layanan" class="section">
 
-<div>
+<div class="container">
 
-<div class="badge">
-📚 PUSAT ATK & PERLENGKAPAN KANTOR
+<div class="section-heading">
+
+    <span class="eyebrow">
+        LAYANAN KAMI
+    </span>
+
+    <h2>
+        Butuh cetak apa hari ini?
+    </h2>
+
+    <p>
+        Pilih layanan yang Anda perlukan,
+        lalu kirim detail pesanan melalui WhatsApp.
+    </p>
+
 </div>
 
-<h1>
-Semua kebutuhan ATK,
-<span>ada di MUCI.</span>
-</h1>
+
+<div class="service-grid">
+
+
+<!-- =====================================================
+     1. FOTOCOPY
+===================================================== -->
+
+<article class="service-card">
+
+<div class="service-icon">
+
+<svg viewBox="0 0 220 180"
+xmlns="http://www.w3.org/2000/svg">
+
+<ellipse
+cx="110"
+cy="158"
+rx="70"
+ry="10"
+fill="#dce8f7"/>
+
+<rect
+x="68"
+y="22"
+width="84"
+height="50"
+rx="9"
+fill="#ffffff"
+stroke="#1677e8"
+stroke-width="7"/>
+
+<rect
+x="84"
+y="35"
+width="52"
+height="24"
+rx="4"
+fill="#eaf4ff"/>
+
+<rect
+x="42"
+y="65"
+width="136"
+height="72"
+rx="16"
+fill="#1677e8"/>
+
+<rect
+x="57"
+y="80"
+width="106"
+height="48"
+rx="8"
+fill="#ffffff"/>
+
+<rect
+x="70"
+y="112"
+width="80"
+height="50"
+rx="5"
+fill="#ffffff"
+stroke="#1677e8"
+stroke-width="6"/>
+
+<circle
+cx="145"
+cy="91"
+r="6"
+fill="#ffd21c"/>
+
+<circle
+cx="160"
+cy="91"
+r="6"
+fill="#39c76a"/>
+
+<rect
+x="65"
+y="70"
+width="55"
+height="7"
+rx="3"
+fill="#0d5fc5"/>
+
+</svg>
+
+</div>
+
+<h3>
+    Fotocopy
+</h3>
 
 <p>
-Belanja alat tulis kantor, perlengkapan sekolah dan kebutuhan
-sehari-hari dengan harga terjangkau. Pilih produk, masukkan
-keranjang, lalu pesan melalui WhatsApp.
+    Hitam putih dan warna untuk dokumen harian.
 </p>
 
-<div class="hero-buttons">
+</article>
 
-<a href="#produk" class="btn-primary">
-🛍️ Lihat Produk
+
+
+<!-- =====================================================
+     2. PRINT DOKUMEN
+===================================================== -->
+
+<article class="service-card">
+
+<div class="service-icon">
+
+<svg viewBox="0 0 220 180"
+xmlns="http://www.w3.org/2000/svg">
+
+<ellipse
+cx="110"
+cy="158"
+rx="70"
+ry="10"
+fill="#dce8f7"/>
+
+<rect
+x="68"
+y="20"
+width="84"
+height="58"
+rx="7"
+fill="white"
+stroke="#1478e5"
+stroke-width="7"/>
+
+<rect
+x="78"
+y="30"
+width="64"
+height="38"
+rx="3"
+fill="#edf7ff"/>
+
+<rect
+x="42"
+y="65"
+width="136"
+height="62"
+rx="14"
+fill="#1478e5"/>
+
+<rect
+x="60"
+y="82"
+width="100"
+height="22"
+rx="4"
+fill="#eaf5ff"/>
+
+<circle
+cx="150"
+cy="94"
+r="7"
+fill="#34c76b"/>
+
+<rect
+x="66"
+y="110"
+width="88"
+height="48"
+rx="5"
+fill="white"
+stroke="#1478e5"
+stroke-width="6"/>
+
+</svg>
+
+</div>
+
+<h3>
+    Print Dokumen
+</h3>
+
+<p>
+    Print tugas, surat, laporan, PDF dan dokumen lainnya.
+</p>
+
+</article>
+
+
+
+<!-- =====================================================
+     3. CETAK FOTO
+===================================================== -->
+
+<article class="service-card">
+
+<div class="service-icon">
+
+<svg viewBox="0 0 220 180"
+xmlns="http://www.w3.org/2000/svg">
+
+<ellipse
+cx="110"
+cy="157"
+rx="65"
+ry="9"
+fill="#dce8f7"/>
+
+<rect
+x="54"
+y="43"
+width="108"
+height="85"
+rx="8"
+fill="white"
+stroke="#1478e5"
+stroke-width="7"
+transform="rotate(-7 108 85)"/>
+
+<rect
+x="68"
+y="30"
+width="108"
+height="85"
+rx="8"
+fill="#ffffff"
+stroke="#1478e5"
+stroke-width="7"/>
+
+<circle
+cx="150"
+cy="50"
+r="13"
+fill="#ffd21c"/>
+
+<path
+d="M76 99 L103 72 L121 89 L139 68 L168 99 Z"
+fill="#43b95f"/>
+
+<path
+d="M76 99 L103 72 L121 89 L139 68 L168 99"
+fill="none"
+stroke="#1677e8"
+stroke-width="5"/>
+
+</svg>
+
+</div>
+
+<h3>
+    Cetak Foto
+</h3>
+
+<p>
+    Cetak foto berbagai ukuran sesuai kebutuhan.
+</p>
+
+</article>
+
+
+
+<!-- =====================================================
+     4. PAS FOTO
+===================================================== -->
+
+<article class="service-card">
+
+<div class="service-icon">
+
+<svg viewBox="0 0 220 180"
+xmlns="http://www.w3.org/2000/svg">
+
+<ellipse
+cx="110"
+cy="158"
+rx="65"
+ry="9"
+fill="#dce8f7"/>
+
+<rect
+x="45"
+y="43"
+width="68"
+height="88"
+rx="6"
+fill="#ffffff"
+stroke="#1478e5"
+stroke-width="7"
+transform="rotate(-5 79 87)"/>
+
+<rect
+x="107"
+y="43"
+width="68"
+height="88"
+rx="6"
+fill="#ffffff"
+stroke="#1478e5"
+stroke-width="7"
+transform="rotate(5 141 87)"/>
+
+<circle
+cx="79"
+cy="67"
+r="11"
+fill="#f6a45d"/>
+
+<path
+d="M59 111 Q79 89 99 111"
+fill="#164782"/>
+
+<circle
+cx="141"
+cy="67"
+r="11"
+fill="#f6a45d"/>
+
+<path
+d="M121 111 Q141 89 161 111"
+fill="#164782"/>
+
+</svg>
+
+</div>
+
+<h3>
+    Pas Foto
+</h3>
+
+<p>
+    Pas foto untuk sekolah, kerja, administrasi dan dokumen.
+</p>
+
+</article>
+
+
+
+<!-- =====================================================
+     5. LAMINATING
+===================================================== -->
+
+<article class="service-card">
+
+<div class="service-icon">
+
+<svg viewBox="0 0 220 180"
+xmlns="http://www.w3.org/2000/svg">
+
+<ellipse
+cx="110"
+cy="158"
+rx="70"
+ry="10"
+fill="#dce8f7"/>
+
+<rect
+x="65"
+y="25"
+width="90"
+height="58"
+rx="8"
+fill="#eef5ff"
+stroke="#607898"
+stroke-width="7"/>
+
+<rect
+x="44"
+y="72"
+width="132"
+height="63"
+rx="14"
+fill="#182849"/>
+
+<rect
+x="62"
+y="86"
+width="96"
+height="20"
+rx="4"
+fill="#edf5ff"/>
+
+<circle
+cx="145"
+cy="119"
+r="7"
+fill="#31c96b"/>
+
+<rect
+x="72"
+y="124"
+width="76"
+height="38"
+rx="4"
+fill="white"
+stroke="#607898"
+stroke-width="6"/>
+
+</svg>
+
+</div>
+
+<h3>
+    Laminating
+</h3>
+
+<p>
+    Lindungi dokumen agar lebih rapi dan tahan lama.
+</p>
+
+</article>
+
+
+
+<!-- =====================================================
+     6. JILID
+===================================================== -->
+
+<article class="service-card">
+
+<div class="service-icon">
+
+<svg viewBox="0 0 220 180"
+xmlns="http://www.w3.org/2000/svg">
+
+<ellipse
+cx="110"
+cy="158"
+rx="65"
+ry="9"
+fill="#dce8f7"/>
+
+<rect
+x="57"
+y="40"
+width="82"
+height="102"
+rx="8"
+fill="#ef3340"
+transform="rotate(-7 98 91)"/>
+
+<rect
+x="70"
+y="30"
+width="86"
+height="110"
+rx="8"
+fill="#ffffff"
+stroke="#657c9b"
+stroke-width="7"
+transform="rotate(7 113 85)"/>
+
+<circle cx="76" cy="54" r="5" fill="#657c9b"/>
+<circle cx="79" cy="77" r="5" fill="#657c9b"/>
+<circle cx="82" cy="100" r="5" fill="#657c9b"/>
+
+<rect
+x="99"
+y="57"
+width="40"
+height="6"
+rx="3"
+fill="#8da1ba"/>
+
+<rect
+x="99"
+y="76"
+width="36"
+height="6"
+rx="3"
+fill="#8da1ba"/>
+
+<rect
+x="99"
+y="95"
+width="42"
+height="6"
+rx="3"
+fill="#8da1ba"/>
+
+</svg>
+
+</div>
+
+<h3>
+    Jilid
+</h3>
+
+<p>
+    Jilid dokumen, tugas, laporan dan kebutuhan lainnya.
+</p>
+
+</article>
+
+
+
+<!-- =====================================================
+     7. STEMPEL
+===================================================== -->
+
+<article class="service-card">
+
+<div class="service-icon">
+
+<svg viewBox="0 0 220 180"
+xmlns="http://www.w3.org/2000/svg">
+
+<ellipse
+cx="110"
+cy="158"
+rx="65"
+ry="9"
+fill="#dce8f7"/>
+
+<rect
+x="66"
+y="35"
+width="57"
+height="73"
+rx="12"
+fill="#e92b2b"/>
+
+<rect
+x="53"
+y="102"
+width="96"
+height="27"
+rx="8"
+fill="#e92b2b"/>
+
+<circle
+cx="135"
+cy="99"
+r="35"
+fill="white"
+stroke="#e92b2b"
+stroke-width="7"/>
+
+<text
+x="135"
+y="105"
+text-anchor="middle"
+font-size="14"
+font-family="Arial"
+font-weight="bold"
+fill="#e92b2b">
+STAMP
+</text>
+
+<rect
+x="78"
+y="26"
+width="36"
+height="15"
+rx="6"
+fill="#e92b2b"/>
+
+</svg>
+
+</div>
+
+<h3>
+    Bikin Stempel/Cap Flash
+</h3>
+
+<p>
+    Pembuatan stempel atau cap flash sesuai kebutuhan dan desain Anda.
+</p>
+
+</article>
+
+
+
+<!-- =====================================================
+     8. ID CARD / NPWP / BPJS
+===================================================== -->
+
+<article class="service-card">
+
+<div class="service-icon">
+
+<svg viewBox="0 0 220 180"
+xmlns="http://www.w3.org/2000/svg">
+
+<ellipse
+cx="110"
+cy="158"
+rx="70"
+ry="9"
+fill="#dce8f7"/>
+
+<rect
+x="50"
+y="30"
+width="112"
+height="75"
+rx="10"
+fill="#ffd21c"
+transform="rotate(-5 106 67)"/>
+
+<rect
+x="63"
+y="52"
+width="108"
+height="76"
+rx="10"
+fill="#eaf5ff"
+stroke="#1478e5"
+stroke-width="7"/>
+
+<circle
+cx="92"
+cy="76"
+r="12"
+fill="#3e7ed8"/>
+
+<path
+d="M75 105 Q92 87 109 105"
+fill="#3e7ed8"/>
+
+<rect
+x="120"
+y="70"
+width="35"
+height="6"
+rx="3"
+fill="#3e7ed8"/>
+
+<rect
+x="120"
+y="84"
+width="42"
+height="6"
+rx="3"
+fill="#3e7ed8"/>
+
+<rect
+x="120"
+y="98"
+width="30"
+height="6"
+rx="3"
+fill="#3e7ed8"/>
+
+</svg>
+
+</div>
+
+<h3>
+    Cetak Kartu ID Card / NPWP / BPJS
+</h3>
+
+<p>
+    Cetak kartu ID Card, NPWP dan BPJS dengan hasil rapi dan berkualitas.
+</p>
+
+</article>
+
+
+</div>
+</div>
+</section>
+
+
+
+<!-- =====================================================
+     HARGA
+===================================================== -->
+
+<section id="harga" class="section price-section">
+
+<div class="container">
+
+<div class="section-heading">
+
+    <span class="eyebrow">
+        DAFTAR HARGA
+    </span>
+
+    <h2>
+        Daftar Harga MUCI
+    </h2>
+
+    <p>
+        Harga layanan MUCI yang transparan dan terjangkau.
+    </p>
+
+</div>
+
+
+<div class="price-grid">
+
+
+<!-- FOTOCOPY -->
+
+<div class="price-card">
+
+<div class="price-icon">
+
+<svg viewBox="0 0 120 100"
+xmlns="http://www.w3.org/2000/svg">
+
+<rect
+x="35"
+y="10"
+width="50"
+height="30"
+rx="5"
+fill="white"
+stroke="#1478e5"
+stroke-width="5"/>
+
+<rect
+x="18"
+y="35"
+width="84"
+height="40"
+rx="9"
+fill="#1478e5"/>
+
+<rect
+x="30"
+y="47"
+width="60"
+height="15"
+rx="3"
+fill="white"/>
+
+<rect
+x="37"
+y="65"
+width="48"
+height="28"
+rx="3"
+fill="white"
+stroke="#1478e5"
+stroke-width="4"/>
+
+</svg>
+
+</div>
+
+<h3>
+    Fotocopy
+</h3>
+
+<strong>
+    Rp 1.000
+</strong>
+
+<p>
+    / 3 lembar
+</p>
+
+<a href="#pesan">
+    Pesan
 </a>
 
-<a href="https://wa.me/6285185207306?text=Halo%20MUCI%20ATK%2C%20saya%20ingin%20bertanya%20tentang%20produk."
-class="btn-secondary">
-💬 Pesan WhatsApp
+</div>
+
+
+
+<!-- PRINT -->
+
+<div class="price-card featured">
+
+<span class="badge">
+    POPULER
+</span>
+
+<div class="price-icon">
+
+<svg viewBox="0 0 120 100"
+xmlns="http://www.w3.org/2000/svg">
+
+<rect
+x="35"
+y="10"
+width="50"
+height="35"
+fill="white"
+stroke="#1478e5"
+stroke-width="5"/>
+
+<rect
+x="17"
+y="37"
+width="86"
+height="38"
+rx="8"
+fill="#1478e5"/>
+
+<rect
+x="29"
+y="50"
+width="62"
+height="12"
+fill="#eaf5ff"/>
+
+<rect
+x="37"
+y="66"
+width="48"
+height="27"
+fill="white"
+stroke="#1478e5"
+stroke-width="4"/>
+
+<circle
+cx="88"
+cy="55"
+r="4"
+fill="#35c96b"/>
+
+</svg>
+
+</div>
+
+<h3>
+    Print Dokumen
+</h3>
+
+<strong>
+    Rp 2.000
+</strong>
+
+<p>
+    / lembar
+</p>
+
+<a href="#pesan">
+    Pesan
 </a>
 
 </div>
 
+
+
+<!-- CETAK FOTO -->
+
+<div class="price-card">
+
+<div class="price-icon">
+
+<svg viewBox="0 0 120 100"
+xmlns="http://www.w3.org/2000/svg">
+
+<rect
+x="20"
+y="24"
+width="75"
+height="55"
+rx="5"
+fill="white"
+stroke="#1478e5"
+stroke-width="5"
+transform="rotate(-7 58 52)"/>
+
+<circle
+cx="78"
+cy="32"
+r="8"
+fill="#ffd21c"/>
+
+<path
+d="M30 70 L51 49 L64 61 L76 47 L95 70"
+fill="#43b95f"/>
+
+</svg>
+
+</div>
+
+<h3>
+    Cetak Foto
+</h3>
+
+<strong>
+    Mulai Rp 3.000
+</strong>
+
+<p>
+    / lembar
+</p>
+
+<a href="#pesan">
+    Pesan
+</a>
+
 </div>
 
 
-<div class="hero-card">
 
-<h3>🔥 Produk Favorit MUCI</h3>
+<!-- PAS FOTO -->
 
-<div class="mini-product">
-<div class="mini-icon">📒</div>
-<div>
-<strong>Buku Tulis</strong>
-<small>Mulai Rp 4.000</small>
-</div>
+<div class="price-card">
+
+<div class="price-icon">
+
+<svg viewBox="0 0 120 100"
+xmlns="http://www.w3.org/2000/svg">
+
+<rect
+x="15"
+y="20"
+width="42"
+height="58"
+rx="4"
+fill="white"
+stroke="#1478e5"
+stroke-width="5"/>
+
+<rect
+x="63"
+y="20"
+width="42"
+height="58"
+rx="4"
+fill="white"
+stroke="#1478e5"
+stroke-width="5"/>
+
+<circle
+cx="36"
+cy="38"
+r="7"
+fill="#f6a45d"/>
+
+<circle
+cx="84"
+cy="38"
+r="7"
+fill="#f6a45d"/>
+
+<path
+d="M25 65 Q36 50 47 65"
+fill="#174b87"/>
+
+<path
+d="M73 65 Q84 50 95 65"
+fill="#174b87"/>
+
+</svg>
+
 </div>
 
-<div class="mini-product">
-<div class="mini-icon">🖊️</div>
-<div>
-<strong>Pulpen</strong>
-<small>Mulai Rp 2.500</small>
-</div>
-</div>
+<h3>
+    Pas Foto
+</h3>
 
-<div class="mini-product">
-<div class="mini-icon">📄</div>
-<div>
-<strong>Kertas A4</strong>
-<small>Mulai Rp 55.000</small>
-</div>
-</div>
+<strong>
+    Mulai Rp 2.000
+</strong>
 
-<div class="mini-product">
-<div class="mini-icon">📁</div>
-<div>
-<strong>Map & Folder</strong>
-<small>Mulai Rp 2.000</small>
-</div>
-</div>
+<p>
+    / set
+</p>
+
+<a href="#pesan">
+    Pesan
+</a>
 
 </div>
+
+
+
+<!-- LAMINATING -->
+
+<div class="price-card">
+
+<div class="price-icon">
+
+<svg viewBox="0 0 120 100"
+xmlns="http://www.w3.org/2000/svg">
+
+<rect
+x="33"
+y="12"
+width="55"
+height="35"
+rx="5"
+fill="#edf5ff"
+stroke="#647c9a"
+stroke-width="5"/>
+
+<rect
+x="18"
+y="40"
+width="84"
+height="42"
+rx="8"
+fill="#19294a"/>
+
+<rect
+x="30"
+y="51"
+width="60"
+height="12"
+fill="#edf5ff"/>
+
+<rect
+x="37"
+y="72"
+width="48"
+height="23"
+fill="white"
+stroke="#647c9a"
+stroke-width="4"/>
+
+</svg>
+
+</div>
+
+<h3>
+    Laminating
+</h3>
+
+<strong>
+    Mulai Rp 3.000
+</strong>
+
+<p>
+    KTP Rp 3.000 • A4/F4 Rp 5.000
+</p>
+
+<a href="#pesan">
+    Pesan
+</a>
+
+</div>
+
+
+
+<!-- JILID -->
+
+<div class="price-card">
+
+<div class="price-icon">
+
+<svg viewBox="0 0 120 100"
+xmlns="http://www.w3.org/2000/svg">
+
+<rect
+x="28"
+y="18"
+width="55"
+height="72"
+rx="5"
+fill="#ef3340"
+transform="rotate(-6 55 54)"/>
+
+<rect
+x="40"
+y="12"
+width="57"
+height="75"
+rx="5"
+fill="white"
+stroke="#657c9b"
+stroke-width="5"
+transform="rotate(7 68 50)"/>
+
+<circle cx="43" cy="30" r="3" fill="#657c9b"/>
+<circle cx="46" cy="46" r="3" fill="#657c9b"/>
+<circle cx="48" cy="62" r="3" fill="#657c9b"/>
+
+<rect
+x="62"
+y="33"
+width="25"
+height="4"
+fill="#8da1ba"/>
+
+<rect
+x="62"
+y="47"
+width="22"
+height="4"
+fill="#8da1ba"/>
+
+<rect
+x="62"
+y="61"
+width="27"
+height="4"
+fill="#8da1ba"/>
+
+</svg>
+
+</div>
+
+<h3>
+    Jilid
+</h3>
+
+<strong>
+    Mulai Rp 3.000
+</strong>
+
+<p>
+    Tergantung ketebalan
+</p>
+
+<a href="#pesan">
+    Pesan
+</a>
+
+</div>
+
+
+
+<!-- STEMPEL -->
+
+<div class="price-card">
+
+<span class="badge">
+    BARU
+</span>
+
+<div class="price-icon">
+
+<svg viewBox="0 0 120 100"
+xmlns="http://www.w3.org/2000/svg">
+
+<rect
+x="35"
+y="12"
+width="32"
+height="48"
+rx="6"
+fill="#e92b2b"/>
+
+<rect
+x="27"
+y="55"
+width="60"
+height="17"
+rx="5"
+fill="#e92b2b"/>
+
+<circle
+cx="77"
+cy="54"
+r="23"
+fill="white"
+stroke="#e92b2b"
+stroke-width="5"/>
+
+<text
+x="77"
+y="58"
+text-anchor="middle"
+font-size="9"
+font-family="Arial"
+font-weight="bold"
+fill="#e92b2b">
+STAMP
+</text>
+
+</svg>
+
+</div>
+
+<h3>
+    Bikin Stempel/Cap Flash
+</h3>
+
+<strong>
+    Mulai Rp 100.000
+</strong>
+
+<p>
+    Stempel / cap flash sesuai kebutuhan
+</p>
+
+<a href="#pesan">
+    Pesan
+</a>
+
+</div>
+
+
+
+<!-- ID CARD -->
+
+<div class="price-card">
+
+<div class="price-icon">
+
+<svg viewBox="0 0 120 100"
+xmlns="http://www.w3.org/2000/svg">
+
+<rect
+x="25"
+y="15"
+width="65"
+height="42"
+rx="5"
+fill="#ffd21c"
+transform="rotate(-5 57 36)"/>
+
+<rect
+x="30"
+y="32"
+width="68"
+height="45"
+rx="6"
+fill="#eaf5ff"
+stroke="#1478e5"
+stroke-width="5"/>
+
+<circle
+cx="48"
+cy="49"
+r="7"
+fill="#3e7ed8"/>
+
+<path
+d="M38 67 Q48 55 58 67"
+fill="#3e7ed8"/>
+
+<rect
+x="63"
+y="46"
+width="25"
+height="4"
+fill="#3e7ed8"/>
+
+<rect
+x="63"
+y="56"
+width="29"
+height="4"
+fill="#3e7ed8"/>
+
+<rect
+x="63"
+y="66"
+width="22"
+height="4"
+fill="#3e7ed8"/>
+
+</svg>
+
+</div>
+
+<h3>
+    Cetak Kartu ID Card / NPWP / BPJS
+</h3>
+
+<strong>
+    Rp 15.000
+</strong>
+
+<p>
+    / kartu
+</p>
+
+<a href="#pesan">
+    Pesan
+</a>
+
+</div>
+
+
+</div>
+
+
+<p class="note">
+    * Harga dapat berbeda sesuai jenis, ukuran,
+    bahan, dan jumlah pesanan.
+</p>
 
 </div>
 
 </section>
 
 
-<!-- ================= FEATURES ================= -->
 
-<section>
+<!-- =====================================================
+     PEMESANAN
+===================================================== -->
 
-<div class="container">
+<section id="pesan" class="section order-section">
 
-<div class="features">
-
-<div class="feature">
-<div class="feature-icon">💰</div>
-<h3>Harga Terjangkau</h3>
-<p>
-Harga bersahabat untuk kebutuhan sekolah,
-kantor dan rumah.
-</p>
-</div>
-
-<div class="feature">
-<div class="feature-icon">📦</div>
-<h3>Belanja Banyak</h3>
-<p>
-Tersedia harga khusus untuk pembelian
-dalam jumlah banyak.
-</p>
-</div>
-
-<div class="feature">
-<div class="feature-icon">⚡</div>
-<h3>Pesan Mudah</h3>
-<p>
-Pilih produk dan kirim daftar belanja
-langsung melalui WhatsApp.
-</p>
-</div>
-
-<div class="feature">
-<div class="feature-icon">🏪</div>
-<h3>Lokasi Strategis</h3>
-<p>
-Melayani kebutuhan ATK di wilayah
-Muara Enim dan sekitarnya.
-</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
+<div class="container order-wrap">
 
 
-<!-- ================= PRODUCTS ================= -->
+<div>
 
-<section id="produk">
+<span class="eyebrow">
+    PEMESANAN
+</span>
 
-<div class="container">
-
-<div class="section-title">
-
-<h2>🛍️ Katalog Produk MUCI</h2>
+<h2>
+    Kirim detail pesanan ke WhatsApp
+</h2>
 
 <p>
-Pilih kebutuhan ATK Anda dengan harga yang terjangkau.
+    Isi formulir. Setelah tombol ditekan,
+    WhatsApp akan terbuka dengan pesan
+    yang sudah tersusun.
+    Untuk file cetak, pelanggan dapat
+    melampirkannya langsung di WhatsApp.
 </p>
+
+
+<div class="steps">
+
+<div>
+    <b>01</b>
+    <span>Isi jenis layanan dan jumlah.</span>
+</div>
+
+<div>
+    <b>02</b>
+    <span>Klik "Kirim ke WhatsApp".</span>
+</div>
+
+<div>
+    <b>03</b>
+    <span>Tambahkan file yang ingin dicetak di WhatsApp.</span>
+</div>
+
+</div>
 
 </div>
 
 
-<div class="search-box">
 
-<span class="search-icon">🔍</span>
+<!-- FORM -->
+
+<form id="orderForm" class="order-form">
+
+
+<label>
+
+Nama
 
 <input
+id="nama"
 type="text"
-id="search"
-placeholder="Cari pulpen, buku, kertas, map..."
-onkeyup="searchProducts()">
+placeholder="Nama Anda"
+required>
+
+</label>
+
+
+
+<label>
+
+Jenis layanan
+
+<select id="layananSelect" required>
+
+<option value="">
+    Pilih layanan
+</option>
+
+<option>
+    Fotocopy
+</option>
+
+<option>
+    Print Dokumen
+</option>
+
+<option>
+    Cetak Foto
+</option>
+
+<option>
+    Pas Foto
+</option>
+
+<option>
+    Laminating
+</option>
+
+<option>
+    Jilid
+</option>
+
+<option>
+    Bikin Stempel/Cap Flash
+</option>
+
+<option>
+    Cetak Kartu ID Card / NPWP / BPJS
+</option>
+
+<option>
+    Lainnya
+</option>
+
+</select>
+
+</label>
+
+
+
+<div class="two-col">
+
+
+<label>
+
+Jumlah
+
+<input
+id="jumlah"
+type="number"
+min="1"
+value="1"
+required>
+
+</label>
+
+
+<label>
+
+Ukuran
+
+<input
+id="ukuran"
+type="text"
+placeholder="A4 / 4R / dll.">
+
+</label>
+
 
 </div>
 
 
-<div class="categories">
 
-<button class="active"
-onclick="filterCategory('all',this)">
-Semua
+<label>
+
+Catatan
+
+<textarea
+id="catatan"
+rows="4"
+placeholder="Warna, jenis kertas, finishing, desain stempel, ukuran stempel, dll."
+></textarea>
+
+</label>
+
+
+
+<button
+class="btn primary full"
+type="submit">
+
+💬 Kirim Pesanan ke WhatsApp
+
 </button>
 
-<button onclick="filterCategory('alat-tulis',this)">
-Alat Tulis
-</button>
 
-<button onclick="filterCategory('buku',this)">
-Buku
-</button>
+<small>
+    File tidak diunggah ke website ini.
+    Setelah WhatsApp terbuka, lampirkan
+    file atau desain secara manual.
+</small>
 
-<button onclick="filterCategory('kertas',this)">
-Kertas
-</button>
 
-<button onclick="filterCategory('kantor',this)">
-Perlengkapan Kantor
-</button>
-
-<button onclick="filterCategory('sekolah',this)">
-Sekolah
-</button>
-
-</div>
-
-
-<div class="products" id="productList">
-
-
-<!-- PRODUK 1 -->
-
-<div class="product"
-data-category="alat-tulis"
-data-name="Pulpen Standard Biru">
-
-<div class="product-img">
-
-<span class="product-label">
-BEST SELLER
-</span>
-
-🖊️
-
-</div>
-
-<div class="product-body">
-
-<div class="product-category">
-Alat Tulis
-</div>
-
-<h3>
-Pulpen Standard Biru
-</h3>
-
-<div class="price">
-Rp 2.500
-</div>
-
-<div class="price-note">
-/ pcs
-</div>
-
-<button class="add-cart"
-onclick="addCart('Pulpen Standard Biru',2500,this)">
-+ Tambah
-</button>
-
-</div>
-
-</div>
-
-
-<!-- PRODUK 2 -->
-
-<div class="product"
-data-category="alat-tulis"
-data-name="Pensil 2B">
-
-<div class="product-img">
-✏️
-</div>
-
-<div class="product-body">
-
-<div class="product-category">
-Alat Tulis
-</div>
-
-<h3>
-Pensil 2B
-</h3>
-
-<div class="price">
-Rp 2.000
-</div>
-
-<div class="price-note">
-/ pcs
-</div>
-
-<button class="add-cart"
-onclick="addCart('Pensil 2B',2000,this)">
-+ Tambah
-</button>
-
-</div>
-
-</div>
-
-
-<!-- PRODUK 3 -->
-
-<div class="product"
-data-category="alat-tulis"
-data-name="Penghapus Putih">
-
-<div class="product-img">
-◻️
-</div>
-
-<div class="product-body">
-
-<div class="product-category">
-Alat Tulis
-</div>
-
-<h3>
-Penghapus Putih
-</h3>
-
-<div class="price">
-Rp 1.500
-</div>
-
-<div class="price-note">
-/ pcs
-</div>
-
-<button class="add-cart"
-onclick="addCart('Penghapus Putih',1500,this)">
-+ Tambah
-</button>
-
-</div>
-
-</div>
-
-
-<!-- PRODUK 4 -->
-
-<div class="product"
-data-category="alat-tulis"
-data-name="Spidol Permanen">
-
-<div class="product-img">
-🖍️
-</div>
-
-<div class="product-body">
-
-<div class="product-category">
-Alat Tulis
-</div>
-
-<h3>
-Spidol Permanen
-</h3>
-
-<div class="price">
-Rp 5.000
-</div>
-
-<div class="price-note">
-/ pcs
-</div>
-
-<button class="add-cart"
-onclick="addCart('Spidol Permanen',5000,this)">
-+ Tambah
-</button>
-
-</div>
-
-</div>
-
-
-<!-- PRODUK 5 -->
-
-<div class="product"
-data-category="buku"
-data-name="Buku Tulis 38 Lembar">
-
-<div class="product-img">
-
-<span class="product-label">
-HEMAT
-</span>
-
-📒
-
-</div>
-
-<div class="product-body">
-
-<div class="product-category">
-Buku
-</div>
-
-<h3>
-Buku Tulis 38 Lembar
-</h3>
-
-<div class="price">
-Rp 4.000
-</div>
-
-<div class="price-note">
-/ buku
-</div>
-
-<button class="add-cart"
-onclick="addCart('Buku Tulis 38 Lembar',4000,this)">
-+ Tambah
-</button>
-
-</div>
-
-</div>
-
-
-<!-- PRODUK 6 -->
-
-<div class="product"
-data-category="buku"
-data-name="Buku Gambar">
-
-<div class="product-img">
-📕
-</div>
-
-<div class="product-body">
-
-<div class="product-category">
-Buku
-</div>
-
-<h3>
-Buku Gambar
-</h3>
-
-<div class="price">
-Rp 5.000
-</div>
-
-<div class="price-note">
-/ buku
-</div>
-
-<button class="add-cart"
-onclick="addCart('Buku Gambar',5000,this)">
-+ Tambah
-</button>
-
-</div>
-
-</div>
-
-
-<!-- PRODUK 7 -->
-
-<div class="product"
-data-category="kertas"
-data-name="Kertas A4 70 GSM">
-
-<div class="product-img">
-
-<span class="product-label">
-POPULER
-</span>
-
-📄
-
-</div>
-
-<div class="product-body">
-
-<div class="product-category">
-Kertas
-</div>
-
-<h3>
-Kertas A4 70 GSM
-</h3>
-
-<div class="price">
-Rp 55.000
-</div>
-
-<div class="price-note">
-/ rim
-</div>
-
-<button class="add-cart"
-onclick="addCart('Kertas A4 70 GSM',55000,this)">
-+ Tambah
-</button>
-
-</div>
-
-</div>
-
-
-<!-- PRODUK 8 -->
-
-<div class="product"
-data-category="kertas"
-data-name="Kertas F4 70 GSM">
-
-<div class="product-img">
-📃
-</div>
-
-<div class="product-body">
-
-<div class="product-category">
-Kertas
-</div>
-
-<h3>
-Kertas F4 70 GSM
-</h3>
-
-<div class="price">
-Rp 58.000
-</div>
-
-<div class="price-note">
-/ rim
-</div>
-
-<button class="add-cart"
-onclick="addCart('Kertas F4 70 GSM',58000,this)">
-+ Tambah
-</button>
-
-</div>
-
-</div>
-
-
-<!-- PRODUK 9 -->
-
-<div class="product"
-data-category="kantor"
-data-name="Stapler Mini">
-
-<div class="product-img">
-📎
-</div>
-
-<div class="product-body">
-
-<div class="product-category">
-Kantor
-</div>
-
-<h3>
-Stapler Mini
-</h3>
-
-<div class="price">
-Rp 8.000
-</div>
-
-<div class="price-note">
-/ pcs
-</div>
-
-<button class="add-cart"
-onclick="addCart('Stapler Mini',8000,this)">
-+ Tambah
-</button>
-
-</div>
-
-</div>
-
-
-<!-- PRODUK 10 -->
-
-<div class="product"
-data-category="kantor"
-data-name="Isi Staples">
-
-<div class="product-img">
-🔩
-</div>
-
-<div class="product-body">
-
-<div class="product-category">
-Kantor
-</div>
-
-<h3>
-Isi Staples
-</h3>
-
-<div class="price">
-Rp 3.000
-</div>
-
-<div class="price-note">
-/ kotak
-</div>
-
-<button class="add-cart"
-onclick="addCart('Isi Staples',3000,this)">
-+ Tambah
-</button>
-
-</div>
-
-</div>
-
-
-<!-- PRODUK 11 -->
-
-<div class="product"
-data-category="kantor"
-data-name="Map Plastik">
-
-<div class="product-img">
-📁
-</div>
-
-<div class="product-body">
-
-<div class="product-category">
-Kantor
-</div>
-
-<h3>
-Map Plastik
-</h3>
-
-<div class="price">
-Rp 3.000
-</div>
-
-<div class="price-note">
-/ pcs
-</div>
-
-<button class="add-cart"
-onclick="addCart('Map Plastik',3000,this)">
-+ Tambah
-</button>
-
-</div>
-
-</div>
-
-
-<!-- PRODUK 12 -->
-
-<div class="product"
-data-category="sekolah"
-data-name="Kotak Pensil">
-
-<div class="product-img">
-🖌️
-</div>
-
-<div class="product-body">
-
-<div class="product-category">
-Sekolah
-</div>
-
-<h3>
-Kotak Pensil
-</h3>
-
-<div class="price">
-Rp 15.000
-</div>
-
-<div class="price-note">
-/ pcs
-</div>
-
-<button class="add-cart"
-onclick="addCart('Kotak Pensil',15000,this)">
-+ Tambah
-</button>
-
-</div>
-
-</div>
-
-
-<!-- PRODUK 13 -->
-
-<div class="product"
-data-category="sekolah"
-data-name="Penggaris 30 CM">
-
-<div class="product-img">
-📏
-</div>
-
-<div class="product-body">
-
-<div class="product-category">
-Sekolah
-</div>
-
-<h3>
-Penggaris 30 CM
-</h3>
-
-<div class="price">
-Rp 3.000
-</div>
-
-<div class="price-note">
-/ pcs
-</div>
-
-<button class="add-cart"
-onclick="addCart('Penggaris 30 CM',3000,this)">
-+ Tambah
-</button>
-
-</div>
-
-</div>
-
-
-<!-- PRODUK 14 -->
-
-<div class="product"
-data-category="sekolah"
-data-name="Lem Kertas">
-
-<div class="product-img">
-🧴
-</div>
-
-<div class="product-body">
-
-<div class="product-category">
-Sekolah
-</div>
-
-<h3>
-Lem Kertas
-</h3>
-
-<div class="price">
-Rp 4.000
-</div>
-
-<div class="price-note">
-/ pcs
-</div>
-
-<button class="add-cart"
-onclick="addCart('Lem Kertas',4000,this)">
-+ Tambah
-</button>
-
-</div>
-
-</div>
-
-
-<!-- PRODUK 15 -->
-
-<div class="product"
-data-category="kantor"
-data-name="Gunting">
-
-<div class="product-img">
-✂️
-</div>
-
-<div class="product-body">
-
-<div class="product-category">
-Kantor
-</div>
-
-<h3>
-Gunting
-</h3>
-
-<div class="price">
-Rp 7.000
-</div>
-
-<div class="price-note">
-/ pcs
-</div>
-
-<button class="add-cart"
-onclick="addCart('Gunting',7000,this)">
-+ Tambah
-</button>
-
-</div>
-
-</div>
-
-
-</div>
+</form>
 
 </div>
 
 </section>
 
 
-<!-- ================= HARGA ================= -->
 
-<section id="harga" class="price-rule">
+<!-- =====================================================
+     KONTAK
+===================================================== -->
 
-<div class="container">
+<section id="kontak" class="section contact-section">
 
-<div class="section-title">
+<div class="container contact-grid">
 
-<h2>
-💰 Ketentuan Harga MUCI
-</h2>
-
-<p>
-Belanja lebih banyak, bisa mendapatkan harga yang lebih hemat.
-</p>
-
-</div>
-
-
-<div class="rules">
-
-<div class="rule">
-
-<h3>
-🏷️ Harga Eceran
-</h3>
-
-<p>
-Harga yang tertera pada katalog merupakan harga eceran.
-Cocok untuk kebutuhan pribadi, sekolah maupun rumah.
-</p>
-
-</div>
-
-
-<div class="rule">
-
-<h3>
-📦 Harga Grosir
-</h3>
-
-<p>
-Untuk pembelian dalam jumlah banyak, silakan hubungi
-MUCI melalui WhatsApp untuk mendapatkan penawaran harga khusus.
-</p>
-
-</div>
-
-
-<div class="rule">
-
-<h3>
-📌 Ketentuan
-</h3>
-
-<p>
-Harga dan ketersediaan barang dapat berubah sewaktu-waktu.
-Pesanan akan dikonfirmasi terlebih dahulu sebelum pembayaran.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= CTA ================= -->
-
-<section>
-
-<div class="container">
-
-<div class="cta">
-
-<h2>
-Butuh ATK dalam jumlah banyak?
-</h2>
-
-<p>
-Kirim daftar kebutuhan Anda. Tim MUCI siap membantu
-memberikan informasi harga terbaik.
-</p>
-
-<a class="btn-secondary"
-href="https://wa.me/6285185207306?text=Halo%20MUCI%20ATK%2C%20saya%20ingin%20meminta%20harga%20grosir.">
-
-💬 Tanya Harga Grosir
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= KONTAK ================= -->
-
-<section id="kontak">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>
-📍 Hubungi MUCI
-</h2>
-
-<p>
-Kunjungi toko atau pesan melalui WhatsApp.
-</p>
-
-</div>
-
-
-<div class="contact-grid">
-
-
-<div class="contact-card">
-
-<div class="contact-item">
-
-<div class="contact-item-icon">
-🏪
-</div>
 
 <div>
 
-<strong>
-MUCI ATK
-</strong>
-
-<span>
-Pusat alat tulis kantor dan perlengkapan sekolah.
+<span class="eyebrow">
+    MUCI
 </span>
 
-</div>
+<h2>
+    Cetak lebih mudah, lebih dekat.
+</h2>
 
-</div>
+<p>
+    Butuh print, fotocopy, cetak foto,
+    laminating, jilid, bikin stempel/cap flash,
+    atau cetak kartu ID Card, NPWP dan BPJS?
 
-
-<div class="contact-item">
-
-<div class="contact-item-icon">
-📍
-</div>
-
-<div>
-
-<strong>
-Alamat
-</strong>
-
-<span>
-Jl. Jend. Bambang Utoyo, Ps. III Muara Enim,
-Kec. Muara Enim, Kabupaten Muara Enim,
-Sumatera Selatan 31313
-</span>
-
-</div>
-
-</div>
-
-
-<div class="contact-item">
-
-<div class="contact-item-icon">
-📱
-</div>
-
-<div>
-
-<strong>
-WhatsApp
-</strong>
-
-<span>
-0851-8520-7306
-</span>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="contact-card">
-
-<h3 style="margin-bottom:15px;">
-💬 Pesan Sekarang
-</h3>
-
-<p style="color:#64748b;line-height:1.7;margin-bottom:20px;">
-
-Klik tombol di bawah untuk langsung menghubungi
-MUCI melalui WhatsApp.
-
+    Hubungi MUCI untuk kebutuhan cetak Anda.
 </p>
 
-<a
-href="https://wa.me/6285185207306?text=Halo%20MUCI%20ATK%2C%20saya%20ingin%20memesan%20produk."
-class="checkout"
-style="display:block;text-align:center;">
-
-💬 Chat WhatsApp MUCI
-
-</a>
-
 </div>
+
+
+
+<div class="contact-box">
+
+
+<p>
+    📱 <b>WhatsApp</b><br>
+    0851-8520-7306
+</p>
+
+
+<p>
+    📍 <b>Alamat</b><br>
+    Jl. Jend. Bambang Utoyo No. 38,
+    Muara Enim
+</p>
+
+
+<p>
+    🕐 <b>Jam Buka</b><br>
+    Mulai pukul 06.00 pagi
+</p>
 
 
 </div>
@@ -1802,442 +2316,160 @@ style="display:block;text-align:center;">
 </div>
 
 </section>
+
 
 </main>
 
 
-<!-- ================= FOOTER ================= -->
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
-<div class="footer-inner">
+<div class="container footer-inner">
 
 <div>
 
 <strong>
-MUCI ATK
+    MUCI
 </strong>
 
-<br>
-
-<small>
-Solusi kebutuhan ATK Anda.
-</small>
+<span>
+    Pusat Print & Foto Copy
+</span>
 
 </div>
 
-
-<div>
-
-<small>
-© 2026 MUCI ATK. Semua hak dilindungi.
-</small>
-
-</div>
+<span>
+    © 2026 MUCI
+</span>
 
 </div>
 
 </footer>
 
 
-<!-- ================= WHATSAPP ================= -->
 
-<a
-class="wa-float"
-href="https://wa.me/6285185207306?text=Halo%20MUCI%20ATK%2C%20saya%20ingin%20bertanya%20tentang%20produk."
-aria-label="WhatsApp MUCI">
-
-💬
-
-</a>
-
-
-<!-- ================= CART ================= -->
-
-<div
-class="overlay"
-id="overlay"
-onclick="closeCart()">
-</div>
-
-
-<div
-class="cart-panel"
-id="cartPanel">
-
-
-<div class="cart-header">
-
-<h3>
-🛒 Keranjang Belanja
-</h3>
-
-<button
-class="close-cart"
-onclick="closeCart()">
-
-×
-
-</button>
-
-</div>
-
-
-<div
-class="cart-items"
-id="cartItems">
-
-<p
-style="color:#64748b;text-align:center;padding-top:40px;">
-
-Keranjang masih kosong.
-
-</p>
-
-</div>
-
-
-<div class="cart-footer">
-
-<div class="total">
-
-<span>
-Total
-</span>
-
-<span id="cartTotal">
-Rp 0
-</span>
-
-</div>
-
-
-<button
-class="checkout"
-onclick="checkoutWhatsApp()">
-
-💬 Pesan melalui WhatsApp
-
-</button>
-
-</div>
-
-</div>
-
+<!-- =====================================================
+     JAVASCRIPT WHATSAPP
+===================================================== -->
 
 <script>
 
-/* ================= KERANJANG ================= */
+const NOMOR_WHATSAPP = "6285185207306";
 
-let cart=[];
 
+const HARGA_LAYANAN = {
 
-/* FORMAT RUPIAH */
+    "Fotocopy":
+        "Rp. 1.000 / 3 lembar",
 
-function rupiah(number){
+    "Print Dokumen":
+        "Rp. 2.000 / lembar",
 
-return new Intl.NumberFormat('id-ID',{
-style:'currency',
-currency:'IDR',
-maximumFractionDigits:0
-}).format(number);
+    "Cetak Foto":
+        "Mulai dari Rp. 3.000 / lembar",
 
-}
+    "Pas Foto":
+        "Mulai dari Rp. 2.000 / set",
 
+    "Laminating":
+        "KTP Rp. 3.000 / A4-F4 Rp. 5.000",
 
-/* TAMBAH KERANJANG */
+    "Jilid":
+        "Mulai dari Rp. 3.000",
 
-function addCart(name,price,button){
+    "Bikin Stempel/Cap Flash":
+        "Mulai dari Rp. 100.000",
 
-const existing=cart.find(
-item=>item.name===name
-);
+    "Cetak Kartu ID Card / NPWP / BPJS":
+        "Rp. 15.000 / kartu",
 
-if(existing){
+    "Lainnya":
+        "Menyesuaikan pesanan"
 
-existing.qty++;
+};
 
-}else{
 
-cart.push({
-name:name,
-price:price,
-qty:1
-});
+const orderForm =
+    document.getElementById("orderForm");
 
-}
 
-updateCart();
+if (orderForm) {
 
+    orderForm.addEventListener(
+        "submit",
+        function(e) {
 
-if(button){
+            e.preventDefault();
 
-const original=button.innerText;
 
-button.innerText="✓ Ditambahkan";
+            const nama =
+                document.getElementById("nama")
+                .value
+                .trim();
 
-button.style.background="#16a34a";
 
-setTimeout(()=>{
+            const layanan =
+                document.getElementById("layananSelect")
+                .value;
 
-button.innerText=original;
-button.style.background="";
 
-},800);
+            const jumlah =
+                document.getElementById("jumlah")
+                .value;
 
-}
 
-}
+            const ukuran =
+                document.getElementById("ukuran")
+                .value
+                .trim() || "-";
 
 
-/* UPDATE KERANJANG */
+            const catatan =
+                document.getElementById("catatan")
+                .value
+                .trim() || "-";
 
-function updateCart(){
 
-const container=
-document.getElementById("cartItems");
+            const harga =
+                HARGA_LAYANAN[layanan] ||
+                "Menyesuaikan pesanan";
 
-const count=
-document.getElementById("cartCount");
 
-const total=
-document.getElementById("cartTotal");
+            const pesan =
+`Halo MUCI, saya ingin memesan.
 
+Nama: ${nama}
+Layanan: ${layanan}
+Jumlah: ${jumlah}
+Ukuran: ${ukuran}
+Harga: ${harga}
+Catatan: ${catatan}
 
-let totalQty=0;
-let totalPrice=0;
+Untuk pesanan Bikin Stempel/Cap Flash, saya akan mengirimkan desain, tulisan, ukuran, atau contoh stempel melalui WhatsApp.
 
+Untuk Cetak Kartu ID Card / NPWP / BPJS, saya akan mengirimkan data atau desain kartu melalui WhatsApp.
 
-cart.forEach(item=>{
+Terima kasih.`;
 
-totalQty+=item.qty;
 
-totalPrice+=
-item.price*item.qty;
+            const url =
+                "https://wa.me/" +
+                NOMOR_WHATSAPP +
+                "?text=" +
+                encodeURIComponent(pesan);
 
-});
 
+            window.open(
+                url,
+                "_blank"
+            );
 
-count.innerText=totalQty;
-
-total.innerText=
-rupiah(totalPrice);
-
-
-if(cart.length===0){
-
-container.innerHTML=`
-
-<p style="color:#64748b;text-align:center;padding-top:40px;">
-Keranjang masih kosong.
-</p>
-
-`;
-
-return;
-
-}
-
-
-container.innerHTML=
-
-cart.map((item,index)=>`
-
-<div class="cart-item">
-
-<div>
-
-<strong>
-${item.name}
-</strong>
-
-<small>
-${item.qty} × ${rupiah(item.price)}
-</small>
-
-</div>
-
-
-<div style="text-align:right;">
-
-<strong>
-${rupiah(item.price*item.qty)}
-</strong>
-
-<br>
-
-<button
-class="remove"
-onclick="removeCart(${index})">
-
-×
-
-</button>
-
-</div>
-
-</div>
-
-`).join("");
-
-}
-
-
-/* HAPUS ITEM */
-
-function removeCart(index){
-
-cart.splice(index,1);
-
-updateCart();
-
-}
-
-
-/* BUKA KERANJANG */
-
-function openCart(){
-
-document
-.getElementById("cartPanel")
-.classList.add("open");
-
-document
-.getElementById("overlay")
-.classList.add("show");
-
-}
-
-
-/* TUTUP KERANJANG */
-
-function closeCart(){
-
-document
-.getElementById("cartPanel")
-.classList.remove("open");
-
-document
-.getElementById("overlay")
-.classList.remove("show");
-
-}
-
-
-/* CHECKOUT WHATSAPP */
-
-function checkoutWhatsApp(){
-
-if(cart.length===0){
-
-alert("Keranjang masih kosong.");
-
-return;
-
-}
-
-
-let message=
-"Halo MUCI ATK, saya ingin memesan:%0A%0A";
-
-let total=0;
-
-
-cart.forEach((item,index)=>{
-
-const subtotal=
-item.price*item.qty;
-
-total+=subtotal;
-
-
-message+=
-`${index+1}. ${item.name} - ${item.qty} x ${rupiah(item.price)} = ${rupiah(subtotal)}%0A`;
-
-});
-
-
-message+=
-`%0ATotal: ${rupiah(total)}%0A%0A`;
-
-message+=
-"Mohon konfirmasi ketersediaan barang dan total pesanan saya. Terima kasih.";
-
-
-window.open(
-"https://wa.me/6285185207306?text="+message,
-"_blank"
-);
-
-}
-
-
-/* ================= PENCARIAN ================= */
-
-function searchProducts(){
-
-const keyword=
-document
-.getElementById("search")
-.value
-.toLowerCase();
-
-
-document
-.querySelectorAll(".product")
-.forEach(product=>{
-
-const name=
-product.dataset.name.toLowerCase();
-
-
-product.style.display=
-name.includes(keyword)
-?""
-:"none";
-
-});
-
-}
-
-
-/* ================= FILTER ================= */
-
-function filterCategory(category,button){
-
-document
-.querySelectorAll(".categories button")
-.forEach(btn=>
-btn.classList.remove("active")
-);
-
-
-button.classList.add("active");
-
-
-document
-.querySelectorAll(".product")
-.forEach(product=>{
-
-if(category==="all"){
-
-product.style.display="";
-
-}else{
-
-product.style.display=
-product.dataset.category===category
-?""
-:"none";
-
-}
-
-});
-
-
-document
-.getElementById("search")
-.value="";
+        }
+    );
 
 }
 
