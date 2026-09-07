@@ -4,1583 +4,892 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MUCI — Print Tech, Studio Foto & Smart Office Supply</title>
-<meta name="description" content="Pusat cetak cerdas dan perlengkapan kerja modern di Muara Enim. Pesan print dokumen, foto studio, stempel flash, dan ATK serba otomatis.">
+<title>MUCI — Pusat Print & Foto Copy</title>
 
-<!-- Fonts & Icons -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<meta name="description"
+content="MUCI menyediakan jasa print, fotocopy, cetak foto, pas foto, laminating, jilid, bikin stempel flash, cetak kartu ID Card, NPWP, BPJS dan kebutuhan ATK di Muara Enim.">
+
+<meta property="og:title"
+content="MUCI — Jasa Print, Fotocopy, Cetak Foto & Stempel Flash">
+
+<meta property="og:description"
+content="Solusi print, fotocopy, cetak foto, pas foto, laminating, jilid, stempel flash dan cetak kartu di Muara Enim.">
+
+<meta property="og:image"
+content="https://ranggamuci.github.io/TokoMuci-website/muci-preview.jpg">
+
+<meta property="og:url"
+content="https://ranggamuci.github.io/TokoMuci-website/">
+
+<meta property="og:type" content="website">
 
 <style>
+
 /* =====================================================
-   VIBRANT BRIGHT MESH & GLOW PALETTE
+   RESET
 ===================================================== */
-:root {
-  --font-display: 'Space Grotesk', sans-serif;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-
-  /* Background Cerah & Dinamis */
-  --bg-bright: #f0f7ff;
-  --bg-gradient: radial-gradient(circle at 10% 15%, rgba(56, 189, 248, 0.28) 0%, transparent 45%),
-                 radial-gradient(circle at 90% 12%, rgba(244, 114, 182, 0.22) 0%, transparent 48%),
-                 radial-gradient(circle at 50% 55%, rgba(192, 132, 252, 0.18) 0%, transparent 52%),
-                 radial-gradient(circle at 15% 85%, rgba(52, 211, 153, 0.20) 0%, transparent 46%),
-                 linear-gradient(180deg, #f8fafc 0%, #eef6ff 50%, #fdf4ff 100%);
-
-  /* Surface Cards Frosted Glass */
-  --surface: rgba(255, 255, 255, 0.85);
-  --surface-card: rgba(255, 255, 255, 0.95);
-  --surface-card-hover: #ffffff;
-  --surface-border: rgba(147, 197, 253, 0.45);
-  --border-subtle: rgba(226, 232, 240, 0.8);
-
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #64748b;
-
-  --accent-blue: #2563eb;
-  --accent-cyan: #0284c7;
-  --accent-violet: #7c3aed;
-  --accent-emerald: #059669;
-  --accent-coral: #f43f5e;
-
-  --radius-sm: 12px;
-  --radius-md: 18px;
-  --radius-lg: 26px;
-  --radius-full: 9999px;
-
-  --shadow-subtle: 0 10px 30px rgba(37, 99, 235, 0.07);
-  --shadow-glow: 0 15px 40px -10px rgba(56, 189, 248, 0.3);
-}
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--font-sans);
-  background: var(--bg-bright);
-  background-image: var(--bg-gradient);
-  background-attachment: fixed;
-  background-size: cover;
-  color: var(--text-primary);
-  line-height: 1.6;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-}
-
-h1, h2, h3, h4, .brand, .btn, .stat-val, .calc-price, .item-price {
-  font-family: var(--font-display);
-  letter-spacing: -0.03em;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef7ff;
+    color: #09234f;
+    line-height: 1.6;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
-}
-
-img {
-  max-width: 100%;
-  display: block;
+    text-decoration: none;
 }
 
 .container {
-  width: min(1200px, 92%);
-  margin: auto;
+    width: min(1280px, 92%);
+    margin: auto;
 }
+
 
 /* =====================================================
-   NAVBAR
+   HEADER
 ===================================================== */
-.header-wrapper {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(18px);
-  border-bottom: 1px solid var(--border-subtle);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+
+.hero {
+    background:
+        radial-gradient(circle at 80% 20%, #d9eeff 0, transparent 35%),
+        linear-gradient(135deg, #eef8ff, #ffffff);
+    padding-bottom: 70px;
 }
 
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 75px;
+.nav {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
 }
 
 .brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 25px;
-  font-weight: 800;
-  background: linear-gradient(135deg, #1e40af 0%, #0284c7 60%, #7c3aed 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.brand-badge {
-  font-size: 10.5px;
-  padding: 3px 10px;
-  border-radius: var(--radius-full);
-  background: rgba(2, 132, 199, 0.1);
-  border: 1px solid rgba(2, 132, 199, 0.25);
-  color: var(--accent-cyan);
-  -webkit-text-fill-color: var(--accent-cyan);
-  font-family: var(--font-sans);
-  font-weight: 700;
+    font-size: 34px;
+    font-weight: 900;
+    color: #0875e1;
+    letter-spacing: 2px;
 }
 
 .nav-links {
-  display: flex;
-  gap: 30px;
+    display: flex;
+    gap: 30px;
 }
 
 .nav-links a {
-  font-size: 14.5px;
-  font-weight: 600;
-  color: var(--text-secondary);
-  transition: color 0.2s ease;
+    color: #163d70;
+    font-weight: 700;
 }
 
 .nav-links a:hover {
-  color: var(--accent-blue);
+    color: #0875e1;
 }
 
-.nav-cta {
-  display: flex;
-  align-items: center;
-  gap: 14px;
+.nav-wa {
+    background: #0875e1;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-weight: 800;
+    box-shadow: 0 8px 20px rgba(8,117,225,.2);
 }
 
-.cart-toggle-btn {
-  position: relative;
-  background: white;
-  border: 1px solid var(--border-subtle);
-  color: var(--text-primary);
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  transition: all 0.25s;
-}
-
-.cart-toggle-btn:hover {
-  border-color: var(--accent-cyan);
-  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.2);
-  color: var(--accent-blue);
-}
-
-.cart-count {
-  position: absolute;
-  top: -4px;
-  right: -4px;
-  background: linear-gradient(135deg, #f43f5e, #e11d48);
-  color: #fff;
-  font-size: 10px;
-  font-weight: 800;
-  width: 20px;
-  height: 20px;
-  border-radius: var(--radius-full);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 6px rgba(244, 63, 94, 0.4);
-}
-
-/* =====================================================
-   BUTTONS & BADGES
-===================================================== */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 12px 26px;
-  font-size: 14.5px;
-  font-weight: 700;
-  border-radius: var(--radius-full);
-  cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  border: none;
-}
-
-.btn-primary {
-  background: linear-gradient(135deg, #0284c7 0%, #2563eb 50%, #7c3aed 100%);
-  color: #fff;
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.28);
-}
-
-.btn-primary:hover {
-  box-shadow: 0 8px 25px rgba(2, 132, 199, 0.45);
-  transform: translateY(-2px);
-}
-
-.btn-secondary {
-  background: white;
-  color: var(--text-primary);
-  border: 1.5px solid var(--border-subtle);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-}
-
-.btn-secondary:hover {
-  background: #f8fafc;
-  border-color: var(--accent-blue);
-  color: var(--accent-blue);
-  transform: translateY(-1px);
-}
-
-.tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--accent-blue);
-  background: rgba(37, 99, 235, 0.08);
-  border: 1px solid rgba(37, 99, 235, 0.2);
-  padding: 6px 16px;
-  border-radius: var(--radius-full);
-  margin-bottom: 22px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
 
 /* =====================================================
    HERO
 ===================================================== */
-.hero {
-  position: relative;
-  padding: 85px 0 80px;
-  overflow: hidden;
-}
-
-.hero-glow {
-  position: absolute;
-  top: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 950px;
-  height: 480px;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.3) 0%, rgba(244, 114, 182, 0.2) 50%, transparent 75%);
-  filter: blur(80px);
-  pointer-events: none;
-}
 
 .hero-grid {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  align-items: center;
-  gap: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+    padding-top: 50px;
 }
 
-.hero-copy h1 {
-  font-size: clamp(38px, 4.8vw, 62px);
-  line-height: 1.12;
-  font-weight: 800;
-  margin-bottom: 22px;
-  color: #0f172a;
+.eyebrow {
+    display: inline-block;
+    color: #0875e1;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
 }
 
-.hero-copy h1 span {
-  background: linear-gradient(135deg, #0284c7 0%, #7c3aed 50%, #f43f5e 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.hero h1 {
+    font-size: clamp(40px, 5vw, 68px);
+    line-height: 1.08;
+    color: #06245a;
+    font-weight: 900;
 }
 
-.hero-copy p {
-  font-size: 17.5px;
-  color: var(--text-secondary);
-  line-height: 1.75;
-  max-width: 530px;
-  margin-bottom: 36px;
+.hero h1 span {
+    color: #0875e1;
+}
+
+.lead {
+    margin-top: 22px;
+    color: #52739f;
+    font-size: 18px;
+    max-width: 650px;
 }
 
 .hero-actions {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
 }
 
-.hero-preview {
-  position: relative;
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    padding: 14px 24px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 800;
 }
 
-.preview-card {
-  position: relative;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  border: 4px solid #ffffff;
-  box-shadow: var(--shadow-glow);
-  background: white;
+.btn.primary {
+    background: #0875e1;
+    color: white;
+    box-shadow: 0 10px 25px rgba(8,117,225,.25);
 }
 
-.preview-card img {
-  width: 100%;
-  height: 420px;
-  object-fit: cover;
+.btn.secondary {
+    background: white;
+    color: #0875e1;
+    border: 2px solid #d7eaff;
 }
 
-.floating-pill {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(226, 232, 240, 0.9);
-  padding: 12px 20px;
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+.btn:hover {
+    transform: translateY(-2px);
 }
 
-.pill-dot {
-  width: 10px;
-  height: 10px;
-  background: var(--accent-emerald);
-  border-radius: 50%;
-  box-shadow: 0 0 10px var(--accent-emerald);
+.trust-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 28px;
+    color: #52739f;
+    font-size: 14px;
+    font-weight: 700;
 }
 
-/* =====================================================
-   METRICS STRIP
-===================================================== */
-.metrics-strip {
-  border-top: 1px solid var(--border-subtle);
-  border-bottom: 1px solid var(--border-subtle);
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(14px);
-  padding: 34px 0;
+.hero-card {
+    background: white;
+    border-radius: 30px;
+    padding: 12px;
+    box-shadow: 0 25px 60px rgba(20,80,130,.14);
 }
 
-.metrics-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  text-align: center;
+.hero-card img {
+    width: 100%;
+    display: block;
+    border-radius: 22px;
 }
 
-.stat-val {
-  font-size: 36px;
-  font-weight: 800;
-  background: linear-gradient(135deg, #0f172a 30%, #2563eb 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.stat-lbl {
-  font-size: 14px;
-  color: var(--text-secondary);
-  font-weight: 500;
-}
 
 /* =====================================================
-   SECTION HEADERS
+   SECTION
 ===================================================== */
+
 .section {
-  padding: 95px 0;
+    padding: 90px 0;
 }
 
-.section-head {
-  text-align: center;
-  max-width: 650px;
-  margin: 0 auto 55px;
+.section-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 45px;
 }
 
-.section-head h2 {
-  font-size: clamp(30px, 3.8vw, 44px);
-  font-weight: 800;
-  margin-bottom: 14px;
-  color: #0f172a;
+.section-heading h2 {
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1.15;
+    color: #06245a;
+    margin-bottom: 14px;
+    font-weight: 900;
 }
 
-.section-head p {
-  color: var(--text-secondary);
-  font-size: 16.5px;
+.section-heading p {
+    color: #5b7ca7;
 }
 
-/* =====================================================
-   KALKULATOR CERDAS
-===================================================== */
-.calc-container {
-  background: var(--surface);
-  border: 1px solid var(--surface-border);
-  backdrop-filter: blur(20px);
-  border-radius: var(--radius-lg);
-  padding: 40px;
-  display: grid;
-  grid-template-columns: 1.25fr 0.75fr;
-  gap: 40px;
-  box-shadow: var(--shadow-subtle);
-}
-
-.calc-step-title {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--accent-blue);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 12px;
-}
-
-.tile-group {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin-bottom: 24px;
-}
-
-.tile-option {
-  background: var(--surface-card);
-  border: 1.5px solid var(--border-subtle);
-  border-radius: var(--radius-sm);
-  padding: 14px;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.2s;
-  user-select: none;
-}
-
-.tile-option:hover {
-  border-color: var(--accent-blue);
-  background: white;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.08);
-}
-
-.tile-option.active {
-  border-color: var(--accent-blue);
-  background: #eff6ff;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
-}
-
-.tile-option .tile-name {
-  font-size: 14px;
-  font-weight: 700;
-  display: block;
-  margin-bottom: 4px;
-  color: #0f172a;
-}
-
-.tile-option .tile-price {
-  font-size: 12px;
-  color: var(--text-muted);
-}
-
-.calc-slider-wrap {
-  background: var(--surface-card);
-  border: 1.5px solid var(--border-subtle);
-  padding: 20px;
-  border-radius: var(--radius-sm);
-}
-
-.slider-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 14px;
-}
-
-.calc-slider {
-  width: 100%;
-  accent-color: var(--accent-blue);
-}
-
-/* Panel Hasil Kalkulator */
-.calc-checkout-panel {
-  background: linear-gradient(145deg, #ffffff 0%, #f0f7ff 100%);
-  border: 1.5px solid var(--surface-border);
-  border-radius: var(--radius-md);
-  padding: 32px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.08);
-}
-
-.calc-summary-item {
-  display: flex;
-  justify-content: space-between;
-  font-size: 14.5px;
-  color: var(--text-secondary);
-  margin-bottom: 12px;
-}
-
-.calc-summary-item strong {
-  color: var(--text-primary);
-}
-
-.calc-total-box {
-  border-top: 2px dashed rgba(148, 163, 184, 0.3);
-  padding-top: 20px;
-  margin-top: 20px;
-  text-align: center;
-}
-
-.calc-price {
-  font-size: 44px;
-  font-weight: 800;
-  color: var(--accent-blue);
-  margin: 8px 0 20px;
-}
 
 /* =====================================================
-   KATALOG PRODUK & SEARCH
+   SERVICE
 ===================================================== */
-.search-controls {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-bottom: 35px;
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
 }
 
-.filter-pills {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
+.service-card {
+    background: white;
+    border: 1px solid #dceafa;
+    border-radius: 22px;
+    padding: 25px 22px 28px;
+    text-align: center;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: .3s ease;
+    box-shadow: 0 8px 25px rgba(40,100,160,.05);
 }
 
-.pill-btn {
-  background: white;
-  border: 1px solid var(--border-subtle);
-  color: var(--text-secondary);
-  font-size: 13.5px;
-  font-weight: 600;
-  padding: 8px 18px;
-  border-radius: var(--radius-full);
-  cursor: pointer;
-  transition: all 0.25s;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+.service-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 40px rgba(40,100,160,.13);
 }
 
-.pill-btn.active, .pill-btn:hover {
-  background: var(--accent-blue);
-  color: #ffffff;
-  border-color: var(--accent-blue);
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
-}
-
-.search-input-box {
-  position: relative;
-  min-width: 280px;
-}
-
-.search-input-box i {
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--text-muted);
-}
-
-.search-input {
-  width: 100%;
-  background: white;
-  border: 1.5px solid var(--border-subtle);
-  color: var(--text-primary);
-  padding: 11px 16px 11px 44px;
-  border-radius: var(--radius-full);
-  outline: none;
-  font-size: 14px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.search-input:focus {
-  border-color: var(--accent-blue);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
-}
-
-.product-card {
-  background: white;
-  border: 1.5px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  box-shadow: var(--shadow-subtle);
-  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
-}
-
-.product-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--accent-blue);
-  box-shadow: 0 16px 35px -5px rgba(37, 99, 235, 0.15);
-}
-
-.product-thumb {
-  height: 175px;
-  overflow: hidden;
-  background: #f1f5f9;
-}
-
-.product-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.35s ease;
-}
-
-.product-card:hover .product-thumb img {
-  transform: scale(1.06);
-}
-
-.product-details {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.item-cat {
-  font-size: 11.5px;
-  text-transform: uppercase;
-  color: var(--accent-cyan);
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  margin-bottom: 5px;
-}
-
-.item-title {
-  font-size: 17px;
-  font-weight: 700;
-  color: #0f172a;
-  margin-bottom: 6px;
-}
-
-.item-desc {
-  font-size: 13.5px;
-  color: var(--text-muted);
-  margin-bottom: 16px;
-  flex: 1;
-  line-height: 1.5;
-}
-
-.item-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 14px;
-  border-top: 1px solid #f1f5f9;
-}
-
-.item-price {
-  font-size: 20px;
-  font-weight: 800;
-  color: var(--accent-blue);
-}
-
-.btn-add-cart {
-  background: #f8fafc;
-  border: 1px solid var(--border-subtle);
-  color: var(--text-primary);
-  width: 38px;
-  height: 38px;
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.btn-add-cart:hover {
-  background: var(--accent-blue);
-  color: #ffffff;
-  border-color: var(--accent-blue);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-}
 
 /* =====================================================
-   FILE DROP & FORM
+   SVG ICON
 ===================================================== */
-.upload-wrapper {
-  background: var(--surface);
-  border: 1px solid var(--surface-border);
-  backdrop-filter: blur(16px);
-  border-radius: var(--radius-lg);
-  padding: 40px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  box-shadow: var(--shadow-subtle);
+
+.service-icon {
+    width: 100%;
+    height: 145px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
 }
 
-.drop-zone {
-  border: 2px dashed rgba(37, 99, 235, 0.35);
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: var(--radius-md);
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.25s;
+.service-icon svg {
+    width: 170px;
+    height: 140px;
+    display: block;
+    filter: drop-shadow(0 8px 8px rgba(0,80,160,.13));
+    transition: .3s ease;
 }
 
-.drop-zone:hover {
-  border-color: var(--accent-blue);
-  background: rgba(239, 246, 255, 0.85);
-  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12);
+.service-card:hover .service-icon svg {
+    transform: translateY(-5px) scale(1.04);
 }
 
-.drop-zone i {
-  font-size: 46px;
-  color: var(--accent-blue);
-  margin-bottom: 14px;
+.service-card h3 {
+    color: #061f51;
+    font-size: 21px;
+    line-height: 1.25;
+    margin-bottom: 12px;
+    font-weight: 900;
 }
 
-.form-group {
-  margin-bottom: 18px;
+.service-card p {
+    color: #5b7ca7;
+    font-size: 15px;
 }
 
-.form-group label {
-  display: block;
-  font-size: 13.5px;
-  font-weight: 600;
-  color: var(--text-secondary);
-  margin-bottom: 6px;
-}
-
-.form-control {
-  width: 100%;
-  background: white;
-  border: 1.5px solid var(--border-subtle);
-  color: var(--text-primary);
-  padding: 12px 14px;
-  border-radius: var(--radius-sm);
-  outline: none;
-  font-family: inherit;
-  font-size: 14.5px;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.form-control:focus {
-  border-color: var(--accent-blue);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
-}
 
 /* =====================================================
-   SIDEBAR KERANJANG (DRAWER)
+   PRICE
 ===================================================== */
-.cart-backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(15, 23, 42, 0.5);
-  backdrop-filter: blur(8px);
-  z-index: 1000;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
+
+.price-section {
+    background: #f7fbff;
 }
 
-.cart-backdrop.open {
-  opacity: 1;
-  pointer-events: all;
+.price-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
 }
 
-.cart-drawer {
-  position: fixed;
-  top: 0;
-  right: -420px;
-  width: min(420px, 100%);
-  height: 100%;
-  background: #ffffff;
-  border-left: 1px solid var(--border-subtle);
-  z-index: 1001;
-  display: flex;
-  flex-direction: column;
-  transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: -10px 0 35px rgba(15, 23, 42, 0.15);
+.price-card {
+    position: relative;
+    background: white;
+    border: 1px solid #dceafa;
+    border-radius: 22px;
+    padding: 28px 20px;
+    text-align: center;
+    min-height: 280px;
+    box-shadow: 0 8px 25px rgba(40,100,160,.05);
+    transition: .3s ease;
 }
 
-.cart-drawer.open {
-  right: 0;
+.price-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(40,100,160,.12);
 }
 
-.cart-header {
-  padding: 24px;
-  border-bottom: 1px solid var(--border-subtle);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.price-card.featured {
+    border: 2px solid #0875e1;
 }
 
-.cart-items {
-  padding: 24px;
-  flex: 1;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.price-card h3 {
+    color: #06245a;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 18px;
+    font-weight: 900;
 }
 
-.cart-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 14px;
-  border-bottom: 1px solid #f1f5f9;
+.price-card strong {
+    display: block;
+    color: #0875e1;
+    font-size: 28px;
+    font-weight: 900;
 }
 
-.cart-qty-ctrl {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.price-card p {
+    color: #6684a9;
+    margin-top: 5px;
+    min-height: 45px;
 }
 
-.qty-btn {
-  background: #f8fafc;
-  border: 1px solid var(--border-subtle);
-  color: var(--text-primary);
-  width: 26px;
-  height: 26px;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  font-size: 13px;
-  font-weight: bold;
-  transition: all 0.2s;
+.price-card a {
+    display: inline-block;
+    margin-top: 18px;
+    background: #0875e1;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-weight: 800;
 }
 
-.qty-btn:hover {
-  background: #e2e8f0;
+.badge {
+    display: inline-block;
+    background: #e8f3ff;
+    color: #0875e1;
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 11px;
+    font-weight: 900;
 }
 
-.cart-footer {
-  padding: 24px;
-  border-top: 1px solid var(--border-subtle);
-  background: #f8fafc;
+.note {
+    text-align: center;
+    color: #6985a5;
+    margin-top: 25px;
+    font-size: 14px;
 }
+
+
+/* =====================================================
+   PRICE ICON
+===================================================== */
+
+.price-icon {
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.price-icon svg {
+    width: 90px;
+    height: 75px;
+    filter: drop-shadow(0 5px 6px rgba(0,80,160,.12));
+}
+
+
+/* =====================================================
+   ORDER
+===================================================== */
+
+.order-section {
+    background: linear-gradient(135deg, #eaf6ff, #ffffff);
+}
+
+.order-wrap {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.order-wrap h2 {
+    font-size: clamp(32px, 4vw, 45px);
+    color: #06245a;
+    line-height: 1.15;
+    margin-bottom: 18px;
+    font-weight: 900;
+}
+
+.order-wrap > div > p {
+    color: #58779f;
+}
+
+.steps {
+    display: grid;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.steps > div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 14px;
+    border-radius: 15px;
+    border: 1px solid #dceafa;
+}
+
+.steps b {
+    background: #0875e1;
+    color: white;
+    min-width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.steps span {
+    color: #456b99;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.order-form {
+    background: white;
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 20px 50px rgba(30,100,160,.12);
+}
+
+.order-form label {
+    display: block;
+    color: #183c6d;
+    font-weight: 800;
+    font-size: 14px;
+    margin-bottom: 17px;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+    display: block;
+    width: 100%;
+    margin-top: 7px;
+    padding: 13px 15px;
+    border: 1px solid #d4e4f5;
+    border-radius: 12px;
+    outline: none;
+    font-family: inherit;
+    font-size: 15px;
+    color: #173c6d;
+    background: #fbfdff;
+}
+
+.order-form input:focus,
+.order-form select:focus,
+.order-form textarea:focus {
+    border-color: #0875e1;
+    box-shadow: 0 0 0 3px rgba(8,117,225,.08);
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.full {
+    width: 100%;
+}
+
+.order-form small {
+    display: block;
+    color: #7890ad;
+    margin-top: 13px;
+    text-align: center;
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-section {
+    background: white;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.contact-grid h2 {
+    font-size: clamp(32px, 4vw, 45px);
+    line-height: 1.15;
+    color: #06245a;
+    font-weight: 900;
+    margin-bottom: 18px;
+}
+
+.contact-grid > div > p {
+    color: #58779f;
+}
+
+.contact-box {
+    background: #f3f9ff;
+    border: 1px solid #dceafa;
+    border-radius: 25px;
+    padding: 30px;
+}
+
+.contact-box p {
+    color: #476c99;
+    margin-bottom: 20px;
+}
+
+.contact-box p:last-child {
+    margin-bottom: 0;
+}
+
 
 /* =====================================================
    FOOTER
 ===================================================== */
+
 footer {
-  border-top: 1px solid var(--border-subtle);
-  padding: 60px 0 30px;
-  background: #ffffff;
+    background: #06245a;
+    color: white;
+    padding: 25px 0;
 }
 
-.footer-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding-bottom: 40px;
-  border-bottom: 1px solid var(--border-subtle);
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
-.footer-bottom {
-  padding-top: 30px;
-  text-align: center;
-  font-size: 13.5px;
-  color: var(--text-muted);
+.footer-inner strong {
+    display: block;
+    font-size: 22px;
 }
+
+.footer-inner span {
+    opacity: .8;
+    font-size: 13px;
+}
+
 
 /* =====================================================
    RESPONSIVE
 ===================================================== */
-@media (max-width: 992px) {
-  .hero-grid, .calc-container, .upload-wrapper {
-    grid-template-columns: 1fr;
-  }
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .metrics-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+
+@media (max-width: 1050px) {
+
+    .service-grid,
+    .price-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-grid,
+    .order-wrap,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-copy {
+        text-align: center;
+    }
+
+    .lead {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-actions,
+    .trust-row {
+        justify-content: center;
+    }
 }
 
-@media (max-width: 640px) {
-  .nav-links {
-    display: none;
-  }
-  .tile-group {
-    grid-template-columns: 1fr;
-  }
-  .product-grid {
-    grid-template-columns: 1fr;
-  }
-  .calc-container, .upload-wrapper {
-    padding: 24px;
-  }
+
+@media (max-width: 700px) {
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 15px 0;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .service-grid,
+    .price-grid,
+    .two-col {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .hero {
+        padding-bottom: 45px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .order-form {
+        padding: 22px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
 }
+
+
+/* =====================================================
+   MENU ATK
+===================================================== */
+
+.atk-section {
+    background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
+}
+
+.atk-toolbar {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.atk-search {
+    width: min(520px, 100%);
+    padding: 14px 18px;
+    border: 1px solid #d4e4f5;
+    border-radius: 30px;
+    outline: none;
+    font-size: 15px;
+    background: white;
+}
+
+.atk-search:focus {
+    border-color: #0875e1;
+    box-shadow: 0 0 0 3px rgba(8,117,225,.08);
+}
+
+.atk-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.atk-card {
+    background: white;
+    border: 1px solid #dceafa;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(40,100,160,.06);
+    transition: .3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.atk-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 40px rgba(40,100,160,.14);
+}
+
+.atk-image {
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    background: linear-gradient(135deg, #eaf6ff, #ffffff);
+}
+
+.atk-image svg {
+    width: 150px;
+    height: 150px;
+    filter: drop-shadow(0 9px 8px rgba(0,80,160,.13));
+    transition: .3s ease;
+}
+
+.atk-card:hover .atk-image svg {
+    transform: scale(1.07) rotate(-1deg);
+}
+
+.atk-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.atk-body h3 {
+    color: #06245a;
+    font-size: 18px;
+    line-height: 1.25;
+    margin-bottom: 8px;
+}
+
+.atk-body p {
+    color: #6985a5;
+    font-size: 13px;
+    min-height: 42px;
+}
+
+.atk-price {
+    color: #0875e1;
+    font-size: 23px;
+    font-weight: 900;
+    margin: 12px 0;
+}
+
+.atk-buy {
+    display: block;
+    text-align: center;
+    background: #0875e1;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-weight: 800;
+    cursor: pointer;
+    border: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+.atk-buy:hover {
+    transform: translateY(-2px);
+}
+
+@media (max-width: 1050px) {
+    .atk-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .atk-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 </style>
 </head>
 
+
 <body>
 
+
 <!-- =====================================================
-     NAVBAR
+     HEADER
 ===================================================== -->
-<div class="header-wrapper">
-  <div class="container navbar">
-    <a href="#home" class="brand">
-      <i class="fa-solid fa-cube"></i> MUCI
-      <span class="brand-badge">STUDIO</span>
+
+<header class="hero">
+
+<nav class="nav container">
+
+    <a class="brand" href="#home">
+        MUCI
     </a>
 
     <div class="nav-links">
-      <a href="#kalkulator">Kalkulator</a>
-      <a href="#katalog">Katalog ATK</a>
-      <a href="#order">Kirim Dokumen</a>
-      <a href="#layanan">Layanan</a>
+        <a href="#layanan">Layanan</a>
+        <a href="#atk">ATK</a>
+        <a href="#harga">Harga</a>
+        <a href="#pesan">Pesan</a>
+        <a href="#kontak">Kontak</a>
     </div>
 
-    <div class="nav-cta">
-      <button class="cart-toggle-btn" onclick="toggleCartDrawer()">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <span class="cart-count" id="cartCountBadge">0</span>
-      </button>
-      <a href="#kalkulator" class="btn btn-primary">
-        Hitung Estimasi
-      </a>
-    </div>
-  </div>
-</div>
+    <a class="nav-wa" href="#pesan">
+        Pesan Sekarang
+    </a>
 
-<!-- =====================================================
-     HERO
-===================================================== -->
-<section class="hero" id="home">
-  <div class="hero-glow"></div>
-  <div class="container hero-grid">
+</nav>
+
+
+<div id="home" class="hero-grid container">
+
     <div class="hero-copy">
-      <div class="tag">
-        <i class="fa-solid fa-bolt-lightning"></i> Generasi Baru Digital Printing
-      </div>
-      <h1>Cetak Dokumen Cepat. <span>Tanpa Antre.</span></h1>
-      <p>
-        Hitung biaya print otomatis dengan kalkulator presisi, lampirkan dokumen tugas atau kantor Anda, dan belanja alat tulis lengkap dari satu layar ponsel Anda.
-      </p>
-      <div class="hero-actions">
-        <a href="#kalkulator" class="btn btn-primary">
-          <i class="fa-solid fa-sliders"></i> Coba Kalkulator
-        </a>
-        <a href="#katalog" class="btn btn-secondary">
-          <i class="fa-solid fa-box-archive"></i> Beli Perlengkapan
-        </a>
-      </div>
+
+        <span class="eyebrow">
+            PUSAT PRINT & FOTO COPY
+        </span>
+
+        <h1>
+            Semua kebutuhan cetak Anda
+            <span>ada di MUCI.</span>
+        </h1>
+
+        <p class="lead">
+            Print dokumen, fotocopy, cetak foto,
+            pas foto, laminating, jilid,
+            bikin stempel flash, cetak kartu
+            ID Card, NPWP dan BPJS dengan proses
+            cepat dan hasil berkualitas.
+        </p>
+
+        <div class="hero-actions">
+
+            <a class="btn primary" href="#pesan">
+                🖨️ Buat Pesanan
+            </a>
+
+            <a class="btn secondary" href="#layanan">
+                Lihat Layanan
+            </a>
+
+        </div>
+
+        <div class="trust-row">
+
+            <div>✓ Hasil berkualitas</div>
+            <div>✓ Proses cepat</div>
+            <div>✓ Harga terjangkau</div>
+
+        </div>
+
     </div>
 
-    <div class="hero-preview">
-      <div class="preview-card">
-        <img src="https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?auto=format&fit=crop&w=800&q=80" alt="Muci Tech Hub">
-        <div class="floating-pill">
-          <span class="pill-dot"></span>
-          <div>
-            <div style="font-size: 13.5px; font-weight: 700; color: #0f172a;">Sistem Aktif & Terhubung</div>
-            <div style="font-size: 11.5px; color: var(--text-muted);">Muara Enim • Buka 07.30 - 21.00 WIB</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- =====================================================
-     METRICS STRIP
-===================================================== -->
-<div class="metrics-strip">
-  <div class="container metrics-grid">
-    <div>
-      <div class="stat-val">12k+</div>
-      <div class="stat-lbl">Dokumen & Skripsi Selesai</div>
-    </div>
-    <div>
-      <div class="stat-val">~10 Mnt</div>
-      <div class="stat-lbl">Kecepatan Cetak Kilat</div>
-    </div>
-    <div>
-      <div class="stat-val">100%</div>
-      <div class="stat-lbl">Kerahasiaan Dokumen Terjaga</div>
-    </div>
-    <div>
-      <div class="stat-val">4.9 / 5</div>
-      <div class="stat-lbl">Rating Kepuasan Pengguna</div>
-    </div>
-  </div>
-</div>
+    <div class="hero-card">
 
-<!-- =====================================================
-     KALKULATOR CERDAS (INTERACTIVE TILES)
-===================================================== -->
-<section class="section" id="kalkulator">
-  <div class="container">
-    <div class="section-head">
-      <div class="tag">Simulasi Instan</div>
-      <h2>Kalkulator Estimasi Biaya Cetak</h2>
-      <p>Ketahui biaya cetak transparan secara instan sebelum melakukan konfirmasi via WhatsApp.</p>
-    </div>
+        <img
+            src="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAABSAAAASvCAIAAACW5sP/AABcQWNhQlgAAFxBanVtYgAAAB5qdW1kYzJwYQARABCAAACqADibcQNjMnBhAAAAXBtqdW1iAAAAR2p1bWRjMm1hABEAEIAAAKoAOJtxA3VybjpjMnBhOmUxYWRiYTc3LTJkZGYtNGYyYS05ZWRhLWI4YTQ2ODJhNGRiYwAAAAxXanVtYgAAAClqdW1kYzJhcwARABCAAACqADibcQNjMnBhLmFzc2VydGlvbnMAAAAJ0Wp1bWIAAAA7anVtZEDLDDK7ikidpwsq1vR/Q2kTYzJwYS5pY29uAAAAABhjMnNouwg6bwPsLw9HE5vPz8PN0gAAABdiZmRiAGltYWdlL3N2Zyt4bWwAAAAJd2JpZGI8c3ZnIHdpZHRoPSI3MTYiIGhlaWdodD0iNzE2IiB2aWV3Qm94PSIwIDAgNzE2IDcxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUwOC43NDkgMzE3LjM5OUM1MTYuNzc3IDI4Ny4zMTQgNTA4Ljk5MSAyNTMuODg0IDQ4NS4zODkgMjMwLjI4MkM0NjEuNzg4IDIwNi42ODEgNDI4LjM2IDE5OC44OTUgMzk4LjI3MyAyMDYuOTIzQzM3Ni4yMzEgMTg0LjkyOCAzNDMuMzkgMTc0Ljk1NiAzMTEuMTQ4IDE4My41OTZDMjc4LjkwNiAxOTIuMjM0IDI1NS40NSAyMTcuMjkyIDI0Ny4zNiAyNDcuMzYxQzIxNy4yOTEgMjU1LjQ1MSAxOTIuMjMzIDI3OC45MSAxODMuNTk1IDMxMS4xNDlDMTc0Ljk1NyAzNDMuMzkxIDE4NC45MjcgMzc2LjIzMiAyMDYuOTI0IDM5OC4yNzRDMTk4Ljg5NiA0MjguMzU5IDIwNi42ODMgNDYxLjc4OSAyMzAuMjg0IDQ4NS4zOTFDMjUzLjg4NSA1MDguOTkyIDI4Ny4zMTMgNTE2Ljc3OSAzMTcuNDAxIDUwOC43NUMzMzkuNDQyIDUzMC43NDUgMzcyLjI4NiA1NDAuNzE3IDQwNC41MjUgNTMyLjA3OUM0MzYuNzY3IDUyMy40NDEgNDYwLjIyMyA0OTguMzg0IDQ2OC4zMTMgNDY4LjMxNUM0OTguMzgzIDQ2MC4yMjQgNTIzLjQ0IDQzNi43NjYgNTMyLjA3OCA0MDQuNTI2QzU0MC43MTYgMzcyLjI4NSA1MzAuNzQ3IDMzOS40NDMgNTA4Ljc0OSAzMTcuNDAyVjMxNy4zOTlaTTQ3MC44OTkgMjQ0Ljc3NkM0ODYuODkyIDI2MC43NyA0OTMuNDg4IDI4Mi42MDEgNDkwLjY4NyAzMDMuNDEyTDQxNS41NzcgMjYwLjA0NkM0MTIuNDExIDI1OC4yMTggNDA4LjUwOSAyNTguMjE4IDQwNS4zNDUgMjYwLjA0NkwzMTcuNDAxIDMxMC44MlYyNzcuNTI2QzMxNy40MDEgMjc1LjE5MSAzMTguNjUyIDI3My4wMDUgMzIwLjY3NiAyNzEuODM3TDM4Ny42NDQgMjMzLjE3NEM0MTQuMTc4IDIxOC4zNTMgNDQ4LjM0NiAyMjIuMjIzIDQ3MC45MDEgMjQ0Ljc3Nkg0NzAuODk5Wk0zNTcuODM3IDMxMS4xNDRMMzk4LjI3NSAzMzQuNDkxVjM4MS4xODVMMzU3LjgzNyA0MDQuNTMyTDMxNy4zOTggMzgxLjE4NVYzMzQuNDkxTDM1Ny44MzcgMzExLjE0NFpNMjY0Ljc3NiAyNjkuNjkzQzI2NS4yMDcgMjM5LjMwNSAyODUuNjQ0IDIxMS42NDkgMzE2LjQ1MyAyMDMuMzkzQzMzOC4zIDE5Ny41NCAzNjAuNTA1IDIwMi43NDQgMzc3LjEyNyAyMTUuNTczTDMwMi4wMTQgMjU4LjkzN0MyOTguODQ4IDI2MC43NjQgMjk2Ljg5OCAyNjQuMTQ0IDI5Ni44OTggMjY3Ljc5OFYzNjkuMzQ2TDI2OC4wNjUgMzUyLjY5OUMyNjYuMDQzIDM1MS41MzEgMjY0Ljc3NiAzNDkuMzUzIDI2NC43NzYgMzQ3LjAxN1YyNjkuNjkxVjI2OS42OTNaTTIwMy4zOTEgMzE2LjQ1NEMyMDkuMjQ0IDI5NC42MDggMjI0Ljg1NCAyNzcuOTc4IDI0NC4yNzYgMjY5Ljk5OVYzNTYuNzNDMjQ0LjI3NiAzNjAuMzg0IDI0Ni4yMjYgMzYzLjc2MyAyNDkuMzkyIDM2NS41OTFMMzM3LjMzNyA0MTYuMzY1TDMwOC41MDMgNDMzLjAxM0MzMDYuNDgxIDQzNC4xODEgMzAzLjk2MSA0MzQuMTg4IDMwMS45MzkgNDMzLjAyTDIzNC45NzEgMzk0LjM1N0MyMDguODY4IDM3OC43ODkgMTk1LjEzOCAzNDcuMjYxIDIwMy4zOTEgMzE2LjQ1NFpNMjQ0Ljc3NSA0NzAuOUMyMjguNzgxIDQ1NC45MDYgMjIyLjE4NiA0MzMuMDc1IDIyNC45ODYgNDEyLjI2NEwzMDAuMDk2IDQ1NS42M0MzMDMuMjYzIDQ1Ny40NTcgMzA3LjE2NCA0NTcuNDU3IDMxMC4zMjggNDU1LjYzTDM5OC4yNzMgNDA0Ljg1NlY0MzguMTQ5QzM5OC4yNzMgNDQwLjQ4NSAzOTcuMDIyIDQ0Mi42NzEgMzk0Ljk5NyA0NDMuODM5TDMyOC4wMjkgNDgyLjUwMkMzMDEuNDk1IDQ5Ny4zMjIgMjY3LjMyNyA0OTMuNDUyIDI0NC43NzIgNDcwLjlIMjQ0Ljc3NVpNNDUwLjg5NyA0NDUuOTgyQzQ1MC40NjYgNDc2LjM3MSA0MzAuMDI5IDUwNC4wMjcgMzk5LjIyIDUxMi4yODNDMzc3LjM3MyA1MTguMTM2IDM1NS4xNjggNTEyLjkzMiAzMzguNTQ3IDUwMC4xMDJMNDEzLjY1OSA0NTYuNzM4QzQxNi44MjYgNDU0LjkxMSA0MTguNzc1IDQ1MS41MzIgNDE4Ljc3NSA0NDcuODc3VjM0Ni4zMjlMNDQ3LjYwOSAzNjIuOTc3QzQ0OS42MzEgMzY0LjE0NSA0NTAuODk3IDM2Ni4zMjMgNDUwLjg5NyAzNjguNjU5VjQ0NS45ODVWNDQ1Ljk4MlpNNTEyLjI4MiAzOTkuMjIxQzUwNi40MjkgNDIxLjA2OCA0OTAuODE5IDQzNy42OTcgNDcxLjM5NyA0NDUuNjc2VjM1OC45NDZDNDcxLjM5NyAzNTUuMjkyIDQ2OS40NDggMzUxLjkxMiA0NjYuMjgxIDM1MC4wODVMMzc4LjMzNiAyOTkuMzExTDQwNy4xNyAyODIuNjYzQzQwOS4xOTIgMjgxLjQ5NSA0MTEuNzEyIDI4MS40ODcgNDEzLjczNCAyODIuNjU1TDQ4MC43MDIgMzIxLjMxOEM1MDYuODA1IDMzNi44ODcgNTIwLjUzNiAzNjguNDE1IDUxMi4yODIgMzk5LjIyMVoiIGZpbGw9ImJsYWNrIi8+Cjwvc3ZnPgoAAAGSanVtYgAAAEFqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmFjdGlvbnMudjIAAAAAGGMyc2hUZZ3qVlsHvI8hfgZS7sZxAAABSWNib3KiZ2FjdGlvbnODpGZhY3Rpb25sYzJwYS5jcmVhdGVkZHdoZW7AdDIwMjYtMDktMDNUMDA6MDA6MDBabXNvZnR3YXJlQWdlbnSiZG5hbWVpZ3B0LWltYWdlZ3ZlcnNpb25jMi4wcWRpZ2l0YWxTb3VyY2VUeXBleEZodHRwOi8vY3YuaXB0Yy5vcmcvbmV3c2NvZGVzL2RpZ2l0YWxzb3VyY2V0eXBlL3RyYWluZWRBbGdvcml0aG1pY01lZGlhomZhY3Rpb25uYzJwYS5jb252ZXJ0ZWRkd2hlbsB0MjAyNi0wOS0wM1QwMDowMDowMFqiZmFjdGlvbngYYzJwYS53YXRlcm1hcmtlZC51bmJvdW5kZHdoZW7AdDIwMjYtMDktMDNUMDA6MDA6MDBacmFsbEFjdGlvbnNJbmNsdWRlZPQAAADDanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaA0XP1rrmurcRs4Fj1BFkPoAAAB7Y2JvcqVqZXhjbHVzaW9uc4GiZXN0YXJ0GCFmbGVuZ3RoGVxNZG5hbWVuanVtYmYgbWFuaWZlc3RjYWxnZnNoYTI1NmRoYXNoWCAJ0ZBCXEIsuGU5srreVXjaO0Medo0Y/Rp+BUkZFtYMn2NwYWRIAAAAAAAAAAAAAAK6anVtYgAAACdqdW1kYzJjbAARABCAAACqADibcQNjMnBhLmNsYWltLnYyAAAAAotjYm9ypmppbnN0YW5jZUlEeCx4bXA6aWlkOjJjMzNkYzdmLTk2MTgtNDc5MC04OWVlLWZlNDQ3ODkwMDU2NnRjbGFpbV9nZW5lcmF0b3JfaW5mb6RkbmFtZXgYT3BlbkFJIE1lZGlhIFNlcnZpY2UgQVBJZGljb26iY3VybHgkc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5pY29uZGhhc2hYIP3UNrzibszMcpxybVGtA+nEyl84y4z/F+tWNmkN6heVa3NwZWNWZXJzaW9uZTIuMi4wd29yZy5jb250ZW50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2indtXYsNg96ixFHjO1j4KOrNNkaxbBFubqc5qVyBN22uCHekMdnY3BhZFki+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA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/zM/89EPfuRTn/v0ve+9672f+uAHH/r4xx587/vf98FH7v3Ih+657/133f/QAz9z1733fuT+j3z04w8+dM9H3v/gRx968D0ffehjH/nQfffd+9GP3f/Rj3z8Ax/66Ac/dM97P/LBe+5733vve889H773/Y88+L5H7nvfBz/2yEPvfeADn3jkox98/73vf//HP/qR+z98930fePAjH3r4Y/d99CMP/NSD7/3o++798P33PvjAg488+OH3ffjDH3ngg/d97H0ffc/DH7n3nvtvu/Ouu37sznvuvu/jD979sY/c8/F7Hvr4PT9xz/2P3PPx+z76vgcfvPeR++97/0fuv/c9D3zg43d/6MOHPvxjHz70/nvf9977P/jAQx+990MPfuie9z/03g/d+8H73//+D91194fuee+9H7nvA+/7yL33f/iBe9/7/nvvfeD+D9/9/kcefs/7P/rA3R964AMfffChd3/kPY/cd9dHP/jg3R954L673v3++957973vve8jH/nQ3R+6+4Pvu/e+e+5694Mffu89H/nQhx+4+733feTe973r/g99+L4PfPi+D9/7/rvef/dH7vvQh+958MH3PvD+h9730Yce+thHHnrPo3e9566P3PXRD330gfd+4L73fuhdH7znfR/86HseevB9d3/wg3fd99FH7rr/3rvu+vjddz/0yEMfeO+DD9370fe+/767PvTBux/8yLse+sC73/uRe95/94fuvfc9Hzn0kUcf+ODdD37wvgfe99A9H/zYe9777rvf/+B733ffBx669/73Pvj+/fd96K4PPfjg3Y986IOPvPfeBx68+74H3/uRe++7+313feze995z74P3vf/j73//+9/7vkfuuvveBx78+L3vvvvdH7nvkXvvu/f9Hzv0voceev9HHvjwRz/0wY9+5AP3/eR7PvbR+++9++577r77vo/f9eF773nw3rs//JH77nvf+x+67yP3fvDeB+9+8L0fevdD7/nQvfdd+/67HvzY+/bf+9677/vw3R/84F0PffDejz70rgfvffjDD95790ff/7573/OhBx5810ceec+HHvrI3e+578GH7nvkPfd98L777nvf+9/73g999CPv/ciDH/zI+x56770PffhD733oAw9+8KMPPnj3e9973wc/ePf77/3oQ+9/9KMPPvjgRz7y0Uc+8tEPfuih+97/4Qff96H3feQ9D3/kAw/d95773vvBD3/0fR/70Lvf98A9H/zY3Q/d/eAHP/yhBx967/0PfuQ9j7zvvvf9xPvu+sB7P/KR+97/4Uceuv/e997z4EMPPHTf3R+77yP3fPiB9911z0fvvffu9z704Ac//FMPvfvdHzn0ofc88lMP3Pveex98z/sfue/9D95974cfvPvBD939wQfe+9G7P/qB99/33g/c/bF7P/jAQ/d89F0PffSeD3z0fffdde+DH/vYRx588J4HH/rIRx784L0fvvd9D3/kvo98+H3v+fBD937w7g/fd88HP/S+/fd+4IOPfOyh+z/4wYfufehn3vfge+9/8CPvffijD33gfe+/5+N33ff+hx/86Ac+evdH7/vghz/8kffc/dEHP/qRD37o/R/88Efuv+ve933ogfd/5L4PPXDf+977/ofv/9Dd7/nQex68+4H3ve/uD334Pfd+8GP3vfeh+z/w8AcffPDee+994APvfeij73v4wXd99D3vf++DH/vwBx/84PsefOCeBx568P3vfeihDz/40QcevvvB99778Hvvvffhe9/30EMfePCBe9/74Ife8+AHH/zwfR+85/2PfOQj7/vwRz78/nvv/fjHHnzPh95738MPvf/u937wfffe8/F77/rYhx+4/757PvjhBx546L773nvf+x+898MPvO+h93/4wXvvf/Dej3/0/gd/4uMPffwjd9//4QfuufdjD3z87oc/9vFHP/yR9z744Hs+/N73ffSh933kfZ+4/0Mf/tCHHnr3fffe8/D7Pn7vBx+878MP3vvhBx98+IN3P/DQx+9/6N4HP/rwR+99+L4HPvjgBx988IMfffAj93zwY/d94IH3vfcjH/nQ+/b/3Pvfe+/7Pv7xez76/kfe+6FHPvT+Bx+468MP3vPBhx766N33vf/BD3zggQ/d/aH3f/jeB/7vB97/kfd/7CMfeO9H3/fgA/d84CN3feR9H7vv/Q889L533fvBhx6864EP3vPhhx788Pvu+8B777nvg+/f/9EH77nngY997JEHP/jQe+75wAMfffDej33w/fe+933vv/sjH7r7o/e97973ffg973ngkfc9+LEPPXjvxx989P13vfuh+9/34LvvvfvB+x549L3v+cjHHnrPIw+956P3PvDBD3z44/ff9dDHPvzhj3/kgfd98KN3vf9DD773I+/54AMfeN+HDn34w+994CPv+9iH3vPAx+567yMPvfeh973v3ns+ctcH7nnvg/d+9IMfvucDH/vo++593333ffje+997770PffDejz308U/c9dFP3PPRe+/78EMfufvBD3/4fffedc8D93z4vvvve/8H73nkoY/e88h7PvKee+558APvu/tDD33wofc98uDHHrzrwQ/ef8+DH7vnA/e89yMP3vOhBz/yvgcefs8jH7rrwx96373vf897P/yRj89+7rOfevS+hx9630P3ffDhD937vvd99L4Pf/jB+/fvP/DRj370w3c/+L57P/bQA++77+EPffjBD9/9wHvvuffe+z9433sfvO++Dz74vkce/PADH/zow++778MPfeTD73/vfffd+5EP3XPPB+675/3vf/CB9z7ywAMPfvCD73/oA/d/5L3vv/eeD3z47g/f+/53ffjhh+/+yPs/9P5H3nvfe99/3/vv/djD77vvvvvve+i973/wYw9+9JEHPvLQD370wQceeOi+e99/7/s++MGPPPTA+x/86Hvu+fCDH37vfffcd+D+e9/z0Qce/uBDD979oQ/f/eAHH3rgox+96z0PfeieDz70ng988N4HPvrgQw9+9D0PfeTD73/vA++/6+5H3vfwwx945J73fuj++9/3vg/fc9d7PvTwRz/w/vd++GOfuPuBD3z8b/2tv/U//st/9//8h//wH/71r3/9n/yTf/IzP/Mz//2//vf/+3//7//n//yf/4v/4l/8i3/xL/69f//v/73/4B/8g3/wb/6N//7f+Dt/52/9rb/1t/7Wf/yP//Gv/dW/+td+6dd+6Z/9s3/2z/4P//B//5M/+ZN/9E//6Z/9+Z//w3/0j/6P/+N//D/9x//4z//rf/6X/vJf+qX/4//4P/7hP/yHf/JP/snP/uzP/tTP/NTP/K2/9bf+1t/6W//hv/8P//H//h//y3/5L/8f//h//yf/6J/8o3/4j/7B//0f/+P//B//8//9P//P/8k/+Qe/9Eu/9Ev//F/+y3/xL/7F//5f//t/4+/8nb/9t/7W//xf//t/5+/8nb/zt/7OP/7H//j/+d//5//pn/x3//Bf/4M//cf/+Df/xt/47//9v//f/7t//z/6R//o//4v/sX//V/7q3/1f/ov/6X/4l/8i//tv/23//ff/bt/9+/+3b/7d//u3/27f/dv/53/43/8P/7t//qf/9v/9b/87//zf/vv/eN//Df/yT/+e//N//rf/tv/9t/9u3/3b//tf/Rv/51/9G//rd/5vd/9vd/3nd/7vd/5fb/vO7/7u7/7O7/rO7/3O7/7u7/3O7/nu7/7u7/ne7/nu77ne77n7/zO7/zO7/zO7/zO7/zO7/y+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7/u+7Berikut adalah petunjuk untuk mengganti nomor WhatsApp pada kode asli repositori tanpa mengubah desain, tata letak, ataupun bagian kode lainnya:
 
-    <div class="calc-container">
-      <div>
-        <!-- Langkah 1: Kertas -->
-        <div class="calc-step-title">1. Pilih Media Kertas</div>
-        <div class="tile-group" id="paperTiles">
-          <div class="tile-option active" data-price="500" onclick="selectTile(this, 'paper')">
-            <span class="tile-name">HVS A4 80g</span>
-            <span class="tile-price">Rp 500/lbr</span>
-          </div>
-          <div class="tile-option" data-price="600" onclick="selectTile(this, 'paper')">
-            <span class="tile-name">F4 / Folio</span>
-            <span class="tile-price">Rp 600/lbr</span>
-          </div>
-          <div class="tile-option" data-price="2500" onclick="selectTile(this, 'paper')">
-            <span class="tile-name">Foto Glossy</span>
-            <span class="tile-price">Rp 2.500/lbr</span>
-          </div>
-        </div>
+### 1. Pada Berkas `script.js`
+Buka berkas `script.js`, cari baris variabel nomor telepon di baris paling atas, lalu ubah nilainya menjadi:
 
-        <!-- Langkah 2: Format Tinta -->
-        <div class="calc-step-title">2. Pilihan Warna & Format</div>
-        <div class="tile-group" id="colorTiles">
-          <div class="tile-option active" data-price="0" onclick="selectTile(this, 'color')">
-            <span class="tile-name">Hitam Putih</span>
-            <span class="tile-price">+ Rp 0</span>
-          </div>
-          <div class="tile-option" data-price="500" onclick="selectTile(this, 'color')">
-            <span class="tile-name">Warna Sebagian</span>
-            <span class="tile-price">+ Rp 500</span>
-          </div>
-          <div class="tile-option" data-price="1500" onclick="selectTile(this, 'color')">
-            <span class="tile-name">Full Color</span>
-            <span class="tile-price">+ Rp 1.500</span>
-          </div>
-        </div>
-
-        <!-- Langkah 3: Jilid -->
-        <div class="calc-step-title">3. Penjilidan & Finishing</div>
-        <div class="tile-group" id="bindingTiles">
-          <div class="tile-option active" data-price="0" onclick="selectTile(this, 'binding')">
-            <span class="tile-name">Tanpa Jilid</span>
-            <span class="tile-price">+ Rp 0</span>
-          </div>
-          <div class="tile-option" data-price="4000" onclick="selectTile(this, 'binding')">
-            <span class="tile-name">Lakban Mika</span>
-            <span class="tile-price">+ Rp 4.000</span>
-          </div>
-          <div class="tile-option" data-price="10000" onclick="selectTile(this, 'binding')">
-            <span class="tile-name">Spiral Kawat</span>
-            <span class="tile-price">+ Rp 10.000</span>
-          </div>
-        </div>
-
-        <!-- Langkah 4: Slider Halaman -->
-        <div class="calc-step-title">4. Jumlah Lembar</div>
-        <div class="calc-slider-wrap">
-          <div class="slider-top">
-            <span style="font-size: 14.5px; color: var(--text-secondary); font-weight: 500;">Kuantitas Halaman:</span>
-            <strong style="font-size: 18px; color: #0f172a;" id="sliderValDisplay">15 Lembar</strong>
-          </div>
-          <input type="range" min="1" max="250" value="15" class="calc-slider" id="calcSlider" oninput="updateSlider(this.value)">
-        </div>
-      </div>
-
-      <!-- Ringkasan Checkout -->
-      <div class="calc-checkout-panel">
-        <div>
-          <h4 style="font-size: 20px; font-weight: 800; color: #0f172a; margin-bottom: 20px;">Detail Pesanan</h4>
-          <div class="calc-summary-item">
-            <span>Media:</span>
-            <strong id="summaryPaper">HVS A4 80g</strong>
-          </div>
-          <div class="calc-summary-item">
-            <span>Warna:</span>
-            <strong id="summaryColor">Hitam Putih</strong>
-          </div>
-          <div class="calc-summary-item">
-            <span>Finishing:</span>
-            <strong id="summaryBinding">Tanpa Jilid</strong>
-          </div>
-          <div class="calc-summary-item">
-            <span>Volume:</span>
-            <strong id="summaryQty">15 Lembar</strong>
-          </div>
-        </div>
-
-        <div class="calc-total-box">
-          <div style="font-size: 12.5px; color: var(--text-muted); text-transform: uppercase; font-weight: 600;">Total Estimasi</div>
-          <div class="calc-price" id="calcFinalPrice">Rp 7.500</div>
-          <button class="btn btn-primary" style="width: 100%;" onclick="orderFromCalculator()">
-            <i class="fa-brands fa-whatsapp"></i> Konfirmasi Pesanan
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- =====================================================
-     KATALOG ATK & FILTER
-===================================================== -->
-<section class="section" id="katalog">
-  <div class="container">
-    <div class="section-head">
-      <div class="tag">Penyedia Kantor</div>
-      <h2>Koleksi Alat Tulis & Perlengkapan</h2>
-      <p>Beli satuan maupun grosir langsung dari gerai kami dengan harga terjangkau.</p>
-    </div>
-
-    <div class="search-controls">
-      <div class="filter-pills">
-        <button class="pill-btn active" onclick="applyCategory('all', this)">Semua</button>
-        <button class="pill-btn" onclick="applyCategory('paper', this)">Kertas & Buku</button>
-        <button class="pill-btn" onclick="applyCategory('pen', this)">Alat Tulis</button>
-        <button class="pill-btn" onclick="applyCategory('file', this)">Map & Arsip</button>
-      </div>
-
-      <div class="search-input-box">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" id="productSearchInput" class="search-input" placeholder="Cari nama barang..." oninput="handleSearch(this.value)">
-      </div>
-    </div>
-
-    <div class="product-grid" id="productGrid">
-      <!-- Item 1 -->
-      <div class="product-card" data-category="paper" data-name="kertas hvs a4 rim sidu">
-        <div class="product-thumb">
-          <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=500&q=80" alt="Kertas HVS">
-        </div>
-        <div class="product-details">
-          <span class="item-cat">Kertas & Buku</span>
-          <div class="item-title">Kertas HVS A4 80g 1 Rim</div>
-          <div class="item-desc">500 lembar ultra-white, anti-jamming untuk printer laser/inkjet.</div>
-          <div class="item-footer">
-            <span class="item-price">Rp 56.000</span>
-            <button class="btn-add-cart" onclick="addToCart('HVS A4 80g (1 Rim)', 56000)"><i class="fa-solid fa-plus"></i></button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 2 -->
-      <div class="product-card" data-category="pen" data-name="pulpen standard ae7 bolpoin">
-        <div class="product-thumb">
-          <img src="https://images.unsplash.com/photo-1585336261024-64ed7d80e15b?auto=format&fit=crop&w=500&q=80" alt="Pulpen Standard">
-        </div>
-        <div class="product-details">
-          <span class="item-cat">Alat Tulis</span>
-          <div class="item-title">Standard AE7 Alfa 0.5</div>
-          <div class="item-desc">Tinta oil-gel pekat bebas bocor, ergonomis untuk tanda tangan.</div>
-          <div class="item-footer">
-            <span class="item-price">Rp 3.000</span>
-            <button class="btn-add-cart" onclick="addToCart('Pulpen Standard AE7', 3000)"><i class="fa-solid fa-plus"></i></button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 3 -->
-      <div class="product-card" data-category="file" data-name="map dokumen plastik folio">
-        <div class="product-thumb">
-          <img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=500&q=80" alt="Map File">
-        </div>
-        <div class="product-details">
-          <span class="item-cat">Map & Arsip</span>
-          <div class="item-title">Stopmap Dokumen Folio</div>
-          <div class="item-desc">Material waterproof pelindung berkas administrasi dan lamaran.</div>
-          <div class="item-footer">
-            <span class="item-price">Rp 2.500</span>
-            <button class="btn-add-cart" onclick="addToCart('Stopmap Folio', 2500)"><i class="fa-solid fa-plus"></i></button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 4 -->
-      <div class="product-card" data-category="pen" data-name="correction tape tipex kertas">
-        <div class="product-thumb">
-          <img src="https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=500&q=80" alt="Tipex Kertas">
-        </div>
-        <div class="product-details">
-          <span class="item-cat">Alat Tulis</span>
-          <div class="item-title">Correction Tape 12m</div>
-          <div class="item-desc">Pita koreksi instan langsung kering, tidak menggembung di kertas.</div>
-          <div class="item-footer">
-            <span class="item-price">Rp 8.000</span>
-            <button class="btn-add-cart" onclick="addToCart('Correction Tape 12m', 8000)"><i class="fa-solid fa-plus"></i></button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- =====================================================
-     PENGIRIMAN FILE DOKUMEN
-===================================================== -->
-<section class="section" id="order">
-  <div class="container">
-    <div class="section-head">
-      <div class="tag">Order Instan</div>
-      <h2>Unggah File & Pesan Cepat</h2>
-      <p>Lampirkan dokumen Anda, sistem akan menyiapkan draf pesanan langsung ke WhatsApp petugas operasional kami.</p>
-    </div>
-
-    <div class="upload-wrapper">
-      <div class="drop-zone" onclick="document.getElementById('fileInput').click()">
-        <i class="fa-solid fa-cloud-arrow-up"></i>
-        <div style="font-size: 16px; font-weight: 700; margin-bottom: 6px; color: #0f172a;">Pilih File Dokumen Anda</div>
-        <div style="font-size: 13.5px; color: var(--text-muted);" id="fileLabel">Mendukung PDF, DOCX, JPG, PNG (Maks 50MB)</div>
-        <input type="file" id="fileInput" style="display: none;" onchange="handleFile(this)">
-      </div>
-
-      <div>
-        <form onsubmit="handleOrderSubmit(event)">
-          <div class="form-group">
-            <label>Nama Pemesan</label>
-            <input type="text" id="senderName" class="form-control" placeholder="Nama Anda" required>
-          </div>
-          <div class="form-group">
-            <label>Layanan yang Dibutuhkan</label>
-            <select id="serviceType" class="form-control">
-              <option>Print Skripsi / Makalah</option>
-              <option>Print Dokumen Kantor</option>
-              <option>Cetak Pas Foto Kilat</option>
-              <option>Stempel Flash Otomatis</option>
-              <option>Cetak Kartu ID Card / BPJS</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Instruksi Cetak</label>
-            <textarea id="orderNotes" class="form-control" rows="3" placeholder="Contoh: Kertas A4, dijilid lakban bening, halaman 1-5 dicetak warna..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" style="width: 100%;">
-            <i class="fa-brands fa-whatsapp"></i> Lanjutkan ke WhatsApp
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- =====================================================
-     LAYANAN
-===================================================== -->
-<section class="section" id="layanan">
-  <div class="container">
-    <div class="section-head">
-      <div class="tag">Fasilitas Lengkap</div>
-      <h2>Kemampuan Cetak Presisi</h2>
-      <p>Dukungan mesin cetak resolusi tinggi untuk seluruh keperluan kantor dan akademik Anda.</p>
-    </div>
-
-    <div class="product-grid">
-      <div class="product-card">
-        <div class="product-thumb"><img src="https://images.unsplash.com/photo-1589330694653-dad6d3240e2b?auto=format&fit=crop&w=500&q=80" alt="Print High Res"></div>
-        <div class="product-details">
-          <div class="item-title">Print & Fotocopy High-Speed</div>
-          <div class="item-desc">Kecepatan tinggi, tinta tahan air tanpa bercak pada dokumen hitam-putih dan warna.</div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-thumb"><img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=500&q=80" alt="Studio Foto"></div>
-        <div class="product-details">
-          <div class="item-title">Pas Foto Resmi & Studio Mini</div>
-          <div class="item-desc">Penyesuaian latar belakang (merah/biru) untuk ijazah, visa, dan keperluan lamaran kerja.</div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-thumb"><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=500&q=80" alt="Stempel & Kartu"></div>
-        <div class="product-details">
-          <div class="item-title">Stempel Flash & ID Card PVC</div>
-          <div class="item-desc">Stempel otomatis tanpa bantalan tinta dan kartu tebal anti air berstandar kartu ATM.</div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-thumb"><img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=500&q=80" alt="Jilid Dokumen"></div>
-        <div class="product-details">
-          <div class="item-title">Jilid Kawat & Hardcover Emas</div>
-          <div class="item-desc">Penjilidan presisi untuk tugas akhir, laporan tahunan, dan proposal proyek penting.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- =====================================================
-     KERANJANG BELANJA (DRAWER)
-===================================================== -->
-<div class="cart-backdrop" id="cartBackdrop" onclick="toggleCartDrawer()"></div>
-<div class="cart-drawer" id="cartDrawer">
-  <div class="cart-header">
-    <h3 style="font-size: 19px; color: #0f172a;"><i class="fa-solid fa-basket-shopping" style="color: var(--accent-blue);"></i> Keranjang ATK</h3>
-    <button onclick="toggleCartDrawer()" style="background: none; border: none; color: var(--text-muted); font-size: 20px; cursor: pointer;">&times;</button>
-  </div>
-
-  <div class="cart-items" id="cartItemsContainer">
-    <div style="text-align: center; color: var(--text-muted); font-size: 14px; margin-top: 60px;" id="emptyCartLabel">
-      Keranjang Anda kosong.<br>Pilih item pada katalog barang.
-    </div>
-  </div>
-
-  <div class="cart-footer">
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-      <span style="color: var(--text-secondary); font-weight: 600;">Total Tagihan:</span>
-      <strong style="font-size: 22px; color: var(--accent-blue);" id="cartTotalLabel">Rp 0</strong>
-    </div>
-    <button class="btn btn-primary" style="width: 100%;" onclick="checkoutCartToWA()">
-      <i class="fa-brands fa-whatsapp"></i> Pesan Barang via WhatsApp
-    </button>
-  </div>
-</div>
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-<footer>
-  <div class="container">
-    <div class="footer-top">
-      <div>
-        <div class="brand" style="margin-bottom: 8px;">
-          <i class="fa-solid fa-cube"></i> MUCI STUDIO
-        </div>
-        <div style="font-size: 14px; color: var(--text-muted);">Infrastruktur Digital Printing & Pasokan Kantor Muara Enim</div>
-      </div>
-      <div>
-        <a href="https://wa.me/6285267855858" target="_blank" class="btn btn-secondary">
-          <i class="fa-brands fa-whatsapp" style="color: var(--accent-emerald);"></i> Hubungi Dukungan Operasional
-        </a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      &copy; 2026 MUCI Tech Hub. Seluruh hak cipta dilindungi.
-    </div>
-  </div>
-</footer>
-
-<!-- =====================================================
-     JAVASCRIPT LOGIC
-===================================================== -->
-<script>
-const PHONE_NUMBER = "6285267855858";
-
-// 1. DATA & STATE KALKULATOR
-const calcState = {
-  paperPrice: 500,
-  paperLabel: "HVS A4 80g",
-  colorPrice: 0,
-  colorLabel: "Hitam Putih",
-  bindingPrice: 0,
-  bindingLabel: "Tanpa Jilid",
-  qty: 15
-};
-
-function selectTile(element, type) {
-  const parent = element.parentElement;
-  parent.querySelectorAll('.tile-option').forEach(el => el.classList.remove('active'));
-  element.classList.add('active');
-
-  const price = parseInt(element.getAttribute('data-price'));
-  const name = element.querySelector('.tile-name').innerText;
-
-  if (type === 'paper') {
-    calcState.paperPrice = price;
-    calcState.paperLabel = name;
-  } else if (type === 'color') {
-    calcState.colorPrice = price;
-    calcState.colorLabel = name;
-  } else if (type === 'binding') {
-    calcState.bindingPrice = price;
-    calcState.bindingLabel = name;
-  }
-
-  updateCalc();
-}
-
-function updateSlider(val) {
-  calcState.qty = parseInt(val);
-  document.getElementById('sliderValDisplay').innerText = val + " Lembar";
-  updateCalc();
-}
-
-function updateCalc() {
-  const total = ((calcState.paperPrice + calcState.colorPrice) * calcState.qty) + calcState.bindingPrice;
-
-  document.getElementById('summaryPaper').innerText = calcState.paperLabel;
-  document.getElementById('summaryColor').innerText = calcState.colorLabel;
-  document.getElementById('summaryBinding').innerText = calcState.bindingLabel;
-  document.getElementById('summaryQty').innerText = calcState.qty + " Lembar";
-  document.getElementById('calcFinalPrice').innerText = "Rp " + total.toLocaleString('id-ID');
-}
-
-function orderFromCalculator() {
-  const total = ((calcState.paperPrice + calcState.colorPrice) * calcState.qty) + calcState.bindingPrice;
-  const message = `Halo MUCI, saya ingin memesan cetak sesuai estimasi kalkulator web:
-- Media: ${calcState.paperLabel}
-- Format: ${calcState.colorLabel}
-- Finishing: ${calcState.bindingLabel}
-- Jumlah: ${calcState.qty} Lembar
-- Estimasi Biaya: Rp ${total.toLocaleString('id-ID')}
-
-Mohon instruksi pengiriman berkasnya. Terima kasih.`;
-
-  window.open(`https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
-}
-
-// 2. SISTEM KERANJANG ATK
-let cart = [];
-
-function toggleCartDrawer() {
-  document.getElementById('cartBackdrop').classList.toggle('open');
-  document.getElementById('cartDrawer').classList.toggle('open');
-}
-
-function addToCart(title, price) {
-  const exist = cart.find(item => item.title === title);
-  if (exist) {
-    exist.qty += 1;
-  } else {
-    cart.push({ title, price, qty: 1 });
-  }
-  renderCart();
-  toggleCartDrawer();
-}
-
-function changeQty(index, delta) {
-  cart[index].qty += delta;
-  if (cart[index].qty <= 0) {
-    cart.splice(index, 1);
-  }
-  renderCart();
-}
-
-function renderCart() {
-  const container = document.getElementById('cartItemsContainer');
-  const badge = document.getElementById('cartCountBadge');
-  const totalLabel = document.getElementById('cartTotalLabel');
-  const emptyLabel = document.getElementById('emptyCartLabel');
-
-  container.innerHTML = '';
-  let count = 0;
-  let total = 0;
-
-  if (cart.length === 0) {
-    container.appendChild(emptyLabel);
-    emptyLabel.style.display = 'block';
-  } else {
-    emptyLabel.style.display = 'none';
-    cart.forEach((item, idx) => {
-      count += item.qty;
-      total += item.price * item.qty;
-
-      const row = document.createElement('div');
-      row.className = 'cart-row';
-      row.innerHTML = `
-        <div>
-          <div style="font-size: 14.5px; font-weight: 700; color: #0f172a;">${item.title}</div>
-          <div style="font-size: 12.5px; color: var(--text-muted);">Rp ${item.price.toLocaleString('id-ID')}</div>
-        </div>
-        <div class="cart-qty-ctrl">
-          <button class="qty-btn" onclick="changeQty(${idx}, -1)">-</button>
-          <span style="font-size: 13.5px; font-weight: 700;">${item.qty}</span>
-          <button class="qty-btn" onclick="changeQty(${idx}, 1)">+</button>
-        </div>
-      `;
-      container.appendChild(row);
-    });
-  }
-
-  badge.innerText = count;
-  totalLabel.innerText = "Rp " + total.toLocaleString('id-ID');
-}
-
-function checkoutCartToWA() {
-  if (cart.length === 0) return;
-
-  let total = 0;
-  let detail = "";
-  cart.forEach(item => {
-    total += item.price * item.qty;
-    detail += `• ${item.title} (${item.qty}x) - Rp ${(item.price * item.qty).toLocaleString('id-ID')}\n`;
-  });
-
-  const message = `Halo MUCI, saya ingin membeli perlengkapan ATK berikut:
-${detail}
-*Total: Rp ${total.toLocaleString('id-ID')}*
-
-Mohon konfirmasi ketersediaan barang. Terima kasih.`;
-
-  window.open(`https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
-}
-
-// 3. FILTER & PENCARIAN ATK
-function applyCategory(cat, btn) {
-  document.querySelectorAll('.pill-btn').forEach(el => el.classList.remove('active'));
-  btn.classList.add('active');
-
-  document.querySelectorAll('.product-card').forEach(card => {
-    if (cat === 'all' || card.getAttribute('data-category') === cat) {
-      card.style.display = 'flex';
-    } else {
-      card.style.display = 'none';
-    }
-  });
-}
-
-function handleSearch(query) {
-  const q = query.toLowerCase().trim();
-  document.querySelectorAll('.product-card').forEach(card => {
-    const name = card.getAttribute('data-name');
-    card.style.display = name.includes(q) ? 'flex' : 'none';
-  });
-}
-
-// 4. UPLOAD SIMULASI & FORM ORDER
-let attachedFileName = "";
-
-function handleFile(input) {
-  if (input.files && input.files[0]) {
-    attachedFileName = input.files[0].name;
-    document.getElementById('fileLabel').innerText = "File siap dikirim: " + attachedFileName;
-  }
-}
-
-function handleOrderSubmit(e) {
-  e.preventDefault();
-  const name = document.getElementById('senderName').value;
-  const service = document.getElementById('serviceType').value;
-  const notes = document.getElementById('orderNotes').value || "-";
-
-  const message = `Halo Tim MUCI, saya mengirim pesanan baru:
-- Nama: ${name}
-- Layanan: ${service}
-- Lampiran Dokumen: ${attachedFileName || "Akan dikirim langsung di chat ini"}
-- Instruksi Tambahan: ${notes}
-
-Mohon segera diproses. Terima kasih!`;
-
-  window.open(`https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
-}
-
-// Inisialisasi awal kalkulator
-updateCalc();
-</script>
-
-</body>
-</html>
+```javascript
+const NOMOR_WHATSAPP = "6285185207306";
