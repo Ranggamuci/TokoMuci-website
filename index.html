@@ -4,1371 +4,1582 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MUCI — Pusat Print & Foto Copy</title>
+<title>MUCI — Print Tech, Studio Foto & Smart Office Supply</title>
+<meta name="description" content="Pusat cetak cerdas dan perlengkapan kerja modern di Muara Enim. Pesan print dokumen, foto studio, stempel flash, dan ATK serba otomatis.">
 
-<meta name="description"
-content="MUCI menyediakan jasa print, fotocopy, cetak foto, pas foto, laminating, jilid, bikin stempel flash, cetak kartu ID Card, NPWP, BPJS dan kebutuhan ATK di Muara Enim.">
-
-<meta property="og:title"
-content="MUCI — Jasa Print, Fotocopy, Cetak Foto & Stempel Flash">
-
-<meta property="og:description"
-content="Solusi print, fotocopy, cetak foto, pas foto, laminating, jilid, stempel flash dan cetak kartu di Muara Enim.">
-
-<meta property="og:image"
-content="muci-preview.jpg">
-
-<meta property="og:url"
-content="https://ranggamuci.github.io/TokoMuci-website/">
-
-<meta property="og:type" content="website">
+<!-- Fonts & Icons -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
-
 /* =====================================================
-   RESET
+   VIBRANT BRIGHT MESH & GLOW PALETTE
 ===================================================== */
+:root {
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Background Cerah & Dinamis */
+  --bg-bright: #f0f7ff;
+  --bg-gradient: radial-gradient(circle at 10% 15%, rgba(56, 189, 248, 0.28) 0%, transparent 45%),
+                 radial-gradient(circle at 90% 12%, rgba(244, 114, 182, 0.22) 0%, transparent 48%),
+                 radial-gradient(circle at 50% 55%, rgba(192, 132, 252, 0.18) 0%, transparent 52%),
+                 radial-gradient(circle at 15% 85%, rgba(52, 211, 153, 0.20) 0%, transparent 46%),
+                 linear-gradient(180deg, #f8fafc 0%, #eef6ff 50%, #fdf4ff 100%);
+
+  /* Surface Cards Frosted Glass */
+  --surface: rgba(255, 255, 255, 0.85);
+  --surface-card: rgba(255, 255, 255, 0.95);
+  --surface-card-hover: #ffffff;
+  --surface-border: rgba(147, 197, 253, 0.45);
+  --border-subtle: rgba(226, 232, 240, 0.8);
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+
+  --accent-blue: #2563eb;
+  --accent-cyan: #0284c7;
+  --accent-violet: #7c3aed;
+  --accent-emerald: #059669;
+  --accent-coral: #f43f5e;
+
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 26px;
+  --radius-full: 9999px;
+
+  --shadow-subtle: 0 10px 30px rgba(37, 99, 235, 0.07);
+  --shadow-glow: 0 15px 40px -10px rgba(56, 189, 248, 0.3);
+}
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #eef7ff;
-    color: #09234f;
-    line-height: 1.6;
+  font-family: var(--font-sans);
+  background: var(--bg-bright);
+  background-image: var(--bg-gradient);
+  background-attachment: fixed;
+  background-size: cover;
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .brand, .btn, .stat-val, .calc-price, .item-price {
+  font-family: var(--font-display);
+  letter-spacing: -0.03em;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 .container {
-    width: min(1280px, 92%);
-    margin: auto;
+  width: min(1200px, 92%);
+  margin: auto;
 }
-
 
 /* =====================================================
-   HEADER
+   NAVBAR
 ===================================================== */
-
-.hero {
-    background:
-        radial-gradient(circle at 80% 20%, #d9eeff 0, transparent 35%),
-        linear-gradient(135deg, #eef8ff, #ffffff);
-    padding-bottom: 70px;
+.header-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border-subtle);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 }
 
-.nav {
-    min-height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 25px;
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 75px;
 }
 
 .brand {
-    font-size: 34px;
-    font-weight: 900;
-    color: #0875e1;
-    letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 25px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #1e40af 0%, #0284c7 60%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-badge {
+  font-size: 10.5px;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  background: rgba(2, 132, 199, 0.1);
+  border: 1px solid rgba(2, 132, 199, 0.25);
+  color: var(--accent-cyan);
+  -webkit-text-fill-color: var(--accent-cyan);
+  font-family: var(--font-sans);
+  font-weight: 700;
 }
 
 .nav-links {
-    display: flex;
-    gap: 30px;
+  display: flex;
+  gap: 30px;
 }
 
 .nav-links a {
-    color: #163d70;
-    font-weight: 700;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-    color: #0875e1;
+  color: var(--accent-blue);
 }
 
-.nav-wa {
-    background: #0875e1;
-    color: white;
-    padding: 12px 22px;
-    border-radius: 30px;
-    font-weight: 800;
-    box-shadow: 0 8px 20px rgba(8,117,225,.2);
+.nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
+.cart-toggle-btn {
+  position: relative;
+  background: white;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s;
+}
+
+.cart-toggle-btn:hover {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.2);
+  color: var(--accent-blue);
+}
+
+.cart-count {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: linear-gradient(135deg, #f43f5e, #e11d48);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(244, 63, 94, 0.4);
+}
+
+/* =====================================================
+   BUTTONS & BADGES
+===================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 26px;
+  font-size: 14.5px;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  border: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0284c7 0%, #2563eb 50%, #7c3aed 100%);
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.28);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 8px 25px rgba(2, 132, 199, 0.45);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--text-primary);
+  border: 1.5px solid var(--border-subtle);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.btn-secondary:hover {
+  background: #f8fafc;
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+  transform: translateY(-1px);
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent-blue);
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  margin-bottom: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
 
 /* =====================================================
    HERO
 ===================================================== */
+.hero {
+  position: relative;
+  padding: 85px 0 80px;
+  overflow: hidden;
+}
+
+.hero-glow {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 950px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.3) 0%, rgba(244, 114, 182, 0.2) 50%, transparent 75%);
+  filter: blur(80px);
+  pointer-events: none;
+}
 
 .hero-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 55px;
-    padding-top: 50px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 60px;
 }
 
-.eyebrow {
-    display: inline-block;
-    color: #0875e1;
-    font-size: 13px;
-    font-weight: 900;
-    letter-spacing: 1.5px;
-    margin-bottom: 15px;
+.hero-copy h1 {
+  font-size: clamp(38px, 4.8vw, 62px);
+  line-height: 1.12;
+  font-weight: 800;
+  margin-bottom: 22px;
+  color: #0f172a;
 }
 
-.hero h1 {
-    font-size: clamp(40px, 5vw, 68px);
-    line-height: 1.08;
-    color: #06245a;
-    font-weight: 900;
+.hero-copy h1 span {
+  background: linear-gradient(135deg, #0284c7 0%, #7c3aed 50%, #f43f5e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.hero h1 span {
-    color: #0875e1;
-}
-
-.lead {
-    margin-top: 22px;
-    color: #52739f;
-    font-size: 18px;
-    max-width: 650px;
+.hero-copy p {
+  font-size: 17.5px;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  max-width: 530px;
+  margin-bottom: 36px;
 }
 
 .hero-actions {
-    display: flex;
-    gap: 15px;
-    margin-top: 30px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    cursor: pointer;
-    padding: 14px 24px;
-    border-radius: 30px;
-    font-size: 15px;
-    font-weight: 800;
+.hero-preview {
+  position: relative;
 }
 
-.btn.primary {
-    background: #0875e1;
-    color: white;
-    box-shadow: 0 10px 25px rgba(8,117,225,.25);
+.preview-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 4px solid #ffffff;
+  box-shadow: var(--shadow-glow);
+  background: white;
 }
 
-.btn.secondary {
-    background: white;
-    color: #0875e1;
-    border: 2px solid #d7eaff;
+.preview-card img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
 }
 
-.btn:hover {
-    transform: translateY(-2px);
+.floating-pill {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
 }
 
-.trust-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 22px;
-    margin-top: 28px;
-    color: #52739f;
-    font-size: 14px;
-    font-weight: 700;
+.pill-dot {
+  width: 10px;
+  height: 10px;
+  background: var(--accent-emerald);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent-emerald);
 }
-
-.hero-card {
-    background: white;
-    border-radius: 30px;
-    padding: 12px;
-    box-shadow: 0 25px 60px rgba(20,80,130,.14);
-}
-
-.hero-card img {
-    width: 100%;
-    display: block;
-    border-radius: 22px;
-}
-
 
 /* =====================================================
-   SECTION
+   METRICS STRIP
 ===================================================== */
+.metrics-strip {
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(14px);
+  padding: 34px 0;
+}
 
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.stat-val {
+  font-size: 36px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #0f172a 30%, #2563eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-lbl {
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* =====================================================
+   SECTION HEADERS
+===================================================== */
 .section {
-    padding: 90px 0;
+  padding: 95px 0;
 }
 
-.section-heading {
-    text-align: center;
-    max-width: 750px;
-    margin: 0 auto 45px;
+.section-head {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 55px;
 }
 
-.section-heading h2 {
-    font-size: clamp(32px, 4vw, 46px);
-    line-height: 1.15;
-    color: #06245a;
-    margin-bottom: 14px;
-    font-weight: 900;
+.section-head h2 {
+  font-size: clamp(30px, 3.8vw, 44px);
+  font-weight: 800;
+  margin-bottom: 14px;
+  color: #0f172a;
 }
 
-.section-heading p {
-    color: #5b7ca7;
+.section-head p {
+  color: var(--text-secondary);
+  font-size: 16.5px;
 }
-
 
 /* =====================================================
-   SERVICE
+   KALKULATOR CERDAS
 ===================================================== */
-
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+.calc-container {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  backdrop-filter: blur(20px);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 40px;
+  box-shadow: var(--shadow-subtle);
 }
 
-.service-card {
-    background: white;
-    border: 1px solid #dceafa;
-    border-radius: 22px;
-    padding: 25px 22px 28px;
-    text-align: center;
-    min-height: 320px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    transition: .3s ease;
-    box-shadow: 0 8px 25px rgba(40,100,160,.05);
+.calc-step-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 12px;
 }
 
-.service-card:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 20px 40px rgba(40,100,160,.13);
+.tile-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
 }
 
+.tile-option {
+  background: var(--surface-card);
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.tile-option:hover {
+  border-color: var(--accent-blue);
+  background: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.08);
+}
+
+.tile-option.active {
+  border-color: var(--accent-blue);
+  background: #eff6ff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.tile-option .tile-name {
+  font-size: 14px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 4px;
+  color: #0f172a;
+}
+
+.tile-option .tile-price {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.calc-slider-wrap {
+  background: var(--surface-card);
+  border: 1.5px solid var(--border-subtle);
+  padding: 20px;
+  border-radius: var(--radius-sm);
+}
+
+.slider-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.calc-slider {
+  width: 100%;
+  accent-color: var(--accent-blue);
+}
+
+/* Panel Hasil Kalkulator */
+.calc-checkout-panel {
+  background: linear-gradient(145deg, #ffffff 0%, #f0f7ff 100%);
+  border: 1.5px solid var(--surface-border);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.08);
+}
+
+.calc-summary-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.calc-summary-item strong {
+  color: var(--text-primary);
+}
+
+.calc-total-box {
+  border-top: 2px dashed rgba(148, 163, 184, 0.3);
+  padding-top: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.calc-price {
+  font-size: 44px;
+  font-weight: 800;
+  color: var(--accent-blue);
+  margin: 8px 0 20px;
+}
 
 /* =====================================================
-   SVG ICON
+   KATALOG PRODUK & SEARCH
 ===================================================== */
-
-.service-icon {
-    width: 100%;
-    height: 145px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 12px;
+.search-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 35px;
 }
 
-.service-icon svg {
-    width: 170px;
-    height: 140px;
-    display: block;
-    filter: drop-shadow(0 8px 8px rgba(0,80,160,.13));
-    transition: .3s ease;
+.filter-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
-.service-card:hover .service-icon svg {
-    transform: translateY(-5px) scale(1.04);
+.pill-btn {
+  background: white;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all 0.25s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
 }
 
-.service-card h3 {
-    color: #061f51;
-    font-size: 21px;
-    line-height: 1.25;
-    margin-bottom: 12px;
-    font-weight: 900;
+.pill-btn.active, .pill-btn:hover {
+  background: var(--accent-blue);
+  color: #ffffff;
+  border-color: var(--accent-blue);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
 }
 
-.service-card p {
-    color: #5b7ca7;
-    font-size: 15px;
+.search-input-box {
+  position: relative;
+  min-width: 280px;
 }
 
+.search-input-box i {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
+
+.search-input {
+  width: 100%;
+  background: white;
+  border: 1.5px solid var(--border-subtle);
+  color: var(--text-primary);
+  padding: 11px 16px 11px 44px;
+  border-radius: var(--radius-full);
+  outline: none;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-input:focus {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.product-card {
+  background: white;
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-subtle);
+  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-blue);
+  box-shadow: 0 16px 35px -5px rgba(37, 99, 235, 0.15);
+}
+
+.product-thumb {
+  height: 175px;
+  overflow: hidden;
+  background: #f1f5f9;
+}
+
+.product-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.product-card:hover .product-thumb img {
+  transform: scale(1.06);
+}
+
+.product-details {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.item-cat {
+  font-size: 11.5px;
+  text-transform: uppercase;
+  color: var(--accent-cyan);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 5px;
+}
+
+.item-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.item-desc {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  flex: 1;
+  line-height: 1.5;
+}
+
+.item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.item-price {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--accent-blue);
+}
+
+.btn-add-cart {
+  background: #f8fafc;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-add-cart:hover {
+  background: var(--accent-blue);
+  color: #ffffff;
+  border-color: var(--accent-blue);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
 
 /* =====================================================
-   PRICE
+   FILE DROP & FORM
 ===================================================== */
-
-.price-section {
-    background: #f7fbff;
+.upload-wrapper {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  backdrop-filter: blur(16px);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  box-shadow: var(--shadow-subtle);
 }
 
-.price-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+.drop-zone {
+  border: 2px dashed rgba(37, 99, 235, 0.35);
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: var(--radius-md);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s;
 }
 
-.price-card {
-    position: relative;
-    background: white;
-    border: 1px solid #dceafa;
-    border-radius: 22px;
-    padding: 28px 20px;
-    text-align: center;
-    min-height: 280px;
-    box-shadow: 0 8px 25px rgba(40,100,160,.05);
-    transition: .3s ease;
+.drop-zone:hover {
+  border-color: var(--accent-blue);
+  background: rgba(239, 246, 255, 0.85);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12);
 }
 
-.price-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 40px rgba(40,100,160,.12);
+.drop-zone i {
+  font-size: 46px;
+  color: var(--accent-blue);
+  margin-bottom: 14px;
 }
 
-.price-card.featured {
-    border: 2px solid #0875e1;
+.form-group {
+  margin-bottom: 18px;
 }
 
-.price-card h3 {
-    color: #06245a;
-    font-size: 20px;
-    margin-top: 15px;
-    margin-bottom: 18px;
-    font-weight: 900;
+.form-group label {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
 }
 
-.price-card strong {
-    display: block;
-    color: #0875e1;
-    font-size: 28px;
-    font-weight: 900;
+.form-control {
+  width: 100%;
+  background: white;
+  border: 1.5px solid var(--border-subtle);
+  color: var(--text-primary);
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  outline: none;
+  font-family: inherit;
+  font-size: 14.5px;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.price-card p {
-    color: #6684a9;
-    margin-top: 5px;
-    min-height: 45px;
+.form-control:focus {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
-
-.price-card a {
-    display: inline-block;
-    margin-top: 18px;
-    background: #0875e1;
-    color: white;
-    padding: 10px 22px;
-    border-radius: 25px;
-    font-weight: 800;
-}
-
-.badge {
-    display: inline-block;
-    background: #e8f3ff;
-    color: #0875e1;
-    border-radius: 20px;
-    padding: 5px 12px;
-    font-size: 11px;
-    font-weight: 900;
-}
-
-.note {
-    text-align: center;
-    color: #6985a5;
-    margin-top: 25px;
-    font-size: 14px;
-}
-
 
 /* =====================================================
-   PRICE ICON
+   SIDEBAR KERANJANG (DRAWER)
 ===================================================== */
-
-.price-icon {
-    height: 85px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.cart-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
-.price-icon svg {
-    width: 90px;
-    height: 75px;
-    filter: drop-shadow(0 5px 6px rgba(0,80,160,.12));
+.cart-backdrop.open {
+  opacity: 1;
+  pointer-events: all;
 }
 
-
-/* =====================================================
-   ORDER
-===================================================== */
-
-.order-section {
-    background: linear-gradient(135deg, #eaf6ff, #ffffff);
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: -420px;
+  width: min(420px, 100%);
+  height: 100%;
+  background: #ffffff;
+  border-left: 1px solid var(--border-subtle);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: -10px 0 35px rgba(15, 23, 42, 0.15);
 }
 
-.order-wrap {
-    display: grid;
-    grid-template-columns: .9fr 1.1fr;
-    gap: 55px;
-    align-items: center;
+.cart-drawer.open {
+  right: 0;
 }
 
-.order-wrap h2 {
-    font-size: clamp(32px, 4vw, 45px);
-    color: #06245a;
-    line-height: 1.15;
-    margin-bottom: 18px;
-    font-weight: 900;
+.cart-header {
+  padding: 24px;
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.order-wrap > div > p {
-    color: #58779f;
+.cart-items {
+  padding: 24px;
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.steps {
-    display: grid;
-    gap: 14px;
-    margin-top: 30px;
+.cart-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #f1f5f9;
 }
 
-.steps > div {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    background: white;
-    padding: 14px;
-    border-radius: 15px;
-    border: 1px solid #dceafa;
+.cart-qty-ctrl {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.steps b {
-    background: #0875e1;
-    color: white;
-    min-width: 42px;
-    height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
+.qty-btn {
+  background: #f8fafc;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  width: 26px;
+  height: 26px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  transition: all 0.2s;
 }
 
-.steps span {
-    color: #456b99;
-    font-weight: 600;
+.qty-btn:hover {
+  background: #e2e8f0;
 }
 
-
-/* =====================================================
-   FORM
-===================================================== */
-
-.order-form {
-    background: white;
-    border-radius: 25px;
-    padding: 30px;
-    box-shadow: 0 20px 50px rgba(30,100,160,.12);
+.cart-footer {
+  padding: 24px;
+  border-top: 1px solid var(--border-subtle);
+  background: #f8fafc;
 }
-
-.order-form label {
-    display: block;
-    color: #183c6d;
-    font-weight: 800;
-    font-size: 14px;
-    margin-bottom: 17px;
-}
-
-.order-form input,
-.order-form select,
-.order-form textarea {
-    display: block;
-    width: 100%;
-    margin-top: 7px;
-    padding: 13px 15px;
-    border: 1px solid #d4e4f5;
-    border-radius: 12px;
-    outline: none;
-    font-family: inherit;
-    font-size: 15px;
-    color: #173c6d;
-    background: #fbfdff;
-}
-
-.order-form input:focus,
-.order-form select:focus,
-.order-form textarea:focus {
-    border-color: #0875e1;
-    box-shadow: 0 0 0 3px rgba(8,117,225,.08);
-}
-
-.two-col {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-
-.full {
-    width: 100%;
-}
-
-.order-form small {
-    display: block;
-    color: #7890ad;
-    margin-top: 13px;
-    text-align: center;
-    font-size: 12px;
-}
-
-
-/* =====================================================
-   CONTACT
-===================================================== */
-
-.contact-section {
-    background: white;
-}
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    align-items: center;
-}
-
-.contact-grid h2 {
-    font-size: clamp(32px, 4vw, 45px);
-    line-height: 1.15;
-    color: #06245a;
-    font-weight: 900;
-    margin-bottom: 18px;
-}
-
-.contact-grid > div > p {
-    color: #58779f;
-}
-
-.contact-box {
-    background: #f3f9ff;
-    border: 1px solid #dceafa;
-    border-radius: 25px;
-    padding: 30px;
-}
-
-.contact-box p {
-    color: #476c99;
-    margin-bottom: 20px;
-}
-
-.contact-box p:last-child {
-    margin-bottom: 0;
-}
-
 
 /* =====================================================
    FOOTER
 ===================================================== */
-
 footer {
-    background: #06245a;
-    color: white;
-    padding: 25px 0;
+  border-top: 1px solid var(--border-subtle);
+  padding: 60px 0 30px;
+  background: #ffffff;
 }
 
-.footer-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--border-subtle);
 }
 
-.footer-inner strong {
-    display: block;
-    font-size: 22px;
+.footer-bottom {
+  padding-top: 30px;
+  text-align: center;
+  font-size: 13.5px;
+  color: var(--text-muted);
 }
-
-.footer-inner span {
-    opacity: .8;
-    font-size: 13px;
-}
-
 
 /* =====================================================
    RESPONSIVE
 ===================================================== */
-
-@media (max-width: 1050px) {
-
-    .service-grid,
-    .price-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .hero-grid,
-    .order-wrap,
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-copy {
-        text-align: center;
-    }
-
-    .lead {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .hero-actions,
-    .trust-row {
-        justify-content: center;
-    }
+@media (max-width: 992px) {
+  .hero-grid, .calc-container, .upload-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-
-@media (max-width: 700px) {
-
-    .nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 15px 0;
-    }
-
-    .nav-links {
-        order: 3;
-        width: 100%;
-        justify-content: center;
-        gap: 15px;
-        font-size: 14px;
-    }
-
-    .service-grid,
-    .price-grid,
-    .two-col {
-        grid-template-columns: 1fr;
-    }
-
-    .section {
-        padding: 65px 0;
-    }
-
-    .hero {
-        padding-bottom: 45px;
-    }
-
-    .hero h1 {
-        font-size: 40px;
-    }
-
-    .order-form {
-        padding: 22px;
-    }
-
-    .footer-inner {
-        flex-direction: column;
-        text-align: center;
-    }
-
+@media (max-width: 640px) {
+  .nav-links {
+    display: none;
+  }
+  .tile-group {
+    grid-template-columns: 1fr;
+  }
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  .calc-container, .upload-wrapper {
+    padding: 24px;
+  }
 }
-
-
-/* =====================================================
-   MENU ATK
-===================================================== */
-
-.atk-section {
-    background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
-}
-
-.atk-toolbar {
-    display: flex;
-    gap: 14px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 32px;
-}
-
-.atk-search {
-    width: min(520px, 100%);
-    padding: 14px 18px;
-    border: 1px solid #d4e4f5;
-    border-radius: 30px;
-    outline: none;
-    font-size: 15px;
-    background: white;
-}
-
-.atk-search:focus {
-    border-color: #0875e1;
-    box-shadow: 0 0 0 3px rgba(8,117,225,.08);
-}
-
-.atk-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
-}
-
-.atk-card {
-    background: white;
-    border: 1px solid #dceafa;
-    border-radius: 22px;
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(40,100,160,.06);
-    transition: .3s ease;
-    display: flex;
-    flex-direction: column;
-}
-
-.atk-card:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 20px 40px rgba(40,100,160,.14);
-}
-
-.atk-image {
-    height: 190px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 18px;
-    background: linear-gradient(135deg, #eaf6ff, #ffffff);
-}
-
-.atk-image svg {
-    width: 150px;
-    height: 150px;
-    filter: drop-shadow(0 9px 8px rgba(0,80,160,.13));
-    transition: .3s ease;
-}
-
-.atk-card:hover .atk-image svg {
-    transform: scale(1.07) rotate(-1deg);
-}
-
-.atk-body {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.atk-body h3 {
-    color: #06245a;
-    font-size: 18px;
-    line-height: 1.25;
-    margin-bottom: 8px;
-}
-
-.atk-body p {
-    color: #6985a5;
-    font-size: 13px;
-    min-height: 42px;
-}
-
-.atk-price {
-    color: #0875e1;
-    font-size: 23px;
-    font-weight: 900;
-    margin: 12px 0;
-}
-
-.atk-buy {
-    display: block;
-    text-align: center;
-    background: #0875e1;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 25px;
-    font-weight: 800;
-    cursor: pointer;
-    border: 0;
-    width: 100%;
-    font-size: 14px;
-}
-
-.atk-buy:hover {
-    transform: translateY(-2px);
-}
-
-@media (max-width: 1050px) {
-    .atk-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 700px) {
-    .atk-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 </style>
 </head>
 
-
 <body>
 
-
 <!-- =====================================================
-     HEADER
+     NAVBAR
 ===================================================== -->
-
-<header class="hero">
-
-<nav class="nav container">
-
-    <a class="brand" href="#home">
-        MUCI
+<div class="header-wrapper">
+  <div class="container navbar">
+    <a href="#home" class="brand">
+      <i class="fa-solid fa-cube"></i> MUCI
+      <span class="brand-badge">STUDIO</span>
     </a>
 
     <div class="nav-links">
-        <a href="#layanan">Layanan</a>
-        <a href="#atk">ATK</a>
-        <a href="#harga">Harga</a>
-        <a href="#pesan">Pesan</a>
-        <a href="#kontak">Kontak</a>
+      <a href="#kalkulator">Kalkulator</a>
+      <a href="#katalog">Katalog ATK</a>
+      <a href="#order">Kirim Dokumen</a>
+      <a href="#layanan">Layanan</a>
     </div>
 
-    <a class="nav-wa" href="#pesan">
-        Pesan Sekarang
-    </a>
-
-</nav>
-
-
-<div id="home" class="hero-grid container">
-
-    <div class="hero-copy">
-
-        <span class="eyebrow">
-            PUSAT PRINT & FOTO COPY
-        </span>
-
-        <h1>
-            Semua kebutuhan cetak Anda
-            <span>ada di MUCI.</span>
-        </h1>
-
-        <p class="lead">
-            Print dokumen, fotocopy, cetak foto,
-            pas foto, laminating, jilid,
-            bikin stempel flash, cetak kartu
-            ID Card, NPWP dan BPJS dengan proses
-            cepat dan hasil berkualitas.
-        </p>
-
-        <div class="hero-actions">
-
-            <a class="btn primary" href="#pesan">
-                🖨️ Buat Pesanan
-            </a>
-
-            <a class="btn secondary" href="#layanan">
-                Lihat Layanan
-            </a>
-
-        </div>
-
-        <div class="trust-row">
-
-            <div>✓ Hasil berkualitas</div>
-            <div>✓ Proses cepat</div>
-            <div>✓ Harga terjangkau</div>
-
-        </div>
-
+    <div class="nav-cta">
+      <button class="cart-toggle-btn" onclick="toggleCartDrawer()">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-count" id="cartCountBadge">0</span>
+      </button>
+      <a href="#kalkulator" class="btn btn-primary">
+        Hitung Estimasi
+      </a>
     </div>
-
-
-    <div class="hero-card">
-        <img src="muci-preview.jpg" alt="Preview MUCI">
-    </div>
-
+  </div>
 </div>
 
-</header>
+<!-- =====================================================
+     HERO
+===================================================== -->
+<section class="hero" id="home">
+  <div class="hero-glow"></div>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="tag">
+        <i class="fa-solid fa-bolt-lightning"></i> Generasi Baru Digital Printing
+      </div>
+      <h1>Cetak Dokumen Cepat. <span>Tanpa Antre.</span></h1>
+      <p>
+        Hitung biaya print otomatis dengan kalkulator presisi, lampirkan dokumen tugas atau kantor Anda, dan belanja alat tulis lengkap dari satu layar ponsel Anda.
+      </p>
+      <div class="hero-actions">
+        <a href="#kalkulator" class="btn btn-primary">
+          <i class="fa-solid fa-sliders"></i> Coba Kalkulator
+        </a>
+        <a href="#katalog" class="btn btn-secondary">
+          <i class="fa-solid fa-box-archive"></i> Beli Perlengkapan
+        </a>
+      </div>
+    </div>
 
+    <div class="hero-preview">
+      <div class="preview-card">
+        <img src="https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?auto=format&fit=crop&w=800&q=80" alt="Muci Tech Hub">
+        <div class="floating-pill">
+          <span class="pill-dot"></span>
+          <div>
+            <div style="font-size: 13.5px; font-weight: 700; color: #0f172a;">Sistem Aktif & Terhubung</div>
+            <div style="font-size: 11.5px; color: var(--text-muted);">Muara Enim • Buka 07.30 - 21.00 WIB</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     METRICS STRIP
+===================================================== -->
+<div class="metrics-strip">
+  <div class="container metrics-grid">
+    <div>
+      <div class="stat-val">12k+</div>
+      <div class="stat-lbl">Dokumen & Skripsi Selesai</div>
+    </div>
+    <div>
+      <div class="stat-val">~10 Mnt</div>
+      <div class="stat-lbl">Kecepatan Cetak Kilat</div>
+    </div>
+    <div>
+      <div class="stat-val">100%</div>
+      <div class="stat-lbl">Kerahasiaan Dokumen Terjaga</div>
+    </div>
+    <div>
+      <div class="stat-val">4.9 / 5</div>
+      <div class="stat-lbl">Rating Kepuasan Pengguna</div>
+    </div>
+  </div>
+</div>
+
+<!-- =====================================================
+     KALKULATOR CERDAS (INTERACTIVE TILES)
+===================================================== -->
+<section class="section" id="kalkulator">
+  <div class="container">
+    <div class="section-head">
+      <div class="tag">Simulasi Instan</div>
+      <h2>Kalkulator Estimasi Biaya Cetak</h2>
+      <p>Ketahui biaya cetak transparan secara instan sebelum melakukan konfirmasi via WhatsApp.</p>
+    </div>
+
+    <div class="calc-container">
+      <div>
+        <!-- Langkah 1: Kertas -->
+        <div class="calc-step-title">1. Pilih Media Kertas</div>
+        <div class="tile-group" id="paperTiles">
+          <div class="tile-option active" data-price="500" onclick="selectTile(this, 'paper')">
+            <span class="tile-name">HVS A4 80g</span>
+            <span class="tile-price">Rp 500/lbr</span>
+          </div>
+          <div class="tile-option" data-price="600" onclick="selectTile(this, 'paper')">
+            <span class="tile-name">F4 / Folio</span>
+            <span class="tile-price">Rp 600/lbr</span>
+          </div>
+          <div class="tile-option" data-price="2500" onclick="selectTile(this, 'paper')">
+            <span class="tile-name">Foto Glossy</span>
+            <span class="tile-price">Rp 2.500/lbr</span>
+          </div>
+        </div>
+
+        <!-- Langkah 2: Format Tinta -->
+        <div class="calc-step-title">2. Pilihan Warna & Format</div>
+        <div class="tile-group" id="colorTiles">
+          <div class="tile-option active" data-price="0" onclick="selectTile(this, 'color')">
+            <span class="tile-name">Hitam Putih</span>
+            <span class="tile-price">+ Rp 0</span>
+          </div>
+          <div class="tile-option" data-price="500" onclick="selectTile(this, 'color')">
+            <span class="tile-name">Warna Sebagian</span>
+            <span class="tile-price">+ Rp 500</span>
+          </div>
+          <div class="tile-option" data-price="1500" onclick="selectTile(this, 'color')">
+            <span class="tile-name">Full Color</span>
+            <span class="tile-price">+ Rp 1.500</span>
+          </div>
+        </div>
+
+        <!-- Langkah 3: Jilid -->
+        <div class="calc-step-title">3. Penjilidan & Finishing</div>
+        <div class="tile-group" id="bindingTiles">
+          <div class="tile-option active" data-price="0" onclick="selectTile(this, 'binding')">
+            <span class="tile-name">Tanpa Jilid</span>
+            <span class="tile-price">+ Rp 0</span>
+          </div>
+          <div class="tile-option" data-price="4000" onclick="selectTile(this, 'binding')">
+            <span class="tile-name">Lakban Mika</span>
+            <span class="tile-price">+ Rp 4.000</span>
+          </div>
+          <div class="tile-option" data-price="10000" onclick="selectTile(this, 'binding')">
+            <span class="tile-name">Spiral Kawat</span>
+            <span class="tile-price">+ Rp 10.000</span>
+          </div>
+        </div>
+
+        <!-- Langkah 4: Slider Halaman -->
+        <div class="calc-step-title">4. Jumlah Lembar</div>
+        <div class="calc-slider-wrap">
+          <div class="slider-top">
+            <span style="font-size: 14.5px; color: var(--text-secondary); font-weight: 500;">Kuantitas Halaman:</span>
+            <strong style="font-size: 18px; color: #0f172a;" id="sliderValDisplay">15 Lembar</strong>
+          </div>
+          <input type="range" min="1" max="250" value="15" class="calc-slider" id="calcSlider" oninput="updateSlider(this.value)">
+        </div>
+      </div>
+
+      <!-- Ringkasan Checkout -->
+      <div class="calc-checkout-panel">
+        <div>
+          <h4 style="font-size: 20px; font-weight: 800; color: #0f172a; margin-bottom: 20px;">Detail Pesanan</h4>
+          <div class="calc-summary-item">
+            <span>Media:</span>
+            <strong id="summaryPaper">HVS A4 80g</strong>
+          </div>
+          <div class="calc-summary-item">
+            <span>Warna:</span>
+            <strong id="summaryColor">Hitam Putih</strong>
+          </div>
+          <div class="calc-summary-item">
+            <span>Finishing:</span>
+            <strong id="summaryBinding">Tanpa Jilid</strong>
+          </div>
+          <div class="calc-summary-item">
+            <span>Volume:</span>
+            <strong id="summaryQty">15 Lembar</strong>
+          </div>
+        </div>
+
+        <div class="calc-total-box">
+          <div style="font-size: 12.5px; color: var(--text-muted); text-transform: uppercase; font-weight: 600;">Total Estimasi</div>
+          <div class="calc-price" id="calcFinalPrice">Rp 7.500</div>
+          <button class="btn btn-primary" style="width: 100%;" onclick="orderFromCalculator()">
+            <i class="fa-brands fa-whatsapp"></i> Konfirmasi Pesanan
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     KATALOG ATK & FILTER
+===================================================== -->
+<section class="section" id="katalog">
+  <div class="container">
+    <div class="section-head">
+      <div class="tag">Penyedia Kantor</div>
+      <h2>Koleksi Alat Tulis & Perlengkapan</h2>
+      <p>Beli satuan maupun grosir langsung dari gerai kami dengan harga terjangkau.</p>
+    </div>
+
+    <div class="search-controls">
+      <div class="filter-pills">
+        <button class="pill-btn active" onclick="applyCategory('all', this)">Semua</button>
+        <button class="pill-btn" onclick="applyCategory('paper', this)">Kertas & Buku</button>
+        <button class="pill-btn" onclick="applyCategory('pen', this)">Alat Tulis</button>
+        <button class="pill-btn" onclick="applyCategory('file', this)">Map & Arsip</button>
+      </div>
+
+      <div class="search-input-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="productSearchInput" class="search-input" placeholder="Cari nama barang..." oninput="handleSearch(this.value)">
+      </div>
+    </div>
+
+    <div class="product-grid" id="productGrid">
+      <!-- Item 1 -->
+      <div class="product-card" data-category="paper" data-name="kertas hvs a4 rim sidu">
+        <div class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=500&q=80" alt="Kertas HVS">
+        </div>
+        <div class="product-details">
+          <span class="item-cat">Kertas & Buku</span>
+          <div class="item-title">Kertas HVS A4 80g 1 Rim</div>
+          <div class="item-desc">500 lembar ultra-white, anti-jamming untuk printer laser/inkjet.</div>
+          <div class="item-footer">
+            <span class="item-price">Rp 56.000</span>
+            <button class="btn-add-cart" onclick="addToCart('HVS A4 80g (1 Rim)', 56000)"><i class="fa-solid fa-plus"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="product-card" data-category="pen" data-name="pulpen standard ae7 bolpoin">
+        <div class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1585336261024-64ed7d80e15b?auto=format&fit=crop&w=500&q=80" alt="Pulpen Standard">
+        </div>
+        <div class="product-details">
+          <span class="item-cat">Alat Tulis</span>
+          <div class="item-title">Standard AE7 Alfa 0.5</div>
+          <div class="item-desc">Tinta oil-gel pekat bebas bocor, ergonomis untuk tanda tangan.</div>
+          <div class="item-footer">
+            <span class="item-price">Rp 3.000</span>
+            <button class="btn-add-cart" onclick="addToCart('Pulpen Standard AE7', 3000)"><i class="fa-solid fa-plus"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="product-card" data-category="file" data-name="map dokumen plastik folio">
+        <div class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=500&q=80" alt="Map File">
+        </div>
+        <div class="product-details">
+          <span class="item-cat">Map & Arsip</span>
+          <div class="item-title">Stopmap Dokumen Folio</div>
+          <div class="item-desc">Material waterproof pelindung berkas administrasi dan lamaran.</div>
+          <div class="item-footer">
+            <span class="item-price">Rp 2.500</span>
+            <button class="btn-add-cart" onclick="addToCart('Stopmap Folio', 2500)"><i class="fa-solid fa-plus"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="product-card" data-category="pen" data-name="correction tape tipex kertas">
+        <div class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=500&q=80" alt="Tipex Kertas">
+        </div>
+        <div class="product-details">
+          <span class="item-cat">Alat Tulis</span>
+          <div class="item-title">Correction Tape 12m</div>
+          <div class="item-desc">Pita koreksi instan langsung kering, tidak menggembung di kertas.</div>
+          <div class="item-footer">
+            <span class="item-price">Rp 8.000</span>
+            <button class="btn-add-cart" onclick="addToCart('Correction Tape 12m', 8000)"><i class="fa-solid fa-plus"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     PENGIRIMAN FILE DOKUMEN
+===================================================== -->
+<section class="section" id="order">
+  <div class="container">
+    <div class="section-head">
+      <div class="tag">Order Instan</div>
+      <h2>Unggah File & Pesan Cepat</h2>
+      <p>Lampirkan dokumen Anda, sistem akan menyiapkan draf pesanan langsung ke WhatsApp petugas operasional kami.</p>
+    </div>
+
+    <div class="upload-wrapper">
+      <div class="drop-zone" onclick="document.getElementById('fileInput').click()">
+        <i class="fa-solid fa-cloud-arrow-up"></i>
+        <div style="font-size: 16px; font-weight: 700; margin-bottom: 6px; color: #0f172a;">Pilih File Dokumen Anda</div>
+        <div style="font-size: 13.5px; color: var(--text-muted);" id="fileLabel">Mendukung PDF, DOCX, JPG, PNG (Maks 50MB)</div>
+        <input type="file" id="fileInput" style="display: none;" onchange="handleFile(this)">
+      </div>
+
+      <div>
+        <form onsubmit="handleOrderSubmit(event)">
+          <div class="form-group">
+            <label>Nama Pemesan</label>
+            <input type="text" id="senderName" class="form-control" placeholder="Nama Anda" required>
+          </div>
+          <div class="form-group">
+            <label>Layanan yang Dibutuhkan</label>
+            <select id="serviceType" class="form-control">
+              <option>Print Skripsi / Makalah</option>
+              <option>Print Dokumen Kantor</option>
+              <option>Cetak Pas Foto Kilat</option>
+              <option>Stempel Flash Otomatis</option>
+              <option>Cetak Kartu ID Card / BPJS</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Instruksi Cetak</label>
+            <textarea id="orderNotes" class="form-control" rows="3" placeholder="Contoh: Kertas A4, dijilid lakban bening, halaman 1-5 dicetak warna..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <i class="fa-brands fa-whatsapp"></i> Lanjutkan ke WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- =====================================================
      LAYANAN
 ===================================================== -->
-
-<section id="layanan" class="section">
-
-<div class="container">
-
-    <div class="section-heading">
-        <h2>Layanan Cetak Lengkap</h2>
-        <p>
-            MUCI siap membantu kebutuhan dokumen tugas sekolah,
-            kuliah, administrasi kantor dan arsip pribadi Anda.
-        </p>
+<section class="section" id="layanan">
+  <div class="container">
+    <div class="section-head">
+      <div class="tag">Fasilitas Lengkap</div>
+      <h2>Kemampuan Cetak Presisi</h2>
+      <p>Dukungan mesin cetak resolusi tinggi untuk seluruh keperluan kantor dan akademik Anda.</p>
     </div>
 
-    <div class="service-grid">
-
-        <div class="service-card">
-            <div class="service-icon">
-                <svg viewBox="0 0 170 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="25" y="45" width="120" height="70" rx="14" fill="#0875e1"/>
-                    <rect x="42" y="15" width="86" height="40" rx="8" fill="#ffffff" stroke="#d4e7fb" stroke-width="4"/>
-                    <rect x="45" y="75" width="80" height="45" rx="8" fill="#eef7ff"/>
-                    <rect x="55" y="27" width="45" height="4" rx="2" fill="#9ecbf7"/>
-                    <rect x="55" y="36" width="60" height="4" rx="2" fill="#9ecbf7"/>
-                    <circle cx="125" cy="65" r="4" fill="#ffffff"/>
-                </svg>
-            </div>
-            <h3>Print & Fotocopy</h3>
-            <p>Print warna, hitam putih, skripsi, makalah dan fotocopy cepat dan bersih.</p>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-thumb"><img src="https://images.unsplash.com/photo-1589330694653-dad6d3240e2b?auto=format&fit=crop&w=500&q=80" alt="Print High Res"></div>
+        <div class="product-details">
+          <div class="item-title">Print & Fotocopy High-Speed</div>
+          <div class="item-desc">Kecepatan tinggi, tinta tahan air tanpa bercak pada dokumen hitam-putih dan warna.</div>
         </div>
-
-        <div class="service-card">
-            <div class="service-icon">
-                <svg viewBox="0 0 170 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="35" y="20" width="100" height="100" rx="16" fill="#0875e1"/>
-                    <circle cx="85" cy="55" r="18" fill="#ffffff"/>
-                    <path d="M55 100C55 83.4315 68.4315 70 85 70C101.569 70 115 83.4315 115 100H55Z" fill="#ffffff"/>
-                </svg>
-            </div>
-            <h3>Cetak Foto & Pas Foto</h3>
-            <p>Cetak foto polaroid, pas foto resmi buku nikah, ijazah dan lamaran kerja.</p>
+      </div>
+      <div class="product-card">
+        <div class="product-thumb"><img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=500&q=80" alt="Studio Foto"></div>
+        <div class="product-details">
+          <div class="item-title">Pas Foto Resmi & Studio Mini</div>
+          <div class="item-desc">Penyesuaian latar belakang (merah/biru) untuk ijazah, visa, dan keperluan lamaran kerja.</div>
         </div>
-
-        <div class="service-card">
-            <div class="service-icon">
-                <svg viewBox="0 0 170 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="35" y="25" width="95" height="90" rx="12" fill="#0875e1"/>
-                    <rect x="47" y="37" width="71" height="66" rx="8" fill="#ffffff"/>
-                    <line x1="42" y1="25" x2="42" y2="115" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
-                </svg>
-            </div>
-            <h3>Jilid & Laminating</h3>
-            <p>Jilid lakban, spiral kawat/plastik, soft/hard cover dan laminating rapi.</p>
+      </div>
+      <div class="product-card">
+        <div class="product-thumb"><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=500&q=80" alt="Stempel & Kartu"></div>
+        <div class="product-details">
+          <div class="item-title">Stempel Flash & ID Card PVC</div>
+          <div class="item-desc">Stempel otomatis tanpa bantalan tinta dan kartu tebal anti air berstandar kartu ATM.</div>
         </div>
-
-        <div class="service-card">
-            <div class="service-icon">
-                <svg viewBox="0 0 170 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="25" y="30" width="120" height="80" rx="14" fill="#0875e1"/>
-                    <rect x="40" y="45" width="35" height="50" rx="6" fill="#ffffff"/>
-                    <rect x="85" y="50" width="45" height="6" rx="3" fill="#ffffff"/>
-                    <rect x="85" y="62" width="35" height="6" rx="3" fill="#ffffff"/>
-                </svg>
-            </div>
-            <h3>Stempel Flash & ID Card</h3>
-            <p>Stempel otomatis langsung jadi, cetak kartu ID card PVC, NPWP dan BPJS.</p>
+      </div>
+      <div class="product-card">
+        <div class="product-thumb"><img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=500&q=80" alt="Jilid Dokumen"></div>
+        <div class="product-details">
+          <div class="item-title">Jilid Kawat & Hardcover Emas</div>
+          <div class="item-desc">Penjilidan presisi untuk tugas akhir, laporan tahunan, dan proposal proyek penting.</div>
         </div>
-
+      </div>
     </div>
-
-</div>
-
+  </div>
 </section>
-
 
 <!-- =====================================================
-     ATK
+     KERANJANG BELANJA (DRAWER)
 ===================================================== -->
+<div class="cart-backdrop" id="cartBackdrop" onclick="toggleCartDrawer()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3 style="font-size: 19px; color: #0f172a;"><i class="fa-solid fa-basket-shopping" style="color: var(--accent-blue);"></i> Keranjang ATK</h3>
+    <button onclick="toggleCartDrawer()" style="background: none; border: none; color: var(--text-muted); font-size: 20px; cursor: pointer;">&times;</button>
+  </div>
 
-<section id="atk" class="section atk-section">
-
-<div class="container">
-
-    <div class="section-heading">
-        <h2>Perlengkapan ATK</h2>
-        <p>Kebutuhan alat tulis sekolah dan kantor siap dibeli langsung atau dipesan via WhatsApp.</p>
+  <div class="cart-items" id="cartItemsContainer">
+    <div style="text-align: center; color: var(--text-muted); font-size: 14px; margin-top: 60px;" id="emptyCartLabel">
+      Keranjang Anda kosong.<br>Pilih item pada katalog barang.
     </div>
+  </div>
 
-    <div class="atk-toolbar">
-        <input type="text" id="atkSearch" class="atk-search" placeholder="🔍 Cari nama barang ATK...">
+  <div class="cart-footer">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+      <span style="color: var(--text-secondary); font-weight: 600;">Total Tagihan:</span>
+      <strong style="font-size: 22px; color: var(--accent-blue);" id="cartTotalLabel">Rp 0</strong>
     </div>
-
-    <div class="atk-grid" id="atkGrid">
-
-        <div class="atk-card" data-name="pulpen standard ae7 bolpoin pena">
-            <div class="atk-image">
-                <svg viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="68" y="20" width="14" height="95" rx="7" fill="#0875e1"/>
-                    <polygon points="75,130 68,115 82,115" fill="#06245a"/>
-                    <rect x="71" y="25" width="8" height="20" rx="4" fill="#ffffff"/>
-                </svg>
-            </div>
-            <div class="atk-body">
-                <h3>Pulpen Standard AE7</h3>
-                <p>Ujung runcing 0.5 mm, tinta hitam pekat, nyaman digunakan sehari-hari.</p>
-                <div class="atk-price">Rp 3.000</div>
-                <button class="atk-buy" onclick="beliATK('Pulpen Standard AE7', 'Rp 3.000')">Pesan via WA</button>
-            </div>
-        </div>
-
-        <div class="atk-card" data-name="kertas hvs a4 75gr rim paperone sidu">
-            <div class="atk-image">
-                <svg viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="35" y="30" width="80" height="90" rx="8" fill="#0875e1"/>
-                    <rect x="42" y="37" width="66" height="76" rx="4" fill="#ffffff"/>
-                    <line x1="52" y1="52" x2="98" y2="52" stroke="#0875e1" stroke-width="4" stroke-linecap="round"/>
-                    <line x1="52" y1="64" x2="98" y2="64" stroke="#0875e1" stroke-width="4" stroke-linecap="round"/>
-                </svg>
-            </div>
-            <div class="atk-body">
-                <h3>Kertas HVS A4 (1 Rim)</h3>
-                <p>Ketebalan 75/80 gram putih bersih, isi 500 lembar untuk cetak dokumen.</p>
-                <div class="atk-price">Rp 55.000</div>
-                <button class="atk-buy" onclick="beliATK('Kertas HVS A4 (1 Rim)', 'Rp 55.000')">Pesan via WA</button>
-            </div>
-        </div>
-
-        <div class="atk-card" data-name="buku tulis sidu kiky catatan">
-            <div class="atk-image">
-                <svg viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="35" y="25" width="80" height="100" rx="8" fill="#0875e1"/>
-                    <rect x="45" y="35" width="60" height="80" rx="4" fill="#ffffff"/>
-                    <line x1="40" y1="25" x2="40" y2="125" stroke="#ffffff" stroke-width="4"/>
-                </svg>
-            </div>
-            <div class="atk-body">
-                <h3>Buku Tulis Sidu 38L</h3>
-                <p>Buku tulis garis rapi dengan kertas halus tidak mudah robek.</p>
-                <div class="atk-price">Rp 4.500</div>
-                <button class="atk-buy" onclick="beliATK('Buku Tulis Sidu 38L', 'Rp 4.500')">Pesan via WA</button>
-            </div>
-        </div>
-
-        <div class="atk-card" data-name="map kertas stopmap folio arsip lamaran">
-            <div class="atk-image">
-                <svg viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="30" y="35" width="90" height="80" rx="6" fill="#0875e1"/>
-                    <polygon points="30,35 65,35 75,45 120,45 120,115 30,115" fill="#06245a"/>
-                    <rect x="45" y="55" width="60" height="45" rx="4" fill="#ffffff"/>
-                </svg>
-            </div>
-            <div class="atk-body">
-                <h3>Stopmap Folio Kertas</h3>
-                <p>Stopmap tebal berbagai warna untuk arsip dokumen dan lamaran.</p>
-                <div class="atk-price">Rp 2.000</div>
-                <button class="atk-buy" onclick="beliATK('Stopmap Folio Kertas', 'Rp 2.000')">Pesan via WA</button>
-            </div>
-        </div>
-
-    </div>
-
+    <button class="btn btn-primary" style="width: 100%;" onclick="checkoutCartToWA()">
+      <i class="fa-brands fa-whatsapp"></i> Pesan Barang via WhatsApp
+    </button>
+  </div>
 </div>
-
-</section>
-
-
-<!-- =====================================================
-     PRICE
-===================================================== -->
-
-<section id="harga" class="section price-section">
-
-<div class="container">
-
-    <div class="section-heading">
-        <h2>Estimasi Harga</h2>
-        <p>Harga terjangkau dengan hasil cetak rapi, terang dan memuaskan.</p>
-    </div>
-
-    <div class="price-grid">
-
-        <div class="price-card">
-            <div class="price-icon">
-                <svg viewBox="0 0 90 75" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="15" y="15" width="60" height="45" rx="8" fill="#0875e1"/>
-                    <rect x="25" y="25" width="40" height="25" rx="4" fill="#ffffff"/>
-                </svg>
-            </div>
-            <h3>Fotocopy</h3>
-            <strong>Rp 1.000</strong>
-            <p>Per 3 lembar teks biasa hitam putih.</p>
-            <a href="#pesan">Pesan</a>
-        </div>
-
-        <div class="price-card featured">
-            <span class="badge">POPULER</span>
-            <div class="price-icon">
-                <svg viewBox="0 0 90 75" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="15" y="15" width="60" height="45" rx="8" fill="#0875e1"/>
-                    <circle cx="45" cy="37" r="10" fill="#ffffff"/>
-                </svg>
-            </div>
-            <h3>Print Dokumen</h3>
-            <strong>Rp 2.000</strong>
-            <p>Per lembar kertas HVS tugas dan laporan.</p>
-            <a href="#pesan">Pesan</a>
-        </div>
-
-        <div class="price-card">
-            <div class="price-icon">
-                <svg viewBox="0 0 90 75" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="45" cy="37" r="22" fill="#0875e1"/>
-                    <circle cx="45" cy="37" r="12" fill="#ffffff"/>
-                </svg>
-            </div>
-            <h3>Pas Foto</h3>
-            <strong>Mulai Rp 2.000</strong>
-            <p>Paket pas foto resmi siap pakai cetak kilat.</p>
-            <a href="#pesan">Pesan</a>
-        </div>
-
-        <div class="price-card">
-            <div class="price-icon">
-                <svg viewBox="0 0 90 75" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="12" y="18" width="66" height="40" rx="6" fill="#0875e1"/>
-                    <rect x="20" y="25" width="20" height="25" rx="4" fill="#ffffff"/>
-                </svg>
-            </div>
-            <h3>ID Card / BPJS</h3>
-            <strong>Rp 15.000</strong>
-            <p>Cetak kartu bahan PVC tebal standar ATM.</p>
-            <a href="#pesan">Pesan</a>
-        </div>
-
-    </div>
-
-</div>
-
-</section>
-
-
-<!-- =====================================================
-     ORDER FORM
-===================================================== -->
-
-<section id="pesan" class="section order-section">
-
-<div class="container">
-
-    <div class="order-wrap">
-
-        <div>
-            <h2>Pesan Mudah Tanpa Perlu Antre</h2>
-            <p>
-                Kirim data pesanan Anda melalui formulir berikut,
-                pesanan akan langsung tersambung ke WhatsApp kami.
-            </p>
-
-            <div class="steps">
-                <div>
-                    <b>1</b>
-                    <span>Isi data formulir pemesanan.</span>
-                </div>
-                <div>
-                    <b>2</b>
-                    <span>Klik kirim pesanan ke WhatsApp.</span>
-                </div>
-                <div>
-                    <b>3</b>
-                    <span>Kirim file dan pesanan diproses.</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="order-form">
-
-            <form id="orderForm">
-
-                <label>
-                    Nama Lengkap
-                    <input type="text" id="nama" placeholder="Masukkan nama Anda" required>
-                </label>
-
-                <label>
-                    Jenis Layanan
-                    <select id="layananSelect" required>
-                        <option value="Print Dokumen">Print Dokumen</option>
-                        <option value="Fotocopy">Fotocopy</option>
-                        <option value="Cetak Foto">Cetak Foto</option>
-                        <option value="Pas Foto">Pas Foto</option>
-                        <option value="Laminating">Laminating</option>
-                        <option value="Jilid">Jilid</option>
-                        <option value="Bikin Stempel/Cap Flash">Bikin Stempel/Cap Flash</option>
-                        <option value="Cetak Kartu ID Card / NPWP / BPJS">Cetak Kartu ID Card / NPWP / BPJS</option>
-                    </select>
-                </label>
-
-                <div class="two-col">
-                    <label>
-                        Jumlah
-                        <input type="number" id="jumlah" min="1" placeholder="Contoh: 1" required>
-                    </label>
-
-                    <label>
-                        Ukuran
-                        <input type="text" id="ukuran" placeholder="A4 / F4 / 3x4">
-                    </label>
-                </div>
-
-                <label>
-                    Catatan Tambahan
-                    <textarea id="catatan" rows="3" placeholder="Contoh: Jilid lakban cover mika bening..."></textarea>
-                </label>
-
-                <button type="submit" class="btn primary full">
-                    Kirim Pesanan ke WhatsApp
-                </button>
-
-                <small>Pesanan akan langsung terhubung ke nomor WhatsApp resmi MUCI.</small>
-
-            </form>
-
-        </div>
-
-    </div>
-
-</div>
-
-</section>
-
-
-<!-- =====================================================
-     CONTACT
-===================================================== -->
-
-<section id="kontak" class="section contact-section">
-
-<div class="container">
-
-    <div class="contact-grid">
-
-        <div>
-            <h2>Lokasi & Kontak</h2>
-            <p>
-                Kami siap melayani kebutuhan percetakan dan perlengkapan ATK harian Anda.
-            </p>
-        </div>
-
-        <div class="contact-box">
-            <p>
-                <strong>Alamat Toko:</strong><br>
-                Muara Enim, Sumatera Selatan.
-            </p>
-
-            <p>
-                <strong>Jam Operasional:</strong><br>
-                Senin - Sabtu: 07.30 - 21.00 WIB<br>
-                Minggu & Libur: Tetap melayani via WhatsApp
-            </p>
-
-            <p>
-                <strong>WhatsApp Pemesanan:</strong><br>
-                0851-8520-7306
-            </p>
-        </div>
-
-    </div>
-
-</div>
-
-</section>
-
 
 <!-- =====================================================
      FOOTER
 ===================================================== -->
-
 <footer>
-
-<div class="container footer-inner">
-
-    <div>
-        <strong>MUCI</strong>
-        <span>Pusat Print, Fotocopy, Cetak Kartu & Perlengkapan ATK</span>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="brand" style="margin-bottom: 8px;">
+          <i class="fa-solid fa-cube"></i> MUCI STUDIO
+        </div>
+        <div style="font-size: 14px; color: var(--text-muted);">Infrastruktur Digital Printing & Pasokan Kantor Muara Enim</div>
+      </div>
+      <div>
+        <a href="https://wa.me/6285267855858" target="_blank" class="btn btn-secondary">
+          <i class="fa-brands fa-whatsapp" style="color: var(--accent-emerald);"></i> Hubungi Dukungan Operasional
+        </a>
+      </div>
     </div>
-
-    <div>
-        <span>&copy; 2026 MUCI. Seluruh hak cipta dilindungi.</span>
+    <div class="footer-bottom">
+      &copy; 2026 MUCI Tech Hub. Seluruh hak cipta dilindungi.
     </div>
-
-</div>
-
+  </div>
 </footer>
 
-
 <!-- =====================================================
-     SCRIPT WHATSAPP & PENCARIAN ATK
+     JAVASCRIPT LOGIC
 ===================================================== -->
-
 <script>
-const NOMOR_WHATSAPP = "6285185207306";
+const PHONE_NUMBER = "6285267855858";
 
-const HARGA_LAYANAN = {
-  "Fotocopy": "Rp. 1.000 / 3 lembar",
-  "Print Dokumen": "Rp. 2.000 / lembar",
-  "Cetak Foto": "Mulai dari Rp. 3.000 / lembar",
-  "Pas Foto": "Mulai dari Rp. 2.000 / set",
-  "Laminating": "Mulai dari Rp. 3.000",
-  "Jilid": "Mulai dari Rp. 3.000",
-  "Bikin Stempel/Cap Flash": "Mulai dari Rp. 100.000",
-  "Cetak Kartu ID Card / NPWP / BPJS": "Rp. 15.000 / kartu"
+// 1. DATA & STATE KALKULATOR
+const calcState = {
+  paperPrice: 500,
+  paperLabel: "HVS A4 80g",
+  colorPrice: 0,
+  colorLabel: "Hitam Putih",
+  bindingPrice: 0,
+  bindingLabel: "Tanpa Jilid",
+  qty: 15
 };
 
-// 1. Form Pemesanan Cetak
-const orderForm = document.getElementById("orderForm");
-if (orderForm) {
-  orderForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+function selectTile(element, type) {
+  const parent = element.parentElement;
+  parent.querySelectorAll('.tile-option').forEach(el => el.classList.remove('active'));
+  element.classList.add('active');
 
-    const nama = document.getElementById("nama").value.trim();
-    const layanan = document.getElementById("layananSelect").value;
-    const jumlah = document.getElementById("jumlah").value.trim();
-    const ukuran = document.getElementById("ukuran").value.trim() || "-";
-    const catatan = document.getElementById("catatan").value.trim() || "-";
-    const harga = HARGA_LAYANAN[layanan] || "Menyesuaikan pesanan";
+  const price = parseInt(element.getAttribute('data-price'));
+  const name = element.querySelector('.tile-name').innerText;
 
-    const pesan = 
-`Halo MUCI, saya ingin memesan:
+  if (type === 'paper') {
+    calcState.paperPrice = price;
+    calcState.paperLabel = name;
+  } else if (type === 'color') {
+    calcState.colorPrice = price;
+    calcState.colorLabel = name;
+  } else if (type === 'binding') {
+    calcState.bindingPrice = price;
+    calcState.bindingLabel = name;
+  }
 
-• Nama: ${nama}
-• Layanan: ${layanan}
-• Jumlah: ${jumlah}
-• Ukuran: ${ukuran}
-• Estimasi Harga: ${harga}
-• Catatan: ${catatan}
+  updateCalc();
+}
+
+function updateSlider(val) {
+  calcState.qty = parseInt(val);
+  document.getElementById('sliderValDisplay').innerText = val + " Lembar";
+  updateCalc();
+}
+
+function updateCalc() {
+  const total = ((calcState.paperPrice + calcState.colorPrice) * calcState.qty) + calcState.bindingPrice;
+
+  document.getElementById('summaryPaper').innerText = calcState.paperLabel;
+  document.getElementById('summaryColor').innerText = calcState.colorLabel;
+  document.getElementById('summaryBinding').innerText = calcState.bindingLabel;
+  document.getElementById('summaryQty').innerText = calcState.qty + " Lembar";
+  document.getElementById('calcFinalPrice').innerText = "Rp " + total.toLocaleString('id-ID');
+}
+
+function orderFromCalculator() {
+  const total = ((calcState.paperPrice + calcState.colorPrice) * calcState.qty) + calcState.bindingPrice;
+  const message = `Halo MUCI, saya ingin memesan cetak sesuai estimasi kalkulator web:
+- Media: ${calcState.paperLabel}
+- Format: ${calcState.colorLabel}
+- Finishing: ${calcState.bindingLabel}
+- Jumlah: ${calcState.qty} Lembar
+- Estimasi Biaya: Rp ${total.toLocaleString('id-ID')}
+
+Mohon instruksi pengiriman berkasnya. Terima kasih.`;
+
+  window.open(`https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
+}
+
+// 2. SISTEM KERANJANG ATK
+let cart = [];
+
+function toggleCartDrawer() {
+  document.getElementById('cartBackdrop').classList.toggle('open');
+  document.getElementById('cartDrawer').classList.toggle('open');
+}
+
+function addToCart(title, price) {
+  const exist = cart.find(item => item.title === title);
+  if (exist) {
+    exist.qty += 1;
+  } else {
+    cart.push({ title, price, qty: 1 });
+  }
+  renderCart();
+  toggleCartDrawer();
+}
+
+function changeQty(index, delta) {
+  cart[index].qty += delta;
+  if (cart[index].qty <= 0) {
+    cart.splice(index, 1);
+  }
+  renderCart();
+}
+
+function renderCart() {
+  const container = document.getElementById('cartItemsContainer');
+  const badge = document.getElementById('cartCountBadge');
+  const totalLabel = document.getElementById('cartTotalLabel');
+  const emptyLabel = document.getElementById('emptyCartLabel');
+
+  container.innerHTML = '';
+  let count = 0;
+  let total = 0;
+
+  if (cart.length === 0) {
+    container.appendChild(emptyLabel);
+    emptyLabel.style.display = 'block';
+  } else {
+    emptyLabel.style.display = 'none';
+    cart.forEach((item, idx) => {
+      count += item.qty;
+      total += item.price * item.qty;
+
+      const row = document.createElement('div');
+      row.className = 'cart-row';
+      row.innerHTML = `
+        <div>
+          <div style="font-size: 14.5px; font-weight: 700; color: #0f172a;">${item.title}</div>
+          <div style="font-size: 12.5px; color: var(--text-muted);">Rp ${item.price.toLocaleString('id-ID')}</div>
+        </div>
+        <div class="cart-qty-ctrl">
+          <button class="qty-btn" onclick="changeQty(${idx}, -1)">-</button>
+          <span style="font-size: 13.5px; font-weight: 700;">${item.qty}</span>
+          <button class="qty-btn" onclick="changeQty(${idx}, 1)">+</button>
+        </div>
+      `;
+      container.appendChild(row);
+    });
+  }
+
+  badge.innerText = count;
+  totalLabel.innerText = "Rp " + total.toLocaleString('id-ID');
+}
+
+function checkoutCartToWA() {
+  if (cart.length === 0) return;
+
+  let total = 0;
+  let detail = "";
+  cart.forEach(item => {
+    total += item.price * item.qty;
+    detail += `• ${item.title} (${item.qty}x) - Rp ${(item.price * item.qty).toLocaleString('id-ID')}\n`;
+  });
+
+  const message = `Halo MUCI, saya ingin membeli perlengkapan ATK berikut:
+${detail}
+*Total: Rp ${total.toLocaleString('id-ID')}*
+
+Mohon konfirmasi ketersediaan barang. Terima kasih.`;
+
+  window.open(`https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
+}
+
+// 3. FILTER & PENCARIAN ATK
+function applyCategory(cat, btn) {
+  document.querySelectorAll('.pill-btn').forEach(el => el.classList.remove('active'));
+  btn.classList.add('active');
+
+  document.querySelectorAll('.product-card').forEach(card => {
+    if (cat === 'all' || card.getAttribute('data-category') === cat) {
+      card.style.display = 'flex';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+function handleSearch(query) {
+  const q = query.toLowerCase().trim();
+  document.querySelectorAll('.product-card').forEach(card => {
+    const name = card.getAttribute('data-name');
+    card.style.display = name.includes(q) ? 'flex' : 'none';
+  });
+}
+
+// 4. UPLOAD SIMULASI & FORM ORDER
+let attachedFileName = "";
+
+function handleFile(input) {
+  if (input.files && input.files[0]) {
+    attachedFileName = input.files[0].name;
+    document.getElementById('fileLabel').innerText = "File siap dikirim: " + attachedFileName;
+  }
+}
+
+function handleOrderSubmit(e) {
+  e.preventDefault();
+  const name = document.getElementById('senderName').value;
+  const service = document.getElementById('serviceType').value;
+  const notes = document.getElementById('orderNotes').value || "-";
+
+  const message = `Halo Tim MUCI, saya mengirim pesanan baru:
+- Nama: ${name}
+- Layanan: ${service}
+- Lampiran Dokumen: ${attachedFileName || "Akan dikirim langsung di chat ini"}
+- Instruksi Tambahan: ${notes}
 
 Mohon segera diproses. Terima kasih!`;
 
-    const url = `https://wa.me/${NOMOR_WHATSAPP}?text=${encodeURIComponent(pesan)}`;
-    window.location.href = url;
-  });
+  window.open(`https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
 }
 
-// 2. Tombol Pemesanan ATK
-function beliATK(namaBarang, hargaBarang) {
-  const pesan = 
-`Halo MUCI, saya ingin membeli ATK:
-
-• Barang: ${namaBarang}
-• Harga: ${hargaBarang}
-• Jumlah: 1 pcs / rim
-
-Mohon info ketersediaan stoknya. Terima kasih!`;
-
-  const url = `https://wa.me/${NOMOR_WHATSAPP}?text=${encodeURIComponent(pesan)}`;
-  window.location.href = url;
-}
-
-// 3. Pencarian ATK
-const atkSearch = document.getElementById("atkSearch");
-if (atkSearch) {
-  atkSearch.addEventListener("input", function () {
-    const filter = this.value.toLowerCase().trim();
-    const cards = document.querySelectorAll("#atkGrid .atk-card");
-
-    cards.forEach(function (card) {
-      const name = card.getAttribute("data-name") || "";
-      if (name.toLowerCase().includes(filter)) {
-        card.style.display = "flex";
-      } else {
-        card.style.display = "none";
-      }
-    });
-  });
-}
+// Inisialisasi awal kalkulator
+updateCalc();
 </script>
 
 </body>
