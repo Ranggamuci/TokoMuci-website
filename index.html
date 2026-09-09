@@ -104,7 +104,7 @@
             </h1>
 
             <p class="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
-                Kombinasi skema warna *Dark Luxury*, kontras tipografi presisi, serta ikon visual halus yang siap memberikan kesan profesional bagi proyek Anda.
+                Kombinasi skema warna Dark Luxury, kontras tipografi presisi, serta ikon visual halus yang siap memberikan kesan profesional bagi proyek Anda.
             </p>
 
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -128,31 +128,96 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Kartu 1 -->
                 <div class="glass-card p-8 rounded-2xl">
                     <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 text-sky-400 flex items-center justify-center text-xl mb-6">
                         <i class="fa-solid fa-wand-magic-sparkles"></i>
                     </div>
                     <h3 class="text-lg font-semibold text-white mb-2">Desain Kaca Modern</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Menggunakan efek *glassmorphism* tembus pandang yang memberikan kesan kedalaman tingkat tinggi.</p>
+                    <p class="text-slate-400 text-sm leading-relaxed">Menggunakan efek glassmorphism tembus pandang yang memberikan kesan kedalaman tingkat tinggi.</p>
                 </div>
 
-                <!-- Kartu 2 -->
                 <div class="glass-card p-8 rounded-2xl">
                     <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center text-xl mb-6">
                         <i class="fa-solid fa-bolt-lightning"></i>
                     </div>
                     <h3 class="text-lg font-semibold text-white mb-2">Satu Berkas Ringkas</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Seluruh struktur terintegrasi langsung tanpa memerlukan proses *build* atau instalasi *framework* rumit.</p>
+                    <p class="text-slate-400 text-sm leading-relaxed">Seluruh struktur terintegrasi langsung tanpa memerlukan proses build atau instalasi framework rumit.</p>
                 </div>
 
-                <!-- Kartu 3 -->
                 <div class="glass-card p-8 rounded-2xl">
                     <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center text-xl mb-6">
                         <i class="fa-solid fa-mobile-screen"></i>
                     </div>
                     <h3 class="text-lg font-semibold text-white mb-2">Responsif Luwes</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">Layout beradaptasi sempurna di berbagai resolusi layar, dari smartphone hingga layar desktop lebar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Layanan -->
+    <section id="layanan" class="py-24 px-6 relative border-t border-slate-800/50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-3">Layanan Kami</h2>
+                <p class="text-slate-400 text-sm max-w-md mx-auto">Solusi lengkap untuk kebutuhan cetak, fotokopi, dan perlengkapan dokumen Anda.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="glass-card p-8 rounded-2xl flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-lg bg-sky-500/10 text-sky-400 flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-print text-lg"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-1">Print & Fotokopi</h3>
+                        <p class="text-slate-400 text-sm">Cetak dokumen hitam putih dan warna dengan kualitas tajam dan cepat.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-stamp text-lg"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-1">Cetak Foto & Stempel</h3>
+                        <p class="text-slate-400 text-sm">Pembuatan stempel otomatis dan cetak foto berbagai ukuran profesional.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Portofolio (Menampilkan Gambar dari folder images) -->
+    <section id="portofolio" class="py-24 px-6 relative border-t border-slate-800/50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-3">Portofolio / Galeri</h2>
+                <p class="text-slate-400 text-sm max-w-md mx-auto">Hasil karya dan dokumentasi produk yang pernah kami kerjakan.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Contoh pemanggilan gambar 1 -->
+                <div class="glass-card overflow-hidden rounded-2xl">
+                    <img src="images/foto1.jpg" alt="Hasil Cetak" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" onerror="this.src='https://via.placeholder.com/400x300?text=Gambar+Belum+Ada'">
+                    <div class="p-4">
+                        <h4 class="text-white font-medium text-sm">Dokumen & Cetak</h4>
+                    </div>
+                </div>
+
+                <!-- Contoh pemanggilan gambar 2 -->
+                <div class="glass-card overflow-hidden rounded-2xl">
+                    <img src="images/foto2.jpg" alt="Hasil Foto" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" onerror="this.src='https://via.placeholder.com/400x300?text=Gambar+Belum+Ada'">
+                    <div class="p-4">
+                        <h4 class="text-white font-medium text-sm">Cetak Foto</h4>
+                    </div>
+                </div>
+
+                <!-- Contoh pemanggilan gambar 3 -->
+                <div class="glass-card overflow-hidden rounded-2xl">
+                    <img src="images/foto3.jpg" alt="Layanan Stempel" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" onerror="this.src='https://via.placeholder.com/400x300?text=Gambar+Belum+Ada'">
+                    <div class="p-4">
+                        <h4 class="text-white font-medium text-sm">Pembuatan Stempel</h4>
+                    </div>
                 </div>
             </div>
         </div>
