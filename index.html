@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toko MUCI — Print, Fotokopi & Alat Tulis Kantor</title>
+    <title>Toko MUCI — Katalog ATK & Cetak Dokumen</title>
 
-    <!-- Tipografi Modern: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CSS Engine -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -24,10 +22,7 @@
         }
     </script>
 
-    <!-- FontAwesome v6 Ikon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <!-- Swiper CSS untuk Carousel Banner Ala Shopee -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <style>
@@ -45,22 +40,15 @@
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(241, 245, 249, 1);
             box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.3s ease;
         }
 
         .glass-card:hover {
-            transform: translateY(-6px) scale(1.01);
+            transform: translateY(-4px);
             border-color: rgba(99, 102, 241, 0.3);
-            box-shadow: 0 25px 45px -12px rgba(79, 70, 229, 0.15);
+            box-shadow: 0 20px 35px -10px rgba(79, 70, 229, 0.12);
         }
 
-        .text-gradient {
-            background: linear-gradient(135deg, #2563eb 0%, #4f46e5 50%, #7c3aed 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Swiper Custom Styling */
         .swiper-pagination-bullet-active {
             background: #4f46e5 !important;
             width: 28px !important;
@@ -68,291 +56,362 @@
         }
         .swiper-button-next, .swiper-button-prev {
             color: #ffffff !important;
-            background: rgba(15, 23, 42, 0.4);
+            background: rgba(15, 23, 42, 0.5);
             backdrop-filter: blur(8px);
-            width: 42px !important;
-            hight: 42px !important;
+            width: 40px !important;
+            height: 40px !important;
             border-radius: 50%;
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
         .swiper-button-next:after, .swiper-button-prev:after {
-            font-size: 16px !important;
+            font-size: 15px !important;
             font-weight: bold;
         }
     </style>
 </head>
-<body class="bg-[#f8fafc] text-slate-800 font-sans antialiased selection:bg-indigo-500 selection:text-white relative overflow-x-hidden">
+<body class="bg-[#f8fafc] text-slate-800 font-sans antialiased relative overflow-x-hidden">
 
-    <!-- Navigasi Utama -->
+    <!-- Header Navigasi -->
     <header class="fixed top-0 left-0 right-0 z-50 px-4 md:px-8 py-4">
         <nav class="max-w-6xl mx-auto glass-nav rounded-2xl px-6 py-3.5 flex items-center justify-between">
             <a href="#" class="text-lg font-bold tracking-tight text-slate-900 flex items-center gap-2.5">
-                <span class="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white text-sm shadow-md shadow-blue-500/30">
+                <span class="w-9 h-9 rounded-xl bg-indigo-600 flex items-center justify-center text-white text-sm shadow-md shadow-indigo-500/30">
                     <i class="fa-solid fa-store"></i>
                 </span>
                 Toko <span class="text-indigo-600">MUCI</span>
             </a>
 
             <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
-                <a href="#promo-banner" class="hover:text-indigo-600 transition-colors">Promo Terkini</a>
-                <a href="#layanan" class="hover:text-indigo-600 transition-colors">Layanan Utama</a>
-                <a href="#produk-atk" class="hover:text-indigo-600 transition-colors">Produk ATK</a>
-                <a href="#keunggulan" class="hover:text-indigo-600 transition-colors">Keunggulan</a>
+                <a href="#promo-banner" class="hover:text-indigo-600 transition-colors">Promo</a>
+                <a href="#layanan" class="hover:text-indigo-600 transition-colors">Layanan</a>
+                <a href="#produk-atk" class="hover:text-indigo-600 transition-colors">Katalog ATK</a>
             </div>
 
-            <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20ingin%20bertanya%20mengenai%20produk/layanan." target="_blank" class="text-xs font-bold px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white transition-all shadow-md shadow-emerald-500/20 flex items-center gap-2 hover:shadow-lg active:scale-95">
+            <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20ingin%20pesan%20ATK." target="_blank" class="text-xs font-bold px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white transition-all shadow-md shadow-emerald-500/20 flex items-center gap-2">
                 <i class="fa-brands fa-whatsapp text-sm"></i>
                 <span>Hubungi Kami</span>
             </a>
         </nav>
     </header>
 
-    <!-- SECTION SLIDER PROMO (Ala Shopee) -->
+    <!-- BANNER PROMO ROTASI (Ala Shopee) -->
     <section id="promo-banner" class="pt-28 pb-6 px-4 md:px-8 max-w-6xl mx-auto">
-        <div class="swiper promo-swiper rounded-3xl shadow-2xl overflow-hidden border border-slate-200/80">
+        <div class="swiper promo-swiper rounded-3xl shadow-xl overflow-hidden border border-slate-200">
             <div class="swiper-wrapper">
                 
-                <!-- Slide 1: Promo Kertas HVS -->
-                <div class="swiper-slide relative h-[260px] sm:h-[360px] md:h-[420px] bg-slate-900">
-                    <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=1200&q=80" alt="Promo Kertas HVS Toko MUCI" class="w-full h-full object-cover opacity-50">
+                <!-- Banner 1: Promo Kertas HVS -->
+                <div class="swiper-slide relative h-[260px] sm:h-[360px] bg-slate-900">
+                    <img src="images/banner-kertas-hvs.jpg" onerror="this.src='https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=1200&q=80'" alt="Promo Kertas HVS Toko MUCI" class="w-full h-full object-cover opacity-60">
                     <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/80 to-transparent p-6 sm:p-12 flex flex-col justify-center items-start">
-                        <span class="bg-amber-500 text-slate-950 text-[11px] font-extrabold uppercase px-3 py-1 rounded-full mb-3 tracking-wider shadow-lg">
-                            <i class="fa-solid fa-fire mr-1"></i> Promo Spesial ATK
+                        <span class="bg-amber-500 text-slate-950 text-[11px] font-extrabold uppercase px-3 py-1 rounded-full mb-3 shadow">
+                            <i class="fa-solid fa-fire mr-1"></i> Promo Terlaris
                         </span>
-                        <h2 class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight max-w-lg mb-3">
-                            Kertas HVS A4 & F4 <br><span class="text-amber-400">Harga Grosir Hemat</span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-white leading-tight max-w-lg mb-2">
+                            Kertas HVS A4 & F4 <br><span class="text-amber-400">Dus & Rim Murah</span>
                         </h2>
-                        <p class="text-slate-200 text-xs sm:text-sm max-w-md mb-6 hidden sm:block">Sedia rim-riman dan eceran dengan kualitas cetak bersih & putih berseri.</p>
-                        <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20mau%20order%20Kertas%20HVS%20Promo" target="_blank" class="px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-bold transition-all shadow-lg shadow-emerald-500/30 flex items-center gap-2">
+                        <p class="text-slate-200 text-xs sm:text-sm max-w-md mb-5 hidden sm:block">Sedia PaperOne, Bola Dunia, dan Sidu 70gsm & 80gsm.</p>
+                        <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20mau%20order%20Kertas%20HVS" target="_blank" class="px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-bold transition-all shadow-lg shadow-emerald-500/30 flex items-center gap-2">
                             <i class="fa-brands fa-whatsapp text-sm"></i> Pesan Sekarang
                         </a>
                     </div>
                 </div>
 
-                <!-- Slide 2: Promo Alat Tulis & Pena Gel -->
-                <div class="swiper-slide relative h-[260px] sm:h-[360px] md:h-[420px] bg-slate-900">
-                    <img src="https://images.unsplash.com/photo-1585336261026-6757688719d3?auto=format&fit=crop&w=1200&q=80" alt="Promo Alat Tulis Toko MUCI" class="w-full h-full object-cover opacity-50">
+                <!-- Banner 2: Promo Alat Tulis lengkap -->
+                <div class="swiper-slide relative h-[260px] sm:h-[360px] bg-slate-900">
+                    <img src="images/banner-alat-tulis.jpg" onerror="this.src='https://images.unsplash.com/photo-1585336261026-6757688719d3?auto=format&fit=crop&w=1200&q=80'" alt="Promo Alat Tulis Toko MUCI" class="w-full h-full object-cover opacity-60">
                     <div class="absolute inset-0 bg-gradient-to-r from-indigo-950 via-indigo-900/80 to-transparent p-6 sm:p-12 flex flex-col justify-center items-start">
-                        <span class="bg-indigo-500 text-white text-[11px] font-extrabold uppercase px-3 py-1 rounded-full mb-3 tracking-wider shadow-lg">
-                            <i class="fa-solid fa-pen-nib mr-1"></i> Perlengkapan Sekolah & Kantor
+                        <span class="bg-indigo-500 text-white text-[11px] font-extrabold uppercase px-3 py-1 rounded-full mb-3 shadow">
+                            <i class="fa-solid fa-pen-clip mr-1"></i> Perlengkapan Lengkap
                         </span>
-                        <h2 class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight max-w-lg mb-3">
-                            Pena, Pensil & Marker <br><span class="text-indigo-300">Lengkap & Murah</span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-white leading-tight max-w-lg mb-2">
+                            Pena, Pensil & Marker <br><span class="text-indigo-300">Grosir & Eceran</span>
                         </h2>
-                        <p class="text-slate-200 text-xs sm:text-sm max-w-md mb-6 hidden sm:block">Berbagai pilihan merek ternama seperti Joyko, Standard, Snowman, dan Kenko.</p>
-                        <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20mau%20tanya%20stok%20Pena%20dan%20Alat%20Tulis" target="_blank" class="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold transition-all shadow-lg shadow-indigo-500/30 flex items-center gap-2">
+                        <p class="text-slate-200 text-xs sm:text-sm max-w-md mb-5 hidden sm:block">Joyko, Standard, Snowman, Kenko, dan Faber-Castell.</p>
+                        <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20mau%20tanya%20stok%20Alat%20Tulis" target="_blank" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold transition-all shadow-lg shadow-indigo-500/30 flex items-center gap-2">
                             <i class="fa-brands fa-whatsapp text-sm"></i> Beli Alat Tulis
                         </a>
                     </div>
                 </div>
 
-                <!-- Slide 3: Layanan Cetak & Fotokopi Cepat -->
-                <div class="swiper-slide relative h-[260px] sm:h-[360px] md:h-[420px] bg-slate-900">
-                    <img src="https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?auto=format&fit=crop&w=1200&q=80" alt="Layanan Print & Fotokopi Toko MUCI" class="w-full h-full object-cover opacity-50">
+                <!-- Banner 3: Cetak & Fotokopi -->
+                <div class="swiper-slide relative h-[260px] sm:h-[360px] bg-slate-900">
+                    <img src="images/banner-cetak-dokumen.jpg" onerror="this.src='https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?auto=format&fit=crop&w=1200&q=80'" alt="Layanan Print & Fotokopi Toko MUCI" class="w-full h-full object-cover opacity-60">
                     <div class="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-900/80 to-transparent p-6 sm:p-12 flex flex-col justify-center items-start">
-                        <span class="bg-blue-500 text-white text-[11px] font-extrabold uppercase px-3 py-1 rounded-full mb-3 tracking-wider shadow-lg">
-                            <i class="fa-solid fa-print mr-1"></i> Layanan Kilat
+                        <span class="bg-blue-500 text-white text-[11px] font-extrabold uppercase px-3 py-1 rounded-full mb-3 shadow">
+                            <i class="fa-solid fa-print mr-1"></i> Layanan Cepat
                         </span>
-                        <h2 class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight max-w-lg mb-3">
-                            Print & Fotokopi <br><span class="text-blue-300">Cepat & Tanpa Antre</span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-white leading-tight max-w-lg mb-2">
+                            Print & Fotokopi Kilat <br><span class="text-blue-300">Hasil Rapi & Bersih</span>
                         </h2>
-                        <p class="text-slate-200 text-xs sm:text-sm max-w-md mb-6 hidden sm:block">Cetak dokumen, tugas sekolah/kuliah, laminating, hingga pembuatan stempel custom.</p>
-                        <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20mau%20kirim%20file%20untuk%20di-print" target="_blank" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition-all shadow-lg shadow-blue-500/30 flex items-center gap-2">
-                            <i class="fa-solid fa-file-arrow-up text-sm"></i> Kirim Berkas Print
+                        <p class="text-slate-200 text-xs sm:text-sm max-w-md mb-5 hidden sm:block">Laminating, jilid skripsi, cetak foto, dan stempel custom.</p>
+                        <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20mau%20kirim%20file%20print" target="_blank" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition-all shadow-lg shadow-blue-500/30 flex items-center gap-2">
+                            <i class="fa-solid fa-file-arrow-up text-sm"></i> Kirim Berkas
                         </a>
                     </div>
                 </div>
 
             </div>
             
-            <!-- Tombol Navigasi Slider -->
             <div class="swiper-pagination"></div>
             <div class="swiper-button-next hidden sm:flex"></div>
             <div class="swiper-button-prev hidden sm:flex"></div>
         </div>
     </section>
 
-    <!-- Bagian Layanan Percetakan -->
-    <section id="layanan" class="py-16 px-6 relative border-t border-slate-200/60 bg-white/60">
+    <!-- KATALOG LENGKAP SEMUA PRODUK ATK -->
+    <section id="produk-atk" class="py-12 px-6 border-t border-slate-200/80">
         <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-3">Layanan Percetakan & Dokumen</h2>
-                <p class="text-slate-500 text-sm max-w-md mx-auto">Pelayanan cepat dan rapi untuk semua kebutuhan berkas Anda.</p>
+            <div class="text-center mb-10">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-2">Katalog Alat Tulis Kantor (ATK)</h2>
+                <p class="text-slate-500 text-sm max-w-md mx-auto">Daftar lengkap produk yang tersedia di Toko MUCI.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="glass-card p-6 rounded-2xl">
-                    <div class="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center text-xl mb-5 shadow-sm">
-                        <i class="fa-solid fa-print"></i>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+                
+                <!-- 1. Kertas HVS -->
+                <div class="glass-card overflow-hidden rounded-2xl group flex flex-col justify-between">
+                    <div>
+                        <div class="overflow-hidden h-36 sm:h-44 bg-slate-100 relative">
+                            <img src="images/kertas-hvs.jpg" onerror="this.src='https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=500&q=80'" alt="Kertas HVS A4 & F4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-4">
+                            <span class="text-[10px] font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full uppercase">Kertas</span>
+                            <h3 class="text-slate-900 font-bold text-sm mt-1.5">Kertas HVS A4 & F4</h3>
+                            <p class="text-[11px] text-slate-500 mt-1">70 GSM & 80 GSM (Sidu, PaperOne, Bola Dunia).</p>
+                        </div>
                     </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">Print & Fotokopi</h3>
-                    <p class="text-slate-600 text-xs leading-relaxed">Cetak dokumen warna/hitam-putih, fotokopi berkas, dan perbanyak dokumen cepat.</p>
+                    <div class="p-4 pt-0">
+                        <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20mau%20tanya%20Kertas%20HVS" target="_blank" class="w-full py-2 rounded-xl bg-slate-100 hover:bg-emerald-600 hover:text-white text-slate-700 text-xs font-bold transition-all flex items-center justify-center gap-1.5">
+                            <i class="fa-brands fa-whatsapp"></i> Chat Penjual
+                        </a>
+                    </div>
                 </div>
 
-                <div class="glass-card p-6 rounded-2xl">
-                    <div class="w-12 h-12 rounded-2xl bg-indigo-50 border border-indigo-100 text-indigo-600 flex items-center justify-center text-xl mb-5 shadow-sm">
-                        <i class="fa-solid fa-image"></i>
+                <!-- 2. Pulpen Gel & Ballpoint -->
+                <div class="glass-card overflow-hidden rounded-2xl group flex flex-col justify-between">
+                    <div>
+                        <div class="overflow-hidden h-36 sm:h-44 bg-slate-100 relative">
+                            <img src="images/pulpen-gel.jpg" onerror="this.src='https://images.unsplash.com/photo-1585336261026-6757688719d3?auto=format&fit=crop&w=500&q=80'" alt="Pulpen Gel & Ballpoint" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-4">
+                            <span class="text-[10px] font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full uppercase">Pena</span>
+                            <h3 class="text-slate-900 font-bold text-sm mt-1.5">Pulpen Gel & Ballpoint</h3>
+                            <p class="text-[11px] text-slate-500 mt-1">Standard AE7, Joyko Gel, Snowman V-1, Kenko.</p>
+                        </div>
                     </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">Cetak Foto Studio</h3>
-                    <p class="text-slate-600 text-xs leading-relaxed">Cetak pas foto, foto pemandangan, hingga ukuran besar dengan kertas khusus foto.</p>
+                    <div class="p-4 pt-0">
+                        <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20mau%20tanya%20Pulpen" target="_blank" class="w-full py-2 rounded-xl bg-slate-100 hover:bg-emerald-600 hover:text-white text-slate-700 text-xs font-bold transition-all flex items-center justify-center gap-1.5">
+                            <i class="fa-brands fa-whatsapp"></i> Chat Penjual
+                        </a>
+                    </div>
                 </div>
 
-                <div class="glass-card p-6 rounded-2xl">
-                    <div class="w-12 h-12 rounded-2xl bg-violet-50 border border-violet-100 text-violet-600 flex items-center justify-center text-xl mb-5 shadow-sm">
-                        <i class="fa-solid fa-stamp"></i>
+                <!-- 3. Pensil 2B & Pensil Warna -->
+                <div class="glass-card overflow-hidden rounded-2xl group flex flex-col justify-between">
+                    <div>
+                        <div class="overflow-hidden h-36 sm:h-44 bg-slate-100 relative">
+                            <img src="images/pensil-2b.jpg" onerror="this.src='https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=500&q=80'" alt="Pensil 2B & Pensil Warna" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-4">
+                            <span class="text-[10px] font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full uppercase">Pensil</span>
+                            <h3 class="text-slate-900 font-bold text-sm mt-1.5">Pensil 2B & Mekanik</h3>
+                            <p class="text-[11px] text-slate-500 mt-1">Faber-Castell, Joyko, Stabilo, & pensil warna.</p>
+                        </div>
                     </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">Stempel Custom</h3>
-                    <p class="text-slate-600 text-xs leading-relaxed">Pembuatan stempel kayu dan stempel otomatis (flash) untuk kantor atau toko.</p>
+                    <div class="p-4 pt-0">
+                        <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20mau%20tanya%20Pensil" target="_blank" class="w-full py-2 rounded-xl bg-slate-100 hover:bg-emerald-600 hover:text-white text-slate-700 text-xs font-bold transition-all flex items-center justify-center gap-1.5">
+                            <i class="fa-brands fa-whatsapp"></i> Chat Penjual
+                        </a>
+                    </div>
                 </div>
 
-                <div class="glass-card p-6 rounded-2xl">
-                    <div class="w-12 h-12 rounded-2xl bg-amber-50 border border-amber-100 text-amber-600 flex items-center justify-center text-xl mb-5 shadow-sm">
-                        <i class="fa-solid fa-box-archive"></i>
+                <!-- 4. Buku Tulis & Hardcover -->
+                <div class="glass-card overflow-hidden rounded-2xl group flex flex-col justify-between">
+                    <div>
+                        <div class="overflow-hidden h-36 sm:h-44 bg-slate-100 relative">
+                            <img src="images/buku-tulis.jpg" onerror="this.src='https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=500&q=80'" alt="Buku Tulis & Hardcover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-4">
+                            <span class="text-[10px] font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full uppercase">Buku</span>
+                            <h3 class="text-slate-900 font-bold text-sm mt-1.5">Buku Tulis & Hardcover</h3>
+                            <p class="text-[11px] text-slate-500 mt-1">Sidu 38/58 lembar, buku batik, & buku kas kantor.</p>
+                        </div>
                     </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">Laminating & Jilid</h3>
-                    <p class="text-slate-600 text-xs leading-relaxed">Pres ijazah/sertifikat tahan air serta jilid lakban, spiral, dan jilid skripsi.</p>
+                    <div class="p-4 pt-0">
+                        <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20mau%20tanya%20Buku%20Tulis" target="_blank" class="w-full py-2 rounded-xl bg-slate-100 hover:bg-emerald-600 hover:text-white text-slate-700 text-xs font-bold transition-all flex items-center justify-center gap-1.5">
+                            <i class="fa-brands fa-whatsapp"></i> Chat Penjual
+                        </a>
+                    </div>
                 </div>
+
+                <!-- 5. Spidol Boardmarker & Permanent -->
+                <div class="glass-card overflow-hidden rounded-2xl group flex flex-col justify-between">
+                    <div>
+                        <div class="overflow-hidden h-36 sm:h-44 bg-slate-100 relative">
+                            <img src="images/spidol-boardmarker.jpg" onerror="this.src='https://images.unsplash.com/photo-1629968417850-3505f5180761?auto=format&fit=crop&w=500&q=80'" alt="Spidol Boardmarker & Permanent" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-4">
+                            <span class="text-[10px] font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full uppercase">Spidol</span>
+                            <h3 class="text-slate-900 font-bold text-sm mt-1.5">Spidol & Tinta Isi Ulang</h3>
+                            <p class="text-[11px] text-slate-500 mt-1">Snowman Boardmarker, Permanent BG-12, & tinta refill.</p>
+                        </div>
+                    </div>
+                    <div class="p-4 pt-0">
+                        <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20mau%20tanya%20Spidol" target="_blank" class="w-full py-2 rounded-xl bg-slate-100 hover:bg-emerald-600 hover:text-white text-slate-700 text-xs font-bold transition-all flex items-center justify-center gap-1.5">
+                            <i class="fa-brands fa-whatsapp"></i> Chat Penjual
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 6. Map Dokumen & Snelhefter -->
+                <div class="glass-card overflow-hidden rounded-2xl group flex flex-col justify-between">
+                    <div>
+                        <div class="overflow-hidden h-36 sm:h-44 bg-slate-100 relative">
+                            <img src="images/map-dokumen.jpg" onerror="this.src='https://images.unsplash.com/photo-1598301257982-0cf014dabbcd?auto=format&fit=crop&w=500&q=80'" alt="Map Dokumen & Ordner" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-4">
+                            <span class="text-[10px] font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full uppercase">Arsip</span>
+                            <h3 class="text-slate-900 font-bold text-sm mt-1.5">Map Dokumen & Map Folder</h3>
+                            <p class="text-[11px] text-slate-500 mt-1">Map plastik, snelhefter, stopmap kertas, & Bindex.</p>
+                        </div>
+                    </div>
+                    <div class="p-4 pt-0">
+                        <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20mau%20tanya%20Map%20Dokumen" target="_blank" class="w-full py-2 rounded-xl bg-slate-100 hover:bg-emerald-600 hover:text-white text-slate-700 text-xs font-bold transition-all flex items-center justify-center gap-1.5">
+                            <i class="fa-brands fa-whatsapp"></i> Chat Penjual
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 7. Penggaris Besi & Plastik -->
+                <div class="glass-card overflow-hidden rounded-2xl group flex flex-col justify-between">
+                    <div>
+                        <div class="overflow-hidden h-36 sm:h-44 bg-slate-100 relative">
+                            <img src="images/penggaris.jpg" onerror="this.src='https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=500&q=80'" alt="Penggaris Besi & Plastik" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-4">
+                            <span class="text-[10px] font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full uppercase">Alat Ukur</span>
+                            <h3 class="text-slate-900 font-bold text-sm mt-1.5">Penggaris Besi & Plastik</h3>
+                            <p class="text-[11px] text-slate-500 mt-1">Ukuran 30cm, 50cm, busur derajat, & penggaris segitiga.</p>
+                        </div>
+                    </div>
+                    <div class="p-4 pt-0">
+                        <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20mau%20tanya%20Penggaris" target="_blank" class="w-full py-2 rounded-xl bg-slate-100 hover:bg-emerald-600 hover:text-white text-slate-700 text-xs font-bold transition-all flex items-center justify-center gap-1.5">
+                            <i class="fa-brands fa-whatsapp"></i> Chat Penjual
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 8. Tipp-Ex & Correction Tape -->
+                <div class="glass-card overflow-hidden rounded-2xl group flex flex-col justify-between">
+                    <div>
+                        <div class="overflow-hidden h-36 sm:h-44 bg-slate-100 relative">
+                            <img src="images/tipp-ex.jpg" onerror="this.src='https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=500&q=80'" alt="Tipp-Ex & Correction Tape" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-4">
+                            <span class="text-[10px] font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full uppercase">Koreksi</span>
+                            <h3 class="text-slate-900 font-bold text-sm mt-1.5">Tipp-Ex & Correction Tape</h3>
+                            <p class="text-[11px] text-slate-500 mt-1">Joyko, Kenko, Pentel tipe cair & pita pita pembersih.</p>
+                        </div>
+                    </div>
+                    <div class="p-4 pt-0">
+                        <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20mau%20tanya%20Tipp-Ex" target="_blank" class="w-full py-2 rounded-xl bg-slate-100 hover:bg-emerald-600 hover:text-white text-slate-700 text-xs font-bold transition-all flex items-center justify-center gap-1.5">
+                            <i class="fa-brands fa-whatsapp"></i> Chat Penjual
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 9. Stapler & Isi Stapler -->
+                <div class="glass-card overflow-hidden rounded-2xl group flex flex-col justify-between">
+                    <div>
+                        <div class="overflow-hidden h-36 sm:h-44 bg-slate-100 relative">
+                            <img src="images/stapler.jpg" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=500&q=80'" alt="Stapler & Isi Stapler" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-4">
+                            <span class="text-[10px] font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full uppercase">Peralatan</span>
+                            <h3 class="text-slate-900 font-bold text-sm mt-1.5">Stapler & Isi Stapler</h3>
+                            <p class="text-[11px] text-slate-500 mt-1">MAX HD-10, HD-50, & isi stapler No.10 / No.3.</p>
+                        </div>
+                    </div>
+                    <div class="p-4 pt-0">
+                        <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20mau%20tanya%20Stapler" target="_blank" class="w-full py-2 rounded-xl bg-slate-100 hover:bg-emerald-600 hover:text-white text-slate-700 text-xs font-bold transition-all flex items-center justify-center gap-1.5">
+                            <i class="fa-brands fa-whatsapp"></i> Chat Penjual
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 10. Gunting & Cutter -->
+                <div class="glass-card overflow-hidden rounded-2xl group flex flex-col justify-between">
+                    <div>
+                        <div class="overflow-hidden h-36 sm:h-44 bg-slate-100 relative">
+                            <img src="images/gunting-cutter.jpg" onerror="this.src='https://images.unsplash.com/photo-1503792501406-2c40da09e1e2?auto=format&fit=crop&w=500&q=80'" alt="Gunting & Cutter" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-4">
+                            <span class="text-[10px] font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full uppercase">Pemotong</span>
+                            <h3 class="text-slate-900 font-bold text-sm mt-1.5">Gunting & Cutter</h3>
+                            <p class="text-[11px] text-slate-500 mt-1">Gunting stainless, cutter besar/kecil, & isi isi cutter.</p>
+                        </div>
+                    </div>
+                    <div class="p-4 pt-0">
+                        <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20mau%20tanya%20Gunting/Cutter" target="_blank" class="w-full py-2 rounded-xl bg-slate-100 hover:bg-emerald-600 hover:text-white text-slate-700 text-xs font-bold transition-all flex items-center justify-center gap-1.5">
+                            <i class="fa-brands fa-whatsapp"></i> Chat Penjual
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 11. Lakban, Solasi & Double Tape -->
+                <div class="glass-card overflow-hidden rounded-2xl group flex flex-col justify-between">
+                    <div>
+                        <div class="overflow-hidden h-36 sm:h-44 bg-slate-100 relative">
+                            <img src="images/lakban-solasi.jpg" onerror="this.src='https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=500&q=80'" alt="Lakban & Solasi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-4">
+                            <span class="text-[10px] font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full uppercase">Perekat</span>
+                            <h3 class="text-slate-900 font-bold text-sm mt-1.5">Lakban, Solasi & Tape</h3>
+                            <p class="text-[11px] text-slate-500 mt-1">Lakban cokelat/bening, double tape, & isolasi kertas.</p>
+                        </div>
+                    </div>
+                    <div class="p-4 pt-0">
+                        <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20mau%20tanya%20Lakban/Solasi" target="_blank" class="w-full py-2 rounded-xl bg-slate-100 hover:bg-emerald-600 hover:text-white text-slate-700 text-xs font-bold transition-all flex items-center justify-center gap-1.5">
+                            <i class="fa-brands fa-whatsapp"></i> Chat Penjual
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 12. Stempel Custom Flash & Kayu -->
+                <div class="glass-card overflow-hidden rounded-2xl group flex flex-col justify-between">
+                    <div>
+                        <div class="overflow-hidden h-36 sm:h-44 bg-slate-100 relative">
+                            <img src="images/stempel-custom.jpg" onerror="this.src='https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=500&q=80'" alt="Stempel Custom Flash & Kayu" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-4">
+                            <span class="text-[10px] font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full uppercase">Custom</span>
+                            <h3 class="text-slate-900 font-bold text-sm mt-1.5">Stempel Custom</h3>
+                            <p class="text-[11px] text-slate-500 mt-1">Stempel otomatis (flash), stempel kayu, & tinta stempel.</p>
+                        </div>
+                    </div>
+                    <div class="p-4 pt-0">
+                        <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20mau%20pesan%20Stempel%20Custom" target="_blank" class="w-full py-2 rounded-xl bg-slate-100 hover:bg-emerald-600 hover:text-white text-slate-700 text-xs font-bold transition-all flex items-center justify-center gap-1.5">
+                            <i class="fa-brands fa-whatsapp"></i> Chat Penjual
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
-
-    <!-- Bagian Katalog Produk ATK -->
-    <section id="produk-atk" class="py-16 px-6 relative border-t border-slate-200/60">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-3">Katalog Alat Tulis Kantor (ATK)</h2>
-                <p class="text-slate-500 text-sm max-w-md mx-auto">Sedia berbagai perlengkapan sekolah, kuliah, dan operasional kantor.</p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <!-- Produk 1 -->
-                <div class="glass-card overflow-hidden rounded-2xl group">
-                    <div class="overflow-hidden h-44 bg-slate-100">
-                        <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=500&q=80" alt="Kertas HVS A4 & F4" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <div class="p-5 bg-white">
-                        <span class="text-[10px] font-bold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-full uppercase tracking-wider">Kertas</span>
-                        <h4 class="text-slate-900 font-bold text-sm mt-2">Kertas HVS A4 & F4 70/80gsm</h4>
-                        <p class="text-xs text-slate-500 mt-1 mb-3">Dua rim & eceran kualitas tinggi.</p>
-                        <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20mau%20tanya%20stok%20Kertas%20HVS" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-600 hover:text-emerald-700">
-                            <i class="fa-brands fa-whatsapp"></i> Chat Penjual
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Produk 2 -->
-                <div class="glass-card overflow-hidden rounded-2xl group">
-                    <div class="overflow-hidden h-44 bg-slate-100">
-                        <img src="https://images.unsplash.com/photo-1585336261026-6757688719d3?auto=format&fit=crop&w=500&q=80" alt="Pulpen & Alat Tulis" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <div class="p-5 bg-white">
-                        <span class="text-[10px] font-bold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-full uppercase tracking-wider">Alat Tulis</span>
-                        <h4 class="text-slate-900 font-bold text-sm mt-2">Pena, Pensil & Marker</h4>
-                        <p class="text-xs text-slate-500 mt-1 mb-3">Merek Gel, Standard, Snowman & Joyko.</p>
-                        <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20mau%20tanya%20stok%20Alat%20Tulis" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-600 hover:text-emerald-700">
-                            <i class="fa-brands fa-whatsapp"></i> Chat Penjual
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Produk 3 -->
-                <div class="glass-card overflow-hidden rounded-2xl group">
-                    <div class="overflow-hidden h-44 bg-slate-100">
-                        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=500&q=80" alt="Buku Tulis & Trik" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <div class="p-5 bg-white">
-                        <span class="text-[10px] font-bold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-full uppercase tracking-wider">Buku</span>
-                        <h4 class="text-slate-900 font-bold text-sm mt-2">Buku Tulis & Hardcover</h4>
-                        <p class="text-xs text-slate-500 mt-1 mb-3">Buku kas, buku gelatik, & buku catatan.</p>
-                        <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20mau%20tanya%20stok%20Buku%20Tulis" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-600 hover:text-emerald-700">
-                            <i class="fa-brands fa-whatsapp"></i> Chat Penjual
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Produk 4 -->
-                <div class="glass-card overflow-hidden rounded-2xl group">
-                    <div class="overflow-hidden h-44 bg-slate-100">
-                        <img src="https://images.unsplash.com/photo-1598301257982-0cf014dabbcd?auto=format&fit=crop&w=500&q=80" alt="Map & Storage" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <div class="p-5 bg-white">
-                        <span class="text-[10px] font-bold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-full uppercase tracking-wider">Arsip</span>
-                        <h4 class="text-slate-900 font-bold text-sm mt-2">Map Dokumen & Ordner</h4>
-                        <p class="text-xs text-slate-500 mt-1 mb-3">Map plastik, map kertas, & stopmap.</p>
-                        <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20mau%20tanya%20stok%20Map%20Dokumen" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-600 hover:text-emerald-700">
-                            <i class="fa-brands fa-whatsapp"></i> Chat Penjual
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Keunggulan Section -->
-    <section id="keunggulan" class="py-16 px-6 border-t border-slate-200/60 bg-white/50">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-3">Mengapa Memilih Toko MUCI?</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="glass-card p-6 rounded-2xl text-center">
-                    <div class="w-12 h-12 rounded-2xl bg-indigo-600 text-white flex items-center justify-center text-xl mx-auto mb-4 shadow-md shadow-indigo-500/20">
-                        <i class="fa-solid fa-bolt"></i>
-                    </div>
-                    <h3 class="font-bold text-slate-900 mb-1">Proses Cepat</h3>
-                    <p class="text-xs text-slate-600">Hasil cetak dan fotokopi dikerjakan langsung tanpa menunggu lama.</p>
-                </div>
-                <div class="glass-card p-6 rounded-2xl text-center">
-                    <div class="w-12 h-12 rounded-2xl bg-indigo-600 text-white flex items-center justify-center text-xl mx-auto mb-4 shadow-md shadow-indigo-500/20">
-                        <i class="fa-solid fa-tags"></i>
-                    </div>
-                    <h3 class="font-bold text-slate-900 mb-1">Harga Bersahabat</h3>
-                    <p class="text-xs text-slate-600">Harga eceran dan grosir terjangkau untuk pelajar, mahasiswa, dan instansi.</p>
-                </div>
-                <div class="glass-card p-6 rounded-2xl text-center">
-                    <div class="w-12 h-12 rounded-2xl bg-indigo-600 text-white flex items-center justify-center text-xl mx-auto mb-4 shadow-md shadow-indigo-500/20">
-                        <i class="fa-solid fa-thumbs-up"></i>
-                    </div>
-                    <h3 class="font-bold text-slate-900 mb-1">Kualitas Terjamin</h3>
-                    <p class="text-xs text-slate-600">Menggunakan tinta original dan kertas berkualitas agar berkas rapi dan tajam.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tombol WhatsApp Melayang -->
-    <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20ingin%20bertanya" target="_blank" class="fixed bottom-6 right-6 z-50 bg-emerald-500 text-white p-4 rounded-full shadow-2xl hover:bg-emerald-600 transition-all hover:scale-110 flex items-center justify-center w-14 h-14">
-        <i class="fa-brands fa-whatsapp text-2xl"></i>
-    </a>
 
     <!-- Footer -->
-    <footer id="kontak" class="border-t border-slate-200/80 py-12 px-6 bg-white">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex items-center gap-2.5 text-slate-900 font-bold text-base">
-                <span class="w-8 h-8 rounded-xl bg-indigo-600 flex items-center justify-center text-white text-xs shadow-md shadow-indigo-500/20">
-                    <i class="fa-solid fa-store"></i>
-                </span>
-                Toko MUCI
-            </div>
-
-            <p class="text-xs text-slate-500 font-medium">© 2026 Toko MUCI — Print, Fotokopi & ATK. Hak cipta dilindungi.</p>
-
-            <div class="flex items-center gap-3 text-slate-500">
-                <a href="https://wa.me/6285185207306" target="_blank" class="w-10 h-10 rounded-xl glass-card flex items-center justify-center hover:text-emerald-600 hover:border-emerald-300 transition-all text-sm">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
-            </div>
-        </div>
+    <footer class="border-t border-slate-200 py-8 px-6 bg-white text-center">
+        <p class="text-xs text-slate-500">© 2026 Toko MUCI — Print, Fotokopi & Alat Tulis Kantor.</p>
     </footer>
 
-    <!-- Swiper JS Script -->
+    <!-- Script Swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        // Inisialisasi Swiper Carousel Promo
         const swiper = new Swiper('.promo-swiper', {
             loop: true,
             autoplay: {
-                delay: 3500,
+                delay: 3000,
                 disableOnInteraction: false,
             },
             pagination: {
