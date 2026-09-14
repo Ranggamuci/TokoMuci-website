@@ -190,7 +190,7 @@
                 <div class="glass-card overflow-hidden rounded-2xl group flex flex-col justify-between">
                     <div>
                         <div class="overflow-hidden h-36 sm:h-44 bg-slate-100 relative">
-                            <img src="Printer.jpeg" onerror="this.src='printer.JPEG'" alt="Print Dokumen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            <img src="Printer.jpeg" onerror="this.src='printer.jpeg'" alt="Print Dokumen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="p-4">
                             <span class="text-[10px] font-bold text-amber-700 bg-amber-100 px-2 py-0.5 rounded-full uppercase">Jasa Percetakan</span>
