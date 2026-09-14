@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko MUCI — Layanan Percetakan & ATK Lengkap</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(241, 245, 249, 1);
+            box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(99, 102, 241, 0.3);
+            box-shadow: 0 20px 35px -10px rgba(79, 70, 229, 0.12);
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #4f46e5 !important;
+            width: 28px !important;
+            border-radius: 8px !important;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            color: #ffffff !important;
+            background: rgba(15, 23, 42, 0.5);
+            backdrop-filter: blur(8px);
+            width: 40px !important;
+            height: 40px !important;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .swiper-button-next:after, .swiper-button-prev:after {
+            font-size: 15px !important;
+            font-weight: bold;
+        }
+
+        /* Scrollbar halus untuk filter kategori */
+        .category-scroll::-webkit-scrollbar {
+            height: 6px;
+        }
+        .category-scroll::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="bg-[#f8fafc] text-slate-800 font-sans antialiased relative overflow-x-hidden">
+
+    <!-- Header Navigasi -->
+    <header class="fixed top-0 left-0 right-0 z-50 px-4 md:px-8 py-4">
+        <nav class="max-w-6xl mx-auto glass-nav rounded-2xl px-6 py-3.5 flex items-center justify-between">
+            <a href="#" class="text-lg font-bold tracking-tight text-slate-900 flex items-center gap-2.5">
+                <span class="w-9 h-9 rounded-xl bg-indigo-600 flex items-center justify-center text-white text-sm shadow-md shadow-indigo-500/30">
+                    <i class="fa-solid fa-store"></i>
+                </span>
+                Toko <span class="text-indigo-600">MUCI</span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                <a href="#promo-banner" class="hover:text-indigo-600 transition-colors">Promo</a>
+                <a href="#layanan-utama" class="hover:text-indigo-600 transition-colors">Layanan Utama</a>
+                <a href="#katalog-atk" class="hover:text-indigo-600 transition-colors flex items-center gap-1.5">
+                    <span>Katalog ATK</span>
+                    <span class="text-[10px] bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-full font-bold">215 Item</span>
+                </a>
+            </div>
+
+            <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20ingin%20pesan/tanya%20layanan." target="_blank" class="text-xs font-bold px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white transition-all shadow-md shadow-emerald-500/20 flex items-center gap-2">
+                <i class="fa-brands fa-whatsapp text-sm"></i>
+                <span>Hubungi Kami</span>
+            </a>
+        </nav>
+    </header>
+
+    <!-- BANNER PROMO ROTASI -->
+    <section id="promo-banner" class="pt-28 pb-6 px-4 md:px-8 max-w-6xl mx-auto">
+        <div class="swiper promo-swiper rounded-3xl shadow-xl overflow-hidden border border-slate-200">
+            <div class="swiper-wrapper">
+                
+                <!-- Banner 1: Promo Fotokopi & Print -->
+                <div class="swiper-slide relative h-[260px] sm:h-[360px] bg-slate-900">
+                    <img src="./images/banner-cetak-dokumen.jpg" onerror="this.src='fotocopy.jpeg?auto=format&fit=crop&w=1200&q=80'" alt="Promo Print & Fotokopi Toko MUCI" class="w-full h-full object-cover opacity-60">
+                    <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/80 to-transparent p-6 sm:p-12 flex flex-col justify-center items-start">
+                        <span class="bg-amber-500 text-slate-950 text-[11px] font-extrabold uppercase px-3 py-1 rounded-full mb-3 shadow">
+                            <i class="fa-solid fa-fire mr-1"></i> Layanan Cepat
+                        </span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-white leading-tight max-w-lg mb-2">
+                            Print & Fotokopi Kilat <br><span class="text-amber-400">Hasil Rapi & Bersih</span>
+                        </h2>
+                        <p class="text-slate-200 text-xs sm:text-sm max-w-md mb-5 hidden sm:block">Melayani cetak dokumen, skripsi, pas foto, laminating, & jilid rapi.</p>
+                        <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20mau%20kirim%20file%20print/fotokopi" target="_blank" class="px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-bold transition-all shadow-lg shadow-emerald-500/30 flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Kirim File Sekarang
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Banner 2: Promo Stempel Custom -->
+                <div class="swiper-slide relative h-[260px] sm:h-[360px] bg-slate-900">
+                    <img src="./images/stempel-custom.jpg" onerror="this.src='stempel.PNG?auto=format&fit=crop&w=1200&q=80'" alt="Promo Stempel Custom Toko MUCI" class="w-full h-full object-cover opacity-60">
+                    <div class="absolute inset-0 bg-gradient-to-r from-indigo-950 via-indigo-900/80 to-transparent p-6 sm:p-12 flex flex-col justify-center items-start">
+                        <span class="bg-indigo-500 text-white text-[11px] font-extrabold uppercase px-3 py-1 rounded-full mb-3 shadow">
+                            <i class="fa-solid fa-stamp mr-1"></i> Bikin Cap Custom
+                        </span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-white leading-tight max-w-lg mb-2">
+                            Stempel Otomatis & Kayu <br><span class="text-indigo-300">Proses Cepat & Presisi</span>
+                        </h2>
+                        <p class="text-slate-200 text-xs sm:text-sm max-w-md mb-5 hidden sm:block">Bisa custom logo toko, kantor, organisasi, dan sekolah.</p>
+                        <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20mau%20pesan%20stempel/cap" target="_blank" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold transition-all shadow-lg shadow-indigo-500/30 flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Pesan Stempel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Banner 3: Promo Kertas HVS & ATK -->
+                <div class="swiper-slide relative h-[260px] sm:h-[360px] bg-slate-900">
+                    <img src="./images/kertas-hvs.jpg" onerror="this.src='https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=1200&q=80'" alt="Promo Kertas & ATK Toko MUCI" class="w-full h-full object-cover opacity-60">
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-900/80 to-transparent p-6 sm:p-12 flex flex-col justify-center items-start">
+                        <span class="bg-blue-500 text-white text-[11px] font-extrabold uppercase px-3 py-1 rounded-full mb-3 shadow">
+                            <i class="fa-solid fa-box mr-1"></i> Grosir & Eceran
+                        </span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-white leading-tight max-w-lg mb-2">
+                            Alat Tulis & Kertas HVS <br><span class="text-blue-300">Harga Terjangkau</span>
+                        </h2>
+                        <p class="text-slate-200 text-xs sm:text-sm max-w-md mb-5 hidden sm:block">Sedia 215+ jenis ATK, map, kertas printer, lakban, & keperluan sekolah/kantor.</p>
+                        <a href="#katalog-atk" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition-all shadow-lg shadow-blue-500/30 flex items-center gap-2">
+                            <i class="fa-solid fa-magnifying-glass text-sm"></i> Cari ATK Lengkap
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next hidden sm:flex"></div>
+            <div class="swiper-button-prev hidden sm:flex"></div>
+        </div>
+    </section>
+
+    <!-- LAYANAN UTAMA PERCETAKAN -->
+    <section id="layanan-utama" class="py-12 px-6 border-t border-slate-200/80">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-10">
+                <span class="text-xs font-extrabold text-indigo-600 uppercase tracking-wider bg-indigo-50 px-3 py-1 rounded-full">Layanan Cetak Unggulan</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2 mb-2">Jasa Percetakan & Finishing Cepat</h2>
+                <p class="text-slate-500 text-sm max-w-md mx-auto">Layanan print, fotokopi dokumen, pembuatan stempel, hingga jilid buku berkualitas prima.</p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+                
+                <!-- LAYANAN 1: Fotokopi -->
+                <div class="glass-card overflow-hidden rounded-2xl group flex flex-col justify-between p-3.5">
+                    <div>
+                        <div class="overflow-hidden h-28 rounded-xl bg-slate-100 relative mb-3">
+                            <img src="./images/fotocopy.jpeg" onerror="this.src='fotocopy.jpeg'" alt="Fotokopi Dokumen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <h3 class="text-slate-900 font-bold text-xs">Fotokopi Berkas</h3>
+                        <p class="text-[11px] text-slate-500 mt-0.5">B/W & Warna, cepat & bersih.</p>
+                    </div>
+                    <div class="pt-3">
+                        <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20mau%20fotokopi%20berkas" target="_blank" class="w-full py-1.5 rounded-lg bg-emerald-50 hover:bg-emerald-600 hover:text-white text-emerald-700 text-[11px] font-bold transition-all flex items-center justify-center gap-1">
+                            <i class="fa-brands fa-whatsapp"></i> Pesan
+                        </a>
+                    </div>
+                </div>
+
+                <!-- LAYANAN 2: Print Dokumen -->
+                <div class="glass-card overflow-hidden rounded-2xl group flex flex-col justify-between p-3.5">
+                    <div>
+                        <div class="overflow-hidden h-28 rounded-xl bg-slate-100 relative mb-3">
+                            <img src="Printer.jpeg" onerror="this.src='printer.JPEG'" alt="Print Dokumen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <h3 class="text-slate-900 font-bold text-xs">Print Dokumen</h3>
+                        <p class="text-[11px] text-slate-500 mt-0.5">PDF/Word, Skripsi & Tugas.</p>
+                    </div>
+                    <div class="pt-3">
+                        <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20mau%20print%20dokumen" target="_blank" class="w-full py-1.5 rounded-lg bg-emerald-50 hover:bg-emerald-600 hover:text-white text-emerald-700 text-[11px] font-bold transition-all flex items-center justify-center gap-1">
+                            <i class="fa-brands fa-whatsapp"></i> Pesan
+                        </a>
+                    </div>
+                </div>
+
+                <!-- LAYANAN 3: Cetak Foto -->
+                <div class="glass-card overflow-hidden rounded-2xl group flex flex-col justify-between p-3.5">
+                    <div>
+                        <div class="overflow-hidden h-28 rounded-xl bg-slate-100 relative mb-3">
+                            <img src="pasfoto.jpeg" onerror="this.src='pasfoto.jpeg'" alt="Cetak Foto" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <h3 class="text-slate-900 font-bold text-xs">Pas Foto & Cetak</h3>
+                        <p class="text-[11px] text-slate-500 mt-0.5">Ukuran 2x3, 3x4, 4x6 & Glossy.</p>
+                    </div>
+                    <div class="pt-3">
+                        <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20mau%20cetak%20foto" target="_blank" class="w-full py-1.5 rounded-lg bg-emerald-50 hover:bg-emerald-600 hover:text-white text-emerald-700 text-[11px] font-bold transition-all flex items-center justify-center gap-1">
+                            <i class="fa-brands fa-whatsapp"></i> Pesan
+                        </a>
+                    </div>
+                </div>
+
+                <!-- LAYANAN 4: Stempel -->
+                <div class="glass-card overflow-hidden rounded-2xl group flex flex-col justify-between p-3.5">
+                    <div>
+                        <div class="overflow-hidden h-28 rounded-xl bg-slate-100 relative mb-3">
+                            <img src="stempel.png" onerror="this.src='stempel.PNG'" alt="Stempel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <h3 class="text-slate-900 font-bold text-xs">Stempel Flash</h3>
+                        <p class="text-[11px] text-slate-500 mt-0.5">Otomatis & Kayu Custom.</p>
+                    </div>
+                    <div class="pt-3">
+                        <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20mau%20bikin%20stempel" target="_blank" class="w-full py-1.5 rounded-lg bg-emerald-50 hover:bg-emerald-600 hover:text-white text-emerald-700 text-[11px] font-bold transition-all flex items-center justify-center gap-1">
+                            <i class="fa-brands fa-whatsapp"></i> Pesan
+                        </a>
+                    </div>
+                </div>
+
+                <!-- LAYANAN 5: Laminating -->
+                <div class="glass-card overflow-hidden rounded-2xl group flex flex-col justify-between p-3.5">
+                    <div>
+                        <div class="overflow-hidden h-28 rounded-xl bg-slate-100 relative mb-3">
+                            <img src="laminating.jpg" onerror="this.src='Laminating.jpg'" alt="Laminating" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <h3 class="text-slate-900 font-bold text-xs">Laminating</h3>
+                        <p class="text-[11px] text-slate-500 mt-0.5">Pelindung Ijazah & Berkas.</p>
+                    </div>
+                    <div class="pt-3">
+                        <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20mau%20laminating" target="_blank" class="w-full py-1.5 rounded-lg bg-emerald-50 hover:bg-emerald-600 hover:text-white text-emerald-700 text-[11px] font-bold transition-all flex items-center justify-center gap-1">
+                            <i class="fa-brands fa-whatsapp"></i> Pesan
+                        </a>
+                    </div>
+                </div>
+
+                <!-- LAYANAN 6: Jilid Buku -->
+                <div class="glass-card overflow-hidden rounded-2xl group flex flex-col justify-between p-3.5">
+                    <div>
+                        <div class="overflow-hidden h-28 rounded-xl bg-slate-100 relative mb-3">
+                            <img src="./images/jilid-buku.jpg" onerror="this.src='Jilid.JPG'" alt="Jilid" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <h3 class="text-slate-900 font-bold text-xs">Jilid Dokumen</h3>
+                        <p class="text-[11px] text-slate-500 mt-0.5">Spiral, Lakban & Hardcover.</p>
+                    </div>
+                    <div class="pt-3">
+                        <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20saya%20mau%20jilid%20buku" target="_blank" class="w-full py-1.5 rounded-lg bg-emerald-50 hover:bg-emerald-600 hover:text-white text-emerald-700 text-[11px] font-bold transition-all flex items-center justify-center gap-1">
+                            <i class="fa-brands fa-whatsapp"></i> Pesan
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- KATALOG LENGKAP 215 DAFTAR ATK TOKO MUCI -->
+    <section id="katalog-atk" class="py-14 px-4 sm:px-8 border-t border-slate-200 bg-white">
+        <div class="max-w-6xl mx-auto">
+            
+            <!-- Section Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+                <div>
+                    <span class="text-xs font-extrabold text-indigo-600 uppercase tracking-wider bg-indigo-50 px-3 py-1 rounded-full">
+                        <i class="fa-solid fa-boxes-stacked mr-1"></i> Sedia Eceran & Grosir
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Daftar Lengkap ATK Toko MUCI</h2>
+                    <p class="text-slate-500 text-sm mt-1">Tersedia <span class="font-bold text-indigo-600">215+ item</span> kebutuhan alat tulis, kertas, map, perekat, hingga perlengkapan kantor.</p>
+                </div>
+
+                <!-- Input Pencarian -->
+                <div class="w-full md:w-80 relative">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+                    <input type="text" id="searchInput" placeholder="Cari nama barang ATK..." class="w-full pl-10 pr-10 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition-all">
+                    <button id="clearSearch" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 text-xs">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tab Kategori Interaktif -->
+            <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-6 category-scroll text-xs">
+                <button class="filter-btn active whitespace-nowrap px-4 py-2 rounded-xl font-bold bg-indigo-600 text-white shadow-md shadow-indigo-500/20 transition-all" data-category="ALL">
+                    Semua (<span id="count-all">215</span>)
+                </button>
+                <button class="filter-btn whitespace-nowrap px-4 py-2 rounded-xl font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all" data-category="Alat Tulis & Koreksi">
+                    <i class="fa-solid fa-pen-nib mr-1 text-slate-400"></i> Alat Tulis & Koreksi (29)
+                </button>
+                <button class="filter-btn whitespace-nowrap px-4 py-2 rounded-xl font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all" data-category="Spidol & Marker">
+                    <i class="fa-solid fa-highlighter mr-1 text-slate-400"></i> Spidol (7)
+                </button>
+                <button class="filter-btn whitespace-nowrap px-4 py-2 rounded-xl font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all" data-category="Buku & Catatan">
+                    <i class="fa-solid fa-book mr-1 text-slate-400"></i> Buku & Catatan (18)
+                </button>
+                <button class="filter-btn whitespace-nowrap px-4 py-2 rounded-xl font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all" data-category="Kertas">
+                    <i class="fa-solid fa-file-lines mr-1 text-slate-400"></i> Aneka Kertas (39)
+                </button>
+                <button class="filter-btn whitespace-nowrap px-4 py-2 rounded-xl font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all" data-category="Map, Arsip & Amplop">
+                    <i class="fa-solid fa-folder mr-1 text-slate-400"></i> Map & Amplop (28)
+                </button>
+                <button class="filter-btn whitespace-nowrap px-4 py-2 rounded-xl font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all" data-category="Perlengkapan Kantor">
+                    <i class="fa-solid fa-paperclip mr-1 text-slate-400"></i> Alat Kantor & Meja (30)
+                </button>
+                <button class="filter-btn whitespace-nowrap px-4 py-2 rounded-xl font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all" data-category="Lem & Perekat">
+                    <i class="fa-solid fa-tape mr-1 text-slate-400"></i> Lem & Lakban (20)
+                </button>
+                <button class="filter-btn whitespace-nowrap px-4 py-2 rounded-xl font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all" data-category="Seni & Kerajinan">
+                    <i class="fa-solid fa-palette mr-1 text-slate-400"></i> Seni & Mewarnai (13)
+                </button>
+                <button class="filter-btn whitespace-nowrap px-4 py-2 rounded-xl font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all" data-category="Percetakan & Nota">
+                    <i class="fa-solid fa-receipt mr-1 text-slate-400"></i> Nota & Finishing (31)
+                </button>
+            </div>
+
+            <!-- Info Bar Jumlah Tampil -->
+            <div class="flex items-center justify-between text-xs text-slate-500 mb-4 px-1">
+                <div>Menampilkan <span id="visible-count" class="font-bold text-slate-900">215</span> produk</div>
+                <div class="text-[11px] text-slate-400">Klik tombol WhatsApp untuk langsung tanya stok/order</div>
+            </div>
+
+            <!-- Container Grid ATK (Dirender Dinamis) -->
+            <div id="atkGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+                <!-- Data 215 items akan otomatis dimuat oleh script di bawah -->
+            </div>
+
+            <!-- Pesan Kosong Jika Pencarian Tidak Ada -->
+            <div id="emptyState" class="hidden text-center py-16">
+                <div class="w-16 h-16 bg-slate-100 text-slate-400 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl">
+                    <i class="fa-solid fa-box-open"></i>
+                </div>
+                <h3 class="text-sm font-bold text-slate-800 mb-1">Item tidak ditemukan</h3>
+                <p class="text-xs text-slate-500 max-w-sm mx-auto mb-4">Barang yang Anda cari belum muncul di filter? Anda bisa langsung menanyakan ketersediaan stok khusus melalui WhatsApp kami.</p>
+                <a href="https://wa.me/6285185207306?text=Halo%20Toko%20MUCI,%20apakah%20tersedia%20barang%20ini?" target="_blank" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-emerald-600 text-white text-xs font-bold shadow hover:bg-emerald-500 transition-all">
+                    <i class="fa-brands fa-whatsapp"></i> Tanya Langsung via WA
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 py-10 px-6 bg-slate-900 text-white">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <div>
+                <div class="text-lg font-bold tracking-tight flex items-center justify-center md:justify-start gap-2 mb-1">
+                    <span class="w-7 h-7 rounded-lg bg-indigo-500 flex items-center justify-center text-white text-xs">
+                        <i class="fa-solid fa-store"></i>
+                    </span>
+                    Toko <span class="text-indigo-400">MUCI</span>
+                </div>
+                <p class="text-xs text-slate-400">Layanan Percetakan, Jilid, Stempel & Alat Tulis Kantor (ATK) Terlengkap.</p>
+            </div>
+            <div class="flex items-center gap-4 text-xs font-semibold text-slate-300">
+                <a href="https://wa.me/6285185207306" target="_blank" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5">
+                    <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i> 0851-8520-7306
+                </a>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto border-t border-slate-800 mt-6 pt-6 text-center text-[11px] text-slate-500">
+            © 2026 Toko MUCI — Print, Fotokopi & 215+ Alat Tulis Kantor.
+        </div>
+    </footer>
+
+    <!-- Script Swiper & Manajemen Data 215 ATK -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Inisialisasi Swiper Banner
+        const swiper = new Swiper('.promo-swiper', {
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        // ==============================================================
+        // MASTER DATA: 215 DAFTAR LENGKAP ATK TOKO MUCI
+        // ==============================================================
+        const daftarATK = [
+            // 1 - 29: Alat Tulis & Koreksi
+            { no: 1, nama: "Pulpen", kategori: "Alat Tulis & Koreksi", icon: "fa-pen" },
+            { no: 2, nama: "Pulpen Gel", kategori: "Alat Tulis & Koreksi", icon: "fa-pen-clip" },
+            { no: 3, nama: "Pulpen Ballpoint", kategori: "Alat Tulis & Koreksi", icon: "fa-pen-fancy" },
+            { no: 4, nama: "Pensil HB", kategori: "Alat Tulis & Koreksi", icon: "fa-pencil" },
+            { no: 5, nama: "Pensil 2B", kategori: "Alat Tulis & Koreksi", icon: "fa-pencil" },
+            { no: 6, nama: "Pensil 4B", kategori: "Alat Tulis & Koreksi", icon: "fa-pencil" },
+            { no: 7, nama: "Pensil 6B", kategori: "Alat Tulis & Koreksi", icon: "fa-pencil" },
+            { no: 8, nama: "Pensil 8B", kategori: "Alat Tulis & Koreksi", icon: "fa-pencil" },
+            { no: 9, nama: "Pensil Mekanik", kategori: "Alat Tulis & Koreksi", icon: "fa-pencil" },
+            { no: 10, nama: "Isi Pensil Mekanik", kategori: "Alat Tulis & Koreksi", icon: "fa-pencil" },
+            { no: 11, nama: "Penghapus", kategori: "Alat Tulis & Koreksi", icon: "fa-eraser" },
+            { no: 12, nama: "Penghapus Pensil Warna", kategori: "Alat Tulis & Koreksi", icon: "fa-eraser" },
+            { no: 13, nama: "Rautan Pensil", kategori: "Alat Tulis & Koreksi", icon: "fa-gear" },
+            { no: 14, nama: "Rautan 2 Lubang", kategori: "Alat Tulis & Koreksi", icon: "fa-gear" },
+            { no: 15, nama: "Penggaris 15 cm", kategori: "Alat Tulis & Koreksi", icon: "fa-ruler" },
+            { no: 16, nama: "Penggaris 30 cm", kategori: "Alat Tulis & Koreksi", icon: "fa-ruler" },
+            { no: 17, nama: "Penggaris 50 cm", kategori: "Alat Tulis & Koreksi", icon: "fa-ruler" },
+            { no: 18, nama: "Penggaris Besi 30 cm", kategori: "Alat Tulis & Koreksi", icon: "fa-ruler" },
+            { no: 19, nama: "Busur Derajat", kategori: "Alat Tulis & Koreksi", icon: "fa-compass-drafting" },
+            { no: 20, nama: "Jangka", kategori: "Alat Tulis & Koreksi", icon: "fa-compass-drafting" },
+            { no: 21, nama: "Set Penggaris Geometri", kategori: "Alat Tulis & Koreksi", icon: "fa-ruler-combined" },
+            { no: 22, nama: "Correction Tape", kategori: "Alat Tulis & Koreksi", icon: "fa-tape" },
+            { no: 23, nama: "Refill Correction Tape", kategori: "Alat Tulis & Koreksi", icon: "fa-tape" },
+            { no: 24, nama: "Correction Fluid", kategori: "Alat Tulis & Koreksi", icon: "fa-pen" },
+            { no: 25, nama: "Correction Pen", kategori: "Alat Tulis & Koreksi", icon: "fa-pen" },
+            { no: 26, nama: "Stabilo", kategori: "Alat Tulis & Koreksi", icon: "fa-highlighter" },
+            { no: 27, nama: "Drawing Pen", kategori: "Alat Tulis & Koreksi", icon: "fa-pen-nib" },
+            { no: 28, nama: "Tempat Pensil", kategori: "Alat Tulis & Koreksi", icon: "fa-box-archive" },
+            { no: 29, nama: "Kotak Pensil", kategori: "Alat Tulis & Koreksi", icon: "fa-box-archive" },
+
+            // 30 - 36: Spidol & Marker
+            { no: 30, nama: "Spidol Permanen", kategori: "Spidol & Marker", icon: "fa-marker" },
+            { no: 31, nama: "Spidol Whiteboard", kategori: "Spidol & Marker", icon: "fa-marker" },
+            { no: 32, nama: "Spidol Warna", kategori: "Spidol & Marker", icon: "fa-marker" },
+            { no: 33, nama: "Spidol Warna 12 Warna", kategori: "Spidol & Marker", icon: "fa-palette" },
+            { no: 34, nama: "Spidol Warna 24 Warna", kategori: "Spidol & Marker", icon: "fa-palette" },
+            { no: 35, nama: "Marker Board Refill", kategori: "Spidol & Marker", icon: "fa-fill-drip" },
+            { no: 36, nama: "Highlighter Set", kategori: "Spidol & Marker", icon: "fa-highlighter" },
+
+            // 37 - 54: Buku & Catatan
+            { no: 37, nama: "Buku Tulis", kategori: "Buku & Catatan", icon: "fa-book" },
+            { no: 38, nama: "Buku Tulis 38 Lembar", kategori: "Buku & Catatan", icon: "fa-book" },
+            { no: 39, nama: "Buku Tulis 58 Lembar", kategori: "Buku & Catatan", icon: "fa-book" },
+            { no: 40, nama: "Buku Tulis 100 Lembar", kategori: "Buku & Catatan", icon: "fa-book" },
+            { no: 41, nama: "Buku Gambar", kategori: "Buku & Catatan", icon: "fa-book-open" },
+            { no: 42, nama: "Buku Gambar A4", kategori: "Buku & Catatan", icon: "fa-book-open" },
+            { no: 43, nama: "Buku Gambar A3", kategori: "Buku & Catatan", icon: "fa-book-open" },
+            { no: 44, nama: "Buku Gambar Sketsa", kategori: "Buku & Catatan", icon: "fa-book-open" },
+            { no: 45, nama: "Notebook", kategori: "Buku & Catatan", icon: "fa-book-bookmark" },
+            { no: 46, nama: "Buku Agenda", kategori: "Buku & Catatan", icon: "fa-calendar-days" },
+            { no: 47, nama: "Buku Kas", kategori: "Buku & Catatan", icon: "fa-cash-register" },
+            { no: 48, nama: "Buku Ekspedisi", kategori: "Buku & Catatan", icon: "fa-truck" },
+            { no: 49, nama: "Buku Kotak-Kotak", kategori: "Buku & Catatan", icon: "fa-border-all" },
+            { no: 50, nama: "Buku Musik", kategori: "Buku & Catatan", icon: "fa-music" },
+            { no: 51, nama: "Buku Kegiatan", kategori: "Buku & Catatan", icon: "fa-clipboard-list" },
+            { no: 52, nama: "Memo Pad", kategori: "Buku & Catatan", icon: "fa-note-sticky" },
+            { no: 53, nama: "Sticky Notes", kategori: "Buku & Catatan", icon: "fa-note-sticky" },
+            { no: 54, nama: "Sketchbook", kategori: "Buku & Catatan", icon: "fa-palette" },
+
+            // 55 - 93: KERTAS
+            { no: 55, nama: "HVS A4 70 gsm", kategori: "Kertas", icon: "fa-file" },
+            { no: 56, nama: "HVS A4 80 gsm", kategori: "Kertas", icon: "fa-file" },
+            { no: 57, nama: "HVS F4 70 gsm", kategori: "Kertas", icon: "fa-file" },
+            { no: 58, nama: "HVS F4 80 gsm", kategori: "Kertas", icon: "fa-file" },
+            { no: 59, nama: "Kertas A3", kategori: "Kertas", icon: "fa-file" },
+            { no: 60, nama: "Kertas Foto Glossy", kategori: "Kertas", icon: "fa-image" },
+            { no: 61, nama: "Kertas Foto Matte", kategori: "Kertas", icon: "fa-image" },
+            { no: 62, nama: "Kertas Buffalo", kategori: "Kertas", icon: "fa-folder-open" },
+            { no: 63, nama: "Kertas Manila", kategori: "Kertas", icon: "fa-scroll" },
+            { no: 64, nama: "Kertas Origami", kategori: "Kertas", icon: "fa-shapes" },
+            { no: 65, nama: "Kertas Origami Warna", kategori: "Kertas", icon: "fa-shapes" },
+            { no: 66, nama: "Kertas Origami Motif", kategori: "Kertas", icon: "fa-shapes" },
+            { no: 67, nama: "Kertas Karton", kategori: "Kertas", icon: "fa-square" },
+            { no: 68, nama: "Kertas Karton Tebal", kategori: "Kertas", icon: "fa-square" },
+            { no: 69, nama: "Kertas Warna", kategori: "Kertas", icon: "fa-palette" },
+            { no: 70, nama: "Kertas Manggis", kategori: "Kertas", icon: "fa-scroll" },
+            { no: 71, nama: "Kertas Kado", kategori: "Kertas", icon: "fa-gift" },
+            { no: 72, nama: "Kertas Kopi", kategori: "Kertas", icon: "fa-scroll" },
+            { no: 73, nama: "Kertas Concorde", kategori: "Kertas", icon: "fa-award" },
+            { no: 74, nama: "Kertas Linen", kategori: "Kertas", icon: "fa-file-lines" },
+            { no: 75, nama: "Kertas Asturo", kategori: "Kertas", icon: "fa-palette" },
+            { no: 76, nama: "Kertas Asturo Folio", kategori: "Kertas", icon: "fa-palette" },
+            { no: 77, nama: "Kertas Kalkir", kategori: "Kertas", icon: "fa-clone" },
+            { no: 78, nama: "Kertas Milimeter Block", kategori: "Kertas", icon: "fa-border-all" },
+            { no: 79, nama: "Kertas Sticker A4", kategori: "Kertas", icon: "fa-tags" },
+            { no: 80, nama: "Kertas HVS Warna A4", kategori: "Kertas", icon: "fa-file" },
+            { no: 81, nama: "Kertas HVS Warna F4", kategori: "Kertas", icon: "fa-file" },
+            { no: 82, nama: "Kertas Samson", kategori: "Kertas", icon: "fa-box" },
+            { no: 83, nama: "Kertas Jasmine", kategori: "Kertas", icon: "fa-sparkles" },
+            { no: 84, nama: "Kertas Ivory", kategori: "Kertas", icon: "fa-sheet-plastic" },
+            { no: 85, nama: "Kertas Art Paper", kategori: "Kertas", icon: "fa-print" },
+            { no: 86, nama: "Kertas Art Carton", kategori: "Kertas", icon: "fa-print" },
+            { no: 87, nama: "Kertas Sertifikat", kategori: "Kertas", icon: "fa-certificate" },
+            { no: 88, nama: "Kertas Drawing", kategori: "Kertas", icon: "fa-pen-ruler" },
+            { no: 89, nama: "Kertas Karbon", kategori: "Kertas", icon: "fa-clone" },
+            { no: 90, nama: "Carbonless Form", kategori: "Kertas", icon: "fa-receipt" },
+            { no: 91, nama: "Kertas Fax", kategori: "Kertas", icon: "fa-fax" },
+            { no: 92, nama: "Kertas Thermal 57mm", kategori: "Kertas", icon: "fa-receipt" },
+            { no: 93, nama: "Kertas Thermal 80mm", kategori: "Kertas", icon: "fa-receipt" },
+
+            // 94 - 121: Map, Arsip & Amplop
+            { no: 94, nama: "Map L", kategori: "Map, Arsip & Amplop", icon: "fa-folder" },
+            { no: 95, nama: "Map Plastik L", kategori: "Map, Arsip & Amplop", icon: "fa-folder" },
+            { no: 96, nama: "Stopmap", kategori: "Map, Arsip & Amplop", icon: "fa-folder-closed" },
+            { no: 97, nama: "Snelhecter", kategori: "Map, Arsip & Amplop", icon: "fa-folder" },
+            { no: 98, nama: "Ordner A4", kategori: "Map, Arsip & Amplop", icon: "fa-box-archive" },
+            { no: 99, nama: "Binder A4", kategori: "Map, Arsip & Amplop", icon: "fa-book" },
+            { no: 100, nama: "Binder A5", kategori: "Map, Arsip & Amplop", icon: "fa-book" },
+            { no: 101, nama: "Clear Holder", kategori: "Map, Arsip & Amplop", icon: "fa-folder-open" },
+            { no: 102, nama: "Clipboard", kategori: "Map, Arsip & Amplop", icon: "fa-clipboard" },
+            { no: 103, nama: "Folder", kategori: "Map, Arsip & Amplop", icon: "fa-folder" },
+            { no: 104, nama: "Expanding File", kategori: "Map, Arsip & Amplop", icon: "fa-folder-tree" },
+            { no: 105, nama: "Map Lamaran Kerja", kategori: "Map, Arsip & Amplop", icon: "fa-briefcase" },
+            { no: 106, nama: "Map Dokumen", kategori: "Map, Arsip & Amplop", icon: "fa-folder" },
+            { no: 107, nama: "Map Kancing", kategori: "Map, Arsip & Amplop", icon: "fa-folder" },
+            { no: 108, nama: "Map Plastik", kategori: "Map, Arsip & Amplop", icon: "fa-folder" },
+            { no: 109, nama: "Map Folio", kategori: "Map, Arsip & Amplop", icon: "fa-folder" },
+            { no: 110, nama: "Map Portofolio", kategori: "Map, Arsip & Amplop", icon: "fa-briefcase" },
+            { no: 111, nama: "Map Resleting", kategori: "Map, Arsip & Amplop", icon: "fa-folder" },
+            { no: 112, nama: "Map Business File", kategori: "Map, Arsip & Amplop", icon: "fa-file-lines" },
+            { no: 113, nama: "Map Sertifikat", kategori: "Map, Arsip & Amplop", icon: "fa-certificate" },
+            { no: 114, nama: "Map Kartu Nama", kategori: "Map, Arsip & Amplop", icon: "fa-id-card" },
+            { no: 115, nama: "Label Sticker", kategori: "Map, Arsip & Amplop", icon: "fa-tag" },
+            { no: 116, nama: "Label Nama", kategori: "Map, Arsip & Amplop", icon: "fa-tag" },
+            { no: 117, nama: "Amplop Putih", kategori: "Map, Arsip & Amplop", icon: "fa-envelope" },
+            { no: 118, nama: "Amplop Putih A4", kategori: "Map, Arsip & Amplop", icon: "fa-envelope" },
+            { no: 119, nama: "Amplop Coklat Folio", kategori: "Map, Arsip & Amplop", icon: "fa-envelope-open" },
+            { no: 120, nama: "Amplop Coklat A4", kategori: "Map, Arsip & Amplop", icon: "fa-envelope-open" },
+            { no: 121, nama: "Amplop Coklat A3", kategori: "Map, Arsip & Amplop", icon: "fa-envelope-open" },
+
+            // 122 - 151: Perlengkapan Kantor & Meja
+            { no: 122, nama: "Stapler", kategori: "Perlengkapan Kantor", icon: "fa-stapler" },
+            { no: 123, nama: "Stapler Mini", kategori: "Perlengkapan Kantor", icon: "fa-stapler" },
+            { no: 124, nama: "Staples Heavy Duty", kategori: "Perlengkapan Kantor", icon: "fa-stapler" },
+            { no: 125, nama: "Isi Staples No.10", kategori: "Perlengkapan Kantor", icon: "fa-paperclip" },
+            { no: 126, nama: "Isi Staples 24/6", kategori: "Perlengkapan Kantor", icon: "fa-paperclip" },
+            { no: 127, nama: "Isi Staples 23/6", kategori: "Perlengkapan Kantor", icon: "fa-paperclip" },
+            { no: 128, nama: "Isi Staples 23/10", kategori: "Perlengkapan Kantor", icon: "fa-paperclip" },
+            { no: 129, nama: "Paper Clip", kategori: "Perlengkapan Kantor", icon: "fa-paperclip" },
+            { no: 130, nama: "Klip Kertas Warna", kategori: "Perlengkapan Kantor", icon: "fa-paperclip" },
+            { no: 131, nama: "Binder Clip Small", kategori: "Perlengkapan Kantor", icon: "fa-paperclip" },
+            { no: 132, nama: "Binder Clip Medium", kategori: "Perlengkapan Kantor", icon: "fa-paperclip" },
+            { no: 133, nama: "Binder Clip Large", kategori: "Perlengkapan Kantor", icon: "fa-paperclip" },
+            { no: 134, nama: "Perforator 1 Lubang", kategori: "Perlengkapan Kantor", icon: "fa-circle-dot" },
+            { no: 135, nama: "Perforator 2 Lubang", kategori: "Perlengkapan Kantor", icon: "fa-circle-dot" },
+            { no: 136, nama: "Gunting Kecil", kategori: "Perlengkapan Kantor", icon: "fa-scissors" },
+            { no: 137, nama: "Gunting Besar", kategori: "Perlengkapan Kantor", icon: "fa-scissors" },
+            { no: 138, nama: "Cutter Kecil", kategori: "Perlengkapan Kantor", icon: "fa-pen-to-square" },
+            { no: 139, nama: "Cutter Besar", kategori: "Perlengkapan Kantor", icon: "fa-pen-to-square" },
+            { no: 140, nama: "Isi Cutter Kecil", kategori: "Perlengkapan Kantor", icon: "fa-lines-leaning" },
+            { no: 141, nama: "Isi Cutter Besar", kategori: "Perlengkapan Kantor", icon: "fa-lines-leaning" },
+            { no: 142, nama: "Kalkulator", kategori: "Perlengkapan Kantor", icon: "fa-calculator" },
+            { no: 143, nama: "Papan Tulis Mini", kategori: "Perlengkapan Kantor", icon: "fa-chalkboard" },
+            { no: 144, nama: "Penghapus Papan Tulis", kategori: "Perlengkapan Kantor", icon: "fa-eraser" },
+            { no: 145, nama: "Papan Jalan A4", kategori: "Perlengkapan Kantor", icon: "fa-clipboard" },
+            { no: 146, nama: "Push Pin", kategori: "Perlengkapan Kantor", icon: "fa-thumbtack" },
+            { no: 147, nama: "Pin Binder", kategori: "Perlengkapan Kantor", icon: "fa-thumbtack" },
+            { no: 148, nama: "CD/DVD", kategori: "Perlengkapan Kantor", icon: "fa-compact-disc" },
+            { no: 149, nama: "Flashdisk", kategori: "Perlengkapan Kantor", icon: "fa-hard-drive" },
+            { no: 150, nama: "Mouse", kategori: "Perlengkapan Kantor", icon: "fa-mouse" },
+            { no: 151, nama: "Kabel Data", kategori: "Perlengkapan Kantor", icon: "fa-cable-car" },
+
+            // 152 - 171: LEM, LAKBAN & PEREKAT
+            { no: 152, nama: "Lem Kertas", kategori: "Lem & Perekat", icon: "fa-bottle-droplet" },
+            { no: 153, nama: "Lem Stik", kategori: "Lem & Perekat", icon: "fa-cubes" },
+            { no: 154, nama: "Lem Serbaguna", kategori: "Lem & Perekat", icon: "fa-bottle-droplet" },
+            { no: 155, nama: "Lem Tembak", kategori: "Lem & Perekat", icon: "fa-gun" },
+            { no: 156, nama: "Stick Lem Tembak", kategori: "Lem & Perekat", icon: "fa-cubes" },
+            { no: 157, nama: "Lem Kayu", kategori: "Lem & Perekat", icon: "fa-cubes" },
+            { no: 158, nama: "Lem Cair", kategori: "Lem & Perekat", icon: "fa-bottle-droplet" },
+            { no: 159, nama: "Lem Glitter", kategori: "Lem & Perekat", icon: "fa-sparkles" },
+            { no: 160, nama: "Double Tape", kategori: "Lem & Perekat", icon: "fa-tape" },
+            { no: 161, nama: "Double Tip Foam", kategori: "Lem & Perekat", icon: "fa-tape" },
+            { no: 162, nama: "Double Tip 1/2 Inch", kategori: "Lem & Perekat", icon: "fa-tape" },
+            { no: 163, nama: "Lakban Bening", kategori: "Lem & Perekat", icon: "fa-tape" },
+            { no: 164, nama: "Lakban Bening Besar", kategori: "Lem & Perekat", icon: "fa-tape" },
+            { no: 165, nama: "Lakban Coklat", kategori: "Lem & Perekat", icon: "fa-tape" },
+            { no: 166, nama: "Lakban Hitam", kategori: "Lem & Perekat", icon: "fa-tape" },
+            { no: 167, nama: "Lakban Kertas", kategori: "Lem & Perekat", icon: "fa-tape" },
+            { no: 168, nama: "Lakban OPP", kategori: "Lem & Perekat", icon: "fa-tape" },
+            { no: 169, nama: "Masking Tape", kategori: "Lem & Perekat", icon: "fa-tape" },
+            { no: 170, nama: "Isolasi Listrik", kategori: "Lem & Perekat", icon: "fa-bolt" },
+            { no: 171, nama: "Dispenser Tape", kategori: "Lem & Perekat", icon: "fa-tape" },
+
+            // 172 - 184: Seni & Kerajinan
+            { no: 172, nama: "Pensil Warna", kategori: "Seni & Kerajinan", icon: "fa-palette" },
+            { no: 173, nama: "Pensil Warna 12 Warna", kategori: "Seni & Kerajinan", icon: "fa-palette" },
+            { no: 174, nama: "Pensil Warna 24 Warna", kategori: "Seni & Kerajinan", icon: "fa-palette" },
+            { no: 175, nama: "Crayon", kategori: "Seni & Kerajinan", icon: "fa-palette" },
+            { no: 176, nama: "Crayon 12 Warna", kategori: "Seni & Kerajinan", icon: "fa-palette" },
+            { no: 177, nama: "Crayon 24 Warna", kategori: "Seni & Kerajinan", icon: "fa-palette" },
+            { no: 178, nama: "Cat Air", kategori: "Seni & Kerajinan", icon: "fa-fill-drip" },
+            { no: 179, nama: "Kuas Lukis", kategori: "Seni & Kerajinan", icon: "fa-paint-brush" },
+            { no: 180, nama: "Palet Cat", kategori: "Seni & Kerajinan", icon: "fa-palette" },
+            { no: 181, nama: "Glitter Craft", kategori: "Seni & Kerajinan", icon: "fa-wand-magic-sparkles" },
+            { no: 182, nama: "Foam Sheet", kategori: "Seni & Kerajinan", icon: "fa-layer-group" },
+            { no: 183, nama: "Kertas Crepe", kategori: "Seni & Kerajinan", icon: "fa-scroll" },
+            { no: 184, nama: "Sticker Nama Anak", kategori: "Seni & Kerajinan", icon: "fa-tags" },
+
+            // 185 - 215: Percetakan & Nota
+            { no: 185, nama: "Tinta Printer", kategori: "Percetakan & Nota", icon: "fa-fill-drip" },
+            { no: 186, nama: "Cartridge Printer", kategori: "Percetakan & Nota", icon: "fa-print" },
+            { no: 187, nama: "Toner Printer", kategori: "Percetakan & Nota", icon: "fa-print" },
+            { no: 188, nama: "Kertas Label A4", kategori: "Percetakan & Nota", icon: "fa-tags" },
+            { no: 189, nama: "Kertas Continuous Form", kategori: "Percetakan & Nota", icon: "fa-scroll" },
+            { no: 190, nama: "Kartu Nama", kategori: "Percetakan & Nota", icon: "fa-id-card" },
+            { no: 191, nama: "Stempel", kategori: "Percetakan & Nota", icon: "fa-stamp" },
+            { no: 192, nama: "Kartu PVC", kategori: "Percetakan & Nota", icon: "fa-id-card" },
+            { no: 193, nama: "ID Card", kategori: "Percetakan & Nota", icon: "fa-id-badge" },
+            { no: 194, nama: "Plastik ID Card", kategori: "Percetakan & Nota", icon: "fa-id-card-clip" },
+            { no: 195, nama: "Tali ID Card", kategori: "Percetakan & Nota", icon: "fa-ribbon" },
+            { no: 196, nama: "Spiral Jilid", kategori: "Percetakan & Nota", icon: "fa-lines-leaning" },
+            { no: 197, nama: "Cover Jilid", kategori: "Percetakan & Nota", icon: "fa-book-open" },
+            { no: 198, nama: "Plastik Laminating", kategori: "Percetakan & Nota", icon: "fa-sheet-plastic" },
+            { no: 199, nama: "Kertas Transfer", kategori: "Percetakan & Nota", icon: "fa-copy" },
+            { no: 200, nama: "Kartu Ujian", kategori: "Percetakan & Nota", icon: "fa-id-card" },
+            { no: 201, nama: "Nota", kategori: "Percetakan & Nota", icon: "fa-receipt" },
+            { no: 202, nama: "Nota NCR", kategori: "Percetakan & Nota", icon: "fa-receipt" },
+            { no: 203, nama: "Formulir", kategori: "Percetakan & Nota", icon: "fa-file-lines" },
+            { no: 204, nama: "Stiker", kategori: "Percetakan & Nota", icon: "fa-tags" },
+            { no: 205, nama: "Brosur", kategori: "Percetakan & Nota", icon: "fa-newspaper" },
+            { no: 206, nama: "Undangan", kategori: "Percetakan & Nota", icon: "fa-envelope-open-text" },
+            { no: 207, nama: "Foto 2x3", kategori: "Percetakan & Nota", icon: "fa-image" },
+            { no: 208, nama: "Foto 3x4", kategori: "Percetakan & Nota", icon: "fa-image" },
+            { no: 209, nama: "Foto 4x6", kategori: "Percetakan & Nota", icon: "fa-image" },
+            { no: 210, nama: "Materai 10.000", kategori: "Percetakan & Nota", icon: "fa-stamp" },
+            { no: 211, nama: "Buku Nota 1 Rangkap", kategori: "Percetakan & Nota", icon: "fa-receipt" },
+            { no: 212, nama: "Buku Nota 2 Rangkap", kategori: "Percetakan & Nota", icon: "fa-receipt" },
+            { no: 213, nama: "Buku Nota 3 Rangkap", kategori: "Percetakan & Nota", icon: "fa-receipt" },
+            { no: 214, nama: "Kwitansi", kategori: "Percetakan & Nota", icon: "fa-money-check" },
+            { no: 215, nama: "Kwitansi NCR", kategori: "Percetakan & Nota", icon: "fa-money-check-dollar" }
+        ];
+
+        // State Aplikasi
+        let currentCategory = 'ALL';
+        let searchQuery = '';
+
+        const atkGrid = document.getElementById('atkGrid');
+        const emptyState = document.getElementById('emptyState');
+        const visibleCount = document.getElementById('visible-count');
+        const searchInput = document.getElementById('searchInput');
+        const clearSearch = document.getElementById('clearSearch');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+
+        // Render Kartu Produk ATK
+        function renderATK() {
+            const filtered = daftarATK.filter(item => {
+                const matchCategory = currentCategory === 'ALL' || item.kategori === currentCategory;
+                const matchSearch = item.nama.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                                    item.kategori.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchCategory && matchSearch;
+            });
+
+            atkGrid.innerHTML = '';
+            visibleCount.innerText = filtered.length;
+
+            if (filtered.length === 0) {
+                emptyState.classList.remove('hidden');
+            } else {
+                emptyState.classList.add('hidden');
+                
+                filtered.forEach(item => {
+                    const waText = encodeURIComponent(`Halo Toko MUCI, saya ingin tanya/pesan: ${item.nama}`);
+                    const waLink = `https://wa.me/6285185207306?text=${waText}`;
+
+                    const card = document.createElement('div');
+                    card.className = 'glass-card rounded-xl p-3 flex flex-col justify-between hover:border-indigo-400/50';
+                    card.innerHTML = `
+                        <div>
+                            <div class="flex items-center justify-between gap-1 mb-2">
+                                <span class="text-[9px] font-extrabold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-md truncate max-w-[110px]">
+                                    ${item.kategori}
+                                </span>
+                                <span class="text-[10px] font-bold text-slate-400">#${item.no}</span>
+                            </div>
+                            <div class="flex items-start gap-2 mb-2">
+                                <div class="w-7 h-7 rounded-lg bg-slate-100 flex items-center justify-center text-slate-600 text-xs shrink-0 mt-0.5">
+                                    <i class="fa-solid ${item.icon}"></i>
+                                </div>
+                                <h4 class="text-xs font-bold text-slate-800 leading-snug line-clamp-2" title="${item.nama}">
+                                    ${item.nama}
+                                </h4>
+                            </div>
+                        </div>
+
+                        <div class="pt-2 border-t border-slate-100">
+                            <a href="${waLink}" target="_blank" class="w-full py-1.5 rounded-lg bg-slate-100 hover:bg-emerald-600 hover:text-white text-slate-700 text-[10px] font-bold transition-all flex items-center justify-center gap-1.5">
+                                <i class="fa-brands fa-whatsapp text-xs"></i>
+                                <span>Pesan / Stok</span>
+                            </a>
+                        </div>
+                    `;
+                    atkGrid.appendChild(card);
+                });
+            }
+        }
+
+        // Event Listener: Filter Kategori
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-indigo-600', 'text-white', 'shadow-md', 'shadow-indigo-500/20');
+                    b.classList.add('bg-slate-100', 'text-slate-700');
+                });
+
+                btn.classList.add('active', 'bg-indigo-600', 'text-white', 'shadow-md', 'shadow-indigo-500/20');
+                btn.classList.remove('bg-slate-100', 'text-slate-700');
+
+                currentCategory = btn.getAttribute('data-category');
+                renderATK();
+            });
+        });
+
+        // Event Listener: Search Bar
+        searchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value.trim();
+            if (searchQuery.length > 0) {
+                clearSearch.classList.remove('hidden');
+            } else {
+                clearSearch.classList.add('hidden');
+            }
+            renderATK();
+        });
+
+        // Tombol Reset Search
+        clearSearch.addEventListener('click', () => {
+            searchInput.value = '';
+            searchQuery = '';
+            clearSearch.classList.add('hidden');
+            renderATK();
+            searchInput.focus();
+        });
+
+        // Render Pertama Kali
+        renderATK();
+    </script>
+</body>
+</html>
