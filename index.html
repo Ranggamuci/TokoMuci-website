@@ -657,13 +657,12 @@
         const clearSearch = document.getElementById('clearSearch');
         const filterBtns = document.querySelectorAll('.filter-btn');
 
-        // Render Kartu Produk ATK
+        // Render Kartu Produk ATK    
         function renderATK() {
             const filtered = daftarATK.filter(item => {
-                const matchCategory = currentCategory === 'ALL' || item.kategori === currentCategory;
-                const matchSearch = item.nama.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                                    item.kategori.toLowerCase().includes(searchQuery.toLowerCase());
-                return matchCategory && matchSearch;
+                ... (isi di dalamnya) ...
+            }
+        }                             
             });
 
             atkGrid.innerHTML = '';
