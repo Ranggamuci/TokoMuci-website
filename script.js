@@ -39,352 +39,268 @@ const placeholderKategori = {
 };
 
 
-// ======================================================
-// PENGATURAN
-// ======================================================
+// =====================================================
+// GAMBAR PRODUK ATK
+// =====================================================
 
-const ATK_IMAGE_FOLDER = "./images/atk/";
+const atkImageMap = {
+    "Pulpen": "Pulpen.jpg",
+    "Pulpen Gel": "Pulpen Gel.jpg",
+    "Pulpen Ballpoint": "Pulpen Ballpoint.jpeg",
+    "Pensil HB": "Pensil HB.jpg",
+    "Pensil 2B": "Pensil2B.jpg",
+    "Penghapus": "Penghapus.jpeg",
+    "Rautan Pensil": "Rautan Pensil.jpg",
+    "Penggaris 30 cm": "Penggaris 30 cm.jpeg",
+    "Penggaris Besi 30 cm": "Penggaris Besi 30 cm.jpg",
+    "Busur Derajat": "Busur Derajat.jpg",
+    "Jangka": "Jangka.jpg",
+    "Correction Tape": "Correction Tape.jpeg",
+    "Correction Fluid": "Correction Fluid.jpeg",
+    "Stabilo": "Stabilo.jpeg",
+    "Spidol Permanen": "Spidol Permanen.png",
+    "Spidol Whiteboard": "Spidol Whiteboard.jpeg",
+    "Spidol Warna": "Spidol Warna.jpeg",
+
+    "Buku Tulis 38 Lembar": "Buku Tulis 38 Lembar.jpg",
+    "Buku Tulis 58 Lembar": "Buku Tulis 58 Lembar.jpg",
+    "Buku Gambar A4": "Buku Gambar A4.jpg",
+    "Buku Agenda": "Buku Agenda.jpg",
+    "Buku Kas": "Buku Kas.jpg",
+    "Buku Ekspedisi": "Buku Ekspedisi.png",
+    "Buku Kotak-Kotak": "Buku Kotak-Kotak.jpeg",
+    "Memo Pad": "Memo Pad.jpeg",
+    "Sticky Notes": "Sticky Notes.jpeg",
+
+    "Kertas Buffalo": "Kertas Buffalo.png",
+    "Kertas Manila": "Kertas Manila.jpeg",
+    "Kertas Origami": "Kertas Origami.jpg",
+    "Kertas Karton": "Kertas Karton.jpeg",
+    "Kertas Kado": "Kertas Kado.jpg",
+    "Kertas Kopi": "Kertas Kopi.jpeg",
+    "Kertas Asturo Folio": "Kertas Asturo Folio.jpeg",
+    "Kertas Milimeter Block": "Kertas Milimeter Block.jpeg",
+
+    "Map L": "Map L.jpg",
+    "Stopmap": "Stopmap.png",
+    "Snelhecter": "Snelhecter.jpeg",
+    "Clear Holder": "Clear Holder.jpeg",
+    "Clipboard": "Clipboard.jpeg",
+    "Expanding File": "Expanding File.jpg",
+    "Map Lamaran Kerja": "Map Lamaran Kerja.jpeg",
+    "Map Dokumen": "Map Dokumen.jpeg",
+    "Map Kancing": "Map Kancing.jpeg",
+    "Map Plastik": "Map Plastik.jpg",
+    "Map Folio": "Map Folio.jpg",
+    "Map Resleting": "Map Resleting.jpeg",
+    "Map Business File": "Map Business File.jpg",
+    "Label Sticker": "Label Sticker.jpg",
+    "Amplop Putih": "Amplop Putih.jpg",
+
+    "Stapler": "Stapler.jpeg",
+    "Isi Staples No.10": "Isi Staples No.10.jpeg",
+    "Paper Clip": "Paper Clip.jpeg",
+    "Binder Clip Small": "Binder Clip Small.jpeg",
+    "Gunting Kecil": "Gunting Kecil.jpeg",
+    "Gunting Besar": "Gunting Besar.jpeg",
+    "Cutter Besar": "Cutter Besar.jpeg",
+    "Isi Cutter Besar": "Isi Cutter Besar.jpeg",
+    "Push Pin": "Push Pin.jpeg",
+
+    "Lem Kertas": "Lem Kertas.jpeg",
+    "Lem Serbaguna": "Lem Serbaguna.jpeg",
+    "Lem Tembak": "Lem Tembak.jpeg",
+    "Lem Kayu": "Lem Kayu.jpeg",
+    "Double Tape": "Double Tape.jpeg",
+    "Double Tip Foam": "Double Tip Foam.jpg",
+    "Lakban Bening": "Lakban Bening.jpeg",
+    "Lakban Coklat": "Lakban Coklat.jpeg",
+    "Lakban Hitam": "Lakban Hitam.jpeg",
+    "Lakban Kertas": "Lakban Kertas.jpeg",
+    "Isolasi Listrik": "Isolasi Listrik.jpeg",
+
+    "Pensil Warna": "Pensil Warna.jpeg",
+    "Pensil Warna 12 Warna": "Pensil Warna 12 Warna.jpeg",
+    "Crayon": "Crayon.jpeg",
+    "Cat Air": "Cat Air.jpeg",
+    "Kuas Lukis": "Kuas Lukis.jpeg",
+    "Glitter Craft": "Glitter Craft.jpeg",
+    "Kertas Crepe": "Kertas Crepe.jpeg",
+
+    "Stempel": "stempel.png",
+    "Plastik ID Card": "Plastik ID Card.jpeg",
+    "Tali ID Card": "Tali ID Card.jpeg",
+    "Plastik Laminating": "Plastik Laminating.jpeg",
+    "Nota": "Nota.jpeg",
+
+    // Alias nama produk
+    "Isi Staples 24/6": "Isi Staples 24.jpeg",
+    "HVS A4 70 gsm": "KertasHVSA4&F4.jpeg",
+    "Lem Cair": "Lem Kertas Cair.jpeg"
+};
 
 
-// ======================================================
-// MENCARI GAMBAR PRODUK
-// ======================================================
+// =====================================================
+// FUNGSI MENCARI GAMBAR
+// =====================================================
 
-function getProductImage(item, imgElement, fallbackImg) {
+function getATKImage(item) {
 
-    const extensions = [
-        "jpg",
-        "jpeg",
-        "png",
-        "webp"
-    ];
-
-    let index = 0;
-
-    function tryNextImage() {
-
-        if (index >= extensions.length) {
-
-            // Semua format gagal
-            imgElement.onerror = null;
-            imgElement.src = fallbackImg;
-
-            return;
-        }
-
-        const extension = extensions[index];
-
-        index++;
-
-        imgElement.src =
-            `${ATK_IMAGE_FOLDER}${item.no}.${extension}`;
+    // 1. Cari berdasarkan nama produk
+    if (atkImageMap[item.nama]) {
+        return encodeURI(atkImageMap[item.nama]);
     }
 
+    // 2. Pencarian otomatis berdasarkan nama
+    const normalize = text =>
+        text.toLowerCase()
+            .replace(/\.[^/.]+$/, "")
+            .replace(/[^a-z0-9]/g, "");
 
-    imgElement.onerror = function () {
+    const target = normalize(item.nama);
 
-        tryNextImage();
+    const key = Object.keys(atkImageMap).find(key =>
+        normalize(key) === target
+    );
 
-    };
+    if (key) {
+        return encodeURI(atkImageMap[key]);
+    }
 
-
-    tryNextImage();
+    // 3. Jika gambar tidak tersedia
+    return "";
 }
 
 
-// ======================================================
+// =====================================================
 // RENDER KARTU PRODUK ATK
-// ======================================================
+// =====================================================
 
 function renderATK() {
 
     const filtered = daftarATK.filter(item => {
 
         const matchCategory =
-            currentCategory === "ALL" ||
+            currentCategory === 'ALL' ||
             item.kategori === currentCategory;
 
-
-        const search =
-            searchQuery.toLowerCase();
-
-
         const matchSearch =
-            item.nama
-                .toLowerCase()
-                .includes(search)
-
-            ||
-
-            item.kategori
-                .toLowerCase()
-                .includes(search);
-
+            item.nama.toLowerCase().includes(
+                searchQuery.toLowerCase()
+            ) ||
+            item.kategori.toLowerCase().includes(
+                searchQuery.toLowerCase()
+            );
 
         return matchCategory && matchSearch;
-
     });
 
+    atkGrid.innerHTML = '';
 
-    // Kosongkan katalog
-    atkGrid.innerHTML = "";
-
-
-    // Jumlah produk
     visibleCount.innerText = filtered.length;
 
-
-    // Tidak ada hasil pencarian
     if (filtered.length === 0) {
 
-        emptyState.classList.remove("hidden");
+        emptyState.classList.remove('hidden');
 
         return;
 
+    } else {
+
+        emptyState.classList.add('hidden');
     }
 
 
-    emptyState.classList.add("hidden");
-
-
-    // ==================================================
-    // BUAT KARTU SATU PER SATU
-    // ==================================================
-
     filtered.forEach(item => {
 
+        const image = getATKImage(item);
 
-        // WhatsApp
         const waText = encodeURIComponent(
-            `Halo Toko MUCI, saya ingin tanya stok/harga: ${item.nama}`
+            `Halo Toko MUCI, saya ingin tanya/pesan: ${item.nama}`
         );
-
 
         const waLink =
             `https://wa.me/6285185207306?text=${waText}`;
 
 
-        // Gambar cadangan
-        const fallbackImg =
-            placeholderKategori[item.kategori] ||
-            placeholderKategori["Alat Tulis & Koreksi"];
-
-
-        // Buat kartu
-        const card =
-            document.createElement("div");
-
+        const card = document.createElement('div');
 
         card.className =
-            "glass-card rounded-2xl p-3 flex flex-col justify-between group overflow-hidden";
+            'glass-card rounded-xl overflow-hidden flex flex-col justify-between hover:border-indigo-400/50 transition-all duration-300';
 
 
-        // ==================================================
-        // HTML KARTU
-        // ==================================================
+        // =================================================
+        // GAMBAR PRODUK
+        // =================================================
+
+        const imageHTML = image
+            ? `
+                <div class="w-full h-40 sm:h-48 bg-white flex items-center justify-center overflow-hidden">
+                    <img
+                        src="${image}"
+                        alt="${item.nama}"
+                        class="w-full h-full object-contain p-2"
+                        loading="lazy"
+                        onerror="this.parentElement.innerHTML='<div class=&quot;w-full h-full flex items-center justify-center text-gray-400&quot;><span class=&quot;text-4xl&quot;>📦</span></div>'"
+                    >
+                </div>
+              `
+            : `
+                <div class="w-full h-40 sm:h-48 bg-white flex items-center justify-center">
+                    <span class="text-5xl">📦</span>
+                </div>
+              `;
+
 
         card.innerHTML = `
 
-            <!-- ========================================= -->
-            <!-- FOTO PRODUK -->
-            <!-- ========================================= -->
+            ${imageHTML}
 
-            <div>
+            <div class="p-3">
 
-                <div
-                    class="
-                        w-full
-                        h-36
-                        sm:h-44
-                        rounded-xl
-                        bg-slate-50
-                        border
-                        border-slate-100
-                        relative
-                        overflow-hidden
-                        mb-3
-                        flex
-                        items-center
-                        justify-center
-                    "
-                >
-
-                    <img
-                        class="
-                            atk-product-image
-                            w-full
-                            h-full
-                            object-contain
-                            p-2
-                            group-hover:scale-105
-                            transition-transform
-                            duration-300
-                        "
-                        alt="${item.nama}"
-                        loading="lazy"
-                    >
-
-
-                    <!-- NOMOR PRODUK -->
-
-                    <span
-                        class="
-                            absolute
-                            top-2
-                            left-2
-                            text-[9px]
-                            font-extrabold
-                            text-indigo-700
-                            bg-white/95
-                            backdrop-blur-sm
-                            px-2
-                            py-1
-                            rounded-md
-                            shadow-sm
-                        "
-                    >
-                        #${item.no}
-                    </span>
-
-
-                    <!-- INDIKATOR FOTO -->
-
-                    <span
-                        class="
-                            absolute
-                            top-2
-                            right-2
-                            text-[8px]
-                            font-bold
-                            text-slate-400
-                            bg-white/90
-                            px-2
-                            py-1
-                            rounded-md
-                        "
-                    >
-                        FOTO
-                    </span>
-
+                <div class="text-xs text-indigo-500 font-semibold mb-1">
+                    ${item.kategori}
                 </div>
 
+                <h3 class="font-bold text-gray-800 text-sm sm:text-base leading-tight">
+                    ${item.nama}
+                </h3>
 
-                <!-- ===================================== -->
-                <!-- INFORMASI PRODUK -->
-                <!-- ===================================== -->
+                <p class="text-xs text-gray-500 mt-1">
+                    ${item.satuan || ''}
+                </p>
 
-                <div class="mb-3">
+                <div class="mt-3 flex items-center justify-between gap-2">
 
-                    <span
-                        class="
-                            text-[9px]
-                            font-bold
-                            text-indigo-500
-                            uppercase
-                            tracking-wider
-                            block
-                            mb-1
-                            truncate
-                        "
+                    <div>
+                        <div class="text-xs text-gray-500">
+                            Harga
+                        </div>
+
+                        <div class="font-bold text-indigo-600">
+                            ${item.harga || 'Hubungi kami'}
+                        </div>
+                    </div>
+
+                    <a
+                        href="${waLink}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="bg-green-500 hover:bg-green-600 text-white px-3 py-2 rounded-lg text-xs font-bold transition-colors"
                     >
-                        ${item.kategori}
-                    </span>
-
-
-                    <h4
-                        class="
-                            text-sm
-                            font-bold
-                            text-slate-900
-                            leading-snug
-                            line-clamp-2
-                            min-h-[40px]
-                        "
-                        title="${item.nama}"
-                    >
-                        ${item.nama}
-                    </h4>
+                        Pesan
+                    </a>
 
                 </div>
 
             </div>
-
-
-            <!-- ========================================= -->
-            <!-- WHATSAPP -->
-            <!-- ========================================= -->
-
-            <div
-                class="
-                    pt-2
-                    border-t
-                    border-slate-100
-                "
-            >
-
-                <a
-                    href="${waLink}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="
-                        w-full
-                        py-2
-                        rounded-lg
-                        bg-emerald-50
-                        hover:bg-emerald-600
-                        hover:text-white
-                        text-emerald-700
-                        text-[10px]
-                        font-bold
-                        transition-all
-                        flex
-                        items-center
-                        justify-center
-                        gap-1.5
-                        shadow-sm
-                    "
-                >
-
-                    <i
-                        class="
-                            fa-brands
-                            fa-whatsapp
-                            text-xs
-                        "
-                    ></i>
-
-                    <span>
-                        Pesan / Stok
-                    </span>
-
-                </a>
-
-            </div>
-
         `;
 
 
-        // Ambil elemen gambar
-        const img =
-            card.querySelector(".atk-product-image");
-
-
-        // Cari gambar 1.jpg / 1.jpeg / 1.png / 1.webp
-        getProductImage(
-            item,
-            img,
-            fallbackImg
-        );
-
-
-        // Masukkan kartu ke katalog
         atkGrid.appendChild(card);
 
     });
-
 }
-
-
 // ======================================================
 // FILTER KATEGORI
 // ======================================================
