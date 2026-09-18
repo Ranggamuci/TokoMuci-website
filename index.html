@@ -346,7 +346,7 @@
             </div>
 
             <!-- Container Grid ATK (Dirender Dinamis) -->
-            <div id="atkGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+            <div id="atkGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 items-stretch">
                 <!-- Data 215 items akan otomatis dimuat oleh script di bawah -->
             </div>
 
@@ -830,12 +830,12 @@
                 const imageSrc = image;
 
                 card.innerHTML = `
-                    <div class="w-full h-40 sm:h-48 bg-white flex items-center justify-center overflow-hidden">
+                    <div class="w-full h-44 sm:h-52 bg-white flex items-center justify-center overflow-hidden border-b border-slate-100">
                         <img
                             src="${imageSrc}"
                             alt="${item.nama}"
                             class="w-full h-full object-contain p-2"
-                            loading="lazy"
+                            loading="eager"
                             onerror="this.onerror=null;this.src='https://placehold.co/800x600/f8fafc/475569?text=Gambar+tidak+tersedia';"
                         >
                     </div>
@@ -851,7 +851,7 @@
                         </div>
 
                         <h4
-                            class="text-sm font-bold text-slate-800 leading-snug line-clamp-2"
+                            class="text-sm font-bold text-slate-800 leading-snug min-h-[2.75rem] line-clamp-2"
                             title="${item.nama}"
                         >
                             ${item.nama}
