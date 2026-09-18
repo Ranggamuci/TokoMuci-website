@@ -765,8 +765,14 @@
         }
 
         function getATKImage(item) {
-            if (atkImageMap[item.nama]) {
-                return encodeURI('./' + atkImageMap[item.nama]);
+            const filename = atkImageMap[item.nama];
+
+            if (filename) {
+                // Ambil gambar langsung dari repository GitHub.
+                // encodeURIComponent penting untuk nama file yang memiliki spasi,
+                // &, tanda kurung, dan karakter khusus lainnya.
+                return 'https://raw.githubusercontent.com/Ranggamuci/TokoMuci-website/main/' +
+                    encodeURIComponent(filename);
             }
 
             const target = normalizeProductName(item.nama);
@@ -774,7 +780,15 @@
                 normalizeProductName(k) === target
             );
 
-            return key ? encodeURI('./' + atkImageMap[key]) : '';
+            if (key) {
+                return 'https://raw.githubusercontent.com/Ranggamuci/TokoMuci-website/main/' +
+                    encodeURIComponent(atkImageMap[key]);
+            }
+
+            // Semua 215 kartu tetap mempunyai gambar meskipun file produk
+            // belum tersedia di repository.
+            const label = encodeURIComponent(item.nama);
+            return 'https://placehold.co/800x600/f8fafc/475569?text=' + label;
         }
 
         // Render Kartu Produk ATK
@@ -813,8 +827,7 @@
                 card.className =
                     'glass-card rounded-xl overflow-hidden p-0 flex flex-col justify-between hover:border-indigo-400/50 transition-all duration-300';
 
-                const imageSrc = image ||
-                    'https://images.unsplash.com/photo-1585336261026-6757688719d3?auto=format&fit=crop&w=600&q=80';
+                const imageSrc = image;
 
                 card.innerHTML = `
                     <div class="w-full h-40 sm:h-48 bg-white flex items-center justify-center overflow-hidden">
@@ -823,7 +836,7 @@
                             alt="${item.nama}"
                             class="w-full h-full object-contain p-2"
                             loading="lazy"
-                            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1585336261026-6757688719d3?auto=format&fit=crop&w=600&q=80';"
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x600/f8fafc/475569?text=Gambar+tidak+tersedia';"
                         >
                     </div>
 
