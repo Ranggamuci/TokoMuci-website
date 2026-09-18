@@ -95,7 +95,7 @@
                 <a href="#layanan-utama" class="hover:text-indigo-600 transition-colors">Layanan Utama</a>
                 <a href="#katalog-atk" class="hover:text-indigo-600 transition-colors flex items-center gap-1.5">
                     <span>Katalog ATK</span>
-                    <span class="text-[10px] bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-full font-bold">215 Item</span>
+                    <span class="text-[10px] bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-full font-bold">212 Item</span>
                 </a>
             </div>
 
@@ -292,7 +292,7 @@
                         <i class="fa-solid fa-boxes-stacked mr-1"></i> Sedia Eceran & Grosir
                     </span>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Daftar Lengkap ATK Toko MUCI</h2>
-                    <p class="text-slate-500 text-sm mt-1">Tersedia <span class="font-bold text-indigo-600">215+ item</span> kebutuhan alat tulis, kertas, map, perekat, hingga perlengkapan kantor.</p>
+                    <p class="text-slate-500 text-sm mt-1">Tersedia <span class="font-bold text-indigo-600">212+ item</span> kebutuhan alat tulis, kertas, map, perekat, hingga perlengkapan kantor.</p>
                 </div>
 
                 <!-- Input Pencarian -->
@@ -308,10 +308,10 @@
             <!-- Tab Kategori Interaktif -->
             <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-6 category-scroll text-xs">
                 <button class="filter-btn active whitespace-nowrap px-4 py-2 rounded-xl font-bold bg-indigo-600 text-white shadow-md shadow-indigo-500/20 transition-all" data-category="ALL">
-                    Semua (<span id="count-all">215</span>)
+                    Semua (<span id="count-all">212</span>)
                 </button>
                 <button class="filter-btn whitespace-nowrap px-4 py-2 rounded-xl font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all" data-category="Alat Tulis & Koreksi">
-                    <i class="fa-solid fa-pen-nib mr-1 text-slate-400"></i> Alat Tulis & Koreksi (29)
+                    <i class="fa-solid fa-pen-nib mr-1 text-slate-400"></i> Alat Tulis & Koreksi (26)
                 </button>
                 <button class="filter-btn whitespace-nowrap px-4 py-2 rounded-xl font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all" data-category="Spidol & Marker">
                     <i class="fa-solid fa-highlighter mr-1 text-slate-400"></i> Spidol (7)
@@ -341,13 +341,13 @@
 
             <!-- Info Bar Jumlah Tampil -->
             <div class="flex items-center justify-between text-xs text-slate-500 mb-4 px-1">
-                <div>Menampilkan <span id="visible-count" class="font-bold text-slate-900">215</span> produk</div>
+                <div>Menampilkan <span id="visible-count" class="font-bold text-slate-900">212</span> produk</div>
                 <div class="text-[11px] text-slate-400">Klik tombol WhatsApp untuk langsung tanya stok/order</div>
             </div>
 
             <!-- Container Grid ATK (Dirender Dinamis) -->
             <div id="atkGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 items-stretch">
-                <!-- Data 215 items akan otomatis dimuat oleh script di bawah -->
+                <!-- Data 212 items akan otomatis dimuat oleh script di bawah -->
             </div>
 
             <!-- Pesan Kosong Jika Pencarian Tidak Ada -->
@@ -384,11 +384,11 @@
             </div>
         </div>
         <div class="max-w-6xl mx-auto border-t border-slate-800 mt-6 pt-6 text-center text-[11px] text-slate-500">
-            © 2026 Toko MUCI — Print, Fotokopi & 215+ Alat Tulis Kantor.
+            © 2026 Toko MUCI — Print, Fotokopi & 212+ Alat Tulis Kantor.
         </div>
     </footer>
 
-    <!-- Script Swiper & Manajemen Data 215 ATK -->
+    <!-- Script Swiper & Manajemen Data 212 ATK -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         // Inisialisasi Swiper Banner secara aman.
@@ -412,7 +412,7 @@
         }
 
         // ==============================================================
-        // MASTER DATA: 215 DAFTAR LENGKAP ATK TOKO MUCI
+        // MASTER DATA: 212 DAFTAR LENGKAP ATK TOKO MUCI
         // ==============================================================
         const daftarATK = [
             // 1 - 29: Alat Tulis & Koreksi
@@ -421,9 +421,6 @@
             { no: 3, nama: "Pulpen Ballpoint", kategori: "Alat Tulis & Koreksi", icon: "fa-pen-fancy" },
             { no: 4, nama: "Pensil HB", kategori: "Alat Tulis & Koreksi", icon: "fa-pencil" },
             { no: 5, nama: "Pensil 2B", kategori: "Alat Tulis & Koreksi", icon: "fa-pencil" },
-            { no: 6, nama: "Pensil 4B", kategori: "Alat Tulis & Koreksi", icon: "fa-pencil" },
-            { no: 7, nama: "Pensil 6B", kategori: "Alat Tulis & Koreksi", icon: "fa-pencil" },
-            { no: 8, nama: "Pensil 8B", kategori: "Alat Tulis & Koreksi", icon: "fa-pencil" },
             { no: 9, nama: "Pensil Mekanik", kategori: "Alat Tulis & Koreksi", icon: "fa-pencil" },
             { no: 10, nama: "Isi Pensil Mekanik", kategori: "Alat Tulis & Koreksi", icon: "fa-pencil" },
             { no: 11, nama: "Penghapus", kategori: "Alat Tulis & Koreksi", icon: "fa-eraser" },
@@ -649,6 +646,9 @@
             { no: 215, nama: "Kwitansi NCR", kategori: "Percetakan & Nota", icon: "fa-money-check-dollar" }
         ];
 
+        // Nomor katalog dibuat ulang agar tetap berurutan setelah item dihapus.
+        daftarATK.forEach((item, index) => { item.no = index + 1; });
+
         // State Aplikasi
         let currentCategory = 'ALL';
         let searchQuery = '';
@@ -670,9 +670,6 @@
     "Pulpen Ballpoint": "Pulpen Ballpoint.jpeg",
     "Pensil HB": "Pensil HB.jpg",
     "Pensil 2B": "Pensil2B.jpg",
-    "Pensil 4B": "Pensil4B.jpg",
-    "Pensil 6B": "Pensil6B.jpg",
-    "Pensil 8B": "Pensil8B.jpg",
     "Penghapus": "Penghapus.jpeg",
     "Rautan Pensil": "Rautan Pensil.jpg",
     "Penggaris 30 cm": "Penggaris 30 cm.jpeg",
