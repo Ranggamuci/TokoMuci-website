@@ -144,33 +144,32 @@ const atkImageMap = {
 // FUNGSI MENCARI GAMBAR
 // =====================================================
 
+function normalizeProductName(text) {
+    return String(text || "")
+        .toLowerCase()
+        .replace(/\.[^/.]+$/, "")
+        .replace(/[^a-z0-9]/g, "");
+}
+
 function getATKImage(item) {
 
-    // 1. Cari berdasarkan nama produk
-    if (atkImageMap[item.nama]) {
-        return encodeURI(atkImageMap[item.nama]);
+    const direct = atkImageMap[item.nama];
+    if (direct) {
+        return encodeURI(`./${direct}`);
     }
 
-    // 2. Pencarian otomatis berdasarkan nama
-    const normalize = text =>
-        text.toLowerCase()
-            .replace(/\.[^/.]+$/, "")
-            .replace(/[^a-z0-9]/g, "");
-
-    const target = normalize(item.nama);
+    const target = normalizeProductName(item.nama);
 
     const key = Object.keys(atkImageMap).find(key =>
-        normalize(key) === target
+        normalizeProductName(key) === target
     );
 
     if (key) {
-        return encodeURI(atkImageMap[key]);
+        return encodeURI(`./${atkImageMap[key]}`);
     }
 
-    // 3. Jika gambar tidak tersedia
     return "";
 }
-
 
 // =====================================================
 // RENDER KARTU PRODUK ATK
@@ -233,23 +232,17 @@ function renderATK() {
         // GAMBAR PRODUK
         // =================================================
 
-        const imageHTML = image
-            ? `
-                <div class="w-full h-40 sm:h-48 bg-white flex items-center justify-center overflow-hidden">
-                    <img
-                        src="${image}"
-                        alt="${item.nama}"
-                        class="w-full h-full object-contain p-2"
-                        loading="lazy"
-                        onerror="this.parentElement.innerHTML='<div class=&quot;w-full h-full flex items-center justify-center text-gray-400&quot;><span class=&quot;text-4xl&quot;>📦</span></div>'"
-                    >
-                </div>
-              `
-            : `
-                <div class="w-full h-40 sm:h-48 bg-white flex items-center justify-center">
-                    <span class="text-5xl">📦</span>
-                </div>
-              `;
+        const imageHTML = `
+            <div class="w-full h-40 sm:h-48 bg-white flex items-center justify-center overflow-hidden">
+                <img
+                    src="${image || placeholderKategori[item.kategori] || placeholderKategori["Alat Tulis & Koreksi"]}"
+                    alt="${item.nama}"
+                    class="w-full h-full object-contain p-2"
+                    loading="lazy"
+                    onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1585336261026-6757688719d3?auto=format&fit=crop&w=600&q=80'"
+                >
+            </div>
+        `;
 
 
         card.innerHTML = `
