@@ -391,22 +391,25 @@
     <!-- Script Swiper & Manajemen Data 215 ATK -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        // Inisialisasi Swiper Banner
-        const swiper = new Swiper('.promo-swiper', {
-            loop: true,
-            autoplay: {
-                delay: 3500,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
+        // Inisialisasi Swiper Banner secara aman.
+        // Jika CDN Swiper gagal dimuat, katalog ATK tetap harus berjalan.
+        if (typeof Swiper !== 'undefined') {
+            new Swiper('.promo-swiper', {
+                loop: true,
+                autoplay: {
+                    delay: 3500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        }
 
         // ==============================================================
         // MASTER DATA: 215 DAFTAR LENGKAP ATK TOKO MUCI
