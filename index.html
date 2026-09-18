@@ -155,7 +155,7 @@
                         <h2 class="text-2xl sm:text-4xl font-extrabold text-white leading-tight max-w-lg mb-2">
                             Alat Tulis & Kertas HVS <br><span class="text-blue-300">Harga Terjangkau</span>
                         </h2>
-                        <p class="text-slate-200 text-xs sm:text-sm max-w-md mb-5 hidden sm:block">Sedia 215+ jenis ATK, map, kertas printer, lakban, & keperluan sekolah/kantor.</p>
+                        <p class="text-slate-200 text-xs sm:text-sm max-w-md mb-5 hidden sm:block">Sedia 212+ jenis ATK, map, kertas printer, lakban, & keperluan sekolah/kantor.</p>
                         <a href="#katalog-atk" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition-all shadow-lg shadow-blue-500/30 flex items-center gap-2">
                             <i class="fa-solid fa-magnifying-glass text-sm"></i> Cari ATK Lengkap
                         </a>
@@ -281,7 +281,7 @@
         </div>
     </section>
 
-    <!-- KATALOG LENGKAP 215 DAFTAR ATK TOKO MUCI -->
+    <!-- KATALOG LENGKAP 212 DAFTAR ATK TOKO MUCI -->
     <section id="katalog-atk" class="py-14 px-4 sm:px-8 border-t border-slate-200 bg-white">
         <div class="max-w-6xl mx-auto">
             
@@ -775,8 +775,7 @@
                 // Ambil gambar langsung dari repository GitHub.
                 // encodeURIComponent penting untuk nama file yang memiliki spasi,
                 // &, tanda kurung, dan karakter khusus lainnya.
-                return 'https://raw.githubusercontent.com/Ranggamuci/TokoMuci-website/main/' +
-                    encodeURIComponent(filename);
+                return './' + encodeURIComponent(filename) + '?v=20260919';
             }
 
             const target = normalizeProductName(item.nama);
@@ -785,11 +784,10 @@
             );
 
             if (key) {
-                return 'https://raw.githubusercontent.com/Ranggamuci/TokoMuci-website/main/' +
-                    encodeURIComponent(atkImageMap[key]);
+                return './' + encodeURIComponent(atkImageMap[key]) + '?v=20260919';
             }
 
-            // Semua 215 kartu tetap mempunyai area gambar.
+            // Semua 212 kartu tetap mempunyai area gambar.
             // Jika foto asli belum tersedia, gunakan placeholder SVG inline
             // sehingga tidak bergantung pada server gambar eksternal.
             const label = String(item.nama || 'Produk ATK')
