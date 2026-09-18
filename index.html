@@ -788,10 +788,21 @@
                     encodeURIComponent(atkImageMap[key]);
             }
 
-            // Semua 215 kartu tetap mempunyai gambar meskipun file produk
-            // belum tersedia di repository.
-            const label = encodeURIComponent(item.nama);
-            return 'https://placehold.co/800x600/f8fafc/475569?text=' + label;
+            // Semua 215 kartu tetap mempunyai area gambar.
+            // Jika foto asli belum tersedia, gunakan placeholder SVG inline
+            // sehingga tidak bergantung pada server gambar eksternal.
+            const label = String(item.nama || 'Produk ATK')
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+            const svg = '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">' +
+                '<rect width="800" height="600" fill="#f8fafc"/>' +
+                '<rect x="40" y="40" width="720" height="520" rx="28" fill="#eef2ff" stroke="#c7d2fe" stroke-width="4"/>' +
+                '<text x="400" y="275" text-anchor="middle" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#475569">' + label + '</text>' +
+                '<text x="400" y="330" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#64748b">Toko MUCI • ATK</text>' +
+                '</svg>';
+            return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
         }
 
         // Render Kartu Produk ATK
@@ -839,7 +850,7 @@
                             alt="${item.nama}"
                             class="w-full h-full object-contain p-2"
                             loading="eager"
-                            onerror="this.onerror=null;this.src='https://placehold.co/800x600/f8fafc/475569?text=Gambar+tidak+tersedia';"
+                            onerror="this.onerror=null;this.src='data:image/svg+xml;charset=UTF-8,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600"><rect width="800" height="600" fill="#f8fafc"/><text x="400" y="300" text-anchor="middle" font-family="Arial" font-size="28" fill="#475569">Gambar tidak tersedia</text></svg>');"
                         >
                     </div>
 
