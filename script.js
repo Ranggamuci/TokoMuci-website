@@ -1,6 +1,6 @@
 // ======================================================
 // SCRIPT KATALOG ATK TOKO MUCI
-// Sistem gambar otomatis 1.jpg - 215.jpg
+// Sistem gambar berdasarkan nama file produk di repository GitHub
 // ======================================================
 
 
@@ -369,23 +369,17 @@ function setupFilterKategori() {
 
 // ======================================================
 // SEARCH
-// Cari gambar berdasarkan nama produk
-const productImage = getATKImage(item);
+// ======================================================
 
-if (productImage) {
-    img.src = productImage;
-} else {
-    img.src = fallbackImg;
-}
+function setupSearch() {
+
+    const searchInput =
         document.getElementById("searchInput");
-
 
     const clearSearch =
         document.getElementById("clearSearch");
 
-
     if (!searchInput) return;
-
 
     searchInput.addEventListener(
         "input",
@@ -394,27 +388,19 @@ if (productImage) {
             searchQuery =
                 event.target.value.trim();
 
-
             if (searchQuery.length > 0) {
-
-                clearSearch.classList.remove(
-                    "hidden"
-                );
-
+                if (clearSearch) {
+                    clearSearch.classList.remove("hidden");
+                }
             } else {
-
-                clearSearch.classList.add(
-                    "hidden"
-                );
-
+                if (clearSearch) {
+                    clearSearch.classList.add("hidden");
+                }
             }
 
-
             renderATK();
-
         }
     );
-
 
     // Tombol hapus pencarian
     if (clearSearch) {
@@ -424,24 +410,17 @@ if (productImage) {
             () => {
 
                 searchInput.value = "";
-
                 searchQuery = "";
 
-                clearSearch.classList.add(
-                    "hidden"
-                );
+                clearSearch.classList.add("hidden");
 
                 renderATK();
 
                 searchInput.focus();
-
             }
         );
-
     }
-
 }
-
 
 // ======================================================
 // INISIALISASI
