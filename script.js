@@ -369,11 +369,14 @@ function setupFilterKategori() {
 
 // ======================================================
 // SEARCH
-// ======================================================
+// Cari gambar berdasarkan nama produk
+const productImage = getATKImage(item);
 
-function setupSearch() {
-
-    const searchInput =
+if (productImage) {
+    img.src = productImage;
+} else {
+    img.src = fallbackImg;
+}
         document.getElementById("searchInput");
 
 
