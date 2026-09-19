@@ -1,3 +1,114 @@
+const ATK_AUTO_IMAGE_MAP = {
+    "amplopputih": "Amplop Putih.jpg",
+    "binderclipsmall": "Binder Clip Small.jpeg",
+    "bukuagenda": "Buku Agenda.jpg",
+    "bukuekspedisi": "Buku Ekspedisi.png",
+    "bukugambara3": "Buku Gambar A3.jpeg",
+    "bukugambara4": "Buku Gambar A4.jpg",
+    "bukugambarsketsa": "Buku Gambar Sketsa.jpeg",
+    "bukugambar": "Buku Gambar.jpeg",
+    "bukukas": "Buku Kas.jpg",
+    "bukukotakkotak": "Buku Kotak-Kotak.jpeg",
+    "bukutulis38lembar": "Buku Tulis 38 Lembar.jpg",
+    "bukutulis58lembar": "Buku Tulis 58 Lembar.jpg",
+    "bukutulis": "Buku Tulis.jpeg",
+    "busurderajat": "Busur Derajat.jpg",
+    "catair": "Cat Air.jpeg",
+    "clearholder": "Clear Holder.jpeg",
+    "clipboard": "Clipboard.jpeg",
+    "correctionfluid": "Correction Fluid.jpeg",
+    "correctionpen": "Correction Pen.jpg",
+    "correctiontape": "Correction Tape.jpeg",
+    "crayon": "Crayon.jpeg",
+    "cutterbesar": "Cutter Besar.jpeg",
+    "doubletape": "Double Tape.jpeg",
+    "doubletipfoam": "Double Tip Foam.jpg",
+    "expandingfile": "Expanding File.jpg",
+    "glittercraft": "Glitter Craft.jpeg",
+    "guntingbesar": "Gunting Besar.jpeg",
+    "guntingkecil": "Gunting Kecil.jpeg",
+    "isicutterbesar": "Isi Cutter Besar.jpeg",
+    "isipensilmekanik": "Isi Pensil Mekanik.jpeg",
+    "isistaples24": "Isi Staples 24.jpeg",
+    "isistaplesno10": "Isi Staples No.10.jpeg",
+    "isolasilistrik": "Isolasi Listrik.jpeg",
+    "jangka": "Jangka.jpg",
+    "jiliddokumen": "JilidDokumen.jpg",
+    "kertasasturofolio": "Kertas Asturo Folio.jpeg",
+    "kertasbuffalo": "Kertas Buffalo.png",
+    "kertascrepe": "Kertas Crepe.jpeg",
+    "kertaskado": "Kertas Kado.jpg",
+    "kertaskarton": "Kertas Karton.jpeg",
+    "kertaskopi": "Kertas Kopi.jpeg",
+    "kertasmanila": "Kertas Manila.jpeg",
+    "kertasmilimeterblock": "Kertas Milimeter Block.jpeg",
+    "kertasorigami": "Kertas Origami.jpg",
+    "kertashvsa4f4": "KertasHVSA4&F4.jpeg",
+    "kuaslukis": "Kuas Lukis.jpeg",
+    "labelsticker": "Label Sticker.jpg",
+    "lakbanbening": "Lakban Bening.jpeg",
+    "lakbancoklat": "Lakban Coklat.jpeg",
+    "lakbanhitam": "Lakban Hitam.jpeg",
+    "lakbankertas": "Lakban Kertas.jpeg",
+    "laminating": "Laminating.jpg",
+    "lemkayu": "Lem Kayu.jpeg",
+    "lemkertascair": "Lem Kertas Cair.jpeg",
+    "lemkertas": "Lem Kertas.jpeg",
+    "lemserbaguna": "Lem Serbaguna.jpeg",
+    "lemtembak": "Lem Tembak.jpeg",
+    "mapbusinessfile": "Map Business File.jpg",
+    "mapdokumen": "Map Dokumen.jpeg",
+    "mapfolio": "Map Folio.jpg",
+    "mapkancing": "Map Kancing.jpeg",
+    "mapl": "Map L.jpg",
+    "maplamarankerja": "Map Lamaran Kerja.jpeg",
+    "mapplastik": "Map Plastik.jpg",
+    "mapresleting": "Map Resleting.jpeg",
+    "markerboardrefill": "Marker Board Refill.jpg",
+    "memopad": "Memo Pad.jpeg",
+    "nota": "Nota.jpeg",
+    "notebook": "Notebook.jpg",
+    "paperclip": "Paper Clip.jpeg",
+    "penggaris15cm": "Penggaris 15 cm.jpg",
+    "penggaris30cm": "Penggaris 30 cm.jpeg",
+    "penggarisbesi30cm": "Penggaris Besi 30 cm.jpg",
+    "penghapuspensilwarna": "Penghapus Pensil Warna.jpg",
+    "penghapus": "Penghapus.jpeg",
+    "pensilhb": "Pensil HB.jpg",
+    "pensilmekanik": "Pensil Mekanik.jpeg",
+    "pensilwarna12warna": "Pensil Warna 12 Warna.jpeg",
+    "pensilwarna": "Pensil Warna.jpeg",
+    "pensil2b": "Pensil2B.jpg",
+    "plastikidcard": "Plastik ID Card.jpeg",
+    "plastiklaminating": "Plastik Laminating.jpeg",
+    "pulpenballpoint": "Pulpen Ballpoint.jpeg",
+    "pulpengel": "Pulpen Gel.jpg",
+    "pulpen": "Pulpen.jpg",
+    "pulpengelballpoint": "PulpenGel&Ballpoint.jpeg",
+    "pushpin": "Push Pin.jpeg",
+    "rautan2lubang": "Rautan 2 Lubang.jpeg",
+    "rautanpensil": "Rautan Pensil.jpg",
+    "refillcorrectiontape": "Refill Correction Tape.png",
+    "setpenggarisgeometri": "Set Penggaris Geometri.jpeg",
+    "snelhecter": "Snelhecter.jpeg",
+    "spidolpermanen": "Spidol Permanen.png",
+    "spidolwarna12warna": "Spidol Warna 12 Warna.jpg",
+    "spidolwarna24warna": "Spidol Warna 24 Warna.jpg",
+    "spidolwarna": "Spidol Warna.jpeg",
+    "spidolwhiteboard": "Spidol Whiteboard.jpeg",
+    "stabilo": "Stabilo.jpeg",
+    "stapler": "Stapler.jpeg",
+    "stickynotes": "Sticky Notes.jpeg",
+    "stopmap": "Stopmap.png",
+    "taliidcard": "Tali ID Card.jpeg",
+    "tempatpensil": "Tempat Pensil.jpeg",
+    "fotocopy": "fotocopy.jpeg",
+    "mucipreview": "muci-preview.jpg",
+    "pasfoto": "pasfoto.jpeg",
+    "printer": "printer.jpeg",
+    "stempel": "stempel.png"
+};
+
 // ======================================================
 // SCRIPT KATALOG ATK TOKO MUCI
 // Sistem gambar berdasarkan nama file produk di repository GitHub
@@ -152,21 +263,28 @@ function normalizeProductName(text) {
 }
 
 function getATKImage(item) {
-
-    const direct = atkImageMap[item.nama];
-    if (direct) {
-        return encodeURI(`./${direct}`);
-    }
-
     const target = normalizeProductName(item.nama);
 
-    const key = Object.keys(atkImageMap).find(key =>
-        normalizeProductName(key) === target
+    // 1. Peta manual untuk alias / nama file yang berbeda.
+    const direct = atkImageMap[item.nama];
+    if (direct) return encodeURI(`./${direct}`);
+
+    // 2. Cari otomatis berdasarkan nama file yang ada di repository.
+    // Contoh: "Buku Gambar A3" -> "Buku Gambar A3.jpeg".
+    const autoKey = Object.keys(ATK_AUTO_IMAGE_MAP).find(
+        key => key === target
     );
 
-    if (key) {
-        return encodeURI(`./${atkImageMap[key]}`);
+    if (autoKey) {
+        return encodeURI(`./${ATK_AUTO_IMAGE_MAP[autoKey]}`);
     }
+
+    // 3. Cari alias manual dengan normalisasi nama.
+    const key = Object.keys(atkImageMap).find(
+        key => normalizeProductName(key) === target
+    );
+
+    if (key) return encodeURI(`./${atkImageMap[key]}`);
 
     return "";
 }
