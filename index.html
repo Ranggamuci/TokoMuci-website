@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./atk-auto-map.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -782,6 +783,12 @@
             }
 
             const target = normalizeProductName(item.nama);
+
+            // Cari otomatis berdasarkan nama file gambar.
+            if (window.ATK_AUTO_IMAGE_MAP && window.ATK_AUTO_IMAGE_MAP[target]) {
+                return './' + encodeURIComponent(window.ATK_AUTO_IMAGE_MAP[target]);
+            }
+
             const key = Object.keys(atkImageMap).find(k =>
                 normalizeProductName(k) === target
             );
