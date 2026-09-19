@@ -154,7 +154,7 @@ const placeholderKategori = {
 // GAMBAR PRODUK ATK
 // =====================================================
 
-const atkImageMap = {
+const scriptATKImageMap = {
     "Pulpen": "Pulpen.jpg",
     "Pulpen Gel": "Pulpen Gel.jpg",
     "Pulpen Ballpoint": "Pulpen Ballpoint.jpeg",
@@ -266,7 +266,7 @@ function getATKImage(item) {
     const target = normalizeProductName(item.nama);
 
     // 1. Peta manual untuk alias / nama file yang berbeda.
-    const direct = atkImageMap[item.nama];
+    const direct = scriptATKImageMap[item.nama];
     if (direct) return encodeURI(`./${direct}`);
 
     // 2. Cari otomatis berdasarkan nama file yang ada di repository.
@@ -280,11 +280,11 @@ function getATKImage(item) {
     }
 
     // 3. Cari alias manual dengan normalisasi nama.
-    const key = Object.keys(atkImageMap).find(
+    const key = Object.keys(scriptATKImageMap).find(
         key => normalizeProductName(key) === target
     );
 
-    if (key) return encodeURI(`./${atkImageMap[key]}`);
+    if (key) return encodeURI(`./${scriptATKImageMap[key]}`);
 
     return "";
 }
