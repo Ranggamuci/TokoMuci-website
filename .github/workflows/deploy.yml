@@ -25,38 +25,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      - name: Generate automatic ATK image map
-        run: |
-          python3 - <<'PY'
-          import json
-          import os
-          import re
-
-          extensions = {'.jpg', '.jpeg', '.png', '.webp', '.gif', '.avif'}
-
-          def normalize(name):
-              name = os.path.splitext(name)[0].lower()
-              return re.sub(r'[^a-z0-9]', '', name)
-
-          mapping = {}
-          for name in sorted(os.listdir('.'), key=str.lower):
-              if not os.path.isfile(name):
-                  continue
-              if os.path.splitext(name)[1].lower() not in extensions:
-                  continue
-              key = normalize(name)
-              if key and key not in mapping:
-                  mapping[key] = name
-
-          with open('atk-auto-map.js', 'w', encoding='utf-8') as f:
-              f.write('// Generated automatically from repository image files.\n')
-              f.write('window.ATK_AUTO_IMAGE_MAP = ')
-              json.dump(mapping, f, ensure_ascii=False, indent=2)
-              f.write(';\n')
-
-          print(f'Generated {len(mapping)} automatic image mappings.')
-          PY
-
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
