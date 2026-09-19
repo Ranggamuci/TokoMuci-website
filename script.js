@@ -1,4 +1,4 @@
-const ATK_AUTO_IMAGE_MAP = {
+window.ATK_AUTO_IMAGE_MAP = {
     "amplopputih": "Amplop Putih.jpg",
     "binderclipsmall": "Binder Clip Small.jpeg",
     "bukuagenda": "Buku Agenda.jpg",
@@ -271,12 +271,12 @@ function getATKImage(item) {
 
     // 2. Cari otomatis berdasarkan nama file yang ada di repository.
     // Contoh: "Buku Gambar A3" -> "Buku Gambar A3.jpeg".
-    const autoKey = Object.keys(ATK_AUTO_IMAGE_MAP).find(
+    const autoKey = Object.keys(window.ATK_AUTO_IMAGE_MAP || {}).find(
         key => key === target
     );
 
     if (autoKey) {
-        return encodeURI(`./${ATK_AUTO_IMAGE_MAP[autoKey]}`);
+        return encodeURI(`./${window.ATK_AUTO_IMAGE_MAP[autoKey]}`);
     }
 
     // 3. Cari alias manual dengan normalisasi nama.
