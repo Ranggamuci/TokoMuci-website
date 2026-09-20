@@ -255,6 +255,8 @@ const scriptATKImageMap = {
 // FUNGSI MENCARI GAMBAR
 // =====================================================
 
+const GITHUB_IMAGE_BASE = 'https://ranggamuci.github.io/TokoMuci-website/';
+
 function normalizeProductName(text) {
     return String(text || "")
         .toLowerCase()
@@ -267,7 +269,7 @@ function getATKImage(item) {
 
     // 1. Peta manual untuk alias / nama file yang berbeda.
     const direct = scriptATKImageMap[item.nama];
-    if (direct) return encodeURI(`./${direct}`);
+    if (direct) return GITHUB_IMAGE_BASE + encodeURIComponent(direct);
 
     // 2. Cari otomatis berdasarkan nama file yang ada di repository.
     // Contoh: "Buku Gambar A3" -> "Buku Gambar A3.jpeg".
@@ -276,7 +278,7 @@ function getATKImage(item) {
     );
 
     if (autoKey) {
-        return encodeURI(`./${window.ATK_AUTO_IMAGE_MAP[autoKey]}`);
+        return GITHUB_IMAGE_BASE + encodeURIComponent(window.ATK_AUTO_IMAGE_MAP[autoKey]);
     }
 
     // 3. Cari alias manual dengan normalisasi nama.
@@ -284,7 +286,7 @@ function getATKImage(item) {
         key => normalizeProductName(key) === target
     );
 
-    if (key) return encodeURI(`./${scriptATKImageMap[key]}`);
+    if (key) return GITHUB_IMAGE_BASE + encodeURIComponent(scriptATKImageMap[key]);
 
     return "";
 }
