@@ -28,6 +28,58 @@ jobs:
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
+
+      - name: Generate automatic ATK image map
+        shell: python
+        run: |
+          import json
+          import re
+          from pathlib import Path
+
+          extensions = {
+              ".jpg", ".jpeg", ".png", ".webp", ".gif",
+              ".avif", ".jfif", ".bmp"
+          }
+
+          def normalize(name):
+              name = re.sub(r"\.[^/.]+$", "", name.lower())
+              return re.sub(r"[^a-z0-9]", "", name)
+
+          priority = {
+              ".jpg": 0,
+              ".jpeg": 1,
+              ".png": 2,
+              ".webp": 3,
+              ".avif": 4,
+              ".jfif": 5,
+              ".bmp": 6,
+              ".gif": 7,
+          }
+
+          images = {}
+          for path in Path(".").iterdir():
+              if not path.is_file():
+                  continue
+              if path.suffix.lower() not in extensions:
+                  continue
+
+              key = normalize(path.name)
+              if not key:
+                  continue
+
+              current = images.get(key)
+              if current is None or priority[path.suffix.lower()] < priority[Path(current).suffix.lower()]:
+                  images[key] = path.name
+
+          content = "window.ATK_AUTO_IMAGE_MAP = " + json.dumps(
+              dict(sorted(images.items())),
+              ensure_ascii=False,
+              indent=4
+          ) + ";\n"
+
+          Path("atk-image-map.js").write_text(content, encoding="utf-8")
+          print(f"Generated {len(images)} automatic image mappings.")
+
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v4
         with:
