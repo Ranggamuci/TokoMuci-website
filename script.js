@@ -1,4 +1,4 @@
-window.ATK_AUTO_IMAGE_MAP = {
+window.ATK_AUTO_IMAGE_MAP = window.ATK_AUTO_IMAGE_MAP || {
     "amplopputih": "Amplop Putih.jpg",
     "binderclipsmall": "Binder Clip Small.jpeg",
     "bukuagenda": "Buku Agenda.jpg",
