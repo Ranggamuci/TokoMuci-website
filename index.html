@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
+    <!-- Peta gambar ATK dibuat otomatis saat deploy dari file gambar di repository -->
+    <script src="./atk-image-map.js"></script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -347,7 +350,7 @@
 
             <!-- Container Grid ATK (Dirender Dinamis) -->
             <div id="atkGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 items-stretch">
-                <!-- Data 212 items akan otomatis dimuat oleh script di bawah -->
+                <!-- Data katalog akan dimuat otomatis dari master data di bawah -->
             </div>
 
             <!-- Pesan Kosong Jika Pencarian Tidak Ada -->
