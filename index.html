@@ -11,6 +11,7 @@
 
     <!-- Peta gambar ATK dibuat otomatis saat deploy dari file gambar di repository -->
     <script src="./atk-image-map.js"></script>
+    <script src="./script.js"></script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -651,7 +652,21 @@
         // Nomor katalog dibuat ulang agar tetap berurutan setelah item dihapus.
         daftarATK.forEach((item, index) => { item.no = index + 1; });
 
-        // Jumlah katalog dihitung langsung dari master data agar tidak ada angka statis yang salah.\n        const totalCatalogItems = daftarATK.length;\n        const catalogCounts = daftarATK.reduce((acc, item) => {\n            acc[item.kategori] = (acc[item.kategori] || 0) + 1;\n            return acc;\n        }, {});\n\n        document.getElementById('catalog-count-badge').textContent = totalCatalogItems + ' Item';\n        document.getElementById('catalog-count-text').textContent = totalCatalogItems + ' item';\n        document.getElementById('count-all').textContent = totalCatalogItems;\n        document.querySelectorAll('.category-count').forEach(el => {\n            el.textContent = catalogCounts[el.dataset.countCategory] || 0;\n        });\n\n        // State Aplikasi
+        // Jumlah katalog dihitung langsung dari master data agar tidak ada angka statis yang salah.
+        const totalCatalogItems = daftarATK.length;
+        const catalogCounts = daftarATK.reduce((acc, item) => {
+            acc[item.kategori] = (acc[item.kategori] || 0) + 1;
+            return acc;
+        }, {});
+
+        document.getElementById('catalog-count-badge').textContent = totalCatalogItems + ' Item';
+        document.getElementById('catalog-count-text').textContent = totalCatalogItems + ' item';
+        document.getElementById('count-all').textContent = totalCatalogItems;
+        document.querySelectorAll('.category-count').forEach(el => {
+            el.textContent = catalogCounts[el.dataset.countCategory] || 0;
+        });
+
+        // State Aplikasi
         let currentCategory = 'ALL';
         let searchQuery = '';
 
@@ -1188,6 +1203,5 @@
         // Render Pertama Kali
         renderATK();
     </script>
-    <script src="./script.js"></script>
 </body>
 </html>
