@@ -23,7 +23,7 @@ window.ATK_AUTO_IMAGE_MAP = window.ATK_AUTO_IMAGE_MAP || {
     "cutterbesar": "Cutter Besar.jpeg",
     "doubletape": "Double Tape.jpeg",
     "doubletipfoam": "Double Tip Foam.jpg",
-    "Drawing Pen": "Drawing Pen.jpeg",
+    "Drawing Pen": "Drawing-Pen.jpeg",
     "expandingfile": "Expanding File.jpg",
     "glittercraft": "Glitter Craft.jpeg",
     "guntingbesar": "Gunting Besar.jpeg",
