@@ -107,7 +107,7 @@ window.ATK_AUTO_IMAGE_MAP = window.ATK_AUTO_IMAGE_MAP || {
     "mucipreview": "muci-preview.jpg",
     "pasfoto": "pasfoto.jpeg",
     "printer": "printer.jpeg",
-    "stempel": "stempel.png"
+    "stempel": "stempel.png",
 
     "kotakpensil": "Kotak Pensil.jpeg",
     "highlighterset": "Highlighter Set.jpg",
