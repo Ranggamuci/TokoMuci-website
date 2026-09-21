@@ -95,7 +95,7 @@
                 <a href="#layanan-utama" class="hover:text-indigo-600 transition-colors">Layanan Utama</a>
                 <a href="#katalog-atk" class="hover:text-indigo-600 transition-colors flex items-center gap-1.5">
                     <span>Katalog ATK</span>
-                    <span class="text-[10px] bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-full font-bold">212 Item</span>
+                    <span id="catalog-count-badge" class="text-[10px] bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-full font-bold">211 Item</span>
                 </a>
             </div>
 
@@ -155,7 +155,7 @@
                         <h2 class="text-2xl sm:text-4xl font-extrabold text-white leading-tight max-w-lg mb-2">
                             Alat Tulis & Kertas HVS <br><span class="text-blue-300">Harga Terjangkau</span>
                         </h2>
-                        <p class="text-slate-200 text-xs sm:text-sm max-w-md mb-5 hidden sm:block">Sedia 212+ jenis ATK, map, kertas printer, lakban, & keperluan sekolah/kantor.</p>
+                        <p class="text-slate-200 text-xs sm:text-sm max-w-md mb-5 hidden sm:block">Sedia 211 jenis ATK, map, kertas printer, lakban, & keperluan sekolah/kantor.</p>
                         <a href="#katalog-atk" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition-all shadow-lg shadow-blue-500/30 flex items-center gap-2">
                             <i class="fa-solid fa-magnifying-glass text-sm"></i> Cari ATK Lengkap
                         </a>
@@ -281,7 +281,7 @@
         </div>
     </section>
 
-    <!-- KATALOG LENGKAP 212 DAFTAR ATK TOKO MUCI -->
+    <!-- KATALOG LENGKAP 211 DAFTAR ATK TOKO MUCI -->
     <section id="katalog-atk" class="py-14 px-4 sm:px-8 border-t border-slate-200 bg-white">
         <div class="max-w-6xl mx-auto">
             
@@ -292,7 +292,7 @@
                         <i class="fa-solid fa-boxes-stacked mr-1"></i> Sedia Eceran & Grosir
                     </span>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Daftar Lengkap ATK Toko MUCI</h2>
-                    <p class="text-slate-500 text-sm mt-1">Tersedia <span class="font-bold text-indigo-600">212+ item</span> kebutuhan alat tulis, kertas, map, perekat, hingga perlengkapan kantor.</p>
+                    <p class="text-slate-500 text-sm mt-1">Tersedia <span id="catalog-count-text" class="font-bold text-indigo-600">211 item</span> kebutuhan alat tulis, kertas, map, perekat, hingga perlengkapan kantor.</p>
                 </div>
 
                 <!-- Input Pencarian -->
@@ -308,40 +308,40 @@
             <!-- Tab Kategori Interaktif -->
             <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-6 category-scroll text-xs">
                 <button class="filter-btn active whitespace-nowrap px-4 py-2 rounded-xl font-bold bg-indigo-600 text-white shadow-md shadow-indigo-500/20 transition-all" data-category="ALL">
-                    Semua (<span id="count-all">212</span>)
+                    Semua (<span id="count-all">211</span>)
                 </button>
                 <button class="filter-btn whitespace-nowrap px-4 py-2 rounded-xl font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all" data-category="Alat Tulis & Koreksi">
-                    <i class="fa-solid fa-pen-nib mr-1 text-slate-400"></i> Alat Tulis & Koreksi (26)
+                    <i class="fa-solid fa-pen-nib mr-1 text-slate-400"></i> Alat Tulis & Koreksi (<span class="category-count" data-count-category="Alat Tulis & Koreksi">25</span>)
                 </button>
                 <button class="filter-btn whitespace-nowrap px-4 py-2 rounded-xl font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all" data-category="Spidol & Marker">
-                    <i class="fa-solid fa-highlighter mr-1 text-slate-400"></i> Spidol (7)
+                    <i class="fa-solid fa-highlighter mr-1 text-slate-400"></i> Spidol (<span class="category-count" data-count-category="Spidol & Marker">7</span>)
                 </button>
                 <button class="filter-btn whitespace-nowrap px-4 py-2 rounded-xl font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all" data-category="Buku & Catatan">
-                    <i class="fa-solid fa-book mr-1 text-slate-400"></i> Buku & Catatan (18)
+                    <i class="fa-solid fa-book mr-1 text-slate-400"></i> Buku & Catatan (<span class="category-count" data-count-category="Buku & Catatan">18</span>)
                 </button>
                 <button class="filter-btn whitespace-nowrap px-4 py-2 rounded-xl font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all" data-category="Kertas">
-                    <i class="fa-solid fa-file-lines mr-1 text-slate-400"></i> Aneka Kertas (39)
+                    <i class="fa-solid fa-file-lines mr-1 text-slate-400"></i> Aneka Kertas (<span class="category-count" data-count-category="Kertas">39</span>)
                 </button>
                 <button class="filter-btn whitespace-nowrap px-4 py-2 rounded-xl font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all" data-category="Map, Arsip & Amplop">
-                    <i class="fa-solid fa-folder mr-1 text-slate-400"></i> Map & Amplop (28)
+                    <i class="fa-solid fa-folder mr-1 text-slate-400"></i> Map & Amplop (<span class="category-count" data-count-category="Map, Arsip & Amplop">28</span>)
                 </button>
                 <button class="filter-btn whitespace-nowrap px-4 py-2 rounded-xl font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all" data-category="Perlengkapan Kantor">
-                    <i class="fa-solid fa-paperclip mr-1 text-slate-400"></i> Alat Kantor & Meja (30)
+                    <i class="fa-solid fa-paperclip mr-1 text-slate-400"></i> Alat Kantor & Meja (<span class="category-count" data-count-category="Perlengkapan Kantor">30</span>)
                 </button>
                 <button class="filter-btn whitespace-nowrap px-4 py-2 rounded-xl font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all" data-category="Lem & Perekat">
-                    <i class="fa-solid fa-tape mr-1 text-slate-400"></i> Lem & Lakban (20)
+                    <i class="fa-solid fa-tape mr-1 text-slate-400"></i> Lem & Lakban (<span class="category-count" data-count-category="Lem & Perekat">20</span>)
                 </button>
                 <button class="filter-btn whitespace-nowrap px-4 py-2 rounded-xl font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all" data-category="Seni & Kerajinan">
-                    <i class="fa-solid fa-palette mr-1 text-slate-400"></i> Seni & Mewarnai (13)
+                    <i class="fa-solid fa-palette mr-1 text-slate-400"></i> Seni & Mewarnai (<span class="category-count" data-count-category="Seni & Kerajinan">13</span>)
                 </button>
                 <button class="filter-btn whitespace-nowrap px-4 py-2 rounded-xl font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all" data-category="Percetakan & Nota">
-                    <i class="fa-solid fa-receipt mr-1 text-slate-400"></i> Nota & Finishing (31)
+                    <i class="fa-solid fa-receipt mr-1 text-slate-400"></i> Nota & Finishing (<span class="category-count" data-count-category="Percetakan & Nota">31</span>)
                 </button>
             </div>
 
             <!-- Info Bar Jumlah Tampil -->
             <div class="flex items-center justify-between text-xs text-slate-500 mb-4 px-1">
-                <div>Menampilkan <span id="visible-count" class="font-bold text-slate-900">212</span> produk</div>
+                <div>Menampilkan <span id="visible-count" class="font-bold text-slate-900">211</span> produk</div>
                 <div class="text-[11px] text-slate-400">Klik tombol WhatsApp untuk langsung tanya stok/order</div>
             </div>
 
@@ -384,11 +384,11 @@
             </div>
         </div>
         <div class="max-w-6xl mx-auto border-t border-slate-800 mt-6 pt-6 text-center text-[11px] text-slate-500">
-            © 2026 Toko MUCI — Print, Fotokopi & 212+ Alat Tulis Kantor.
+            © 2026 Toko MUCI — Print, Fotokopi & 211 Alat Tulis Kantor.
         </div>
     </footer>
 
-    <!-- Script Swiper & Manajemen Data 212 ATK -->
+    <!-- Script Swiper & Manajemen Data 211 ATK -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         // Inisialisasi Swiper Banner secara aman.
@@ -412,7 +412,7 @@
         }
 
         // ==============================================================
-        // MASTER DATA: 212 DAFTAR LENGKAP ATK TOKO MUCI
+        // MASTER DATA: 211 DAFTAR LENGKAP ATK TOKO MUCI
         // ==============================================================
         const daftarATK = [
             // 1 - 29: Alat Tulis & Koreksi
@@ -648,7 +648,7 @@
         // Nomor katalog dibuat ulang agar tetap berurutan setelah item dihapus.
         daftarATK.forEach((item, index) => { item.no = index + 1; });
 
-        // State Aplikasi
+        // Jumlah katalog dihitung langsung dari master data agar tidak ada angka statis yang salah.\n        const totalCatalogItems = daftarATK.length;\n        const catalogCounts = daftarATK.reduce((acc, item) => {\n            acc[item.kategori] = (acc[item.kategori] || 0) + 1;\n            return acc;\n        }, {});\n\n        document.getElementById('catalog-count-badge').textContent = totalCatalogItems + ' Item';\n        document.getElementById('catalog-count-text').textContent = totalCatalogItems + ' item';\n        document.getElementById('count-all').textContent = totalCatalogItems;\n        document.querySelectorAll('.category-count').forEach(el => {\n            el.textContent = catalogCounts[el.dataset.countCategory] || 0;\n        });\n\n        // State Aplikasi
         let currentCategory = 'ALL';
         let searchQuery = '';
 
