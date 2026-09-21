@@ -167,6 +167,7 @@ const scriptATKImageMap = {
     "Busur Derajat": "Busur Derajat.jpg",
     "Jangka": "Jangka.jpg",
     "Correction Tape": "Correction Tape.jpeg",
+    "Drawing Pen": "Drawing Pen.jpeg",
     "Correction Fluid": "Correction Fluid.jpeg",
     "Stabilo": "Stabilo.jpeg",
     "Spidol Permanen": "Spidol Permanen.png",
