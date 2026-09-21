@@ -23,7 +23,7 @@ window.ATK_AUTO_IMAGE_MAP = window.ATK_AUTO_IMAGE_MAP || {
     "cutterbesar": "Cutter Besar.jpeg",
     "doubletape": "Double Tape.jpeg",
     "doubletipfoam": "Double Tip Foam.jpg",
-    "Drawing Pen": "Drawing-Pen.jpeg",
+    "drawingpen": "Drawing-Pen.jpeg",
     "expandingfile": "Expanding File.jpg",
     "glittercraft": "Glitter Craft.jpeg",
     "guntingbesar": "Gunting Besar.jpeg",
@@ -108,6 +108,25 @@ window.ATK_AUTO_IMAGE_MAP = window.ATK_AUTO_IMAGE_MAP || {
     "pasfoto": "pasfoto.jpeg",
     "printer": "printer.jpeg",
     "stempel": "stempel.png"
+
+    "kotakpensil": "Kotak Pensil.jpeg",
+    "highlighterset": "Highlighter Set.jpg",
+    "bukutulis100lembar": "Buku Tulis 100 Lembar.jpg",
+    "bukumusik": "Buku Musik.jpeg",
+    "bukukegiatan": "Buku Kegiatan.jpg",
+    "sketchbook": "Sketchbook.jpeg",
+    "hvsa480gsm": "HVS A4 80 gsm.jpeg",
+    "hvsf470gsm": "HVS F4 70 gsm.jpeg",
+    "hvsf480gsm": "HVS F4 80 gsm.jpg",
+    "kertasa3": "Kertas A3.jpg",
+    "kertasfotoglossy": "Kertas Foto Glossy.jpg",
+    "kertasfotomatte": "Kertas Foto Matte.jpg",
+    "kertasorigamiwarna": "Kertas Origami Warna.webp",
+    "kertaswarna": "Kertas Warna.jpeg",
+    "kertasmanggis": "Kertas Manggis.webp",
+    "kertasconcorde": "Kertas Concorde.png",
+    "kertaslinen": "Kertas Linen.png",
+    "kertasasturo": "Kertas Asturo.jpg",
 };
 
 // ======================================================
