@@ -1114,14 +1114,14 @@
                 // Ambil gambar langsung dari repository GitHub.
                 // encodeURIComponent penting untuk nama file yang memiliki spasi,
                 // &, tanda kurung, dan karakter khusus lainnya.
-                return './' + encodeURIComponent(filename);
+                return './' + encodeURIComponent(filename) + '?v=20260922-1';
             }
 
             const target = normalizeProductName(item.nama);
 
             // Cari otomatis berdasarkan peta gambar yang sudah tertanam di script.js.
             if (window.ATK_AUTO_IMAGE_MAP && window.ATK_AUTO_IMAGE_MAP[target]) {
-                return './' + encodeURI(window.ATK_AUTO_IMAGE_MAP[target]);
+                return './' + encodeURI(window.ATK_AUTO_IMAGE_MAP[target]) + '?v=20260922-1';
             }
 
             const key = Object.keys(atkImageMap).find(k =>
@@ -1129,7 +1129,7 @@
             );
 
             if (key) {
-                return './' + encodeURIComponent(atkImageMap[key]);
+                return './' + encodeURIComponent(atkImageMap[key]) + '?v=20260922-1';
             }
 
             // Produk tanpa foto asli tetap menampilkan placeholder lokal berbasis SVG.
