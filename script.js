@@ -66,7 +66,7 @@ window.ATK_AUTO_IMAGE_MAP = window.ATK_AUTO_IMAGE_MAP || {
     "amplopcoklata3": "Amplop Coklat A3.jpg",
     "staplermini": "Stapler Mini.jpg",
     "staplesheavyduty": "Staples Heavy Duty.jpg",
-    "isistaples236": "Isi Staples 23 6.jpg",
+    "isistaples236": "Staples 23-6.jpg",
     "isistaples2310": "Isi Staples 23 10.jpg",
     "klipkertaswarna": "Klip Kertas Warna.jpg",
     "binderclipmedium": "Binder Clip Medium.jpg",
