@@ -69,7 +69,7 @@ window.ATK_AUTO_IMAGE_MAP = window.ATK_AUTO_IMAGE_MAP || {
     "isistaples236": "Isi Staples 23-6.jpg",
     "isistaples2310": "Isi Staples 23-10.jpg",
     "klipkertaswarna": "Klip Kertas Warna.jpg",
-    "isicutterkecil": "Isi Cutter Kecil.jpg",
+    "isicutterkecil": "Isi Cutter Kecil.jpeg",
     "kalkulator": "Kalkulator.jpeg",
     "papantulismini": "Papan Tulis Mini.jpg",
     "penghapuspapantulis": "Penghapus Papan Tulis.jpeg",
