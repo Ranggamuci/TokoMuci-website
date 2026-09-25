@@ -1,4 +1,11 @@
 window.ATK_AUTO_IMAGE_MAP = window.ATK_AUTO_IMAGE_MAP || {
+    "papantulismini": "Papan Tulis Mini.jpg",
+    "papanjalana4": "Papan Jalan A4.png",
+    "cddvd": "CD.png",
+    "flashdisk": "Flashdisk.png",
+    "pinbinder": "Pin Binder.jpg",
+    "mouse": "Mouse.jpg",
+    "kabeldata": "Kabel Data.jpg",
     "amplopcoklata3": "Amplop Coklat A3.jpg",
     "amplopcoklata4": "Amplop Coklat A4.jpg",
     "amplopcoklatfolio": "Amplop Coklat Folio.jpg",
