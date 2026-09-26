@@ -276,7 +276,7 @@
                 <div class="glass-card overflow-hidden rounded-2xl group flex flex-col justify-between p-3.5">
                     <div>
                         <div class="overflow-hidden h-28 rounded-xl bg-slate-100 relative mb-3">
-                            <img src="laminating.jpg" onerror="this.src='Laminating.jpg'" alt="Laminating" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            <img src="Laminating.jpg" onerror="this.src='Plastik Laminating.jpeg'" alt="Laminating" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <h3 class="text-slate-900 font-bold text-xs">Laminating</h3>
                         <p class="text-[11px] text-slate-500 mt-0.5">Pelindung Ijazah & Berkas.</p>
@@ -913,6 +913,7 @@
     "Stick Lem Tembak": "Stick Lem Tembak.jpeg",
     "Lem Kayu": "Lem Kayu.jpeg",
     "Lem Cair": "Lem Kertas Cair.jpeg",
+    "Materai 10.000": "Materai 10.000.jpg",
     "Lem Glitter": "Lem Glitter.jpeg",
     "Double Tape": "Double Tape.jpeg",
     "Double Tip Foam": "Double Tip Foam.jpg",
@@ -968,13 +969,13 @@
             // Dengan urutan ini, upload/rename gambar terbaru otomatis menang
             // terhadap pemetaan manual lama.
             if (window.ATK_AUTO_IMAGE_MAP && window.ATK_AUTO_IMAGE_MAP[target]) {
-                return './' + encodeURIComponent(window.ATK_AUTO_IMAGE_MAP[target]) + '?v=20260926-3';
+                return './' + encodeURIComponent(window.ATK_AUTO_IMAGE_MAP[target]) + '?v=20260926-4';
             }
 
             // Pemetaan manual dipakai untuk nama produk yang berbeda dari nama file.
             const filename = atkImageMap[item.nama];
             if (filename) {
-                return './' + encodeURIComponent(filename) + '?v=20260926-3';
+                return './' + encodeURIComponent(filename) + '?v=20260926-4';
             }
 
             const key = Object.keys(atkImageMap).find(k =>
@@ -982,7 +983,7 @@
             );
 
             if (key) {
-                return './' + encodeURIComponent(atkImageMap[key]) + '?v=20260926-3';
+                return './' + encodeURIComponent(atkImageMap[key]) + '?v=20260926-4';
             }
 
             // Produk tanpa foto asli tetap menampilkan placeholder lokal berbasis SVG.
