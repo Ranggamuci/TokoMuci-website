@@ -945,6 +945,12 @@
     "Plastik ID Card": "Plastik ID Card.jpeg",
     "Tali ID Card": "Tali ID Card.jpeg",
     "Plastik Laminating": "Plastik Laminating.jpeg",
+    "Tinta Printer": "Tinta Printer.jpeg",
+    "Cartridge Printer": "Cartridge Printer.jpg",
+    "Toner Printer": "Toner Printer.jpg",
+    "Kertas Label A4": "Kertas Label A4.jpg",
+    "Kertas Continuous Form": "Kertas Continuous Form.jpeg",
+    "Kartu PVC": "Kartu PVC.jpeg",
     "Nota": "Nota.jpeg",
 };
 
@@ -962,13 +968,13 @@
             // Dengan urutan ini, upload/rename gambar terbaru otomatis menang
             // terhadap pemetaan manual lama.
             if (window.ATK_AUTO_IMAGE_MAP && window.ATK_AUTO_IMAGE_MAP[target]) {
-                return './' + encodeURIComponent(window.ATK_AUTO_IMAGE_MAP[target]) + '?v=20260926-2';
+                return './' + encodeURIComponent(window.ATK_AUTO_IMAGE_MAP[target]) + '?v=20260926-3';
             }
 
             // Pemetaan manual dipakai untuk nama produk yang berbeda dari nama file.
             const filename = atkImageMap[item.nama];
             if (filename) {
-                return './' + encodeURIComponent(filename) + '?v=20260926-2';
+                return './' + encodeURIComponent(filename) + '?v=20260926-3';
             }
 
             const key = Object.keys(atkImageMap).find(k =>
@@ -976,7 +982,7 @@
             );
 
             if (key) {
-                return './' + encodeURIComponent(atkImageMap[key]) + '?v=20260926-2';
+                return './' + encodeURIComponent(atkImageMap[key]) + '?v=20260926-3';
             }
 
             // Produk tanpa foto asli tetap menampilkan placeholder lokal berbasis SVG.
