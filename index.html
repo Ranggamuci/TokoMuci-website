@@ -157,7 +157,7 @@
 
                 <!-- Banner 2: Promo Stempel Custom -->
                 <div class="swiper-slide relative h-[260px] sm:h-[360px] bg-slate-900">
-                    <img src="./images/stempel-custom.jpg" onerror="this.src='stempel.PNG?auto=format&fit=crop&w=1200&q=80'" alt="Promo Stempel Custom Toko MUCI" class="w-full h-full object-cover opacity-60">
+                    <img src="./stempel.png" onerror="this.src='stempel.PNG?auto=format&fit=crop&w=1200&q=80'" alt="Promo Stempel Custom Toko MUCI" class="w-full h-full object-cover opacity-60">
                     <div class="absolute inset-0 bg-gradient-to-r from-indigo-950 via-indigo-900/80 to-transparent p-6 sm:p-12 flex flex-col justify-center items-start">
                         <span class="bg-indigo-500 text-white text-[11px] font-extrabold uppercase px-3 py-1 rounded-full mb-3 shadow">
                             <i class="fa-solid fa-stamp mr-1"></i> Bikin Cap Custom
@@ -174,7 +174,7 @@
 
                 <!-- Banner 3: Promo Kertas HVS & ATK -->
                 <div class="swiper-slide relative h-[260px] sm:h-[360px] bg-slate-900">
-                    <img src="./images/kertas-hvs.jpg" onerror="this.src='https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=1200&q=80'" alt="Promo Kertas & ATK Toko MUCI" class="w-full h-full object-cover opacity-60">
+                    <img src="./HVS A4 70 gsm.jpg" onerror="this.src='https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=1200&q=80'" alt="Promo Kertas & ATK Toko MUCI" class="w-full h-full object-cover opacity-60">
                     <div class="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-900/80 to-transparent p-6 sm:p-12 flex flex-col justify-center items-start">
                         <span class="bg-blue-500 text-white text-[11px] font-extrabold uppercase px-3 py-1 rounded-full mb-3 shadow">
                             <i class="fa-solid fa-box mr-1"></i> Grosir & Eceran
@@ -212,7 +212,7 @@
                 <div class="glass-card overflow-hidden rounded-2xl group flex flex-col justify-between p-3.5">
                     <div>
                         <div class="overflow-hidden h-28 rounded-xl bg-slate-100 relative mb-3">
-                            <img src="./images/fotocopy.jpeg" onerror="this.src='fotocopy.jpeg'" alt="Fotokopi Dokumen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            <img src="./fotocopy.jpeg" onerror="this.src='fotocopy.jpeg'" alt="Fotokopi Dokumen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <h3 class="text-slate-900 font-bold text-xs">Fotokopi Berkas</h3>
                         <p class="text-[11px] text-slate-500 mt-0.5">B/W & Warna, cepat & bersih.</p>
@@ -962,13 +962,13 @@
             // Dengan urutan ini, upload/rename gambar terbaru otomatis menang
             // terhadap pemetaan manual lama.
             if (window.ATK_AUTO_IMAGE_MAP && window.ATK_AUTO_IMAGE_MAP[target]) {
-                return './' + encodeURIComponent(window.ATK_AUTO_IMAGE_MAP[target]) + '?v=20260926-1';
+                return './' + encodeURIComponent(window.ATK_AUTO_IMAGE_MAP[target]) + '?v=20260926-2';
             }
 
             // Pemetaan manual dipakai untuk nama produk yang berbeda dari nama file.
             const filename = atkImageMap[item.nama];
             if (filename) {
-                return './' + encodeURIComponent(filename) + '?v=20260926-1';
+                return './' + encodeURIComponent(filename) + '?v=20260926-2';
             }
 
             const key = Object.keys(atkImageMap).find(k =>
@@ -976,7 +976,7 @@
             );
 
             if (key) {
-                return './' + encodeURIComponent(atkImageMap[key]) + '?v=20260926-1';
+                return './' + encodeURIComponent(atkImageMap[key]) + '?v=20260926-2';
             }
 
             // Produk tanpa foto asli tetap menampilkan placeholder lokal berbasis SVG.
