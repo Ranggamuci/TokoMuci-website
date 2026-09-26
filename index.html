@@ -522,9 +522,11 @@
             { no: 27, nama: "Drawing Pen", kategori: "Alat Tulis & Koreksi", icon: "fa-pen-nib" },
             { no: 28, nama: "Tempat Pensil", kategori: "Alat Tulis & Koreksi", icon: "fa-box-archive" },
             { no: 29, nama: "Kotak Pensil", kategori: "Alat Tulis & Koreksi", icon: "fa-box-archive" },
+            { no: 30, nama: "Alat Bantu Hitung Anak", kategori: "Alat Tulis & Koreksi", icon: "fa-calculator" },
 
             // 30 - 36: Spidol & Marker
             { no: 30, nama: "Spidol Permanen", kategori: "Spidol & Marker", icon: "fa-marker" },
+            { no: 31, nama: "Spidol Hitam Kecil", kategori: "Spidol & Marker", icon: "fa-marker" },
             { no: 31, nama: "Spidol Whiteboard", kategori: "Spidol & Marker", icon: "fa-marker" },
             { no: 32, nama: "Spidol Warna", kategori: "Spidol & Marker", icon: "fa-marker" },
             { no: 33, nama: "Spidol Warna 12 Warna", kategori: "Spidol & Marker", icon: "fa-palette" },
@@ -785,6 +787,8 @@
     "Tempat Pensil": "Tempat Pensil.jpeg",
     "Kotak Pensil": "Kotak Pensil.jpeg",
     "Spidol Permanen": "Spidol Permanen.png",
+    "Alat Bantu Hitung Anak": "Alat Bantu Hitung Anak.webp",
+    "Spidol Hitam Kecil": "Spidol Hitam Kecil.jpeg",
     "Spidol Whiteboard": "Spidol Whiteboard.jpeg",
     "Spidol Warna": "Spidol Warna.jpeg",
     "Spidol Warna 12 Warna": "Spidol Warna 12 Warna.jpg",
@@ -986,13 +990,13 @@
             // Dengan urutan ini, upload/rename gambar terbaru otomatis menang
             // terhadap pemetaan manual lama.
             if (window.ATK_AUTO_IMAGE_MAP && window.ATK_AUTO_IMAGE_MAP[target]) {
-                return './' + encodeURIComponent(window.ATK_AUTO_IMAGE_MAP[target]) + '?v=20260926-5';
+                return './' + encodeURIComponent(window.ATK_AUTO_IMAGE_MAP[target]) + '?v=20260926-6';
             }
 
             // Pemetaan manual dipakai untuk nama produk yang berbeda dari nama file.
             const filename = atkImageMap[item.nama];
             if (filename) {
-                return './' + encodeURIComponent(filename) + '?v=20260926-5';
+                return './' + encodeURIComponent(filename) + '?v=20260926-6';
             }
 
             const key = Object.keys(atkImageMap).find(k =>
@@ -1000,7 +1004,7 @@
             );
 
             if (key) {
-                return './' + encodeURIComponent(atkImageMap[key]) + '?v=20260926-5';
+                return './' + encodeURIComponent(atkImageMap[key]) + '?v=20260926-6';
             }
 
             // Produk tanpa foto asli tetap menampilkan placeholder lokal berbasis SVG.
