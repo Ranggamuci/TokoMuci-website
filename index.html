@@ -849,7 +849,7 @@
     "Kertas Thermal 57mm": "Kertas Thermal 57mm.jpg",
     "Kertas Thermal 80mm": "Kertas Thermal 80mm.jpeg",
     "Map L": "Map L.jpg",
-    "Map Plastik L": "Map L.jpg",
+    "Map Plastik L": "Map Plastik.jpg",
     "Stopmap": "Stopmap.png",
     "Snelhecter": "Snelhecter.jpeg",
     "Ordner A4": "Ordner A4.jpeg",
@@ -913,7 +913,6 @@
     "Stick Lem Tembak": "Stick Lem Tembak.jpeg",
     "Lem Kayu": "Lem Kayu.jpeg",
     "Lem Cair": "Lem Kertas Cair.jpeg",
-    "Materai 10.000": "Materai 10.000.jpg",
     "Lem Glitter": "Lem Glitter.jpeg",
     "Double Tape": "Double Tape.jpeg",
     "Double Tip Foam": "Double Tip Foam.jpg",
@@ -940,19 +939,37 @@
     "Foam Sheet": "Foam Sheet.jpg",
     "Kertas Crepe": "Kertas Crepe.jpeg",
     "Sticker Nama Anak": "Sticker Nama Anak.jpg",
-    "Kartu Nama": "Kartu Nama.jpg",
-    "Stempel": "stempel.png",
-    "ID Card": "ID Card.jpg",
-    "Plastik ID Card": "Plastik ID Card.jpeg",
-    "Tali ID Card": "Tali ID Card.jpeg",
-    "Plastik Laminating": "Plastik Laminating.jpeg",
     "Tinta Printer": "Tinta Printer.jpeg",
     "Cartridge Printer": "Cartridge Printer.jpg",
     "Toner Printer": "Toner Printer.jpg",
     "Kertas Label A4": "Kertas Label A4.jpg",
     "Kertas Continuous Form": "Kertas Continuous Form.jpeg",
+    "Kartu Nama": "Kartu Nama.jpg",
+    "Stempel": "stempel.png",
     "Kartu PVC": "Kartu PVC.jpeg",
+    "ID Card": "ID Card.jpg",
+    "Plastik ID Card": "Plastik ID Card.jpeg",
+    "Tali ID Card": "Tali ID Card.jpeg",
+    "Spiral Jilid": "Spiral Jilid.jpg",
+    "Cover Jilid": "Cover Jilid.jpg",
+    "Plastik Laminating": "Plastik Laminating.jpeg",
+    "Kertas Transfer": "Kertas Transfer.jpeg",
+    "Kartu Ujian": "Kartu Ujian.jpg",
     "Nota": "Nota.jpeg",
+    "Nota NCR": "Nota NCR.jpg",
+    "Formulir": "Formulir.jpeg",
+    "Stiker": "Stiker.jpg",
+    "Brosur": "Brosur.jpg",
+    "Undangan": "Undangan.jpg",
+    "Foto 2x3": "Foto 2x3.jpg",
+    "Foto 3x4": "Foto 3x4.jpeg",
+    "Foto 4x6": "Foto 4x6.jpeg",
+    "Materai 10.000": "Materai 10.000.jpg",
+    "Buku Nota 1 Rangkap": "Buku Nota 1 Rangkap.jpeg",
+    "Buku Nota 2 Rangkap": "Buku Nota 2 Rangkap.png",
+    "Buku Nota 3 Rangkap": "Buku Nota 3 Rangkap.jpeg",
+    "Kwitansi": "Kwitansi.jpeg",
+    "Kwitansi NCR": "Kwitansi NCR.jpeg",
 };
 
         function normalizeProductName(text) {
@@ -969,13 +986,13 @@
             // Dengan urutan ini, upload/rename gambar terbaru otomatis menang
             // terhadap pemetaan manual lama.
             if (window.ATK_AUTO_IMAGE_MAP && window.ATK_AUTO_IMAGE_MAP[target]) {
-                return './' + encodeURIComponent(window.ATK_AUTO_IMAGE_MAP[target]) + '?v=20260926-4';
+                return './' + encodeURIComponent(window.ATK_AUTO_IMAGE_MAP[target]) + '?v=20260926-5';
             }
 
             // Pemetaan manual dipakai untuk nama produk yang berbeda dari nama file.
             const filename = atkImageMap[item.nama];
             if (filename) {
-                return './' + encodeURIComponent(filename) + '?v=20260926-4';
+                return './' + encodeURIComponent(filename) + '?v=20260926-5';
             }
 
             const key = Object.keys(atkImageMap).find(k =>
@@ -983,7 +1000,7 @@
             );
 
             if (key) {
-                return './' + encodeURIComponent(atkImageMap[key]) + '?v=20260926-4';
+                return './' + encodeURIComponent(atkImageMap[key]) + '?v=20260926-5';
             }
 
             // Produk tanpa foto asli tetap menampilkan placeholder lokal berbasis SVG.
