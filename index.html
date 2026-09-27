@@ -100,7 +100,7 @@
                 <a href="#tentang-muci" class="hover:text-indigo-600 transition-colors">Tentang</a>
                 <a href="#katalog-atk" class="hover:text-indigo-600 transition-colors flex items-center gap-1.5">
                     <span>Katalog ATK</span>
-                    <span id="catalog-count-badge" class="text-[10px] bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-full font-bold">211 Item</span>
+                    <span id="catalog-count-badge" class="text-[10px] bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-full font-bold">217 Item</span>
                 </a>
             </div>
 
@@ -182,7 +182,7 @@
                         <h2 class="text-2xl sm:text-4xl font-extrabold text-white leading-tight max-w-lg mb-2">
                             Alat Tulis & Kertas HVS <br><span class="text-blue-300">Harga Terjangkau</span>
                         </h2>
-                        <p class="text-slate-200 text-xs sm:text-sm max-w-md mb-5 hidden sm:block">Sedia 211 jenis ATK, map, kertas printer, lakban, & keperluan sekolah/kantor.</p>
+                        <p class="text-slate-200 text-xs sm:text-sm max-w-md mb-5 hidden sm:block">Sedia 217 jenis ATK, map, kertas printer, lakban, & keperluan sekolah/kantor.</p>
                         <a href="#katalog-atk" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition-all shadow-lg shadow-blue-500/30 flex items-center gap-2">
                             <i class="fa-solid fa-magnifying-glass text-sm"></i> Cari ATK Lengkap
                         </a>
@@ -725,7 +725,11 @@
             { no: 212, nama: "Buku Nota 2 Rangkap", kategori: "Percetakan & Nota", icon: "fa-receipt" },
             { no: 213, nama: "Buku Nota 3 Rangkap", kategori: "Percetakan & Nota", icon: "fa-receipt" },
             { no: 214, nama: "Kwitansi", kategori: "Percetakan & Nota", icon: "fa-money-check" },
-            { no: 215, nama: "Kwitansi NCR", kategori: "Percetakan & Nota", icon: "fa-money-check-dollar" }
+            { no: 215, nama: "Kwitansi NCR", kategori: "Percetakan & Nota", icon: "fa-money-check-dollar" },
+{ no: 216, nama: "Jarum Pentul", kategori: "Seni & Kerajinan", icon: "fa-thumbtack" },
+            { no: 217, nama: "Peniti", kategori: "Seni & Kerajinan", icon: "fa-thumbtack" },
+            { no: 218, nama: "Lem Alteco", kategori: "Lem & Perekat", icon: "fa-droplet" },
+            { no: 219, nama: "Sampul Plastik Buku Buku Cetak", kategori: "Percetakan & Nota", icon: "fa-book-open" }
         ];
 
         // Nomor katalog dibuat ulang agar tetap berurutan setelah item dihapus.
@@ -974,6 +978,11 @@
     "Buku Nota 3 Rangkap": "Buku Nota 3 Rangkap.jpeg",
     "Kwitansi": "Kwitansi.jpeg",
     "Kwitansi NCR": "Kwitansi NCR.jpeg",
+    "Jarum Pentul": "jarum pentul.jpeg",
+    "Peniti": "peniti.jpeg",
+    "Lem Alteco": "lem alteco.jpeg",
+    "Sampul Plastik Buku Buku Cetak": "sampul plastik buku buku cetak.jpg",
+
 };
 
         function normalizeProductName(text) {
@@ -990,7 +999,7 @@
             // Dengan urutan ini, upload/rename gambar terbaru otomatis menang
             // terhadap pemetaan manual lama.
             if (window.ATK_AUTO_IMAGE_MAP && window.ATK_AUTO_IMAGE_MAP[target]) {
-                return './' + encodeURIComponent(window.ATK_AUTO_IMAGE_MAP[target]) + '?v=20260926-6';
+                return './' + encodeURIComponent(window.ATK_AUTO_IMAGE_MAP[target]) + '?v=20260928-1';
             }
 
             // Pemetaan manual dipakai untuk nama produk yang berbeda dari nama file.
