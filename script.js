@@ -195,6 +195,10 @@ window.ATK_AUTO_IMAGE_MAP = window.ATK_AUTO_IMAGE_MAP || {
     "stopmap": "Stopmap.png",
     "taliidcard": "Tali ID Card.jpeg",
     "tempatpensil": "Tempat Pensil.jpeg",
+    "jarumpentul": "jarum pentul.jpeg",
+    "peniti": "peniti.jpeg",
+    "lemalteco": "lem alteco.jpeg",
+    "sampulplastikbukubukucetak": "sampul plastik buku buku cetak.jpg",
 };
 
 // Peta gambar otomatis disinkronkan dari file gambar yang tersedia di repository.
