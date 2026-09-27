@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ranggamuci.github.io/TokoMuci-website/sitemap.xml
