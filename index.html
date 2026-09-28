@@ -1046,17 +1046,11 @@
         function getATKImage(item) {
             const target = normalizeProductName(item.nama);
 
-            // Prioritaskan file gambar yang benar-benar ada di repository.
-            // Dengan urutan ini, upload/rename gambar terbaru otomatis menang
-            // terhadap pemetaan manual lama.
-            if (window.ATK_AUTO_IMAGE_MAP && window.ATK_AUTO_IMAGE_MAP[target]) {
-                return './' + encodeURIComponent(window.ATK_AUTO_IMAGE_MAP[target]) + '?v=20260928-1';
-            }
-
-            // Pemetaan manual dipakai untuk nama produk yang berbeda dari nama file.
+            // 1) Pemetaan manual adalah sumber utama agar setiap produk memakai
+            // foto yang memang ditentukan untuk produk tersebut.
             const filename = atkImageMap[item.nama];
             if (filename) {
-                return './' + encodeURIComponent(filename) + '?v=20260926-6';
+                return './' + encodeURIComponent(filename) + '?v=20260928-2';
             }
 
             const key = Object.keys(atkImageMap).find(k =>
@@ -1064,7 +1058,13 @@
             );
 
             if (key) {
-                return './' + encodeURIComponent(atkImageMap[key]) + '?v=20260926-6';
+                return './' + encodeURIComponent(atkImageMap[key]) + '?v=20260928-2';
+            }
+
+            // 2) Jika belum ada pemetaan manual, gunakan peta otomatis dari
+            // file gambar yang tersedia di repository.
+            if (window.ATK_AUTO_IMAGE_MAP && window.ATK_AUTO_IMAGE_MAP[target]) {
+                return './' + encodeURIComponent(window.ATK_AUTO_IMAGE_MAP[target]) + '?v=20260928-2';
             }
 
             // Produk tanpa foto asli tetap menampilkan placeholder lokal berbasis SVG.
