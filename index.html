@@ -344,7 +344,7 @@
         </div>
     </section>
 
-    <!-- KATALOG LENGKAP 211 DAFTAR ATK TOKO MUCI -->
+    <!-- KATALOG LENGKAP 217 DAFTAR ATK TOKO MUCI -->
     <section id="katalog-atk" class="py-14 px-4 sm:px-8 border-t border-slate-200 bg-white">
         <div class="max-w-6xl mx-auto">
             
@@ -355,7 +355,7 @@
                         <i class="fa-solid fa-boxes-stacked mr-1"></i> Sedia Eceran & Grosir
                     </span>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Daftar Lengkap ATK Toko MUCI</h2>
-                    <p class="text-slate-500 text-sm mt-1">Tersedia <span id="catalog-count-text" class="font-bold text-indigo-600">211 item</span> kebutuhan alat tulis, kertas, map, perekat, hingga perlengkapan kantor.</p>
+                    <p class="text-slate-500 text-sm mt-1">Tersedia <span id="catalog-count-text" class="font-bold text-indigo-600">217 item</span> kebutuhan alat tulis, kertas, map, perekat, hingga perlengkapan kantor.</p>
                 </div>
 
                 <!-- Input Pencarian -->
@@ -369,9 +369,15 @@
             </div>
 
             <!-- Tab Kategori Interaktif -->
+            <div class="mb-4 flex justify-end">
+                <button id="showAllProducts" type="button" class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 text-xs font-extrabold shadow-md shadow-indigo-500/20">
+                    <i class="fa-solid fa-layer-group"></i> Tampilkan Semua 217 Produk
+                </button>
+            </div>
+
             <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-6 category-scroll text-xs">
                 <button class="filter-btn active whitespace-nowrap px-4 py-2 rounded-xl font-bold bg-indigo-600 text-white shadow-md shadow-indigo-500/20 transition-all" data-category="ALL">
-                    Semua (<span id="count-all">211</span>)
+                    Semua (<span id="count-all">217</span>)
                 </button>
                 <button class="filter-btn whitespace-nowrap px-4 py-2 rounded-xl font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all" data-category="Alat Tulis & Koreksi">
                     <i class="fa-solid fa-pen-nib mr-1 text-slate-400"></i> Alat Tulis & Koreksi (<span class="category-count" data-count-category="Alat Tulis & Koreksi">25</span>)
@@ -548,7 +554,7 @@
         }
 
         // ==============================================================
-        // MASTER DATA: 211 DAFTAR LENGKAP ATK TOKO MUCI
+        // MASTER DATA: 217 DAFTAR LENGKAP ATK TOKO MUCI
         // ==============================================================
         const daftarATK = [
             // 1 - 29: Alat Tulis & Koreksi
@@ -1215,6 +1221,23 @@
         function changeCart(name,d){muciCart[name]=(muciCart[name]||0)+d;if(muciCart[name]<=0)delete muciCart[name];saveMuciCart();updateCartUI();} function openCart(){document.getElementById("cartDrawer")?.classList.add("open");document.getElementById("cartOverlay")?.classList.add("open");} function closeCart(){document.getElementById("cartDrawer")?.classList.remove("open");document.getElementById("cartOverlay")?.classList.remove("open");} function addToCart(name){changeCart(name,1);openCart();} function checkoutCart(){const e=Object.entries(muciCart);if(!e.length){openCart();return;}const lines=e.map(([n,q],i)=>`${i+1}. ${n} × ${q}`);const t=encodeURIComponent("Halo Toko MUCI, saya ingin memesan/menanyakan produk:\n\n"+lines.join("\n")+"\n\nMohon info harga dan ketersediaannya.");window.open("https://wa.me/6285185207306?text="+t,"_blank");}
         document.getElementById("headerCartBtn")?.addEventListener("click",openCart);document.getElementById("marketCartBtn")?.addEventListener("click",openCart);document.getElementById("mobileCartBtn")?.addEventListener("click",openCart);document.getElementById("closeCartBtn")?.addEventListener("click",closeCart);document.getElementById("cartOverlay")?.addEventListener("click",closeCart);document.getElementById("checkoutCartBtn")?.addEventListener("click",checkoutCart);document.getElementById("marketSearch")?.addEventListener("input",e=>{const m=document.getElementById("searchInput");if(m){m.value=e.target.value;m.dispatchEvent(new Event("input",{bubbles:true}));}});document.querySelectorAll("[data-market-category]").forEach(b=>b.addEventListener("click",()=>{const t=b.dataset.marketCategory;const o=[...document.querySelectorAll(".filter-btn")].find(x=>x.dataset.category===t);if(o)o.click();document.getElementById("katalog-atk")?.scrollIntoView({behavior:"smooth",block:"start"});}));document.getElementById("sortProducts")?.addEventListener("change",e=>{muciSort=e.target.value;renderATK();});
         const originalRenderATK=renderATK; renderATK=function(){originalRenderATK();document.querySelectorAll(".add-cart-btn").forEach(b=>b.addEventListener("click",()=>addToCart(decodeURIComponent(b.dataset.product))));if(muciSort!=="default"){const g=document.getElementById("atkGrid");const cards=[...g.children];cards.sort((a,b)=>{const na=a.querySelector("h4")?.textContent.trim()||"";const nb=b.querySelector("h4")?.textContent.trim()||"";return muciSort==="name"?na.localeCompare(nb,"id"):nb.localeCompare(na,"id");});cards.forEach(x=>g.appendChild(x));}}; updateCartUI();
+        document.getElementById('showAllProducts')?.addEventListener('click', () => {
+            currentCategory = 'ALL';
+            searchQuery = '';
+            if (searchInput) searchInput.value = '';
+            clearSearch?.classList.add('hidden');
+            filterBtns.forEach(btn => {
+                const active = btn.dataset.category === 'ALL';
+                btn.classList.toggle('active', active);
+                btn.classList.toggle('bg-indigo-600', active);
+                btn.classList.toggle('text-white', active);
+                btn.classList.toggle('bg-slate-100', !active);
+                btn.classList.toggle('text-slate-700', !active);
+            });
+            renderATK();
+            document.getElementById('katalog-atk')?.scrollIntoView({behavior:'smooth', block:'start'});
+        });
+
         // Render Pertama Kali
         renderATK();
     </script>
